@@ -1,0 +1,330 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "液压起重机",
+      "score": null,
+      "points": [
+        [
+          856.0655737704918,
+          748.1967213114754
+        ],
+        [
+          1229.8360655737704,
+          748.1967213114754
+        ],
+        [
+          1229.8360655737704,
+          1071.1475409836064
+        ],
+        [
+          856.0655737704918,
+          1071.1475409836064
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "开关箱",
+      "score": null,
+      "points": [
+        [
+          799.891304347826,
+          796.5217391304348
+        ],
+        [
+          837.9347826086955,
+          796.5217391304348
+        ],
+        [
+          837.9347826086955,
+          841.086956521739
+        ],
+        [
+          799.891304347826,
+          841.086956521739
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱施工平台",
+      "score": null,
+      "points": [
+        [
+          362.6229508196721,
+          526.8852459016392
+        ],
+        [
+          720.0,
+          526.8852459016392
+        ],
+        [
+          720.0,
+          726.8852459016392
+        ],
+        [
+          362.6229508196721,
+          726.8852459016392
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩钢模板",
+      "score": null,
+      "points": [
+        [
+          590.4918032786885,
+          710.4918032786885
+        ],
+        [
+          701.967213114754,
+          710.4918032786885
+        ],
+        [
+          701.967213114754,
+          995.7377049180327
+        ],
+        [
+          590.4918032786885,
+          995.7377049180327
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩钢模板",
+      "score": null,
+      "points": [
+        [
+          406.88524590163934,
+          610.4918032786885
+        ],
+        [
+          523.2786885245902,
+          610.4918032786885
+        ],
+        [
+          523.2786885245902,
+          869.5081967213114
+        ],
+        [
+          406.88524590163934,
+          869.5081967213114
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          640.0657894736843,
+          595.921052631579
+        ],
+        [
+          668.3552631578948,
+          595.921052631579
+        ],
+        [
+          668.3552631578948,
+          645.2631578947368
+        ],
+        [
+          640.0657894736843,
+          645.2631578947368
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          572.9605263157895,
+          613.0263157894736
+        ],
+        [
+          601.25,
+          613.0263157894736
+        ],
+        [
+          601.25,
+          661.7105263157895
+        ],
+        [
+          572.9605263157895,
+          661.7105263157895
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          644.2469879518071,
+          602.0481927710844
+        ],
+        [
+          656.5963855421686,
+          602.0481927710844
+        ],
+        [
+          656.5963855421686,
+          609.277108433735
+        ],
+        [
+          644.2469879518071,
+          609.277108433735
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          581.5963855421686,
+          619.8192771084338
+        ],
+        [
+          595.4518072289156,
+          619.8192771084338
+        ],
+        [
+          595.4518072289156,
+          629.4578313253012
+        ],
+        [
+          581.5963855421686,
+          629.4578313253012
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          579.7891566265059,
+          630.3614457831326
+        ],
+        [
+          597.5602409638553,
+          630.3614457831326
+        ],
+        [
+          597.5602409638553,
+          653.5542168674699
+        ],
+        [
+          579.7891566265059,
+          653.5542168674699
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          646.0542168674698,
+          611.0843373493976
+        ],
+        [
+          663.2228915662649,
+          611.0843373493976
+        ],
+        [
+          663.2228915662649,
+          632.4698795180723
+        ],
+        [
+          646.0542168674698,
+          632.4698795180723
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101840_0_1762827520549_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

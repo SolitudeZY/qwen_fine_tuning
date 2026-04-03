@@ -1,0 +1,40 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "液压夯",
+      "score": null,
+      "points": [
+        [
+          664.7058823529412,
+          264.11764705882354
+        ],
+        [
+          822.3529411764707,
+          264.11764705882354
+        ],
+        [
+          822.3529411764707,
+          451.1764705882353
+        ],
+        [
+          664.7058823529412,
+          451.1764705882353
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251112_101312_0_1762913592958_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

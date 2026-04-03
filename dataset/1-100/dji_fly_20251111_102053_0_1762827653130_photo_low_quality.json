@@ -1,0 +1,127 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "圆柱施工平台",
+      "score": null,
+      "points": [
+        [
+          1065.9016393442623,
+          776.0655737704917
+        ],
+        [
+          1252.7868852459017,
+          776.0655737704917
+        ],
+        [
+          1252.7868852459017,
+          944.9180327868852
+        ],
+        [
+          1065.9016393442623,
+          944.9180327868852
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱施工平台",
+      "score": null,
+      "points": [
+        [
+          1236.3934426229507,
+          912.1311475409835
+        ],
+        [
+          1433.1147540983607,
+          912.1311475409835
+        ],
+        [
+          1433.1147540983607,
+          1072.7868852459017
+        ],
+        [
+          1236.3934426229507,
+          1072.7868852459017
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "钢筋笼",
+      "score": null,
+      "points": [
+        [
+          467.54098360655735,
+          631.8032786885245
+        ],
+        [
+          610.1639344262295,
+          631.8032786885245
+        ],
+        [
+          610.1639344262295,
+          908.8524590163934
+        ],
+        [
+          467.54098360655735,
+          908.8524590163934
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "泥浆池",
+      "score": null,
+      "points": [
+        [
+          10.163934426229481,
+          841.639344262295
+        ],
+        [
+          394.0,
+          841.639344262295
+        ],
+        [
+          394.0,
+          1079
+        ],
+        [
+          10.163934426229481,
+          1079
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_102053_0_1762827653130_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

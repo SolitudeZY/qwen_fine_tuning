@@ -1,0 +1,243 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          525.8823529411766,
+          704.1176470588235
+        ],
+        [
+          631.7647058823529,
+          704.1176470588235
+        ],
+        [
+          631.7647058823529,
+          959.4117647058823
+        ],
+        [
+          525.8823529411766,
+          959.4117647058823
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "混凝土罐车",
+      "score": null,
+      "points": [
+        [
+          542.3529411764705,
+          427.64705882352945
+        ],
+        [
+          617.6470588235295,
+          427.64705882352945
+        ],
+        [
+          617.6470588235295,
+          581.7647058823529
+        ],
+        [
+          542.3529411764705,
+          581.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          560.0,
+          308.8235294117647
+        ],
+        [
+          623.5294117647059,
+          308.8235294117647
+        ],
+        [
+          623.5294117647059,
+          421.7647058823529
+        ],
+        [
+          560.0,
+          421.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          565.8823529411766,
+          221.76470588235296
+        ],
+        [
+          622.3529411764705,
+          221.76470588235296
+        ],
+        [
+          622.3529411764705,
+          308.8235294117647
+        ],
+        [
+          565.8823529411766,
+          308.8235294117647
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          584.7058823529412,
+          140.58823529411765
+        ],
+        [
+          634.1176470588234,
+          140.58823529411765
+        ],
+        [
+          634.1176470588234,
+          218.23529411764707
+        ],
+        [
+          584.7058823529412,
+          218.23529411764707
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          590.5882352941176,
+          91.1764705882353
+        ],
+        [
+          634.1176470588234,
+          91.1764705882353
+        ],
+        [
+          634.1176470588234,
+          141.76470588235296
+        ],
+        [
+          590.5882352941176,
+          141.76470588235296
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          600.0,
+          60.58823529411765
+        ],
+        [
+          638.8235294117646,
+          60.58823529411765
+        ],
+        [
+          638.8235294117646,
+          97.05882352941177
+        ],
+        [
+          600.0,
+          97.05882352941177
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          658.8235294117646,
+          170.0
+        ],
+        [
+          696.4705882352941,
+          170.0
+        ],
+        [
+          696.4705882352941,
+          206.47058823529412
+        ],
+        [
+          658.8235294117646,
+          206.47058823529412
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    }
+  ],
+  "imagePath": "dji_fly_20251112_101238_0_1762913558825_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

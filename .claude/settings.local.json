@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nvidia-smi)",
+      "Bash(lscpu)",
+      "Bash(pip list:*)",
+      "Bash(conda list:*)",
+      "Bash(sudo apt-get:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(pip install:*)",
+      "Bash(7z x:*)",
+      "Bash(python3:*)",
+      "Bash(swift sft:*)",
+      "Bash(chmod:*)",
+      "Bash(conda info:*)",
+      "Bash(conda create:*)",
+      "Bash(curl -s http://0.0.0.0:7860)",
+      "Bash(python:*)",
+      "Bash(conda run:*)",
+      "Bash(kill:*)",
+      "Bash(fc-list :lang=zh -f \"%{file}\\\\n\")"
+    ]
+  }
+}

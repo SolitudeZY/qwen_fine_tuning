@@ -1,0 +1,98 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "防雨布",
+      "score": null,
+      "points": [
+        [
+          785.5737704918032,
+          656.3934426229507
+        ],
+        [
+          897.0491803278688,
+          656.3934426229507
+        ],
+        [
+          897.0491803278688,
+          751.4754098360655
+        ],
+        [
+          785.5737704918032,
+          751.4754098360655
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          636.9047619047619,
+          435.7142857142857
+        ],
+        [
+          654.1666666666667,
+          435.7142857142857
+        ],
+        [
+          654.1666666666667,
+          464.8809523809524
+        ],
+        [
+          636.9047619047619,
+          464.8809523809524
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          639.1129032258065,
+          443.5483870967742
+        ],
+        [
+          650.4032258064516,
+          443.5483870967742
+        ],
+        [
+          650.4032258064516,
+          452.4193548387097
+        ],
+        [
+          639.1129032258065,
+          452.4193548387097
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101251_0_1762827171896_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

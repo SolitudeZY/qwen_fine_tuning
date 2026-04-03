@@ -1,0 +1,98 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "浆砌片石",
+      "score": null,
+      "points": [
+        [
+          944.5901639344262,
+          869.5081967213114
+        ],
+        [
+          1067.5409836065573,
+          869.5081967213114
+        ],
+        [
+          1067.5409836065573,
+          951.4754098360655
+        ],
+        [
+          944.5901639344262,
+          951.4754098360655
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "浆砌片石",
+      "score": null,
+      "points": [
+        [
+          613.4426229508197,
+          607.2131147540983
+        ],
+        [
+          687.2131147540983,
+          607.2131147540983
+        ],
+        [
+          687.2131147540983,
+          648.1967213114754
+        ],
+        [
+          613.4426229508197,
+          648.1967213114754
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          916.7213114754098,
+          195.73770491803276
+        ],
+        [
+          947.8688524590164,
+          195.73770491803276
+        ],
+        [
+          947.8688524590164,
+          230.16393442622947
+        ],
+        [
+          916.7213114754098,
+          230.16393442622947
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101200_0_1762827120666_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

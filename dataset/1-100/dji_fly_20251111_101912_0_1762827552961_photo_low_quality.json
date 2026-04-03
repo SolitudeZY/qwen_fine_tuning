@@ -1,0 +1,185 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "钻孔灌注桩",
+      "score": null,
+      "points": [
+        [
+          876.6524114991685,
+          520.4822998336896
+        ],
+        [
+          963.5376574008078,
+          520.4822998336896
+        ],
+        [
+          963.5376574008078,
+          669.6626277025421
+        ],
+        [
+          876.6524114991685,
+          669.6626277025421
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          498.68852459016387,
+          648.1967213114754
+        ],
+        [
+          557.7049180327868,
+          648.1967213114754
+        ],
+        [
+          557.7049180327868,
+          751.4754098360655
+        ],
+        [
+          498.68852459016387,
+          751.4754098360655
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          895.4098360655737,
+          399.0163934426229
+        ],
+        [
+          967.5409836065573,
+          399.0163934426229
+        ],
+        [
+          967.5409836065573,
+          476.06557377049177
+        ],
+        [
+          895.4098360655737,
+          476.06557377049177
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "钻孔灌注桩钻头",
+      "score": null,
+      "points": [
+        [
+          848.5507246376811,
+          607.2463768115941
+        ],
+        [
+          881.159420289855,
+          607.2463768115941
+        ],
+        [
+          881.159420289855,
+          639.855072463768
+        ],
+        [
+          848.5507246376811,
+          639.855072463768
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "钻孔灌注桩",
+      "score": null,
+      "points": [
+        [
+          652.0361990950227,
+          230.72398190045254
+        ],
+        [
+          720.8144796380091,
+          230.72398190045254
+        ],
+        [
+          720.8144796380091,
+          286.83257918552044
+        ],
+        [
+          652.0361990950227,
+          286.83257918552044
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "泥浆池",
+      "score": null,
+      "points": [
+        [
+          621.639344262295,
+          484.2622950819672
+        ],
+        [
+          703.6065573770492,
+          484.2622950819672
+        ],
+        [
+          703.6065573770492,
+          541.639344262295
+        ],
+        [
+          621.639344262295,
+          541.639344262295
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101912_0_1762827552961_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

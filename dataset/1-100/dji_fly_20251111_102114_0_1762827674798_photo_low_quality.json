@@ -1,0 +1,185 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "钻孔灌注桩钻头",
+      "score": null,
+      "points": [
+        [
+          918.3606557377049,
+          751.4754098360655
+        ],
+        [
+          1026.5573770491803,
+          751.4754098360655
+        ],
+        [
+          1026.5573770491803,
+          871.1475409836065
+        ],
+        [
+          918.3606557377049,
+          871.1475409836065
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "钻孔灌注桩",
+      "score": null,
+      "points": [
+        [
+          741.311475409836,
+          472.7868852459016
+        ],
+        [
+          923.2786885245902,
+          472.7868852459016
+        ],
+        [
+          923.2786885245902,
+          687.5409836065573
+        ],
+        [
+          741.311475409836,
+          687.5409836065573
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "钻孔灌注桩护筒",
+      "score": null,
+      "points": [
+        [
+          510.1639344262295,
+          507.21311475409834
+        ],
+        [
+          564.2622950819672,
+          507.21311475409834
+        ],
+        [
+          564.2622950819672,
+          572.7868852459015
+        ],
+        [
+          510.1639344262295,
+          572.7868852459015
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          634.7540983606557,
+          459.672131147541
+        ],
+        [
+          736.3934426229508,
+          459.672131147541
+        ],
+        [
+          736.3934426229508,
+          605.5737704918032
+        ],
+        [
+          634.7540983606557,
+          605.5737704918032
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "液压起重机",
+      "score": null,
+      "points": [
+        [
+          721.639344262295,
+          326.88524590163934
+        ],
+        [
+          841.311475409836,
+          326.88524590163934
+        ],
+        [
+          841.311475409836,
+          520.3278688524589
+        ],
+        [
+          721.639344262295,
+          520.3278688524589
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "钢筋笼",
+      "score": null,
+      "points": [
+        [
+          15.08196721311473,
+          838.3606557377049
+        ],
+        [
+          515.0819672131147,
+          838.3606557377049
+        ],
+        [
+          515.0819672131147,
+          1056.3934426229507
+        ],
+        [
+          15.08196721311473,
+          1056.3934426229507
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_102114_0_1762827674798_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

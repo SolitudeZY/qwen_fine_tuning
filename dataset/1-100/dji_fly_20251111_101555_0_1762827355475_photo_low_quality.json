@@ -1,0 +1,98 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "薄壁墩液压推挽同步爬模",
+      "score": null,
+      "points": [
+        [
+          698.6885245901639,
+          61.31147540983602
+        ],
+        [
+          1157.704918032787,
+          61.31147540983602
+        ],
+        [
+          1157.704918032787,
+          808.8524590163934
+        ],
+        [
+          698.6885245901639,
+          808.8524590163934
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩钢模板",
+      "score": null,
+      "points": [
+        [
+          518.3606557377049,
+          139.99999999999997
+        ],
+        [
+          669.1803278688525,
+          139.99999999999997
+        ],
+        [
+          669.1803278688525,
+          310.4918032786885
+        ],
+        [
+          518.3606557377049,
+          310.4918032786885
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "防雨布",
+      "score": null,
+      "points": [
+        [
+          772.4590163934427,
+          867.8688524590164
+        ],
+        [
+          839.672131147541,
+          867.8688524590164
+        ],
+        [
+          839.672131147541,
+          1020.327868852459
+        ],
+        [
+          772.4590163934427,
+          1020.327868852459
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101555_0_1762827355475_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

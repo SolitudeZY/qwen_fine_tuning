@@ -1,0 +1,330 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "皮卡车",
+      "score": null,
+      "points": [
+        [
+          588.2352941176471,
+          667.6470588235294
+        ],
+        [
+          702.3529411764705,
+          667.6470588235294
+        ],
+        [
+          702.3529411764705,
+          899.4117647058823
+        ],
+        [
+          588.2352941176471,
+          899.4117647058823
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          467.05882352941177,
+          278.2352941176471
+        ],
+        [
+          569.4117647058824,
+          278.2352941176471
+        ],
+        [
+          569.4117647058824,
+          427.64705882352945
+        ],
+        [
+          467.05882352941177,
+          427.64705882352945
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "装载机",
+      "score": null,
+      "points": [
+        [
+          658.8235294117646,
+          130.0
+        ],
+        [
+          717.6470588235295,
+          130.0
+        ],
+        [
+          717.6470588235295,
+          204.11764705882354
+        ],
+        [
+          658.8235294117646,
+          204.11764705882354
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          757.6470588235295,
+          798.2352941176471
+        ],
+        [
+          775.2941176470588,
+          798.2352941176471
+        ],
+        [
+          775.2941176470588,
+          853.5294117647059
+        ],
+        [
+          757.6470588235295,
+          853.5294117647059
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          768.2352941176471,
+          821.7647058823529
+        ],
+        [
+          792.9411764705883,
+          821.7647058823529
+        ],
+        [
+          792.9411764705883,
+          891.1764705882352
+        ],
+        [
+          768.2352941176471,
+          891.1764705882352
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "越野车",
+      "score": null,
+      "points": [
+        [
+          487.05882352941177,
+          604.1176470588235
+        ],
+        [
+          587.0588235294117,
+          604.1176470588235
+        ],
+        [
+          587.0588235294117,
+          782.9411764705882
+        ],
+        [
+          487.05882352941177,
+          782.9411764705882
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "越野车",
+      "score": null,
+      "points": [
+        [
+          394.1176470588235,
+          822.9411764705882
+        ],
+        [
+          560.0,
+          822.9411764705882
+        ],
+        [
+          560.0,
+          1073.5294117647059
+        ],
+        [
+          394.1176470588235,
+          1073.5294117647059
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          557.6923076923076,
+          167.8846153846154
+        ],
+        [
+          564.1025641025641,
+          167.8846153846154
+        ],
+        [
+          564.1025641025641,
+          173.0128205128205
+        ],
+        [
+          557.6923076923076,
+          173.0128205128205
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          557.6923076923076,
+          174.93589743589743
+        ],
+        [
+          565.3846153846154,
+          174.93589743589743
+        ],
+        [
+          565.3846153846154,
+          181.98717948717947
+        ],
+        [
+          557.6923076923076,
+          181.98717948717947
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          553.2051282051282,
+          164.67948717948718
+        ],
+        [
+          569.2307692307692,
+          164.67948717948718
+        ],
+        [
+          569.2307692307692,
+          198.0128205128205
+        ],
+        [
+          553.2051282051282,
+          198.0128205128205
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "越野车",
+      "score": null,
+      "points": [
+        [
+          703.8461538461538,
+          66.60256410256409
+        ],
+        [
+          730.1282051282051,
+          66.60256410256409
+        ],
+        [
+          730.1282051282051,
+          97.37179487179485
+        ],
+        [
+          703.8461538461538,
+          97.37179487179485
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251112_102633_0_1762914393300_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

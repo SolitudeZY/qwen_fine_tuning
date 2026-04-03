@@ -1,0 +1,677 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "安全锥",
+      "score": null,
+      "points": [
+        [
+          112.5,
+          886.0
+        ],
+        [
+          143.5,
+          886.0
+        ],
+        [
+          143.5,
+          919.0
+        ],
+        [
+          112.5,
+          919.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全锥",
+      "score": null,
+      "points": [
+        [
+          386.5,
+          720.0
+        ],
+        [
+          413.5,
+          720.0
+        ],
+        [
+          413.5,
+          753.0
+        ],
+        [
+          386.5,
+          753.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全锥",
+      "score": null,
+      "points": [
+        [
+          638.6666666666666,
+          580.0
+        ],
+        [
+          656.6666666666666,
+          580.0
+        ],
+        [
+          656.6666666666666,
+          603.3333333333334
+        ],
+        [
+          638.6666666666666,
+          603.3333333333334
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全锥",
+      "score": null,
+      "points": [
+        [
+          740.0,
+          527.3333333333334
+        ],
+        [
+          758.0,
+          527.3333333333334
+        ],
+        [
+          758.0,
+          545.3333333333334
+        ],
+        [
+          740.0,
+          545.3333333333334
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全锥",
+      "score": null,
+      "points": [
+        [
+          898.6036036036036,
+          432.34234234234236
+        ],
+        [
+          909.8648648648649,
+          432.34234234234236
+        ],
+        [
+          909.8648648648649,
+          448.1081081081081
+        ],
+        [
+          898.6036036036036,
+          448.1081081081081
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全锥",
+      "score": null,
+      "points": [
+        [
+          940.03367003367,
+          409.02356902356905
+        ],
+        [
+          948.7878787878788,
+          409.02356902356905
+        ],
+        [
+          948.7878787878788,
+          421.4814814814815
+        ],
+        [
+          940.03367003367,
+          421.4814814814815
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          571.25,
+          615.0
+        ],
+        [
+          586.25,
+          615.0
+        ],
+        [
+          586.25,
+          641.6666666666667
+        ],
+        [
+          571.25,
+          641.6666666666667
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          806.25,
+          479.58333333333337
+        ],
+        [
+          819.5833333333334,
+          479.58333333333337
+        ],
+        [
+          819.5833333333334,
+          503.33333333333337
+        ],
+        [
+          806.25,
+          503.33333333333337
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          881.6666666666667,
+          438.33333333333337
+        ],
+        [
+          889.5833333333334,
+          438.33333333333337
+        ],
+        [
+          889.5833333333334,
+          457.9166666666667
+        ],
+        [
+          881.6666666666667,
+          457.9166666666667
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          986.254295532646,
+          376.9415807560137
+        ],
+        [
+          996.5635738831614,
+          376.9415807560137
+        ],
+        [
+          996.5635738831614,
+          394.46735395189
+        ],
+        [
+          986.254295532646,
+          394.46735395189
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全锥",
+      "score": null,
+      "points": [
+        [
+          1039.3023255813953,
+          352.5581395348837
+        ],
+        [
+          1046.9767441860465,
+          352.5581395348837
+        ],
+        [
+          1046.9767441860465,
+          362.7906976744186
+        ],
+        [
+          1039.3023255813953,
+          362.7906976744186
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "装载机",
+      "score": null,
+      "points": [
+        [
+          1162.3809523809523,
+          293.8095238095238
+        ],
+        [
+          1206.6666666666665,
+          293.8095238095238
+        ],
+        [
+          1206.6666666666665,
+          334.2857142857143
+        ],
+        [
+          1162.3809523809523,
+          334.2857142857143
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          1242.1875,
+          229.64843750000003
+        ],
+        [
+          1257.421875,
+          229.64843750000003
+        ],
+        [
+          1257.421875,
+          246.44531250000003
+        ],
+        [
+          1242.1875,
+          246.44531250000003
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          1230.078125,
+          237.85156250000003
+        ],
+        [
+          1243.75,
+          237.85156250000003
+        ],
+        [
+          1243.75,
+          251.52343750000003
+        ],
+        [
+          1230.078125,
+          251.52343750000003
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          1217.96875,
+          245.66406250000003
+        ],
+        [
+          1236.71875,
+          245.66406250000003
+        ],
+        [
+          1236.71875,
+          262.46093750000006
+        ],
+        [
+          1217.96875,
+          262.46093750000006
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          1299.3569131832799,
+          231.47909967845655
+        ],
+        [
+          1312.218649517685,
+          231.47909967845655
+        ],
+        [
+          1312.218649517685,
+          243.37620578778132
+        ],
+        [
+          1299.3569131832799,
+          243.37620578778132
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          1346.8115942028987,
+          289.75845410628017
+        ],
+        [
+          1368.0676328502416,
+          289.75845410628017
+        ],
+        [
+          1368.0676328502416,
+          309.5652173913043
+        ],
+        [
+          1346.8115942028987,
+          309.5652173913043
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          1341.497584541063,
+          309.5652173913043
+        ],
+        [
+          1369.033816425121,
+          309.5652173913043
+        ],
+        [
+          1369.033816425121,
+          332.7536231884058
+        ],
+        [
+          1341.497584541063,
+          332.7536231884058
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          1326.55737704918,
+          187.86885245901638
+        ],
+        [
+          1336.7213114754097,
+          187.86885245901638
+        ],
+        [
+          1336.7213114754097,
+          200.327868852459
+        ],
+        [
+          1326.55737704918,
+          200.327868852459
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          1342.295081967213,
+          187.86885245901638
+        ],
+        [
+          1351.8032786885244,
+          187.86885245901638
+        ],
+        [
+          1351.8032786885244,
+          197.37704918032784
+        ],
+        [
+          1342.295081967213,
+          197.37704918032784
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "装载机",
+      "score": null,
+      "points": [
+        [
+          1314.0983606557377,
+          206.5573770491803
+        ],
+        [
+          1344.918032786885,
+          206.5573770491803
+        ],
+        [
+          1344.918032786885,
+          226.2295081967213
+        ],
+        [
+          1314.0983606557377,
+          226.2295081967213
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          1387.7828054298643,
+          348.371040723982
+        ],
+        [
+          1431.2217194570137,
+          348.371040723982
+        ],
+        [
+          1431.2217194570137,
+          415.79185520362
+        ],
+        [
+          1387.7828054298643,
+          415.79185520362
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "液压起重机",
+      "score": null,
+      "points": [
+        [
+          1360.633484162896,
+          242.48868778280547
+        ],
+        [
+          1416.289592760181,
+          242.48868778280547
+        ],
+        [
+          1416.289592760181,
+          282.7601809954752
+        ],
+        [
+          1360.633484162896,
+          282.7601809954752
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440
+}

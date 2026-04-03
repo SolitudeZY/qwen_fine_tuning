@@ -1,0 +1,184 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "压路机",
+      "score": null,
+      "points": [
+        [
+          2496.0,
+          1337.0
+        ],
+        [
+          3006.0,
+          1337.0
+        ],
+        [
+          3006.0,
+          1650.3333333333333
+        ],
+        [
+          2496.0,
+          1650.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          642.6666666666665,
+          1670.3333333333333
+        ],
+        [
+          1275.9999999999998,
+          1670.3333333333333
+        ],
+        [
+          1275.9999999999998,
+          2430.3333333333335
+        ],
+        [
+          642.6666666666665,
+          2430.3333333333335
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全标识",
+      "score": null,
+      "points": [
+        [
+          1802.6666666666667,
+          1843.6666666666665
+        ],
+        [
+          1955.9999999999998,
+          1843.6666666666665
+        ],
+        [
+          1955.9999999999998,
+          1917.0
+        ],
+        [
+          1802.6666666666667,
+          1917.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全标识",
+      "score": null,
+      "points": [
+        [
+          1972.6666666666667,
+          1847.0
+        ],
+        [
+          2132.666666666667,
+          1847.0
+        ],
+        [
+          2132.666666666667,
+          1923.6666666666665
+        ],
+        [
+          1972.6666666666667,
+          1923.6666666666665
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全标识",
+      "score": null,
+      "points": [
+        [
+          2142.666666666667,
+          1847.0
+        ],
+        [
+          2299.333333333333,
+          1847.0
+        ],
+        [
+          2299.333333333333,
+          1913.6666666666665
+        ],
+        [
+          2142.666666666667,
+          1913.6666666666665
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "平地机",
+      "score": null,
+      "points": [
+        [
+          1325.9999999999998,
+          446.99999999999994
+        ],
+        [
+          1922.6666666666667,
+          446.99999999999994
+        ],
+        [
+          1922.6666666666667,
+          803.6666666666665
+        ],
+        [
+          1325.9999999999998,
+          803.6666666666665
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "org_789e3fe992e28072_1765940300000.jpg",
+  "imageData": null,
+  "imageHeight": 3024,
+  "imageWidth": 4032
+}

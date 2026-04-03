@@ -1,0 +1,301 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "障碍物",
+      "score": null,
+      "points": [
+        [
+          826.5573770491803,
+          217.04918032786884
+        ],
+        [
+          942.9508196721312,
+          217.04918032786884
+        ],
+        [
+          942.9508196721312,
+          290.8196721311475
+        ],
+        [
+          826.5573770491803,
+          290.8196721311475
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "反光立柱",
+      "score": null,
+      "points": [
+        [
+          153.9285714285715,
+          642.6785714285714
+        ],
+        [
+          212.85714285714295,
+          642.6785714285714
+        ],
+        [
+          212.85714285714295,
+          701.6071428571429
+        ],
+        [
+          153.9285714285715,
+          701.6071428571429
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光立柱",
+      "score": null,
+      "points": [
+        [
+          66.4285714285715,
+          774.8214285714286
+        ],
+        [
+          107.50000000000009,
+          774.8214285714286
+        ],
+        [
+          107.50000000000009,
+          826.6071428571429
+        ],
+        [
+          66.4285714285715,
+          826.6071428571429
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光立柱",
+      "score": null,
+      "points": [
+        [
+          245.00000000000006,
+          544.4642857142858
+        ],
+        [
+          271.78571428571433,
+          544.4642857142858
+        ],
+        [
+          271.78571428571433,
+          583.75
+        ],
+        [
+          245.00000000000006,
+          583.75
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光锥",
+      "score": null,
+      "points": [
+        [
+          327.1428571428572,
+          410.5357142857143
+        ],
+        [
+          366.4285714285715,
+          410.5357142857143
+        ],
+        [
+          366.4285714285715,
+          442.67857142857144
+        ],
+        [
+          327.1428571428572,
+          442.67857142857144
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光锥",
+      "score": null,
+      "points": [
+        [
+          157.50000000000006,
+          719.4642857142858
+        ],
+        [
+          202.14285714285722,
+          719.4642857142858
+        ],
+        [
+          202.14285714285722,
+          762.3214285714286
+        ],
+        [
+          157.50000000000006,
+          762.3214285714286
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光锥",
+      "score": null,
+      "points": [
+        [
+          252.14285714285722,
+          503.3928571428571
+        ],
+        [
+          309.28571428571433,
+          503.3928571428571
+        ],
+        [
+          309.28571428571433,
+          537.3214285714287
+        ],
+        [
+          252.14285714285722,
+          537.3214285714287
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          716.4285714285716,
+          110.53571428571433
+        ],
+        [
+          757.5,
+          110.53571428571433
+        ],
+        [
+          757.5,
+          158.75000000000006
+        ],
+        [
+          716.4285714285716,
+          158.75000000000006
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "液压起重机",
+      "score": null,
+      "points": [
+        [
+          652.1428571428571,
+          17.678571428571487
+        ],
+        [
+          709.2857142857142,
+          17.678571428571487
+        ],
+        [
+          709.2857142857142,
+          112.32142857142861
+        ],
+        [
+          652.1428571428571,
+          112.32142857142861
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光立柱",
+      "score": null,
+      "points": [
+        [
+          1177.142857142857,
+          449.82142857142856
+        ],
+        [
+          1214.642857142857,
+          449.82142857142856
+        ],
+        [
+          1214.642857142857,
+          489.10714285714283
+        ],
+        [
+          1177.142857142857,
+          489.10714285714283
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_095112_0_1762825872640_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

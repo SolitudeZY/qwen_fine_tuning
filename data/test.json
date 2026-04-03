@@ -1,0 +1,287 @@
+[
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>请检查这张施工现场图片中的边防护设施是否合规，是否存在围栏缺失、防护不全等违规情况。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 0,\n  \"description\": \"施工现场可见施工人员，当前画面中未发现需要临边防护的高风险区域。\",\n  \"suggestion\": \"当前区域无明显临边防护需求，建议关注其他安全事项。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/无人机图片标识441-550/图片/dji_fly_20251112_102609_0_1762914369708_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>请对这张图片进行边防护安全检查，分析临边防护设施的状态。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 0,\n  \"description\": \"施工现场可见施工人员，当前画面中未发现需要临边防护的高风险区域。\",\n  \"suggestion\": \"当前区域无明显临边防护需求，建议关注其他安全事项。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_100117_0_1762826477958_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>对图片中的施工区域进行边防护违规检测，识别是否存在防护缺失问题。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 1,\n  \"edge_protection_types\": [\n    \"临边防护\"\n  ],\n  \"description\": \"施工现场可见施工设备和设施，已设置临边防护共1处，边防护设施基本到位。\",\n  \"suggestion\": \"继续保持现有防护措施，定期检查防护设施的完整性和稳固性。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101003_0_1762827003509_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>请对这张图片进行边防护安全检查，分析临边防护设施的状态。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 0,\n  \"description\": \"施工现场可见施工机械，当前画面中未发现需要临边防护的高风险区域。\",\n  \"suggestion\": \"当前区域无明显临边防护需求，建议关注其他安全事项。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/无人机图片标识441-550/图片/dji_fly_20251112_102557_0_1762914357842_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>对图片中的施工区域进行边防护违规检测，识别是否存在防护缺失问题。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 0,\n  \"description\": \"施工现场可见施工人员，当前画面中未发现需要临边防护的高风险区域。\",\n  \"suggestion\": \"当前区域无明显临边防护需求，建议关注其他安全事项。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101210_0_1762827130932_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>请对这张图片进行边防护安全检查，分析临边防护设施的状态。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"low\",\n  \"edge_protection_count\": 4,\n  \"edge_protection_types\": [\n    \"临边防护\",\n    \"钻孔灌注桩孔口防护\"\n  ],\n  \"risk_areas\": [\n    \"钻孔灌注桩孔口\",\n    \"钻孔灌注桩\"\n  ],\n  \"description\": \"施工现场可见施工设备和设施，已设置临边防护、钻孔灌注桩孔口防护共4处。现场存在钻孔灌注桩孔口、钻孔灌注桩等高风险区域，目前已有防护措施覆盖。\",\n  \"suggestion\": \"注意检查钻孔灌注桩孔口、钻孔灌注桩周围的防护设施是否完整牢固，确保防护范围覆盖所有风险区域。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102251_0_1762827771701_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>检查图片中的施工现场，判断边防护措施是否到位，是否存在安全隐患。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 2,\n  \"edge_protection_types\": [\n    \"临边防护\"\n  ],\n  \"description\": \"施工现场可见起重机械、施工人员、梁体结构，已设置临边防护共2处，边防护设施基本到位。\",\n  \"suggestion\": \"继续保持现有防护措施，定期检查防护设施的完整性和稳固性。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/无人机图片标识441-550/图片/dji_fly_20251111_152920_0_1762846160702_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>检查图片中的施工现场，判断边防护措施是否到位，是否存在安全隐患。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"low\",\n  \"edge_protection_count\": 3,\n  \"edge_protection_types\": [\n    \"临边防护\"\n  ],\n  \"risk_areas\": [\n    \"基坑\"\n  ],\n  \"description\": \"施工现场可见起重机械、桥墩结构、梁体结构，已设置临边防护共3处。现场存在基坑等高风险区域，目前已有防护措施覆盖。\",\n  \"suggestion\": \"注意检查基坑周围的防护设施是否完整牢固，确保防护范围覆盖所有风险区域。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101314_0_1762827194997_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>请分析这张施工现场照片的边防护设施情况，输出安全检查结果。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 0,\n  \"description\": \"施工现场可见施工人员，当前画面中未发现需要临边防护的高风险区域。\",\n  \"suggestion\": \"当前区域无明显临边防护需求，建议关注其他安全事项。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101251_0_1762827171896_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>对图片中的施工区域进行边防护违规检测，识别是否存在防护缺失问题。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"low\",\n  \"edge_protection_count\": 2,\n  \"edge_protection_types\": [\n    \"临边防护\"\n  ],\n  \"risk_areas\": [\n    \"基坑\"\n  ],\n  \"description\": \"施工现场可见桥墩结构，已设置临边防护共2处。现场存在基坑等高风险区域，目前已有防护措施覆盖。\",\n  \"suggestion\": \"注意检查基坑周围的防护设施是否完整牢固，确保防护范围覆盖所有风险区域。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/北二绕无人机图片标注/图片/org_1e70a919f9ce7089_1765939314000.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>对图片中的施工区域进行边防护违规检测，识别是否存在防护缺失问题。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 1,\n  \"edge_protection_types\": [\n    \"临边防护\"\n  ],\n  \"description\": \"施工现场可见施工人员，已设置临边防护共1处，边防护设施基本到位。\",\n  \"suggestion\": \"继续保持现有防护措施，定期检查防护设施的完整性和稳固性。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/无人机图片标识441-550/图片/dji_fly_20251111_102900_0_1762828140192_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>请对这张图片进行边防护安全检查，分析临边防护设施的状态。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 2,\n  \"edge_protection_types\": [\n    \"桥台围挡\"\n  ],\n  \"description\": \"施工现场可见施工人员，已设置桥台围挡共2处，边防护设施基本到位。\",\n  \"suggestion\": \"继续保持现有防护措施，定期检查防护设施的完整性和稳固性。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101243_0_1762827163610_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>检查图片中的施工现场，判断边防护措施是否到位，是否存在安全隐患。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 0,\n  \"description\": \"施工现场可见施工人员、施工机械，当前画面中未发现需要临边防护的高风险区域。\",\n  \"suggestion\": \"当前区域无明显临边防护需求，建议关注其他安全事项。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_100957_0_1762826997220_photo_low_quality.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>请检查这张施工现场图片中的边防护设施是否合规，是否存在围栏缺失、防护不全等违规情况。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 0,\n  \"description\": \"施工现场可见施工人员，当前画面中未发现需要临边防护的高风险区域。\",\n  \"suggestion\": \"当前区域无明显临边防护需求，建议关注其他安全事项。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0360.JPG"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是一个专业的工业安全检查AI助手，专注于施工现场的边防护设施安全检查。你需要分析图片中的施工现场，重点关注临边防护设施（围栏、护栏、防护网、安全围挡等）的完整性和合规性。请以JSON格式输出检查结果。"
+      },
+      {
+        "role": "user",
+        "content": "<image>请分析这张施工现场照片的边防护设施情况，输出安全检查结果。"
+      },
+      {
+        "role": "assistant",
+        "content": "{\n  \"violation_detected\": false,\n  \"violation_type\": \"normal\",\n  \"severity\": \"none\",\n  \"edge_protection_count\": 1,\n  \"edge_protection_types\": [\n    \"临边防护\"\n  ],\n  \"description\": \"施工现场可见施工人员，已设置临边防护共1处，边防护设施基本到位。\",\n  \"suggestion\": \"继续保持现有防护措施，定期检查防护设施的完整性和稳固性。\"\n}"
+      }
+    ],
+    "images": [
+      "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/无人机图片标识441-550/图片/dji_fly_20251112_100017_0_1762912817126_photo_low_quality.jpg"
+    ]
+  }
+]

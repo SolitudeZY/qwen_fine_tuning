@@ -1,0 +1,155 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "液压起重机",
+      "score": null,
+      "points": [
+        [
+          1032.6666666666665,
+          326.99999999999994
+        ],
+        [
+          2486.0,
+          326.99999999999994
+        ],
+        [
+          2486.0,
+          2877.0
+        ],
+        [
+          1032.6666666666665,
+          2877.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "皮卡车",
+      "score": null,
+      "points": [
+        [
+          2526.0,
+          2437.0
+        ],
+        [
+          3079.333333333333,
+          2437.0
+        ],
+        [
+          3079.333333333333,
+          3010.3333333333335
+        ],
+        [
+          2526.0,
+          3010.3333333333335
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          2559.333333333333,
+          1470.3333333333333
+        ],
+        [
+          2936.0,
+          1470.3333333333333
+        ],
+        [
+          2936.0,
+          1860.3333333333333
+        ],
+        [
+          2559.333333333333,
+          1860.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          299.33333333333314,
+          1420.3333333333333
+        ],
+        [
+          809.3333333333333,
+          1420.3333333333333
+        ],
+        [
+          809.3333333333333,
+          1823.6666666666665
+        ],
+        [
+          299.33333333333314,
+          1823.6666666666665
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "摩托车",
+      "score": null,
+      "points": [
+        [
+          2739.333333333333,
+          370.33333333333326
+        ],
+        [
+          3132.666666666667,
+          370.33333333333326
+        ],
+        [
+          3132.666666666667,
+          686.9999999999999
+        ],
+        [
+          2739.333333333333,
+          686.9999999999999
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "org_e712216076cbe30a_1765938830000.jpg",
+  "imageData": null,
+  "imageHeight": 3024,
+  "imageWidth": 4032
+}

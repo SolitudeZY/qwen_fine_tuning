@@ -1,0 +1,185 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "反光锥",
+      "score": null,
+      "points": [
+        [
+          736.8478260869564,
+          541.086956521739
+        ],
+        [
+          757.4999999999999,
+          541.086956521739
+        ],
+        [
+          757.4999999999999,
+          568.2608695652175
+        ],
+        [
+          736.8478260869564,
+          568.2608695652175
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "反光立柱",
+      "score": null,
+      "points": [
+        [
+          407.49999999999994,
+          537.8260869565217
+        ],
+        [
+          435.7608695652174,
+          537.8260869565217
+        ],
+        [
+          435.7608695652174,
+          570.4347826086957
+        ],
+        [
+          407.49999999999994,
+          570.4347826086957
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光锥",
+      "score": null,
+      "points": [
+        [
+          454.23913043478257,
+          555.2173913043478
+        ],
+        [
+          477.0652173913043,
+          555.2173913043478
+        ],
+        [
+          477.0652173913043,
+          575.8695652173913
+        ],
+        [
+          454.23913043478257,
+          575.8695652173913
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光立柱",
+      "score": null,
+      "points": [
+        [
+          1007.4999999999999,
+          526.9565217391305
+        ],
+        [
+          1037.9347826086955,
+          526.9565217391305
+        ],
+        [
+          1037.9347826086955,
+          562.8260869565217
+        ],
+        [
+          1007.4999999999999,
+          562.8260869565217
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光锥",
+      "score": null,
+      "points": [
+        [
+          1147.7173913043478,
+          537.8260869565217
+        ],
+        [
+          1175.978260869565,
+          537.8260869565217
+        ],
+        [
+          1175.978260869565,
+          565.0
+        ],
+        [
+          1147.7173913043478,
+          565.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光锥",
+      "score": null,
+      "points": [
+        [
+          1401.8965517241381,
+          536.2068965517242
+        ],
+        [
+          1431.2068965517242,
+          536.2068965517242
+        ],
+        [
+          1431.2068965517242,
+          563.7931034482759
+        ],
+        [
+          1401.8965517241381,
+          563.7931034482759
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_094843_0_1762825723294_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

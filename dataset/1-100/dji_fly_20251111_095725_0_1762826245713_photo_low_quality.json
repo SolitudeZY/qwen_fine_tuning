@@ -1,0 +1,156 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "蓄水桶",
+      "score": null,
+      "points": [
+        [
+          149.50819672131146,
+          690.8196721311475
+        ],
+        [
+          241.31147540983605,
+          690.8196721311475
+        ],
+        [
+          241.31147540983605,
+          792.4590163934425
+        ],
+        [
+          149.50819672131146,
+          792.4590163934425
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "蓄水桶",
+      "score": null,
+      "points": [
+        [
+          400.327868852459,
+          482.6229508196721
+        ],
+        [
+          474.0983606557377,
+          482.6229508196721
+        ],
+        [
+          474.0983606557377,
+          562.950819672131
+        ],
+        [
+          400.327868852459,
+          562.950819672131
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          782.295081967213,
+          335.08196721311475
+        ],
+        [
+          828.1967213114754,
+          335.08196721311475
+        ],
+        [
+          828.1967213114754,
+          389.18032786885243
+        ],
+        [
+          782.295081967213,
+          389.18032786885243
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "液压起重机",
+      "score": null,
+      "points": [
+        [
+          1185.5737704918033,
+          7.2131147540983225
+        ],
+        [
+          1431.4754098360656,
+          7.2131147540983225
+        ],
+        [
+          1431.4754098360656,
+          677.7049180327868
+        ],
+        [
+          1185.5737704918033,
+          677.7049180327868
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          801.081081081081,
+          334.5945945945946
+        ],
+        [
+          811.8918918918919,
+          334.5945945945946
+        ],
+        [
+          811.8918918918919,
+          344.86486486486484
+        ],
+        [
+          801.081081081081,
+          344.86486486486484
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_095725_0_1762826245713_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

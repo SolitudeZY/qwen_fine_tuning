@@ -1,0 +1,359 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "人行塔梯",
+      "score": null,
+      "points": [
+        [
+          455.29411764705884,
+          768.8235294117646
+        ],
+        [
+          596.4705882352941,
+          768.8235294117646
+        ],
+        [
+          596.4705882352941,
+          1001.7647058823529
+        ],
+        [
+          455.29411764705884,
+          1001.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "盖梁",
+      "score": null,
+      "points": [
+        [
+          600.0,
+          144.11764705882354
+        ],
+        [
+          894.1176470588236,
+          144.11764705882354
+        ],
+        [
+          894.1176470588236,
+          245.29411764705884
+        ],
+        [
+          600.0,
+          245.29411764705884
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          635.2941176470588,
+          250.0
+        ],
+        [
+          702.3529411764705,
+          250.0
+        ],
+        [
+          702.3529411764705,
+          391.1764705882353
+        ],
+        [
+          635.2941176470588,
+          391.1764705882353
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          791.7647058823529,
+          244.11764705882354
+        ],
+        [
+          855.2941176470588,
+          244.11764705882354
+        ],
+        [
+          855.2941176470588,
+          398.2352941176471
+        ],
+        [
+          791.7647058823529,
+          398.2352941176471
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "柱系梁",
+      "score": null,
+      "points": [
+        [
+          282.3529411764706,
+          691.1764705882352
+        ],
+        [
+          536.4705882352941,
+          691.1764705882352
+        ],
+        [
+          536.4705882352941,
+          759.4117647058823
+        ],
+        [
+          282.3529411764706,
+          759.4117647058823
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          408.235294117647,
+          452.3529411764706
+        ],
+        [
+          524.7058823529412,
+          452.3529411764706
+        ],
+        [
+          524.7058823529412,
+          684.1176470588235
+        ],
+        [
+          408.235294117647,
+          684.1176470588235
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          161.1764705882353,
+          432.3529411764706
+        ],
+        [
+          322.35294117647055,
+          432.3529411764706
+        ],
+        [
+          322.35294117647055,
+          688.8235294117646
+        ],
+        [
+          161.1764705882353,
+          688.8235294117646
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          430.5882352941176,
+          72.3529411764706
+        ],
+        [
+          498.8235294117647,
+          72.3529411764706
+        ],
+        [
+          498.8235294117647,
+          192.3529411764706
+        ],
+        [
+          430.5882352941176,
+          192.3529411764706
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          555.2941176470588,
+          65.29411764705883
+        ],
+        [
+          609.4117647058824,
+          65.29411764705883
+        ],
+        [
+          609.4117647058824,
+          185.29411764705884
+        ],
+        [
+          555.2941176470588,
+          185.29411764705884
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "盖梁",
+      "score": null,
+      "points": [
+        [
+          394.1176470588235,
+          1.7647058823529411
+        ],
+        [
+          625.8823529411766,
+          1.7647058823529411
+        ],
+        [
+          625.8823529411766,
+          61.76470588235294
+        ],
+        [
+          394.1176470588235,
+          61.76470588235294
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "人行塔梯",
+      "score": null,
+      "points": [
+        [
+          821.1627906976746,
+          42.90697674418602
+        ],
+        [
+          874.6511627906978,
+          42.90697674418602
+        ],
+        [
+          874.6511627906978,
+          160.3488372093023
+        ],
+        [
+          821.1627906976746,
+          160.3488372093023
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "柱系梁施工平台",
+      "score": null,
+      "points": [
+        [
+          654.8837209302326,
+          63.837209302325554
+        ],
+        [
+          822.325581395349,
+          63.837209302325554
+        ],
+        [
+          822.325581395349,
+          126.62790697674417
+        ],
+        [
+          654.8837209302326,
+          126.62790697674417
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_153906_0_1762846746409_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

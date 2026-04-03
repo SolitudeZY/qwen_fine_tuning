@@ -1,0 +1,127 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "皮卡车",
+      "score": null,
+      "points": [
+        [
+          707.0588235294117,
+          491.1764705882353
+        ],
+        [
+          800.0,
+          491.1764705882353
+        ],
+        [
+          800.0,
+          632.3529411764705
+        ],
+        [
+          707.0588235294117,
+          632.3529411764705
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全锥",
+      "score": null,
+      "points": [
+        [
+          623.5294117647059,
+          602.9411764705882
+        ],
+        [
+          657.6470588235295,
+          602.9411764705882
+        ],
+        [
+          657.6470588235295,
+          655.8823529411765
+        ],
+        [
+          623.5294117647059,
+          655.8823529411765
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "越野车",
+      "score": null,
+      "points": [
+        [
+          708.2352941176471,
+          691.1764705882352
+        ],
+        [
+          852.9411764705883,
+          691.1764705882352
+        ],
+        [
+          852.9411764705883,
+          920.5882352941176
+        ],
+        [
+          708.2352941176471,
+          920.5882352941176
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "越野车",
+      "score": null,
+      "points": [
+        [
+          727.5657894736843,
+          210.39473684210523
+        ],
+        [
+          782.171052631579,
+          210.39473684210523
+        ],
+        [
+          782.171052631579,
+          276.84210526315786
+        ],
+        [
+          727.5657894736843,
+          276.84210526315786
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251112_102449_0_1762914289468_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

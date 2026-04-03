@@ -1,0 +1,301 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          660.983606557377,
+          362.9508196721311
+        ],
+        [
+          752.7868852459017,
+          362.9508196721311
+        ],
+        [
+          752.7868852459017,
+          480.983606557377
+        ],
+        [
+          660.983606557377,
+          480.983606557377
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          1075.7377049180327,
+          700.655737704918
+        ],
+        [
+          1262.622950819672,
+          700.655737704918
+        ],
+        [
+          1262.622950819672,
+          853.1147540983605
+        ],
+        [
+          1075.7377049180327,
+          853.1147540983605
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          1031.4754098360656,
+          562.950819672131
+        ],
+        [
+          1165.9016393442623,
+          562.950819672131
+        ],
+        [
+          1165.9016393442623,
+          671.1475409836065
+        ],
+        [
+          1031.4754098360656,
+          671.1475409836065
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          1188.8524590163934,
+          882.622950819672
+        ],
+        [
+          1372.4590163934427,
+          882.622950819672
+        ],
+        [
+          1372.4590163934427,
+          1043.27868852459
+        ],
+        [
+          1188.8524590163934,
+          1043.27868852459
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          652.8431372549019,
+          248.52941176470588
+        ],
+        [
+          687.156862745098,
+          248.52941176470588
+        ],
+        [
+          687.156862745098,
+          282.84313725490193
+        ],
+        [
+          652.8431372549019,
+          282.84313725490193
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          675.3921568627451,
+          220.09803921568627
+        ],
+        [
+          708.2352941176471,
+          220.09803921568627
+        ],
+        [
+          708.2352941176471,
+          260.78431372549016
+        ],
+        [
+          675.3921568627451,
+          260.78431372549016
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "汽车",
+      "score": null,
+      "points": [
+        [
+          729.8039215686274,
+          184.31372549019608
+        ],
+        [
+          750.3921568627451,
+          184.31372549019608
+        ],
+        [
+          750.3921568627451,
+          211.27450980392157
+        ],
+        [
+          729.8039215686274,
+          211.27450980392157
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          845.2873563218391,
+          96.55172413793103
+        ],
+        [
+          909.655172413793,
+          96.55172413793103
+        ],
+        [
+          909.655172413793,
+          139.08045977011494
+        ],
+        [
+          845.2873563218391,
+          139.08045977011494
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          1004.4444444444445,
+          313.3333333333333
+        ],
+        [
+          1017.3333333333334,
+          313.3333333333333
+        ],
+        [
+          1017.3333333333334,
+          332.0
+        ],
+        [
+          1004.4444444444445,
+          332.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          986.6666666666666,
+          299.1111111111111
+        ],
+        [
+          1002.2222222222222,
+          299.1111111111111
+        ],
+        [
+          1002.2222222222222,
+          323.55555555555554
+        ],
+        [
+          986.6666666666666,
+          323.55555555555554
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101011_0_1762827011933_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

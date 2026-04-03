@@ -1,0 +1,127 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "小吊钩限位装置",
+      "score": null,
+      "points": [
+        [
+          1002.3529411764707,
+          104.11764705882354
+        ],
+        [
+          1044.7058823529412,
+          104.11764705882354
+        ],
+        [
+          1044.7058823529412,
+          224.11764705882354
+        ],
+        [
+          1002.3529411764707,
+          224.11764705882354
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "大吊钩",
+      "score": null,
+      "points": [
+        [
+          1004.7058823529412,
+          291.1764705882353
+        ],
+        [
+          1081.1764705882354,
+          291.1764705882353
+        ],
+        [
+          1081.1764705882354,
+          454.7058823529412
+        ],
+        [
+          1004.7058823529412,
+          454.7058823529412
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "防脱钩装置",
+      "score": null,
+      "points": [
+        [
+          1044.7058823529412,
+          398.2352941176471
+        ],
+        [
+          1063.5294117647059,
+          398.2352941176471
+        ],
+        [
+          1063.5294117647059,
+          426.47058823529414
+        ],
+        [
+          1044.7058823529412,
+          426.47058823529414
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "大吊钩限位装置",
+      "score": null,
+      "points": [
+        [
+          1058.8235294117649,
+          167.64705882352942
+        ],
+        [
+          1100.0,
+          167.64705882352942
+        ],
+        [
+          1100.0,
+          280.5882352941177
+        ],
+        [
+          1058.8235294117649,
+          280.5882352941177
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    }
+  ],
+  "imagePath": "dji_fly_20251111_153312_0_1762846392983_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

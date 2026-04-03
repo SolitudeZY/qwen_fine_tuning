@@ -1,0 +1,68 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          640.531561461794,
+          439.83388704318935
+        ],
+        [
+          652.1594684385382,
+          439.83388704318935
+        ],
+        [
+          652.1594684385382,
+          448.47176079734214
+        ],
+        [
+          640.531561461794,
+          448.47176079734214
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          634.9122807017544,
+          424.5614035087719
+        ],
+        [
+          656.8421052631579,
+          424.5614035087719
+        ],
+        [
+          656.8421052631579,
+          470.1754385964912
+        ],
+        [
+          634.9122807017544,
+          470.1754385964912
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101251_0_1762827171896_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440
+}

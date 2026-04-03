@@ -1,0 +1,127 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          856.0655737704918,
+          374.4262295081967
+        ],
+        [
+          1036.3934426229507,
+          374.4262295081967
+        ],
+        [
+          1036.3934426229507,
+          659.6721311475409
+        ],
+        [
+          856.0655737704918,
+          659.6721311475409
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          1108.3333333333335,
+          697.0238095238095
+        ],
+        [
+          1135.1190476190477,
+          697.0238095238095
+        ],
+        [
+          1135.1190476190477,
+          738.0952380952381
+        ],
+        [
+          1108.3333333333335,
+          738.0952380952381
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          1114.6520146520147,
+          712.0879120879121
+        ],
+        [
+          1128.2051282051282,
+          712.0879120879121
+        ],
+        [
+          1128.2051282051282,
+          727.1062271062272
+        ],
+        [
+          1114.6520146520147,
+          727.1062271062272
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          1117.866004962779,
+          704.2183622828784
+        ],
+        [
+          1128.7841191066998,
+          704.2183622828784
+        ],
+        [
+          1128.7841191066998,
+          709.9255583126551
+        ],
+        [
+          1117.866004962779,
+          709.9255583126551
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101113_0_1762827073324_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

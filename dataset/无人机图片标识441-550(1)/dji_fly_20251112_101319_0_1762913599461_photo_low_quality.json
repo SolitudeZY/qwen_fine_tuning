@@ -1,0 +1,185 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          1005.8823529411766,
+          380.5882352941177
+        ],
+        [
+          1174.1176470588236,
+          380.5882352941177
+        ],
+        [
+          1174.1176470588236,
+          455.88235294117646
+        ],
+        [
+          1005.8823529411766,
+          455.88235294117646
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          1276.4705882352941,
+          392.3529411764706
+        ],
+        [
+          1439.0,
+          392.3529411764706
+        ],
+        [
+          1439.0,
+          482.0
+        ],
+        [
+          1276.4705882352941,
+          482.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          809.4117647058824,
+          371.1764705882353
+        ],
+        [
+          976.4705882352941,
+          371.1764705882353
+        ],
+        [
+          976.4705882352941,
+          457.05882352941177
+        ],
+        [
+          809.4117647058824,
+          457.05882352941177
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "混凝土罐车",
+      "score": null,
+      "points": [
+        [
+          575.2941176470588,
+          355.88235294117646
+        ],
+        [
+          757.6470588235295,
+          355.88235294117646
+        ],
+        [
+          757.6470588235295,
+          447.64705882352945
+        ],
+        [
+          575.2941176470588,
+          447.64705882352945
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          284.70588235294116,
+          354.7058823529412
+        ],
+        [
+          455.29411764705884,
+          354.7058823529412
+        ],
+        [
+          455.29411764705884,
+          433.5294117647059
+        ],
+        [
+          284.70588235294116,
+          433.5294117647059
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          44.70588235294116,
+          346.47058823529414
+        ],
+        [
+          220.0,
+          346.47058823529414
+        ],
+        [
+          220.0,
+          424.11764705882354
+        ],
+        [
+          44.70588235294116,
+          424.11764705882354
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    }
+  ],
+  "imagePath": "dji_fly_20251112_101319_0_1762913599461_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

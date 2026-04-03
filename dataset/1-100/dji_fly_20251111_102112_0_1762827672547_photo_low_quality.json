@@ -1,0 +1,185 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "钻孔灌注桩钻头",
+      "score": null,
+      "points": [
+        [
+          911.8032786885245,
+          599.0163934426229
+        ],
+        [
+          977.377049180328,
+          599.0163934426229
+        ],
+        [
+          977.377049180328,
+          667.8688524590164
+        ],
+        [
+          911.8032786885245,
+          667.8688524590164
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          700.327868852459,
+          426.88524590163934
+        ],
+        [
+          792.1311475409835,
+          426.88524590163934
+        ],
+        [
+          792.1311475409835,
+          541.639344262295
+        ],
+        [
+          700.327868852459,
+          541.639344262295
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "钢筋笼",
+      "score": null,
+      "points": [
+        [
+          483.9344262295082,
+          600.655737704918
+        ],
+        [
+          679.0163934426229,
+          600.655737704918
+        ],
+        [
+          679.0163934426229,
+          710.4918032786885
+        ],
+        [
+          483.9344262295082,
+          710.4918032786885
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "钻孔灌注桩",
+      "score": null,
+      "points": [
+        [
+          806.8852459016393,
+          484.2622950819672
+        ],
+        [
+          936.3934426229508,
+          484.2622950819672
+        ],
+        [
+          936.3934426229508,
+          580.983606557377
+        ],
+        [
+          806.8852459016393,
+          580.983606557377
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "钻孔灌注桩护筒",
+      "score": null,
+      "points": [
+        [
+          610.1639344262295,
+          459.672131147541
+        ],
+        [
+          670.8196721311475,
+          459.672131147541
+        ],
+        [
+          670.8196721311475,
+          510.49180327868856
+        ],
+        [
+          610.1639344262295,
+          510.49180327868856
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "泥浆池",
+      "score": null,
+      "points": [
+        [
+          983.9344262295081,
+          784.2622950819672
+        ],
+        [
+          1360.983606557377,
+          784.2622950819672
+        ],
+        [
+          1360.983606557377,
+          1058.0327868852457
+        ],
+        [
+          983.9344262295081,
+          1058.0327868852457
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_102112_0_1762827672547_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

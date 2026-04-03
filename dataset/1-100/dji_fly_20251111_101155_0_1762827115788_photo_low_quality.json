@@ -1,0 +1,127 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "浆砌片石",
+      "score": null,
+      "points": [
+        [
+          829.8360655737705,
+          913.7704918032787
+        ],
+        [
+          977.377049180328,
+          913.7704918032787
+        ],
+        [
+          977.377049180328,
+          1040.0
+        ],
+        [
+          829.8360655737705,
+          1040.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "浆砌片石",
+      "score": null,
+      "points": [
+        [
+          505.2459016393442,
+          680.983606557377
+        ],
+        [
+          582.295081967213,
+          680.983606557377
+        ],
+        [
+          582.295081967213,
+          748.1967213114754
+        ],
+        [
+          505.2459016393442,
+          748.1967213114754
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "浆砌片石",
+      "score": null,
+      "points": [
+        [
+          856.6371681415928,
+          415.929203539823
+        ],
+        [
+          913.2743362831858,
+          415.929203539823
+        ],
+        [
+          913.2743362831858,
+          452.2123893805309
+        ],
+        [
+          856.6371681415928,
+          452.2123893805309
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "浆砌片石",
+      "score": null,
+      "points": [
+        [
+          648.6725663716813,
+          346.0176991150442
+        ],
+        [
+          700.8849557522124,
+          346.0176991150442
+        ],
+        [
+          700.8849557522124,
+          375.22123893805303
+        ],
+        [
+          648.6725663716813,
+          375.22123893805303
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101155_0_1762827115788_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

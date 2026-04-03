@@ -1,0 +1,185 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          369.18032786885243,
+          348.1967213114754
+        ],
+        [
+          479.01639344262287,
+          348.1967213114754
+        ],
+        [
+          479.01639344262287,
+          435.08196721311475
+        ],
+        [
+          369.18032786885243,
+          435.08196721311475
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "平地机",
+      "score": null,
+      "points": [
+        [
+          277.37704918032784,
+          325.24590163934425
+        ],
+        [
+          357.70491803278685,
+          325.24590163934425
+        ],
+        [
+          357.70491803278685,
+          436.72131147540983
+        ],
+        [
+          277.37704918032784,
+          436.72131147540983
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "装载机",
+      "score": null,
+      "points": [
+        [
+          382.16216216216213,
+          130.27027027027026
+        ],
+        [
+          428.64864864864865,
+          130.27027027027026
+        ],
+        [
+          428.64864864864865,
+          195.67567567567568
+        ],
+        [
+          382.16216216216213,
+          195.67567567567568
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          237.037037037037,
+          435.18518518518516
+        ],
+        [
+          309.25925925925924,
+          435.18518518518516
+        ],
+        [
+          309.25925925925924,
+          610.1851851851851
+        ],
+        [
+          237.037037037037,
+          610.1851851851851
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "运输车",
+      "score": null,
+      "points": [
+        [
+          412.037037037037,
+          444.4444444444444
+        ],
+        [
+          509.25925925925924,
+          444.4444444444444
+        ],
+        [
+          509.25925925925924,
+          559.2592592592592
+        ],
+        [
+          412.037037037037,
+          559.2592592592592
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "防雨布",
+      "score": null,
+      "points": [
+        [
+          711.9047619047619,
+          343.57142857142856
+        ],
+        [
+          838.0952380952381,
+          343.57142857142856
+        ],
+        [
+          838.0952380952381,
+          432.4603174603174
+        ],
+        [
+          711.9047619047619,
+          432.4603174603174
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101142_0_1762827102814_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

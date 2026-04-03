@@ -1,0 +1,214 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "薄壁墩液压爬模",
+      "score": null,
+      "points": [
+        [
+          767.5409836065573,
+          371.1475409836065
+        ],
+        [
+          1085.5737704918033,
+          371.1475409836065
+        ],
+        [
+          1085.5737704918033,
+          676.0655737704917
+        ],
+        [
+          767.5409836065573,
+          676.0655737704917
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "基坑",
+      "score": null,
+      "points": [
+        [
+          298.6885245901639,
+          676.0655737704917
+        ],
+        [
+          529.8360655737705,
+          676.0655737704917
+        ],
+        [
+          529.8360655737705,
+          851.4754098360655
+        ],
+        [
+          298.6885245901639,
+          851.4754098360655
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "薄壁墩液压推挽同步爬模",
+      "score": null,
+      "points": [
+        [
+          451.1475409836065,
+          312.1311475409836
+        ],
+        [
+          733.1147540983607,
+          312.1311475409836
+        ],
+        [
+          733.1147540983607,
+          564.5901639344262
+        ],
+        [
+          451.1475409836065,
+          564.5901639344262
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "液压起重机",
+      "score": null,
+      "points": [
+        [
+          259.34426229508193,
+          472.7868852459016
+        ],
+        [
+          452.7868852459016,
+          472.7868852459016
+        ],
+        [
+          452.7868852459016,
+          648.1967213114754
+        ],
+        [
+          259.34426229508193,
+          648.1967213114754
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "罐车",
+      "score": null,
+      "points": [
+        [
+          277.6923076923077,
+          155.3846153846154
+        ],
+        [
+          337.6923076923077,
+          155.3846153846154
+        ],
+        [
+          337.6923076923077,
+          204.6153846153846
+        ],
+        [
+          277.6923076923077,
+          204.6153846153846
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "桥梁墩身承台垫层",
+      "score": null,
+      "points": [
+        [
+          334.6153846153846,
+          721.5384615384615
+        ],
+        [
+          502.30769230769226,
+          721.5384615384615
+        ],
+        [
+          502.30769230769226,
+          832.3076923076923
+        ],
+        [
+          334.6153846153846,
+          832.3076923076923
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "人行塔梯",
+      "score": null,
+      "points": [
+        [
+          967.9166666666666,
+          323.33333333333337
+        ],
+        [
+          1116.5277777777778,
+          323.33333333333337
+        ],
+        [
+          1116.5277777777778,
+          881.6666666666667
+        ],
+        [
+          967.9166666666666,
+          881.6666666666667
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101326_0_1762827206324_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}
