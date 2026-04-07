@@ -221,7 +221,7 @@ def chat(model, processor, model_family, image_path, query=None):
 import re
 
 def _extract_json_object(response: str):
-    """从回复中提取JSON对象，并兼容模型将 JSON 切散或格式不标准的情况"""
+    """从回复中提取JSON对象，优先匹配 ```json ... ``` 块，否则提取第一个大括号到最后一个大括号的内容"""
     # 1. 尝试匹配 markdown 的 json 代码块
     json_block_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', response, re.DOTALL)
     if json_block_match:
@@ -233,93 +233,15 @@ def _extract_json_object(response: str):
 
     # 2. 尝试从后往前寻找能够成功 parse 的完整 JSON 对象
     end = response.rfind("}")
-    parsed_json = None
-    json_candidate = None
-    json_start_index = -1
-    
     if end != -1:
         start = response.rfind("{", 0, end)
         while start != -1:
             candidate = response[start:end+1]
             try:
-                # 兼容模型偶尔使用单引号或格式不规范的情况
-                candidate_fixed = candidate.replace("'", '"')
-                parsed_json = json.loads(candidate_fixed)
-                json_candidate = candidate_fixed
-                json_start_index = start
-                break # 找到了最外层或者说第一个能解开的
+                return json.loads(candidate), candidate, response[:start].strip()
             except json.JSONDecodeError:
                 start = response.rfind("{", 0, start)
                 
-    # 如果找到了 JSON，并且它包含了关键的状态字段
-    if parsed_json is not None and ("violation_detected" in parsed_json or "violation_type" in parsed_json):
-        # 检查是否缺失 boxes
-        if parsed_json.get("violation_detected") is True and not parsed_json.get("violation_boxes"):
-            # 尝试在整个文本中搜索散落的 boxes，并补充进去
-            box_objects = re.findall(r'\{\s*["\']label["\']\s*:\s*["\'](.*?)["\']\s*,\s*["\']bbox["\']\s*:\s*(\[[^\]]+\])\s*\}', response)
-            if box_objects:
-                parsed_boxes = []
-                for label, bbox_str in box_objects:
-                    try:
-                        bbox = json.loads(bbox_str)
-                        parsed_boxes.append({"label": label, "bbox": bbox})
-                    except:
-                        pass
-                if parsed_boxes:
-                    parsed_json["violation_boxes"] = parsed_boxes
-        
-        return parsed_json, json_candidate, response[:json_start_index].strip() if json_start_index > 0 else response.strip()
-                
-    # 3. 兜底策略：如果模型没有输出标准 JSON，或者将 violation_boxes 打印在了 JSON 外面
-    # 尝试手动通过正则提取关键字段构建 JSON
-    fallback_json = {}
-    
-    # 提取 violation_detected
-    if "violation_detected: true" in response.lower() or '"violation_detected": true' in response.lower():
-        fallback_json["violation_detected"] = True
-    elif "violation_detected: false" in response.lower() or '"violation_detected": false' in response.lower():
-        fallback_json["violation_detected"] = False
-        
-    # 如果找到了布尔值，说明模型意图输出结构化数据，继续提取其他字段
-    if "violation_detected" in fallback_json:
-        # 提取类型、严重程度、建议等
-        type_match = re.search(r'violation_type:\s*([^\n]+)', response)
-        if type_match: fallback_json["violation_type"] = type_match.group(1).strip().strip('",')
-        
-        severity_match = re.search(r'severity:\s*([^\n]+)', response)
-        if severity_match: fallback_json["severity"] = severity_match.group(1).strip().strip('",')
-        
-        suggestion_match = re.search(r'suggestion:\s*([^\n]+)', response)
-        if suggestion_match: fallback_json["suggestion"] = suggestion_match.group(1).strip().strip('",')
-        
-        # 尝试提取独立的 violation_boxes 数组
-        # 模型可能输出: violation_boxes: [{"label":...}] [{"label":...}] 这种多个列表散落的情况
-        # 或者输出正常的: violation_boxes: [{"label":...}, {"label":...}]
-        if "violation_boxes" not in fallback_json:
-            # 找到所有长得像 {"label": "...", "bbox": [...]} 的对象
-            box_objects = re.findall(r'\{\s*["\']label["\']\s*:\s*["\'](.*?)["\']\s*,\s*["\']bbox["\']\s*:\s*(\[[^\]]+\])\s*\}', response)
-            if box_objects:
-                parsed_boxes = []
-                for label, bbox_str in box_objects:
-                    try:
-                        bbox = json.loads(bbox_str)
-                        parsed_boxes.append({"label": label, "bbox": bbox})
-                    except:
-                        pass
-                if parsed_boxes:
-                    fallback_json["violation_boxes"] = parsed_boxes
-                    
-        # 还有一种情况：模型输出了两段 JSON，一段是状态，一段是 boxes (整块数组)
-        if "violation_boxes" not in fallback_json:
-            all_arrays = re.findall(r'\[\s*\{.*?"label".*?"bbox".*?\}\s*\]', response, re.DOTALL)
-            if all_arrays:
-                try:
-                    fallback_json["violation_boxes"] = json.loads(all_arrays[-1])
-                except json.JSONDecodeError:
-                    pass
-                    
-        return fallback_json, json.dumps(fallback_json, ensure_ascii=False), response.strip()
-
     return None, None, response.strip()
 
 
@@ -438,8 +360,7 @@ def interactive_mode(model, processor, model_family, visualize=False, output_dir
 
         if visualize and is_violation:
             if not boxes:
-                print("  警告: 未在初始回答中检测到 violation_boxes，正在尝试从备用逻辑获取或进行第二阶段定位...")
-                # 兼容旧版本模型：如果解析出来没有框，自动进行一次定位兜底
+                print("  正在进行第二阶段违规区域定位...")
                 boxes = locate_violations(model, processor, model_family, image_path)
             else:
                 boxes = _normalize_boxes(boxes, image_path)
@@ -541,8 +462,7 @@ if __name__ == "__main__":
         if args.visualize and result and result.get("violation_detected"):
             boxes = result.get("violation_boxes", [])
             if not boxes:
-                print("  警告: 未在初始回答中检测到 violation_boxes，正在尝试从备用逻辑获取或进行第二阶段定位...")
-                # 兼容旧版本模型：如果解析出来没有框，自动进行一次定位兜底
+                print("  正在进行第二阶段违规区域定位...")
                 boxes = locate_violations(model, processor, model_family, args.image)
             else:
                 boxes = _normalize_boxes(boxes, args.image)
