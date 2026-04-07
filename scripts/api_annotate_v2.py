@@ -14,7 +14,6 @@
 import os
 import pathlib
 import sys
-import pathlib
 
 # 解决 dashscope 已安装但当前 Python 解释器找不到的问题
 # 将 dashscope 所在真实 site-packages 目录临时注入 sys.path

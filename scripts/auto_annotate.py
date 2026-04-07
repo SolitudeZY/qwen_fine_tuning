@@ -5,32 +5,18 @@ import time
 from tqdm import tqdm
 
 import torch
-from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor, BitsAndBytesConfig
 from qwen_vl_utils import process_vision_info
+from model_utils import load_vlm, infer_vlm
 
 # ============ 核心配置 ============
-MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen2.5-VL-7B-Instruct"
+MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct"
 DATASET_DIR = "/home/fs-ai/llama-qwen/dataset"
 OUTPUT_JSON = "/home/fs-ai/llama-qwen/outputs/auto_annotations_cot.json"
 
 def load_model():
-    """加载 4-bit 量化的 Qwen2.5-VL-7B 基础模型"""
-    print(f"Loading Base Model in 4-bit from: {MODEL_PATH}")
-    quantization_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.bfloat16,
-        bnb_4bit_use_double_quant=True,
-    )
-    model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-        MODEL_PATH,
-        torch_dtype=torch.bfloat16,
-        device_map="auto",
-        quantization_config=quantization_config,
-    )
-    processor = AutoProcessor.from_pretrained(MODEL_PATH)
-    model.eval()
-    return model, processor
+    """加载 4-bit 量化的 VLM 模型（自动适配 Qwen2.5-VL / Qwen3-VL）"""
+    model, processor, family = load_vlm(MODEL_PATH)
+    return model, processor, family
 
 def parse_labelme_to_qwen_boxes(json_path: str) -> dict:
     with open(json_path, "r", encoding="utf-8") as f:
@@ -143,7 +129,7 @@ def main():
 
     print(f"Found {len(parsed_data)} valid image-annotation pairs.")
 
-    model, processor = load_model()
+    model, processor, model_family = load_model()
 
     print("\nStarting Auto-Annotation...")
     results = []
@@ -152,21 +138,10 @@ def main():
     for i, data in enumerate(tqdm(parsed_data)):
         messages = build_cot_prompt(data)
 
-        text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        image_inputs, video_inputs = process_vision_info(messages)
-        inputs = processor(
-            text=[text],
-            images=image_inputs,
-            videos=video_inputs,
-            padding=True,
-            return_tensors="pt",
-        ).to(model.device)
-
-        with torch.no_grad():
-            output_ids = model.generate(**inputs, max_new_tokens=768, do_sample=True, temperature=0.3)
-
-        generated = [out[len(inp):] for inp, out in zip(inputs.input_ids, output_ids)]
-        response_text = processor.batch_decode(generated, skip_special_tokens=True)[0]
+        response_text = infer_vlm(
+            model, processor, model_family, messages,
+            max_new_tokens=768, do_sample=True, temperature=0.3,
+        )
 
         vlm_parsed = parse_vlm_output(response_text)
 

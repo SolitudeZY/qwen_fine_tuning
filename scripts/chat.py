@@ -4,6 +4,7 @@
   1. 输入图片路径进行单图检测
   2. 交互式多轮对话
   3. 对比测试（原始模型 vs 微调模型）
+  4. Qwen2.5-VL 和 Qwen3-VL 模型自动适配
 """
 
 import json
@@ -15,12 +16,11 @@ import cv2
 import numpy as np
 from PIL import Image as PILImage, ImageDraw, ImageFont
 import torch
-from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor, BitsAndBytesConfig
-from peft import PeftModel
-from qwen_vl_utils import process_vision_info
+from model_utils import load_vlm, infer_vlm
 
 # ============ 配置 ============
-MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen2.5-VL-7B-Instruct"
+# 默认模型路径，可通过 --model_path 覆盖
+MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct"
 # 使用最佳 checkpoint
 
 SYSTEM_PROMPT = (
@@ -143,7 +143,7 @@ def _normalize_boxes(boxes, image_path):
     return boxes
 
 
-def locate_violations(model, processor, image_path):
+def locate_violations(model, processor, model_family, image_path):
     """第二阶段：让模型定位违规区域，输出 bbox"""
     messages = [
         {
@@ -155,21 +155,7 @@ def locate_violations(model, processor, image_path):
         },
     ]
 
-    text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    image_inputs, video_inputs = process_vision_info(messages)
-    inputs = processor(
-        text=[text],
-        images=image_inputs,
-        videos=video_inputs,
-        padding=True,
-        return_tensors="pt",
-    ).to(model.device)
-
-    with torch.no_grad():
-        output_ids = model.generate(**inputs, max_new_tokens=512, do_sample=False)
-
-    generated = [out[len(inp):] for inp, out in zip(inputs.input_ids, output_ids)]
-    response = processor.batch_decode(generated, skip_special_tokens=True)[0]
+    response = infer_vlm(model, processor, model_family, messages, max_new_tokens=512)
 
     cleaned = response.strip()
     if cleaned.startswith("```"):
@@ -203,34 +189,13 @@ def locate_violations(model, processor, image_path):
 
 
 def load_model(use_lora=True):
-    """加载模型"""
-    print(f"正在加载基础模型: {MODEL_PATH}")
-    quantization_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.bfloat16,
-        bnb_4bit_use_double_quant=True,
-    )
-    model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-        MODEL_PATH,
-        torch_dtype=torch.bfloat16,
-        device_map="cuda",
-        quantization_config=quantization_config,
-    )
-
-    if use_lora and LORA_PATH and os.path.exists(LORA_PATH):
-        print(f"正在加载 LoRA 微调权重: {LORA_PATH}")
-        model = PeftModel.from_pretrained(model, LORA_PATH)
-        print("LoRA 权重加载成功！")
-    elif use_lora:
-        print(f"警告: LoRA 路径为空或不存在 {LORA_PATH}，使用原始模型")
-
-    processor = AutoProcessor.from_pretrained(MODEL_PATH,use_fast=False)
-    model.eval()
-    return model, processor
+    """加载模型（自动适配 Qwen2.5-VL / Qwen3-VL）"""
+    lora = LORA_PATH if (use_lora and LORA_PATH) else None
+    model, processor, family = load_vlm(MODEL_PATH, lora_path=lora)
+    return model, processor, family
 
 
-def chat(model, processor, image_path, query=None):
+def chat(model, processor, model_family, image_path, query=None):
     """单次对话推理"""
     if query is None:
         query = DEFAULT_QUERY
@@ -246,24 +211,8 @@ def chat(model, processor, image_path, query=None):
         },
     ]
 
-    text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    image_inputs, video_inputs = process_vision_info(messages)
-    inputs = processor(
-        text=[text],
-        images=image_inputs,
-        videos=video_inputs,
-        padding=True,
-        return_tensors="pt",
-    ).to(model.device)
-
     start = time.time()
-    with torch.no_grad():
-        output_ids = model.generate(**inputs, max_new_tokens=768, do_sample=False)
-
-    generated = [
-        out[len(inp):] for inp, out in zip(inputs.input_ids, output_ids)
-    ]
-    response = processor.batch_decode(generated, skip_special_tokens=True)[0]
+    response = infer_vlm(model, processor, model_family, messages, max_new_tokens=768)
     elapsed = time.time() - start
 
     return response, elapsed
@@ -321,11 +270,12 @@ def print_result(response, elapsed):
         return None
 
 
-def interactive_mode(model, processor, visualize=False, output_dir=None):
+def interactive_mode(model, processor, model_family, visualize=False, output_dir=None):
     """交互式对话模式"""
     print("\n" + "="*60)
     print("  边防护违规识别系统 - 交互式测试")
-    print("  模型: Qwen2.5-VL-7B + LoRA 微调")
+    family_label = "Qwen3-VL" if model_family == "qwen3-vl" else "Qwen2.5-VL"
+    print(f"  模型: {family_label} ({os.path.basename(MODEL_PATH)})")
     if visualize:
         print(f"  可视化模式已开启，标注图保存至: {output_dir}")
     print("="*60)
@@ -364,14 +314,14 @@ def interactive_mode(model, processor, visualize=False, output_dir=None):
         query = custom_query if custom_query else None
 
         print(f"\n正在分析图片: {image_path}")
-        response, elapsed = chat(model, processor, image_path, query)
+        response, elapsed = chat(model, processor, model_family, image_path, query)
         result = print_result(response, elapsed)
 
         if visualize and result and result.get("violation_detected"):
             boxes = result.get("violation_boxes", [])
             if not boxes:
                 print("  正在进行第二阶段违规区域定位...")
-                boxes = locate_violations(model, processor, image_path)
+                boxes = locate_violations(model, processor, model_family, image_path)
             else:
                 boxes = _normalize_boxes(boxes, image_path)
             if boxes:
@@ -382,7 +332,7 @@ def interactive_mode(model, processor, visualize=False, output_dir=None):
                 print("  未能定位到具体违规区域，跳过可视化。")
 
 
-def batch_test(model, processor, test_jsonl):
+def batch_test(model, processor, model_family, test_jsonl):
     """批量测试模式：在测试集上运行"""
     print(f"\n正在加载测试数据: {test_jsonl}")
     samples = []
@@ -414,7 +364,7 @@ def batch_test(model, processor, test_jsonl):
         except json.JSONDecodeError:
             continue
 
-        response, elapsed = chat(model, processor, image_path)
+        response, elapsed = chat(model, processor, model_family, image_path)
 
         predicted_json_str = response
         predicted_json_start = response.rfind("{")
@@ -444,6 +394,7 @@ def batch_test(model, processor, test_jsonl):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="边防护违规识别 - 测试对话")
+    parser.add_argument("--model_path", type=str, default=None, help="模型路径（覆盖默认值）")
     parser.add_argument("--no-lora", action="store_true", help="不加载 LoRA，使用原始模型对比")
     parser.add_argument("--image", type=str, help="直接测试单张图片")
     parser.add_argument("--batch-test", action="store_true", help="在测试集上批量测试")
@@ -455,21 +406,23 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     LORA_PATH = args.lora_path
+    if args.model_path:
+        MODEL_PATH = args.model_path
     use_lora = not args.no_lora
-    model, processor = load_model(use_lora=use_lora)
+    model, processor, model_family = load_model(use_lora=use_lora)
 
     if args.visualize:
         os.makedirs(args.output_dir, exist_ok=True)
 
     if args.image:
         # 单图测试
-        response, elapsed = chat(model, processor, args.image, args.query)
+        response, elapsed = chat(model, processor, model_family, args.image, args.query)
         result = print_result(response, elapsed)
         if args.visualize and result and result.get("violation_detected"):
             boxes = result.get("violation_boxes", [])
             if not boxes:
                 print("  正在进行第二阶段违规区域定位...")
-                boxes = locate_violations(model, processor, args.image)
+                boxes = locate_violations(model, processor, model_family, args.image)
             else:
                 boxes = _normalize_boxes(boxes, args.image)
             if boxes:
@@ -480,7 +433,7 @@ if __name__ == "__main__":
                 print("  未能定位到具体违规区域，跳过可视化。")
     elif args.batch_test:
         # 批量测试
-        batch_test(model, processor, args.test_data)
+        batch_test(model, processor, model_family, args.test_data)
     else:
         # 交互模式
-        interactive_mode(model, processor, visualize=args.visualize, output_dir=args.output_dir)
+        interactive_mode(model, processor, model_family, visualize=args.visualize, output_dir=args.output_dir)

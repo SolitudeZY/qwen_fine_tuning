@@ -1,42 +1,18 @@
 """
-Qwen2.5-VL-7B 边防护违规识别 - 评估脚本
+VLM 边防护违规识别 - 评估脚本
+支持 Qwen2.5-VL 和 Qwen3-VL 系列模型
 在测试集上评估模型性能
 """
 
 import argparse
 import json
 import os
-import sys
 
 import torch
-from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor, BitsAndBytesConfig
-from peft import PeftModel
-from qwen_vl_utils import process_vision_info
+from model_utils import load_vlm, infer_vlm
 
 
-def load_model(model_path: str, lora_path: str = None):
-    """加载模型"""
-    print(f"Loading model: {model_path}")
-    quantization_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.bfloat16,
-        bnb_4bit_use_double_quant=True,
-    )
-    model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-        model_path,
-        torch_dtype=torch.bfloat16,
-        device_map="auto",
-        quantization_config=quantization_config,
-    )
-    if lora_path:
-        print(f"Loading LoRA: {lora_path}")
-        model = PeftModel.from_pretrained(model, lora_path)
-    processor = AutoProcessor.from_pretrained(model_path)
-    return model, processor
-
-
-def evaluate(model, processor, test_data: list) -> dict:
+def evaluate(model, processor, model_family: str, test_data: list) -> dict:
     """评估模型在测试集上的表现"""
     total = len(test_data)
     correct_violation = 0  # 违规判定正确数
@@ -73,29 +49,10 @@ def evaluate(model, processor, test_data: list) -> dict:
             print(f"  [{i+1}] Cannot parse expected JSON, skipping")
             continue
 
-        # 推理
-        text = processor.apply_chat_template(
-            input_messages, tokenize=False, add_generation_prompt=True
+        # 推理（使用统一接口）
+        output_text = infer_vlm(
+            model, processor, model_family, input_messages, max_new_tokens=512
         )
-        image_inputs, video_inputs = process_vision_info(input_messages)
-        inputs = processor(
-            text=[text],
-            images=image_inputs,
-            videos=video_inputs,
-            padding=True,
-            return_tensors="pt",
-        ).to(model.device)
-
-        with torch.no_grad():
-            generated_ids = model.generate(**inputs, max_new_tokens=512)
-
-        generated_ids_trimmed = [
-            out_ids[len(in_ids):]
-            for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
-        ]
-        output_text = processor.batch_decode(
-            generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
-        )[0]
 
         try:
             predicted = json.loads(output_text)
@@ -117,16 +74,21 @@ def evaluate(model, processor, test_data: list) -> dict:
             correct_type += 1
 
         status = "OK" if violation_match else "WRONG"
-        print(f"  [{i+1}/{total}] {status} | Expected: {exp_violation}({exp_type}) | Predicted: {pred_violation}({pred_type})")
+        print(
+            f"  [{i+1}/{total}] {status} | Expected: {exp_violation}({exp_type})"
+            f" | Predicted: {pred_violation}({pred_type})"
+        )
 
-        results.append({
-            "expected_violation": exp_violation,
-            "predicted_violation": pred_violation,
-            "expected_type": exp_type,
-            "predicted_type": pred_type,
-            "violation_match": violation_match,
-            "type_match": type_match,
-        })
+        results.append(
+            {
+                "expected_violation": exp_violation,
+                "predicted_violation": pred_violation,
+                "expected_type": exp_type,
+                "predicted_type": pred_type,
+                "violation_match": violation_match,
+                "type_match": type_match,
+            }
+        )
 
     metrics = {
         "total": total,
@@ -143,12 +105,25 @@ def evaluate(model, processor, test_data: list) -> dict:
     return {"metrics": metrics, "details": results}
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="评估边防护违规识别模型")
-    parser.add_argument("--model_path", type=str, default="/home/fs-ai/llama-qwen/models/Qwen/Qwen2.5-VL-7B-Instruct")
+    parser.add_argument(
+        "--model_path",
+        type=str,
+        default="/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct",
+        help="模型路径（支持 Qwen2.5-VL 和 Qwen3-VL）",
+    )
     parser.add_argument("--lora_path", type=str, default=None)
-    parser.add_argument("--test_data", type=str, default="/home/fs-ai/llama-qwen/data/test.jsonl")
-    parser.add_argument("--output", type=str, default="/home/fs-ai/llama-qwen/outputs/eval_results.json")
+    parser.add_argument(
+        "--test_data",
+        type=str,
+        default="/home/fs-ai/llama-qwen/data/test.jsonl",
+    )
+    parser.add_argument(
+        "--output",
+        type=str,
+        default="/home/fs-ai/llama-qwen/outputs/eval_results.json",
+    )
     args = parser.parse_args()
 
     # 加载测试数据
@@ -159,8 +134,8 @@ def main():
                 test_data.append(json.loads(line))
     print(f"Loaded {len(test_data)} test samples")
 
-    model, processor = load_model(args.model_path, args.lora_path)
-    results = evaluate(model, processor, test_data)
+    model, processor, model_family = load_vlm(args.model_path, args.lora_path)
+    results = evaluate(model, processor, model_family, test_data)
 
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, "w", encoding="utf-8") as f:

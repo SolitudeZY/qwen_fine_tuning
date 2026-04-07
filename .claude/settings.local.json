@@ -18,7 +18,12 @@
       "Bash(python:*)",
       "Bash(conda run:*)",
       "Bash(kill:*)",
-      "Bash(fc-list :lang=zh -f \"%{file}\\\\n\")"
+      "Bash(fc-list :lang=zh -f \"%{file}\\\\n\")",
+      "Bash(ls:*)",
+      "WebSearch",
+      "mcp__plugin_everything-claude-code_exa__web_search_exa",
+      "mcp__plugin_everything-claude-code_exa__web_fetch_exa",
+      "Bash(nvidia-smi --query-gpu=name,memory.total --format=csv,noheader)"
     ]
   }
 }
