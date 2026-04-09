@@ -1,0 +1,233 @@
+{
+  "version": "6.0.0",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "液压起重机",
+      "points": [
+        [
+          859.344262295082,
+          451.4754098360656
+        ],
+        [
+          970.8196721311476,
+          621.967213114754
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "薄壁墩液压推挽同步爬模",
+      "points": [
+        [
+          1157.704918032787,
+          264.5901639344262
+        ],
+        [
+          1429.8360655737704,
+          603.9344262295082
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "桥梁墩身承台垫层",
+      "points": [
+        [
+          788.8524590163934,
+          715.4098360655737
+        ],
+        [
+          995.4098360655737,
+          890.8196721311475
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "基坑",
+      "points": [
+        [
+          720.0,
+          648.1967213114754
+        ],
+        [
+          1113.4426229508197,
+          941.639344262295
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "临边防护",
+      "points": [
+        [
+          732.0,
+          682.4
+        ],
+        [
+          800.8,
+          958.4
+        ],
+        [
+          1058.4,
+          917.6
+        ],
+        [
+          1052.0,
+          896.0
+        ],
+        [
+          814.4,
+          940.8
+        ],
+        [
+          745.6,
+          676.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "临边防护",
+      "points": [
+        [
+          841.6,
+          641.6
+        ],
+        [
+          972.0,
+          611.2
+        ],
+        [
+          1061.40625,
+          779.6875
+        ],
+        [
+          1137.96875,
+          875.0
+        ],
+        [
+          1097.34375,
+          892.1875
+        ],
+        [
+          953.59375,
+          632.8125
+        ],
+        [
+          848.90625,
+          665.625
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          1036.4634146341464,
+          966.8292682926829
+        ],
+        [
+          1126.7073170731708,
+          879.0243902439024
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          708.4146341463415,
+          721.7073170731707
+        ],
+        [
+          870.6097560975611,
+          624.1463414634146
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "临边防护缺失",
+      "points": [
+        [
+          881.5853658536587,
+          114.39024390243902
+        ],
+        [
+          960.8536585365855,
+          57.07317073170732
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101405_0_1762827245671_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

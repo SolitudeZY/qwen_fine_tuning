@@ -1,0 +1,1006 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          945.8823529411766,
+          14.705882352941178
+        ],
+        [
+          934.1176470588236,
+          39.41176470588235
+        ],
+        [
+          938.8235294117649,
+          102.94117647058825
+        ],
+        [
+          945.8823529411766,
+          170.0
+        ],
+        [
+          952.9411764705883,
+          255.88235294117646
+        ],
+        [
+          964.7058823529412,
+          375.88235294117646
+        ],
+        [
+          977.6470588235295,
+          490.0
+        ],
+        [
+          992.9411764705883,
+          615.8823529411765
+        ],
+        [
+          1008.2352941176471,
+          739.4117647058823
+        ],
+        [
+          1023.5294117647059,
+          898.2352941176471
+        ],
+        [
+          1043.5294117647059,
+          1070.0
+        ],
+        [
+          1072.9411764705883,
+          1074.7058823529412
+        ],
+        [
+          1044.7058823529412,
+          828.8235294117646
+        ],
+        [
+          1037.6470588235295,
+          750.0
+        ],
+        [
+          1011.7647058823529,
+          577.0588235294117
+        ],
+        [
+          1000.0,
+          454.7058823529412
+        ],
+        [
+          982.3529411764707,
+          360.5882352941177
+        ],
+        [
+          976.4705882352941,
+          287.64705882352945
+        ],
+        [
+          968.2352941176471,
+          227.64705882352942
+        ],
+        [
+          964.7058823529412,
+          182.94117647058823
+        ],
+        [
+          957.6470588235295,
+          137.05882352941177
+        ],
+        [
+          954.1176470588236,
+          98.23529411764706
+        ],
+        [
+          951.7647058823529,
+          65.29411764705883
+        ],
+        [
+          948.2352941176471,
+          44.117647058823536
+        ],
+        [
+          968.2352941176471,
+          18.235294117647058
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          429.4117647058824,
+          368.8235294117647
+        ],
+        [
+          462.35294117647055,
+          420.5882352941177
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          379.99999999999994,
+          435.88235294117646
+        ],
+        [
+          419.99999999999994,
+          487.64705882352945
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          323.5294117647059,
+          526.470588235294
+        ],
+        [
+          356.4705882352941,
+          575.8823529411765
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          252.94117647058823,
+          634.7058823529411
+        ],
+        [
+          289.4117647058824,
+          681.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          171.76470588235293,
+          757.0588235294117
+        ],
+        [
+          212.94117647058823,
+          802.9411764705882
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光柱",
+      "score": null,
+      "points": [
+        [
+          74.11764705882354,
+          926.4705882352941
+        ],
+        [
+          111.76470588235293,
+          973.5294117647059
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "摩托车",
+      "score": null,
+      "points": [
+        [
+          627.0588235294117,
+          337.05882352941177
+        ],
+        [
+          694.1176470588236,
+          440.5882352941177
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          648.2352941176471,
+          348.8235294117647
+        ],
+        [
+          680.0,
+          392.3529411764706
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          520.0,
+          325.29411764705884
+        ],
+        [
+          540.0,
+          342.94117647058823
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          518.8235294117646,
+          345.29411764705884
+        ],
+        [
+          544.7058823529412,
+          368.8235294117647
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          510.5882352941176,
+          318.2352941176471
+        ],
+        [
+          556.4705882352941,
+          408.8235294117647
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          807.0588235294117,
+          444.11764705882354
+        ],
+        [
+          828.2352941176471,
+          462.94117647058823
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          798.8235294117646,
+          462.94117647058823
+        ],
+        [
+          823.5294117647059,
+          493.5294117647059
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          791.7647058823529,
+          430.0
+        ],
+        [
+          843.5294117647059,
+          531.1764705882352
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          707.0588235294117,
+          755.8823529411765
+        ],
+        [
+          735.2941176470588,
+          775.8823529411765
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          692.9411764705883,
+          750.0
+        ],
+        [
+          741.1764705882354,
+          837.0588235294117
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          757.6470588235295,
+          781.7647058823529
+        ],
+        [
+          776.4705882352941,
+          802.9411764705882
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          751.7647058823529,
+          804.1176470588235
+        ],
+        [
+          777.6470588235295,
+          842.9411764705882
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          747.0588235294117,
+          774.7058823529411
+        ],
+        [
+          785.8823529411766,
+          868.8235294117646
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          951.7647058823529,
+          573.5294117647059
+        ],
+        [
+          975.2941176470588,
+          594.7058823529411
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          952.9411764705883,
+          599.4117647058823
+        ],
+        [
+          981.1764705882354,
+          628.8235294117646
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          944.7058823529412,
+          566.470588235294
+        ],
+        [
+          983.5294117647059,
+          660.5882352941176
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          992.9411764705883,
+          651.1764705882352
+        ],
+        [
+          1011.7647058823529,
+          671.1764705882352
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          987.0588235294119,
+          675.8823529411765
+        ],
+        [
+          1011.7647058823529,
+          711.1764705882352
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          985.8823529411766,
+          648.8235294117646
+        ],
+        [
+          1012.9411764705883,
+          741.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          1005.8823529411766,
+          805.2941176470588
+        ],
+        [
+          1027.058823529412,
+          828.8235294117646
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          997.6470588235295,
+          827.6470588235294
+        ],
+        [
+          1024.7058823529412,
+          865.2941176470588
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          985.8823529411766,
+          798.2352941176471
+        ],
+        [
+          1030.5882352941178,
+          901.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          1072.9411764705883,
+          810.0
+        ],
+        [
+          1094.1176470588236,
+          832.3529411764706
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          1075.294117647059,
+          839.4117647058823
+        ],
+        [
+          1097.6470588235295,
+          875.8823529411765
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          1062.3529411764707,
+          806.470588235294
+        ],
+        [
+          1096.4705882352941,
+          904.1176470588235
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          1069.4117647058824,
+          773.5294117647059
+        ],
+        [
+          1090.5882352941178,
+          800.5882352941176
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          129.41176470588232,
+          792.3529411764706
+        ],
+        [
+          150.58823529411762,
+          815.8823529411765
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          67.05882352941177,
+          857.0588235294117
+        ],
+        [
+          92.94117647058823,
+          881.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          140.0,
+          821.7647058823529
+        ],
+        [
+          178.8235294117647,
+          852.3529411764706
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          123.52941176470586,
+          799.4117647058823
+        ],
+        [
+          200.0,
+          895.8823529411765
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          80.0,
+          890.0
+        ],
+        [
+          118.8235294117647,
+          912.3529411764706
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          61.176470588235304,
+          851.1764705882352
+        ],
+        [
+          155.29411764705884,
+          940.5882352941176
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "洒水车",
+      "score": null,
+      "points": [
+        [
+          635.2941176470588,
+          65.29411764705883
+        ],
+        [
+          860.0,
+          190.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "越野车",
+      "score": null,
+      "points": [
+        [
+          837.6470588235295,
+          253.5294117647059
+        ],
+        [
+          949.4117647058824,
+          379.4117647058824
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "越野车",
+      "score": null,
+      "points": [
+        [
+          838.8235294117649,
+          407.64705882352945
+        ],
+        [
+          950.5882352941178,
+          581.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "越野车",
+      "score": null,
+      "points": [
+        [
+          811.7647058823529,
+          627.6470588235294
+        ],
+        [
+          971.7647058823529,
+          908.8235294117646
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    }
+  ],
+  "imagePath": "dji_fly_20251112_100204_0_1762912924903_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

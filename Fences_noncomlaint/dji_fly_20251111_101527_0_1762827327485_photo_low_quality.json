@@ -1,0 +1,287 @@
+{
+  "version": "6.0.0",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "薄壁墩液压推挽同步爬模",
+      "points": [
+        [
+          774.0983606557377,
+          285.90163934426226
+        ],
+        [
+          1164.2622950819673,
+          608.8524590163934
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "液压起重机",
+      "points": [
+        [
+          631.4754098360655,
+          564.5901639344262
+        ],
+        [
+          775.7377049180327,
+          731.8032786885245
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "临边防护",
+      "points": [
+        [
+          426.5573770491803,
+          192.4590163934426
+        ],
+        [
+          474.0983606557377,
+          289.18032786885243
+        ],
+        [
+          646.2295081967213,
+          230.16393442622947
+        ],
+        [
+          615.0819672131147,
+          207.21311475409834
+        ],
+        [
+          485.5737704918032,
+          258.03278688524586
+        ],
+        [
+          441.311475409836,
+          180.98360655737702
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "基坑",
+      "points": [
+        [
+          616.7213114754098,
+          708.8524590163934
+        ],
+        [
+          931.4754098360655,
+          972.7868852459015
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "临边防护",
+      "points": [
+        [
+          625.6,
+          840.8
+        ],
+        [
+          788.8,
+          1028.8
+        ],
+        [
+          956.0,
+          876.8
+        ],
+        [
+          929.6,
+          863.2
+        ],
+        [
+          798.4,
+          1002.4
+        ],
+        [
+          636.0,
+          823.2
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "临边防护",
+      "points": [
+        [
+          692.0,
+          750.4
+        ],
+        [
+          776.8,
+          676.0
+        ],
+        [
+          929.6,
+          795.2
+        ],
+        [
+          976.8,
+          820.0
+        ],
+        [
+          1020.0,
+          883.2
+        ],
+        [
+          992.8,
+          886.4
+        ],
+        [
+          955.2,
+          836.0
+        ],
+        [
+          774.4,
+          701.6
+        ],
+        [
+          706.4,
+          764.0
+        ],
+        [
+          696.0,
+          757.6
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "桥梁墩身承台垫层",
+      "points": [
+        [
+          687.2,
+          750.4
+        ],
+        [
+          863.2,
+          939.2
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "防雨布",
+      "points": [
+        [
+          822.2222222222222,
+          344.32098765432096
+        ],
+        [
+          890.1234567901234,
+          409.75308641975306
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          919.3902439024391,
+          907.0731707317073
+        ],
+        [
+          1007.1951219512196,
+          837.560975609756
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          614.5121951219512,
+          852.1951219512194
+        ],
+        [
+          740.1219512195123,
+          726.5853658536585
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101527_0_1762827327485_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

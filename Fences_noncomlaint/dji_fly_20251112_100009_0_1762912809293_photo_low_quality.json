@@ -1,0 +1,215 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "开关箱",
+      "score": null,
+      "points": [
+        [
+          672.9411764705883,
+          552.3529411764705
+        ],
+        [
+          731.7647058823529,
+          638.2352941176471
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          1436.4705882352941,
+          466.47058823529414
+        ],
+        [
+          1435.294117647059,
+          430.0
+        ],
+        [
+          1250.5882352941178,
+          451.1764705882353
+        ],
+        [
+          965.8823529411766,
+          492.3529411764706
+        ],
+        [
+          656.4705882352941,
+          538.2352941176471
+        ],
+        [
+          324.70588235294116,
+          582.9411764705882
+        ],
+        [
+          54.117647058823536,
+          632.3529411764705
+        ],
+        [
+          62.35294117647055,
+          662.9411764705882
+        ],
+        [
+          356.4705882352941,
+          657.0588235294117
+        ],
+        [
+          967.0588235294119,
+          567.6470588235294
+        ],
+        [
+          1245.8823529411766,
+          525.2941176470588
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          149.41176470588232,
+          606.470588235294
+        ],
+        [
+          265.88235294117646,
+          741.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          170.58823529411762,
+          613.5294117647059
+        ],
+        [
+          207.05882352941177,
+          639.4117647058823
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          184.70588235294116,
+          640.5882352941176
+        ],
+        [
+          229.41176470588232,
+          681.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          1.1764705882352757,
+          626.470588235294
+        ],
+        [
+          14.117647058823508,
+          647.6470588235294
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          8.235294117647044,
+          652.3529411764706
+        ],
+        [
+          40.0,
+          681.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          2.35294117647058,
+          619.4117647058823
+        ],
+        [
+          84.70588235294116,
+          734.7058823529411
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    }
+  ],
+  "imagePath": "dji_fly_20251112_100009_0_1762912809293_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

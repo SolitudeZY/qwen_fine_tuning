@@ -1,0 +1,209 @@
+{
+  "version": "6.0.0",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "运输车",
+      "points": [
+        [
+          564.8000000000001,
+          204.0
+        ],
+        [
+          644.8000000000001,
+          348.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "运输车",
+      "points": [
+        [
+          877.6,
+          117.6
+        ],
+        [
+          971.2,
+          172.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "运输车",
+      "points": [
+        [
+          904.0,
+          180.0
+        ],
+        [
+          1005.6,
+          241.6
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "汽车",
+      "points": [
+        [
+          952.8,
+          243.2
+        ],
+        [
+          1037.6,
+          304.8
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "临边防护",
+      "points": [
+        [
+          1019.8675496688742,
+          168.80794701986753
+        ],
+        [
+          1025.8278145695365,
+          151.58940397350992
+        ],
+        [
+          1056.291390728477,
+          242.31788079470195
+        ],
+        [
+          1047.682119205298,
+          256.887417218543
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全锥",
+      "points": [
+        [
+          975.0200803212851,
+          144.17670682730923
+        ],
+        [
+          980.6425702811244,
+          155.42168674698794
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全锥",
+      "points": [
+        [
+          982.2489959839357,
+          140.96385542168673
+        ],
+        [
+          991.0843373493976,
+          154.61847389558233
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          1035.2439024390244,
+          279.0243902439024
+        ],
+        [
+          1077.9268292682927,
+          227.8048780487805
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          995.0,
+          194.8780487804878
+        ],
+        [
+          1053.5365853658539,
+          126.58536585365853
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101003_0_1762827003509_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}
