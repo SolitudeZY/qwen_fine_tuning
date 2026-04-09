@@ -1,0 +1,731 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          490.71428571428567,
+          349.2857142857143
+        ],
+        [
+          505.71428571428567,
+          364.2857142857143
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          491.4285714285714,
+          365.71428571428567
+        ],
+        [
+          506.4285714285714,
+          386.4285714285714
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          479.99999999999994,
+          342.85714285714283
+        ],
+        [
+          512.8571428571428,
+          415.71428571428567
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          172.85714285714283,
+          287.1428571428571
+        ],
+        [
+          184.28571428571428,
+          298.57142857142856
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          192.1428571428571,
+          295.0
+        ],
+        [
+          208.57142857142856,
+          314.2857142857143
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          172.14285714285714,
+          287.85714285714283
+        ],
+        [
+          214.28571428571428,
+          327.1428571428571
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          599.2857142857142,
+          240.7142857142857
+        ],
+        [
+          611.4285714285713,
+          251.42857142857142
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          585.7142857142857,
+          245.7142857142857
+        ],
+        [
+          598.5714285714286,
+          267.85714285714283
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          581.4285714285713,
+          243.57142857142856
+        ],
+        [
+          608.5714285714286,
+          276.4285714285714
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          607.8571428571428,
+          257.85714285714283
+        ],
+        [
+          618.5714285714286,
+          271.4285714285714
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          624.2857142857142,
+          265.71428571428567
+        ],
+        [
+          640.7142857142857,
+          286.4285714285714
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          610.7142857142857,
+          258.57142857142856
+        ],
+        [
+          644.2857142857142,
+          298.57142857142856
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          347.05882352941177,
+          373.5294117647059
+        ],
+        [
+          374.1176470588235,
+          395.88235294117646
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          354.1176470588235,
+          360.5882352941177
+        ],
+        [
+          372.94117647058823,
+          375.88235294117646
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          341.1764705882353,
+          358.2352941176471
+        ],
+        [
+          388.235294117647,
+          420.5882352941177
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "盖梁施工平台",
+      "score": null,
+      "points": [
+        [
+          83.52941176470569,
+          253.20855614973271
+        ],
+        [
+          709.4117647058825,
+          463.79679144385
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人行塔梯",
+      "score": null,
+      "points": [
+        [
+          487.05882352941177,
+          165.29411764705884
+        ],
+        [
+          635.2941176470588,
+          271.1764705882353
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人行塔梯",
+      "score": null,
+      "points": [
+        [
+          1057.6470588235295,
+          768.8235294117646
+        ],
+        [
+          1411.764705882353,
+          1074.7058823529412
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩施工平台",
+      "score": null,
+      "points": [
+        [
+          961.1764705882354,
+          579.4117647058823
+        ],
+        [
+          1060.0,
+          670.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩施工平台",
+      "score": null,
+      "points": [
+        [
+          872.9411764705883,
+          573.5294117647059
+        ],
+        [
+          970.5882352941178,
+          678.2352941176471
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          654.4155844155844,
+          256.4935064935065
+        ],
+        [
+          684.2857142857142,
+          255.84415584415584
+        ],
+        [
+          701.1688311688312,
+          362.987012987013
+        ],
+        [
+          707.012987012987,
+          412.987012987013
+        ],
+        [
+          102.46753246753244,
+          466.8831168831169
+        ],
+        [
+          77.14285714285711,
+          409.7402597402597
+        ],
+        [
+          127.79220779220776,
+          303.8961038961039
+        ],
+        [
+          164.80519480519476,
+          300.64935064935065
+        ],
+        [
+          160.25974025974023,
+          307.1428571428571
+        ],
+        [
+          143.37662337662334,
+          308.4415584415584
+        ],
+        [
+          123.24675324675322,
+          398.05194805194805
+        ],
+        [
+          689.4805194805194,
+          355.84415584415586
+        ],
+        [
+          678.4415584415584,
+          270.7792207792208
+        ],
+        [
+          656.3636363636364,
+          268.83116883116884
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "柱系梁",
+      "score": null,
+      "points": [
+        [
+          378.8235294117647,
+          562.9411764705882
+        ],
+        [
+          564.7058823529412,
+          652.3529411764706
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "柱系梁",
+      "score": null,
+      "points": [
+        [
+          441.1764705882353,
+          744.1176470588235
+        ],
+        [
+          598.8235294117646,
+          811.1764705882352
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          537.6470588235295,
+          475.88235294117646
+        ],
+        [
+          670.5882352941176,
+          855.8823529411765
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          256.4705882352941,
+          485.29411764705884
+        ],
+        [
+          457.64705882352945,
+          893.5294117647059
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "柱系梁",
+      "score": null,
+      "points": [
+        [
+          728.2352941176471,
+          239.41176470588238
+        ],
+        [
+          863.5294117647059,
+          315.88235294117646
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "盖梁",
+      "score": null,
+      "points": [
+        [
+          641.1764705882354,
+          6.470588235294118
+        ],
+        [
+          1003.5294117647059,
+          95.88235294117648
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          850.5882352941178,
+          105.29411764705883
+        ],
+        [
+          923.5294117647059,
+          421.7647058823529
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          681.1764705882354,
+          106.47058823529413
+        ],
+        [
+          750.5882352941176,
+          458.2352941176471
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "柱系梁",
+      "score": null,
+      "points": [
+        [
+          451.764705882353,
+          73.52941176470588
+        ],
+        [
+          578.8235294117646,
+          127.64705882352942
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          409.4117647058824,
+          8.823529411764707
+        ],
+        [
+          495.29411764705884,
+          237.05882352941177
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          540.0,
+          4.117647058823529
+        ],
+        [
+          610.5882352941176,
+          197.05882352941177
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    }
+  ],
+  "imagePath": "dji_fly_20251111_154019_0_1762846819543_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

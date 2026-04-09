@@ -1,0 +1,243 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "大吊钩",
+      "score": null,
+      "points": [
+        [
+          554.2553191489361,
+          214.89361702127653
+        ],
+        [
+          592.5531914893617,
+          290.95744680851055
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "大吊钩限位装置",
+      "score": null,
+      "points": [
+        [
+          547.3404255319149,
+          155.85106382978722
+        ],
+        [
+          562.2340425531914,
+          185.63829787234042
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "小吊钩限位装置",
+      "score": null,
+      "points": [
+        [
+          589.8936170212766,
+          130.3191489361702
+        ],
+        [
+          606.9148936170212,
+          178.72340425531914
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "防脱钩装置",
+      "score": null,
+      "points": [
+        [
+          564.3617021276596,
+          266.48936170212767
+        ],
+        [
+          575.531914893617,
+          280.8510638297872
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "压路机",
+      "score": null,
+      "points": [
+        [
+          1307.058823529412,
+          913.5294117647059
+        ],
+        [
+          1439.0,
+          1074
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          935.2941176470588,
+          893.5294117647059
+        ],
+        [
+          924.7058823529412,
+          962.9411764705882
+        ],
+        [
+          924.7058823529412,
+          1033.5294117647059
+        ],
+        [
+          930.5882352941178,
+          1067.6470588235293
+        ],
+        [
+          982.3529411764707,
+          1067.6470588235293
+        ],
+        [
+          974.1176470588236,
+          991.1764705882352
+        ],
+        [
+          981.1764705882354,
+          944.1176470588235
+        ],
+        [
+          990.5882352941178,
+          890.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          652.6771653543307,
+          565.1968503937007
+        ],
+        [
+          653.4645669291339,
+          597.4803149606298
+        ],
+        [
+          702.2834645669292,
+          597.4803149606298
+        ],
+        [
+          884.9606299212599,
+          589.6062992125983
+        ],
+        [
+          1045.5905511811025,
+          580.1574803149606
+        ],
+        [
+          1150.3149606299212,
+          577.0078740157479
+        ],
+        [
+          1244.8031496062993,
+          568.3464566929133
+        ],
+        [
+          1332.2047244094488,
+          563.6220472440943
+        ],
+        [
+          1333.7795275590552,
+          525.8267716535432
+        ],
+        [
+          1031.4173228346456,
+          547.8740157480314
+        ],
+        [
+          888.8976377952756,
+          563.6220472440943
+        ],
+        [
+          732.992125984252,
+          567.5590551181101
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "锚杆框格梁",
+      "score": null,
+      "points": [
+        [
+          686.6666666666666,
+          602.3456790123457
+        ],
+        [
+          1411.358024691358,
+          804.8148148148149
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_152639_0_1762845999081_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

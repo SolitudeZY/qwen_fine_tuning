@@ -1,0 +1,357 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "环切机",
+      "score": null,
+      "points": [
+        [
+          2395.4545454545455,
+          1586.3636363636365
+        ],
+        [
+          2545.4545454545455,
+          1768.1818181818182
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "泥浆池",
+      "score": null,
+      "points": [
+        [
+          1536.3636363636365,
+          1590.909090909091
+        ],
+        [
+          2286.3636363636365,
+          2254.5454545454545
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "泥浆池",
+      "score": null,
+      "points": [
+        [
+          3195.4545454545455,
+          2150.0
+        ],
+        [
+          3863.6363636363635,
+          2968.1818181818185
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "泥浆池",
+      "score": null,
+      "points": [
+        [
+          3040.909090909091,
+          1136.3636363636365
+        ],
+        [
+          3277.2727272727275,
+          1390.909090909091
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "钻孔灌注桩护筒",
+      "score": null,
+      "points": [
+        [
+          1795.4545454545455,
+          2013.6363636363637
+        ],
+        [
+          2086.3636363636365,
+          2236.3636363636365
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "开关箱",
+      "score": null,
+      "points": [
+        [
+          3437.2093023255816,
+          1627.906976744186
+        ],
+        [
+          3500.0,
+          1723.2558139534883
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "钻孔灌注桩",
+      "score": null,
+      "points": [
+        [
+          3465.1162790697676,
+          974.4186046511628
+        ],
+        [
+          3572.093023255814,
+          1193.0232558139535
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          3411.6279069767443,
+          869.7674418604652
+        ],
+        [
+          3627.906976744186,
+          1055.8139534883721
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          2484.090909090909,
+          1442.0454545454545
+        ],
+        [
+          2553.409090909091,
+          1545.4545454545455
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          2507.6923076923076,
+          1451.7482517482517
+        ],
+        [
+          2532.867132867133,
+          1467.832167832168
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "导管",
+      "score": null,
+      "points": [
+        [
+          2060.3174603174602,
+          1947.6190476190477
+        ],
+        [
+          2280.9523809523807,
+          2207.936507936508
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          3154.5454545454545,
+          2272.727272727273
+        ],
+        [
+          2995.4545454545455,
+          2713.6363636363635
+        ],
+        [
+          3368.1818181818185,
+          2995.4545454545455
+        ],
+        [
+          3527.2727272727275,
+          2959.090909090909
+        ],
+        [
+          3150.0,
+          2645.4545454545455
+        ],
+        [
+          3268.1818181818185,
+          2304.5454545454545
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          1395.4545454545455,
+          2018.1818181818182
+        ],
+        [
+          1840.909090909091,
+          2218.1818181818185
+        ],
+        [
+          1822.7272727272727,
+          2081.818181818182
+        ],
+        [
+          1431.818181818182,
+          1913.6363636363637
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          3977.272727272727,
+          1545.4545454545455
+        ],
+        [
+          3763.6363636363635,
+          1468.1818181818182
+        ],
+        [
+          3795.4545454545455,
+          1322.7272727272727
+        ],
+        [
+          3822.727272727273,
+          1254.5454545454547
+        ],
+        [
+          3999,
+          1263
+        ],
+        [
+          3981.818181818182,
+          1340.909090909091
+        ],
+        [
+          3836.3636363636365,
+          1354.5454545454547
+        ],
+        [
+          3840.909090909091,
+          1445.4545454545455
+        ],
+        [
+          3999,
+          1467
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "DJI_0366.JPG",
+  "imageData": null,
+  "imageHeight": 3000,
+  "imageWidth": 4000,
+  "description": ""
+}

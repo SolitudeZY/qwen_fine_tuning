@@ -1,0 +1,213 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "液压起重机",
+      "score": null,
+      "points": [
+        [
+          3006.0,
+          703.6666666666665
+        ],
+        [
+          3156.0,
+          703.6666666666665
+        ],
+        [
+          3156.0,
+          1423.6666666666665
+        ],
+        [
+          3006.0,
+          1423.6666666666665
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "液压起重机",
+      "score": null,
+      "points": [
+        [
+          685.9999999999998,
+          593.6666666666665
+        ],
+        [
+          1085.9999999999998,
+          593.6666666666665
+        ],
+        [
+          1085.9999999999998,
+          1460.3333333333333
+        ],
+        [
+          685.9999999999998,
+          1460.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "挖掘机",
+      "score": null,
+      "points": [
+        [
+          2896.0,
+          1663.6666666666665
+        ],
+        [
+          3042.666666666667,
+          1663.6666666666665
+        ],
+        [
+          3042.666666666667,
+          1827.0
+        ],
+        [
+          2896.0,
+          1827.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          3726.0,
+          1147.0
+        ],
+        [
+          3819.333333333334,
+          1147.0
+        ],
+        [
+          3819.333333333334,
+          1387.0
+        ],
+        [
+          3726.0,
+          1387.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "圆柱墩",
+      "score": null,
+      "points": [
+        [
+          3909.333333333334,
+          1170.3333333333333
+        ],
+        [
+          4016.0,
+          1170.3333333333333
+        ],
+        [
+          4016.0,
+          1403.6666666666665
+        ],
+        [
+          3909.333333333334,
+          1403.6666666666665
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "柱系梁",
+      "score": null,
+      "points": [
+        [
+          3739.333333333334,
+          1380.3333333333333
+        ],
+        [
+          3962.666666666667,
+          1380.3333333333333
+        ],
+        [
+          3962.666666666667,
+          1480.3333333333333
+        ],
+        [
+          3739.333333333334,
+          1480.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "钢便桥",
+      "score": null,
+      "points": [
+        [
+          15.999999999999773,
+          1467.0
+        ],
+        [
+          3969.333333333334,
+          1467.0
+        ],
+        [
+          3969.333333333334,
+          2030.3333333333335
+        ],
+        [
+          15.999999999999773,
+          2030.3333333333335
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "org_106f3c5fb3a585f0_1765941594000.jpg",
+  "imageData": null,
+  "imageHeight": 3024,
+  "imageWidth": 4032
+}

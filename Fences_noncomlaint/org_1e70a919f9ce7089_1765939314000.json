@@ -1,0 +1,462 @@
+{
+  "version": "6.0.0",
+  "flags": {},
+  "shapes": [
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "points": [
+        [
+          717.9999999999999,
+          2244.3333333333335
+        ],
+        [
+          1088.0,
+          3054.3333333333335
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "圆柱墩",
+      "points": [
+        [
+          2411.3333333333335,
+          2277.6666666666665
+        ],
+        [
+          2651.3333333333335,
+          3061.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "基坑",
+      "points": [
+        [
+          691.3333333333334,
+          1781.0
+        ],
+        [
+          2894.666666666667,
+          2184.3333333333335
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "临边防护",
+      "points": [
+        [
+          2131.7073170731705,
+          2114.048780487805
+        ],
+        [
+          2131.7073170731705,
+          2314.048780487805
+        ],
+        [
+          2948.780487804878,
+          2333.560975609756
+        ],
+        [
+          3158.5365853658536,
+          2343.3170731707314
+        ],
+        [
+          3175.609756097561,
+          2231.121951219512
+        ],
+        [
+          3053.6585365853657,
+          1421.3658536585365
+        ],
+        [
+          595.1219512195122,
+          1484.780487804878
+        ],
+        [
+          468.29268292682923,
+          2079.9024390243903
+        ],
+        [
+          485.36585365853654,
+          2253.0731707317073
+        ],
+        [
+          1485.3658536585365,
+          2301.853658536585
+        ],
+        [
+          1468.2926829268292,
+          2116.487804878049
+        ],
+        [
+          551.2195121951219,
+          2060.390243902439
+        ],
+        [
+          641.4634146341463,
+          1682.341463414634
+        ],
+        [
+          3004.8780487804875,
+          1531.121951219512
+        ],
+        [
+          3102.4390243902435,
+          2182.341463414634
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "基坑",
+      "points": [
+        [
+          741.4634146341463,
+          743.3170731707316
+        ],
+        [
+          2721.9512195121947,
+          1133.560975609756
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "临边防护",
+      "points": [
+        [
+          1560.9756097560974,
+          594.5365853658536
+        ],
+        [
+          1548.780487804878,
+          431.12195121951214
+        ],
+        [
+          617.0731707317073,
+          516.4878048780487
+        ],
+        [
+          563.4146341463414,
+          1011.6097560975609
+        ],
+        [
+          565.8536585365853,
+          1172.5853658536585
+        ],
+        [
+          1614.6341463414633,
+          1199.4146341463415
+        ],
+        [
+          3014.6341463414633,
+          1221.3658536585365
+        ],
+        [
+          2960.975609756097,
+          435.99999999999994
+        ],
+        [
+          2021.951219512195,
+          428.68292682926824
+        ],
+        [
+          2014.6341463414633,
+          633.560975609756
+        ],
+        [
+          2882.9268292682923,
+          601.8536585365853
+        ],
+        [
+          2917.0731707317073,
+          1045.7560975609756
+        ],
+        [
+          1814.6341463414633,
+          1014.0487804878047
+        ],
+        [
+          858.5365853658536,
+          1011.6097560975609
+        ],
+        [
+          629.2682926829268,
+          999.4146341463413
+        ],
+        [
+          663.4146341463414,
+          679.9024390243901
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全标识",
+      "points": [
+        [
+          1873.9740259740258,
+          1080.5194805194806
+        ],
+        [
+          2044.103896103896,
+          1123.3766233766235
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全标识",
+      "points": [
+        [
+          2171.3766233766237,
+          1089.6103896103896
+        ],
+        [
+          2340.2077922077924,
+          1144.155844155844
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全标识",
+      "points": [
+        [
+          2473.974025974026,
+          1110.3896103896104
+        ],
+        [
+          2644.103896103896,
+          1146.7532467532467
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全标识",
+      "points": [
+        [
+          2771.3766233766237,
+          1110.3896103896104
+        ],
+        [
+          2936.3116883116886,
+          1150.6493506493507
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全标识",
+      "points": [
+        [
+          1570.077922077922,
+          1072.7272727272727
+        ],
+        [
+          1740.2077922077922,
+          1115.5844155844156
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全标识",
+      "points": [
+        [
+          1266.181818181818,
+          1064.935064935065
+        ],
+        [
+          1438.9090909090908,
+          1112.987012987013
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全标识",
+      "points": [
+        [
+          957.0909090909091,
+          1053.2467532467533
+        ],
+        [
+          1132.4155844155844,
+          1105.1948051948052
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "安全标识",
+      "points": [
+        [
+          644.1038961038962,
+          1019.4805194805194
+        ],
+        [
+          780.4675324675325,
+          1102.5974025974026
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          1398.0,
+          2067.0344827586205
+        ],
+        [
+          2287.655172413793,
+          2360.137931034483
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          1373.8620689655172,
+          698.0689655172413
+        ],
+        [
+          2218.689655172414,
+          360.13793103448256
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "org_1e70a919f9ce7089_1765939314000.jpg",
+  "imageData": null,
+  "imageHeight": 3072,
+  "imageWidth": 4096
+}

@@ -529,6 +529,17 @@ if __name__ == "__main__":
     if args.model_path:
         MODEL_PATH = args.model_path
     use_lora = not args.no_lora
+    
+    # 校验 LoRA 路径
+    if use_lora:
+        if not LORA_PATH:
+            print("[Error] 未指定 --lora_path 且未使用 --no-lora。请提供有效的 LoRA 路径，或者使用 --no-lora 来测试原始基座模型。")
+            sys.exit(1)
+        if not os.path.exists(LORA_PATH):
+            print(f"[Error] 指定的 LoRA 路径不存在: {LORA_PATH}")
+            print("请检查路径是否正确，或者使用 --no-lora 来测试原始基座模型。")
+            sys.exit(1)
+            
     model, processor, model_family = load_model(use_lora=use_lora)
 
     if args.visualize:

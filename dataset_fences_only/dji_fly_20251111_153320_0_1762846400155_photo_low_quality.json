@@ -1,0 +1,181 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "label": "大吊钩限位装置",
+      "score": null,
+      "points": [
+        [
+          795.2941176470588,
+          153.52941176470588
+        ],
+        [
+          830.5882352941178,
+          248.82352941176472
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "小吊钩限位装置",
+      "score": null,
+      "points": [
+        [
+          736.4705882352941,
+          71.1764705882353
+        ],
+        [
+          784.7058823529412,
+          195.8823529411765
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "大吊钩",
+      "score": null,
+      "points": [
+        [
+          765.8823529411766,
+          259.4117647058824
+        ],
+        [
+          834.1176470588236,
+          404.11764705882354
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "kie_linking": [],
+      "label": "防脱钩装置",
+      "score": null,
+      "points": [
+        [
+          792.9411764705883,
+          347.64705882352945
+        ],
+        [
+          809.4117647058824,
+          372.3529411764706
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {}
+    },
+    {
+      "label": "锚杆框格梁",
+      "score": null,
+      "points": [
+        [
+          1187.058823529412,
+          767.6470588235294
+        ],
+        [
+          1434.1176470588236,
+          999.4117647058823
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          1147.2727272727273,
+          732.4675324675325
+        ],
+        [
+          1145.9740259740258,
+          756.4935064935065
+        ],
+        [
+          1194.6753246753246,
+          761.038961038961
+        ],
+        [
+          1243.3766233766232,
+          757.7922077922078
+        ],
+        [
+          1305.7142857142858,
+          762.3376623376623
+        ],
+        [
+          1360.2597402597403,
+          757.7922077922078
+        ],
+        [
+          1401.168831168831,
+          757.7922077922078
+        ],
+        [
+          1436.8831168831168,
+          756.4935064935065
+        ],
+        [
+          1438.1818181818182,
+          726.6233766233767
+        ],
+        [
+          1377.7922077922078,
+          732.4675324675325
+        ],
+        [
+          1243.3766233766232,
+          729.8701298701299
+        ],
+        [
+          1187.5324675324675,
+          727.922077922078
+        ],
+        [
+          1147.922077922078,
+          725.3246753246754
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_153320_0_1762846400155_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

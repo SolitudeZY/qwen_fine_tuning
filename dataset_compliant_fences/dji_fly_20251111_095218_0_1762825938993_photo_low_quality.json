@@ -1,0 +1,97 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "反光锥",
+      "score": null,
+      "points": [
+        [
+          90.49180327868851,
+          374.4262295081967
+        ],
+        [
+          129.83606557377047,
+          374.4262295081967
+        ],
+        [
+          129.83606557377047,
+          405.57377049180326
+        ],
+        [
+          90.49180327868851,
+          405.57377049180326
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光锥",
+      "score": null,
+      "points": [
+        [
+          80.65573770491801,
+          797.3770491803278
+        ],
+        [
+          119.99999999999997,
+          797.3770491803278
+        ],
+        [
+          119.99999999999997,
+          828.5245901639344
+        ],
+        [
+          80.65573770491801,
+          828.5245901639344
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光立柱",
+      "score": null,
+      "points": [
+        [
+          1210.1639344262294,
+          464.5901639344262
+        ],
+        [
+          1239.672131147541,
+          464.5901639344262
+        ],
+        [
+          1239.672131147541,
+          497.37704918032784
+        ],
+        [
+          1210.1639344262294,
+          497.37704918032784
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440
+}

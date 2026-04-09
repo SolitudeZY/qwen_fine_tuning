@@ -1,0 +1,265 @@
+{
+  "version": "6.0.0",
+  "flags": {},
+  "shapes": [
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "钢管护栏",
+      "points": [
+        [
+          580.655737704918,
+          648.1967213114754
+        ],
+        [
+          851.1475409836065,
+          677.7049180327868
+        ],
+        [
+          988.8524590163934,
+          753.1147540983605
+        ],
+        [
+          1116.7213114754097,
+          889.1803278688524
+        ],
+        [
+          1138.032786885246,
+          853.1147540983605
+        ],
+        [
+          921.639344262295,
+          667.8688524590164
+        ],
+        [
+          803.6065573770492,
+          644.9180327868852
+        ],
+        [
+          572.4590163934425,
+          615.4098360655737
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "罐车",
+      "points": [
+        [
+          674.0983606557377,
+          846.5573770491802
+        ],
+        [
+          841.311475409836,
+          917.0491803278688
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "汽车",
+      "points": [
+        [
+          731.4754098360655,
+          771.1475409836065
+        ],
+        [
+          826.5573770491803,
+          835.0819672131147
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "液压起重机",
+      "points": [
+        [
+          710.1639344262295,
+          536.7213114754097
+        ],
+        [
+          926.5573770491803,
+          646.5573770491802
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "开关箱",
+      "points": [
+        [
+          733.6283185840707,
+          485.84070796460173
+        ],
+        [
+          753.9823008849556,
+          504.4247787610619
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "kie_linking": [],
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "label": "圆柱施工平台",
+      "points": [
+        [
+          474.0983606557377,
+          461.3114754098361
+        ],
+        [
+          672.4590163934425,
+          630.1639344262294
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "临边防护",
+      "points": [
+        [
+          787.2131147540983,
+          744.9180327868852
+        ],
+        [
+          847.8688524590164,
+          779.3442622950819
+        ],
+        [
+          926.5573770491803,
+          803.9344262295082
+        ],
+        [
+          1005.2459016393443,
+          833.4426229508196
+        ],
+        [
+          1070.8196721311476,
+          874.4262295081967
+        ],
+        [
+          1097.0491803278687,
+          903.9344262295082
+        ],
+        [
+          1115.0819672131147,
+          889.1803278688524
+        ],
+        [
+          1056.0655737704917,
+          835.0819672131147
+        ],
+        [
+          1003.6065573770491,
+          812.1311475409835
+        ],
+        [
+          908.5245901639344,
+          772.7868852459015
+        ],
+        [
+          838.0327868852459,
+          741.639344262295
+        ],
+        [
+          795.4098360655737,
+          726.8852459016392
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          535.2439024390244,
+          650.9756097560975
+        ],
+        [
+          604.7560975609756,
+          605.8536585365853
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "围栏断口",
+      "points": [
+        [
+          1060.8536585365855,
+          909.5121951219511
+        ],
+        [
+          1158.4146341463415,
+          831.4634146341463
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "dji_fly_20251111_101858_0_1762827538561_photo_low_quality.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1440,
+  "description": ""
+}

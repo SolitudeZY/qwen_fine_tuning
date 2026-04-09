@@ -1,0 +1,168 @@
+{
+  "version": "3.0.3",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "安全帽",
+      "score": null,
+      "points": [
+        [
+          1535.9999999999998,
+          2057.0
+        ],
+        [
+          1579.3333333333333,
+          2110.3333333333335
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "反光衣",
+      "score": null,
+      "points": [
+        [
+          1532.6666666666667,
+          2110.3333333333335
+        ],
+        [
+          1612.6666666666667,
+          2147.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "人员",
+      "score": null,
+      "points": [
+        [
+          1509.3333333333333,
+          2033.6666666666665
+        ],
+        [
+          1652.6666666666667,
+          2180.3333333333335
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "基坑",
+      "score": null,
+      "points": [
+        [
+          675.9999999999998,
+          1053.6666666666665
+        ],
+        [
+          3202.666666666667,
+          1820.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          1712.6666666666667,
+          636.9999999999999
+        ],
+        [
+          522.6666666666665,
+          833.6666666666665
+        ],
+        [
+          539.3333333333333,
+          2037.0
+        ],
+        [
+          1755.9999999999998,
+          2050.3333333333335
+        ],
+        [
+          1742.6666666666667,
+          2103.6666666666665
+        ],
+        [
+          469.33333333333326,
+          2077.0
+        ],
+        [
+          445.9999999999998,
+          756.9999999999999
+        ],
+        [
+          1705.9999999999998,
+          586.9999999999999
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "临边防护",
+      "score": null,
+      "points": [
+        [
+          2096.0,
+          2137.0
+        ],
+        [
+          2096.0,
+          2203.6666666666665
+        ],
+        [
+          3449.333333333333,
+          2237.0
+        ],
+        [
+          3452.666666666667,
+          2167.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "polygon",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "org_8da638eed1ad938a_1765939132000.jpg",
+  "imageData": null,
+  "imageHeight": 3024,
+  "imageWidth": 4032
+}
