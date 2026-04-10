@@ -21,9 +21,12 @@
       "Bash(fc-list :lang=zh -f \"%{file}\\\\n\")",
       "Bash(ls:*)",
       "WebSearch",
-      "mcp__plugin_everything-claude-code_exa__web_search_exa",
-      "mcp__plugin_everything-claude-code_exa__web_fetch_exa",
-      "Bash(nvidia-smi --query-gpu=name,memory.total --format=csv,noheader)"
+      "Bash(nvidia-smi --query-gpu=name,memory.total --format=csv,noheader)",
+      "Bash(wc -l /home/fs-ai/llama-qwen/scripts/*.py)",
+      "Bash(xargs -I{} head -60 {})",
+      "Bash(pip show:*)",
+      "Bash(/home/fs-ai/miniconda3/envs/qwen-ft/bin/python:*)",
+      "Bash(head -5 ls /home/fs-ai/llama-qwen/Fences_noncomlaint/*.jpg)"
     ]
   }
 }

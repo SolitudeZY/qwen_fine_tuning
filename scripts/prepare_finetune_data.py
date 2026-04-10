@@ -14,7 +14,7 @@ BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 # 数据集目录
 NON_COMPLIANT_DIR = "/home/fs-ai/llama-qwen/Fences_noncomlaint"
 COMPLIANT_DIR = "/home/fs-ai/llama-qwen/dataset_compliant_fences"
-OUTPUT_JSONL = "/home/fs-ai/llama-qwen/data/finetune_fences.jsonl"
+OUTPUT_JSONL = "/home/fs-ai/llama-qwen/data/finetune_fences_minimal_cot.jsonl"
 
 # 客户端初始化
 client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
@@ -88,23 +88,20 @@ def generate_reasoning_via_qwen_max(img_path, ground_truth_boxes, is_violation):
         gt_info = f"这张图片存在违规，人工标注的违规区域及坐标如下（千分比格式）：\n"
         for b in ground_truth_boxes:
             gt_info += f"- 标签：{b['label']}, 坐标：{b['bbox']}\n"
-        gt_info += "请你基于以上真实坐标和标签，生成一段非常专业、详细的安全检查推理过程。并严格按照以下 JSON 格式输出最终结果，必须包含上述提供的 violation_boxes。"
+        gt_info += "请你基于以上真实坐标和标签，生成一段极简的安全检查推理过程。只用一两句话说明发现了什么违规，然后立即严格按照以下 JSON 格式输出最终结果，必须包含上述提供的 violation_boxes。"
     else:
-        gt_info = "这张图片的临边防护设施（如围栏、围挡）完全合规，不存在断口、倒伏等违规情况。请你生成一段专业的安全检查推理过程，说明其防护措施到位，并在最后输出 violation_detected 为 false 的 JSON，且 violation_boxes 必须为空数组 []。"
+        gt_info = "这张图片的临边防护设施（如围栏、围挡）完全合规，不存在断口、倒伏等违规情况。请你生成一段极简的安全检查推理过程。只用一句话说明防护措施到位，然后立即输出 violation_detected 为 false 的 JSON，且 violation_boxes 必须为空数组 []。"
 
     prompt = f"""
 你现在是一个用于生成微调数据集的 Teacher Model。
-你需要模仿一个专业的工业安全检查AI助手，对下方的施工现场图片进行分析。
+你需要模仿一个高效的工业安全检查AI助手，对下方的施工现场图片进行快速分析。
 【核心要求】：
 {gt_info}
 
-你的输出必须符合以下格式（先输出推理文本，最后输出一段纯 JSON，不要带 markdown 代码块）：
+你的输出必须符合以下极简格式（先输出一两句话的短文本，最后输出一段纯 JSON，不要带 markdown 代码块）：
 
-【推理过程】：
-场景类型：...
-关键观察：...
-安全推理：...
-结论：...
+【推理】：
+...（一两句话说明情况）
 
 {{
   "violation_detected": {str(is_violation).lower()},

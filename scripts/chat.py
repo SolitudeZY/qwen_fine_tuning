@@ -25,23 +25,24 @@ MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct"
 
 SYSTEM_PROMPT = (
     "你是一名严谨的边坡与基坑施工安全监测专家，负责基于施工现场图片输出可落地的监测结论。\n"
-    "你的任务不是泛泛描述图片，而是围绕高坠风险和临边防护进行监测判定，并输出结构化的推理过程和JSON结果。\n"
+    "你的任务不是泛泛描述图片，而是围绕高坠风险和临边防护进行监测判定，并输出极简推理和结构化的JSON结果。\n"
     "【场景识别要求】：\n"
     "- 基坑：向下开挖形成的坑槽，坑边通常需要防护隔离。\n"
     "- 边坡：倾斜土坡、岩坡本身通常不是必须全封闭围挡的对象。但坡顶作业平台、临空边若存在坠落风险，仍需防护。\n"
     "- 如果只是可见大面积施工坡面，不要仅凭'是边坡'或'是基坑'或就判为违规。\n"
     "【输出要求】：\n"
-    "1. 首先，你需要详细描述图片中危险区域的状态，并进行安全推理。\n"
-    "2. 然后，你必须在回答的最后严格以 JSON 格式输出判定结果。\n"
+    "1. 首先，输出【推理】：只用一两句话简要说明发现了什么违规或为什么合规。\n"
+    "2. 然后，你必须在回答的最后严格以 JSON 格式输出判定结果，不要输出任何其他的解释文本。\n"
     "JSON 字段必须包含：violation_detected(布尔), violation_type(字符串), severity(字符串), suggestion(字符串)。\n"
-    "3. 如果检测到违规(violation_detected=true)，你必须额外输出 violation_boxes 字段，它是一个数组，"
+    "3. 如果检测到违规(violation_detected=true)，你必须在最后输出的 JSON 对象中，直接包含一个名为 violation_boxes 的数组，"
     "每个元素包含：label(违规简述), bbox(四个整数的数组，格式为[x_min, y_min, x_max, y_max]，"
-    "坐标为相对于图片宽高的千分比坐标，范围0-1000)。"
-    "例如：\"violation_boxes\": [{\"label\": \"围栏缺口\", \"bbox\": [120, 300, 450, 680]}]\n"
+    "坐标为相对于图片宽高的千分比坐标，范围0-1000)。\n"
+    "【重要警告】：violation_boxes 中的 label 必须是描述**违规缺陷**的词语（例如：“围栏断口”、“围栏倒伏”、“未合围区域”、“踢脚板缺失”、“临边无防护”），**绝对不能**仅仅输出中性词如“临边防护”、“泥浆池”、“施工人员”！你标出的框代表的是隐患点，标签必须体现出隐患性质！\n"
+    "例如：\"violation_boxes\": [{\"label\": \"围栏断口\", \"bbox\": [120, 300, 450, 680]}]\n"
     "4. 如果合规(violation_detected=false)，violation_boxes 为空数组 []。"
 )
 
-DEFAULT_QUERY = "请对这张施工现场图片执行边坡/基坑安全监测，识别场景类型，提取关键观察，判断是否存在临边高坠风险及防护缺陷，并输出安全推理与 JSON 结果。如果存在违规，请用 violation_boxes 标出违规区域的位置坐标。"
+DEFAULT_QUERY = "请对这张施工现场图片执行边坡/基坑安全监测，识别场景类型，提取关键观察，判断是否存在临边高坠风险及防护缺陷，并输出极简推理与 JSON 结果。如果存在违规，请用 violation_boxes 标出违规区域的位置坐标。"
 
 
 # ============ 可视化配置 ============
@@ -155,7 +156,7 @@ def locate_violations(model, processor, model_family, image_path):
         },
     ]
 
-    response = infer_vlm(model, processor, model_family, messages, max_new_tokens=512)
+    response = infer_vlm(model, processor, model_family, messages, max_new_tokens=1536)
 
     cleaned = response.strip()
     if cleaned.startswith("```"):
@@ -212,7 +213,7 @@ def chat(model, processor, model_family, image_path, query=None):
     ]
 
     start = time.time()
-    response = infer_vlm(model, processor, model_family, messages, max_new_tokens=768)
+    response = infer_vlm(model, processor, model_family, messages, max_new_tokens=1536)
     elapsed = time.time() - start
 
     return response, elapsed
@@ -440,7 +441,11 @@ def interactive_mode(model, processor, model_family, visualize=False, output_dir
             if not boxes:
                 print("  警告: 未在初始回答中检测到 violation_boxes，正在尝试从备用逻辑获取或进行第二阶段定位...")
                 # 兼容旧版本模型：如果解析出来没有框，自动进行一次定位兜底
+                start_time = time.time()
                 boxes = locate_violations(model, processor, model_family, image_path)
+                end_time = time.time()
+                location_time = end_time - start_time
+                print(f"二次定位花费时间：{location_time:.2f}")
             else:
                 boxes = _normalize_boxes(boxes, image_path)
 

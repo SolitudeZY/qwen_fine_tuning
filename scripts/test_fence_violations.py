@@ -4,6 +4,7 @@ import time
 from tqdm import tqdm
 from model_utils import load_vlm, infer_vlm
 from chat import SYSTEM_PROMPT, DEFAULT_QUERY, _extract_json_object
+from datetime import datetime
 
 import csv
 
@@ -11,7 +12,8 @@ import csv
 CSV_DATA_PATH = "/home/fs-ai/llama-qwen/outputs/all_fences_for_review.csv"
 NON_COMPLIANT_DIR = "/home/fs-ai/llama-qwen/Fences_noncomlaint"
 MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct"
-LORA_PATH = "/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_lora/v1-20260409-130945/checkpoint-290"
+LORA_PATH = "/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_minimal_cot_lora/v0-20260409-191023/checkpoint-330"
+# 备用路径-输出长但准确"/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_lora/v4-20260409-161021/checkpoint-420"
 TEST_COUNT = 50
 
 def get_fence_violation_images():
@@ -46,10 +48,11 @@ def test_model(use_lora=True):
     print(f"[*] 正在从 {NON_COMPLIANT_DIR} 提取违规测试图片...")
     all_violation_images = get_fence_violation_images()
     test_images = all_violation_images[:TEST_COUNT]
-    
+
     lora = LORA_PATH if use_lora else None
     model_type_str = "微调模型 (带 LoRA)" if use_lora else "原始基座模型 (无 LoRA)"
-    
+    print(f"\n Lora路径为 {LORA_PATH}")
+
     print(f"[*] 成功提取 {len(test_images)} 张违规图片，准备加载 {model_type_str}...")
     model, processor, model_family = load_vlm(MODEL_PATH, lora_path=lora)
     
@@ -75,18 +78,27 @@ def test_model(use_lora=True):
         ]
         
         try:
-            response = infer_vlm(model, processor, model_family, messages, max_new_tokens=768)
+            response = infer_vlm(model, processor, model_family, messages, max_new_tokens=1536)
             parsed_json, _, _ = _extract_json_object(response)
             
             if parsed_json:
                 is_violation = parsed_json.get("violation_detected", False)
-                # 兼容模型输出字符串 "true" / "false"
+                # 兼容模型输出字符串 "true" / "false" 或大写
                 if isinstance(is_violation, str):
                     is_violation = (is_violation.lower() == "true")
+                
+                # 新增逻辑：如果 violation_boxes 不为空，则强制认为是违规
+                if not is_violation and parsed_json.get("violation_boxes") and len(parsed_json.get("violation_boxes")) > 0:
+                    print(f"  [!] 发现逻辑矛盾: {os.path.basename(img_path)} 输出 false 但带有违规框，强制判定为违规。")
+                    is_violation = True
             else:
                 # 如果没解析出来 JSON，尝试正则粗暴匹配
                 is_violation = "violation_detected: true" in response.lower() or '"violation_detected": true' in response.lower()
                 
+                # 正则匹配是否输出了违规框
+                if not is_violation and '"bbox"' in response.lower():
+                    is_violation = True
+                    
             if is_violation:
                 correct_count += 1
                 status = "✅ 成功 (违规)"
@@ -115,10 +127,12 @@ def test_model(use_lora=True):
             })
 
     end_time = time.time()
-    
+
+    timestamp = int(time.time())
+    date_str = datetime.now().strftime('%Y%m%d')
     # 将结果保存到文件
     prefix = "lora_" if use_lora else "base_"
-    output_file = f"/home/fs-ai/llama-qwen/outputs/{prefix}fence_test_results_{int(time.time())}.json"
+    output_file = f"/home/fs-ai/llama-qwen/outputs/{prefix}fence_test_results_{date_str}_{timestamp}.json"
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
     recall_rate = f"{correct_count / total_count * 100:.2f}%" if total_count > 0 else "0.00%"

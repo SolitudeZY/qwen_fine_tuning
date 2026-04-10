@@ -12,18 +12,18 @@ conda activate qwen-ft
 
 PROJECT_ROOT="/home/fs-ai/llama-qwen"
 DATA_DIR="$PROJECT_ROOT/data"
-DATASET_JSONL="$DATA_DIR/finetune_fences.jsonl"
+DATASET_JSONL="$DATA_DIR/finetune_fences_minimal_cot.jsonl"
 
 MODEL_DIR="$PROJECT_ROOT/models/Qwen/Qwen3-VL-2B-Instruct"
-OUTPUT_DIR="$PROJECT_ROOT/outputs/qwen3vl_2b_fences_lora"
+OUTPUT_DIR="$PROJECT_ROOT/outputs/qwen3vl_2b_fences_minimal_cot_lora"
 
-LORA_RANK=32
-LORA_ALPHA=64
-LR="1e-4"
-EPOCHS=10
-BATCH_SIZE=2
-GRAD_ACCUM=2
-MAX_PIXELS=602112
+LORA_RANK=16
+LORA_ALPHA=32
+LR="5e-5"
+EPOCHS=15
+BATCH_SIZE=1
+GRAD_ACCUM=8
+MAX_PIXELS=800000
 
 echo "============================================="
 echo "  Qwen3-VL 2B 围栏精细化 QLoRA 微调"
@@ -61,12 +61,14 @@ swift sft \
     --save_steps 20 \
     --save_total_limit 3 \
     --logging_steps 5 \
-    --max_length 2048 \
+    --max_length 4096 \
+    --truncation_strategy left \
     --lora_rank "$LORA_RANK" \
     --lora_alpha "$LORA_ALPHA" \
     --lora_dropout 0.05 \
     --gradient_checkpointing true \
     --max_pixels "$MAX_PIXELS" \
+    --enable_thinking false
     2>&1 | tee "$OUTPUT_DIR/train.log"
 
 echo "============================================="
