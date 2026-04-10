@@ -1,5 +1,6 @@
 # ========== 模型文件忽略规则 ==========
-
+/dataset_compliant_fences/
+/dataset/
 # 通用模型文件扩展名
 *.bin
 *.pth
