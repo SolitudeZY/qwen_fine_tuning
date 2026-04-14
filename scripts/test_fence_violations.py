@@ -1,199 +1,346 @@
-import os
+"""
+围栏违规检测评估脚本
+测试指标：
+  - 召回率 (Recall)：违规图片中检出违规的比例
+  - 精确率 (Precision)：合规图片中判为合规的比例
+  - IoU：预测框与 LabelMe 标注框的平均 IoU
+
+用法：
+  python scripts/test_fence_violations.py              # 默认快速模式
+  python scripts/test_fence_violations.py --tiled      # 分块推理（更准但慢）
+  python scripts/test_fence_violations.py --base-only  # 不加 LoRA，测基座
+  python scripts/test_fence_violations.py --count 30   # 每类最多测 30 张
+"""
+
+import argparse
 import json
+import os
+import sys
 import time
-from tqdm import tqdm
-from model_utils import load_vlm, infer_vlm
-from chat import SYSTEM_PROMPT, DEFAULT_QUERY, _extract_json_object
-from tiled_infer import tiled_chat
-from PIL import Image
 from datetime import datetime
 
-import csv
+from PIL import Image
+from tqdm import tqdm
 
-# 配置
-CSV_DATA_PATH = "/home/fs-ai/llama-qwen/outputs/all_fences_for_review.csv"
-NON_COMPLIANT_DIR = "/home/fs-ai/llama-qwen/Fences_noncomlaint"
-MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct"
-LORA_PATH = "/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_stage2_json/v9-20260413-151832/checkpoint-180"
-# 备用路径-短思维链后得出结果"/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_minimal_cot_lora/v0-20260409-191023/checkpoint-330"
-# 备用路径-输出长但准确"/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_lora/v4-20260409-161021/checkpoint-420"
-TEST_COUNT = 50
-TILED_PIXEL_THRESHOLD = 4_000_000  # 超过此像素数自动启用分块推理
+# 把 scripts/ 加入路径
+sys.path.insert(0, os.path.dirname(__file__))
+from model_utils import load_vlm, infer_vlm
+from prompts import (
+    SYSTEM_PROMPT, DEFAULT_QUERY,
+    NON_COMPLIANT_DIR, COMPLIANT_IMAGE_DIRS, VALID_LABELS,
+)
+from tiled_infer import tiled_chat
 
-def get_fence_violation_images():
-    """从违规数据集中提取确实存在违规框的图片路径"""
-    images = []
-    if not os.path.exists(NON_COMPLIANT_DIR):
-        print(f"[!] 找不到违规数据集目录: {NON_COMPLIANT_DIR}")
-        return images
-        
-    supported_formats = ('.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG')
-    for filename in os.listdir(NON_COMPLIANT_DIR):
-        if filename.endswith(supported_formats):
-            img_path = os.path.join(NON_COMPLIANT_DIR, filename)
-            json_path = os.path.splitext(img_path)[0] + ".json"
-            
-            # 只有当对应的 JSON 文件中包含真正的违规标签时，才认为是违规图片
-            # 仅 shapes 不为空不够，人员/车辆等标签不属于违规
-            VIOLATION_LABELS = {"围栏断口", "围栏倒伏", "临边防护缺失"}
-            if os.path.exists(json_path):
-                try:
-                    with open(json_path, "r", encoding="utf-8") as f:
-                        label_data = json.load(f)
-                        has_violation = any(
-                            s.get("label") in VIOLATION_LABELS
-                            for s in label_data.get("shapes", [])
-                        )
-                        if has_violation:
-                            images.append({
-                                "path": img_path,
-                                "expected_type": "已知违规数据",
-                                "expected_suggestion": "违规数据集"
-                            })
-                except Exception:
-                    pass
-    return images
+# ── 模型路径 ──────────────────────────────────────────────────────────────────
+MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
+# 一阶段直接训练时: MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct"
+LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v0-20260414-135237/checkpoint-285"
 
-def test_model(use_lora=True):
-    print(f"[*] 正在从 {NON_COMPLIANT_DIR} 提取违规测试图片...")
-    all_violation_images = get_fence_violation_images()
-    test_images = all_violation_images[:TEST_COUNT]
+TILED_PIXEL_THRESHOLD = 4_000_000
+IMG_EXTS = {".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"}
 
-    lora = LORA_PATH if use_lora else None
-    model_type_str = "微调模型 (带 LoRA)" if use_lora else "原始基座模型 (无 LoRA)"
-    print(f"\n Lora路径为 {LORA_PATH}")
 
-    print(f"[*] 成功提取 {len(test_images)} 张违规图片，准备加载 {model_type_str}...")
-    model, processor, model_family = load_vlm(MODEL_PATH, lora_path=lora)
-    
-    print(f"\n[*] 开始批量测试 (共 {len(test_images)} 张)...")
-    
-    correct_count = 0
-    total_count = len(test_images)
-    results = []
-    
-    start_time = time.time()
-    
-    for i, item in enumerate(tqdm(test_images)):
-        img_path = item["path"]
-
+# ── 数据加载 ──────────────────────────────────────────────────────────────────
+def get_violation_images(max_count: int) -> list[dict]:
+    """从 NON_COMPLIANT_DIR 加载有 LabelMe 标注的违规图片。"""
+    items = []
+    if not os.path.isdir(NON_COMPLIANT_DIR):
+        print(f"[!] 找不到违规目录: {NON_COMPLIANT_DIR}")
+        return items
+    for fname in os.listdir(NON_COMPLIANT_DIR):
+        if os.path.splitext(fname)[1] not in IMG_EXTS:
+            continue
+        img_path = os.path.join(NON_COMPLIANT_DIR, fname)
+        json_path = os.path.splitext(img_path)[0] + ".json"
+        if not os.path.exists(json_path):
+            continue
         try:
-            # 检查图片尺寸，超过阈值启用分块推理
-            try:
-                img_size = Image.open(img_path).size
-                use_tiled = (img_size[0] * img_size[1]) > TILED_PIXEL_THRESHOLD
-            except Exception:
-                use_tiled = False
+            label_data = json.load(open(json_path, encoding="utf-8"))
+            gt_boxes = [
+                s for s in label_data.get("shapes", [])
+                if s.get("label") in VALID_LABELS
+            ]
+            if gt_boxes:
+                items.append({"path": img_path, "gt_boxes": gt_boxes,
+                               "img_w": label_data.get("imageWidth", 0),
+                               "img_h": label_data.get("imageHeight", 0)})
+        except Exception:
+            pass
+        if len(items) >= max_count:
+            break
+    return items
 
-            if use_tiled:
-                parsed_json = tiled_chat(
-                    model, processor, model_family, img_path,
-                    infer_fn=infer_vlm,
-                    system_prompt=SYSTEM_PROMPT,
-                    query=DEFAULT_QUERY,
-                    extract_fn=_extract_json_object,
+
+def get_compliant_images(max_count: int) -> list[dict]:
+    """从 COMPLIANT_IMAGE_DIRS 加载合规图片（无需标注文件）。"""
+    items = []
+    for d in COMPLIANT_IMAGE_DIRS:
+        if not os.path.isdir(d):
+            continue
+        for fname in os.listdir(d):
+            if os.path.splitext(fname)[1] not in IMG_EXTS:
+                continue
+            items.append({"path": os.path.join(d, fname), "gt_boxes": []})
+            if len(items) >= max_count:
+                return items
+    return items
+
+
+# ── 推理 ──────────────────────────────────────────────────────────────────────
+def _extract_json(text: str) -> dict | None:
+    """从模型输出中提取 JSON 对象。"""
+    import re
+    # 去掉 markdown 代码块
+    text = re.sub(r"```(?:json)?", "", text).strip()
+    # 找最外层 {}
+    start = text.find("{")
+    end = text.rfind("}") + 1
+    if start == -1 or end == 0:
+        return None
+    try:
+        d = json.loads(text[start:end])
+        # 兼容 violation_detection typo
+        if "violation_detection" in d and "violation_detected" not in d:
+            d["violation_detected"] = d.pop("violation_detection")
+        return d
+    except Exception:
+        return None
+
+
+def infer_single(model, processor, family, img_path: str, use_tiled: bool) -> dict | None:
+    """单张图推理，返回解析后的 JSON dict。"""
+    try:
+        w, h = Image.open(img_path).size
+        is_large = w * h > TILED_PIXEL_THRESHOLD
+    except Exception:
+        is_large = False
+
+    if use_tiled and is_large:
+        return tiled_chat(
+            model, processor, family, img_path,
+            infer_fn=infer_vlm,
+            system_prompt=SYSTEM_PROMPT,
+            query=DEFAULT_QUERY,
+            extract_fn=lambda t: (_extract_json(t), None, None),
+        )
+
+    messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": [
+            {"type": "image", "image": f"file://{os.path.abspath(img_path)}"},
+            {"type": "text", "text": DEFAULT_QUERY},
+        ]},
+    ]
+    raw = infer_vlm(model, processor, family, messages, max_new_tokens=1024)
+    return _extract_json(raw)
+
+
+# ── IoU 计算 ──────────────────────────────────────────────────────────────────
+def _labelme_to_norm1000(points: list, img_w: int, img_h: int) -> list:
+    """LabelMe polygon/rectangle points → [x0,y0,x1,y1] 千分比。"""
+    xs = [p[0] for p in points]
+    ys = [p[1] for p in points]
+    return [
+        int(min(xs) / img_w * 1000),
+        int(min(ys) / img_h * 1000),
+        int(max(xs) / img_w * 1000),
+        int(max(ys) / img_h * 1000),
+    ]
+
+
+def _iou(a: list, b: list) -> float:
+    ix0, iy0 = max(a[0], b[0]), max(a[1], b[1])
+    ix1, iy1 = min(a[2], b[2]), min(a[3], b[3])
+    inter = max(0, ix1 - ix0) * max(0, iy1 - iy0)
+    if inter == 0:
+        return 0.0
+    area_a = (a[2] - a[0]) * (a[3] - a[1])
+    area_b = (b[2] - b[0]) * (b[3] - b[1])
+    return inter / (area_a + area_b - inter)
+
+
+def compute_iou_stats(pred_boxes: list, gt_boxes: list, img_w: int, img_h: int) -> dict:
+    """
+    计算预测框与 GT 框的匹配 IoU。
+    返回 {mean_iou, matched, total_gt, total_pred}
+    """
+    if not gt_boxes or not pred_boxes:
+        return {"mean_iou": 0.0, "matched": 0,
+                "total_gt": len(gt_boxes), "total_pred": len(pred_boxes)}
+
+    gt_norm = [_labelme_to_norm1000(s["points"], img_w, img_h) for s in gt_boxes]
+    pred_norm = [b["bbox"] for b in pred_boxes if len(b.get("bbox", [])) == 4]
+
+    matched_ious = []
+    used_pred = set()
+    for gt in gt_norm:
+        best_iou, best_j = 0.0, -1
+        for j, pred in enumerate(pred_norm):
+            if j in used_pred:
+                continue
+            iou = _iou(gt, pred)
+            if iou > best_iou:
+                best_iou, best_j = iou, j
+        if best_j >= 0 and best_iou > 0:
+            matched_ious.append(best_iou)
+            used_pred.add(best_j)
+
+    return {
+        "mean_iou": sum(matched_ious) / len(matched_ious) if matched_ious else 0.0,
+        "matched": len(matched_ious),
+        "total_gt": len(gt_norm),
+        "total_pred": len(pred_norm),
+    }
+
+
+# ── 主测试逻辑 ────────────────────────────────────────────────────────────────
+def run_test(use_lora: bool, use_tiled: bool, count: int):
+    lora = LORA_PATH if use_lora else None
+    mode = "微调模型" if use_lora else "基座模型"
+    infer_mode = "分块推理" if use_tiled else "快速单路"
+    print(f"\n模型: {mode}  推理模式: {infer_mode}")
+    print(f"MODEL_PATH: {MODEL_PATH}")
+    if lora:
+        print(f"LORA_PATH:  {lora}")
+
+    violation_items = get_violation_images(count)
+    compliant_items = get_compliant_images(count)
+    print(f"违规测试集: {len(violation_items)} 张  合规测试集: {len(compliant_items)} 张")
+
+    model, processor, family = load_vlm(MODEL_PATH, lora_path=lora)
+
+    # ── 违规图测试（召回率 + IoU）────────────────────────────────────────────
+    print(f"\n[1/2] 违规图测试（召回率 + IoU）...")
+    recall_correct = 0
+    iou_stats_all = []
+    violation_results = []
+    t0 = time.time()
+
+    for item in tqdm(violation_items):
+        img_path = item["path"]
+        t1 = time.time()
+        parsed = infer_single(model, processor, family, img_path, use_tiled)
+        elapsed = time.time() - t1
+
+        detected = False
+        iou_stat = {"mean_iou": 0.0, "matched": 0,
+                    "total_gt": len(item["gt_boxes"]), "total_pred": 0}
+
+        if parsed:
+            detected = bool(parsed.get("violation_detected", False))
+            if isinstance(detected, str):
+                detected = detected.lower() == "true"
+            # 有框但 detected=false，修正
+            if not detected and parsed.get("violation_boxes"):
+                detected = True
+
+            if detected and item["gt_boxes"] and item["img_w"]:
+                iou_stat = compute_iou_stats(
+                    parsed.get("violation_boxes", []),
+                    item["gt_boxes"],
+                    item["img_w"], item["img_h"],
                 )
-                response = json.dumps(parsed_json, ensure_ascii=False)
-            else:
-                messages = [
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {
-                        "role": "user",
-                        "content": [
-                            {"type": "image", "image": f"file://{os.path.abspath(img_path)}"},
-                            {"type": "text", "text": DEFAULT_QUERY},
-                        ],
-                    },
-                ]
-                response = infer_vlm(model, processor, model_family, messages, max_new_tokens=1536)
-                parsed_json, _, _ = _extract_json_object(response)
-            
-            if parsed_json:
-                is_violation = parsed_json.get("violation_detected", False)
-                # 兼容模型输出字符串 "true" / "false" 或大写
-                if isinstance(is_violation, str):
-                    is_violation = (is_violation.lower() == "true")
-                
-                # 新增逻辑：如果 violation_boxes 不为空，则强制认为是违规
-                if not is_violation and parsed_json.get("violation_boxes") and len(parsed_json.get("violation_boxes")) > 0:
-                    print(f"  [!] 发现逻辑矛盾: {os.path.basename(img_path)} 输出 false 但带有违规框，强制判定为违规。")
-                    is_violation = True
-            else:
-                # 如果没解析出来 JSON，尝试正则粗暴匹配
-                is_violation = "violation_detected: true" in response.lower() or '"violation_detected": true' in response.lower()
-                
-                # 正则匹配是否输出了违规框
-                if not is_violation and '"bbox"' in response.lower():
-                    is_violation = True
-                    
-            if is_violation:
-                correct_count += 1
-                status = "✅ 成功 (违规)"
-            else:
-                status = "❌ 失败 (合规)"
-                
-            results.append({
-                "image_name": os.path.basename(img_path),
-                "image_path": img_path,
-                "status": status,
-                "is_violation_detected": is_violation,
-                "parsed_type": parsed_json.get("violation_type") if parsed_json else "Parse Error",
-                "boxes_detected": len(parsed_json.get("violation_boxes", [])) if parsed_json else 0,
-                "raw_response": response
-            })
-            
-        except Exception as e:
-            results.append({
-                "image_name": os.path.basename(img_path),
-                "image_path": img_path,
-                "status": f"⚠️ 报错 ({str(e)})",
-                "is_violation_detected": False,
-                "parsed_type": "Error",
-                "boxes_detected": 0,
-                "raw_response": ""
-            })
+                iou_stats_all.append(iou_stat["mean_iou"])
 
-    end_time = time.time()
+        if detected:
+            recall_correct += 1
 
-    timestamp = int(time.time())
-    date_str = datetime.now().strftime('%Y%m%d')
-    # 将结果保存到文件
-    prefix = "lora_" if use_lora else "base_"
-    output_file = f"/home/fs-ai/llama-qwen/outputs/{prefix}fence_test_results_{date_str}_{timestamp}.json"
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    
-    recall_rate = f"{correct_count / total_count * 100:.2f}%" if total_count > 0 else "0.00%"
-    avg_time = f"{(end_time - start_time) / total_count:.2f}s/张" if total_count > 0 else "0.00s/张"
-    
-    with open(output_file, "w", encoding="utf-8") as f:
+        violation_results.append({
+            "image": os.path.basename(img_path),
+            "detected": detected,
+            "violation_type": parsed.get("violation_type", "") if parsed else "",
+            "iou": iou_stat,
+            "elapsed": round(elapsed, 2),
+        })
+
+    recall = recall_correct / len(violation_items) if violation_items else 0
+    mean_iou = sum(iou_stats_all) / len(iou_stats_all) if iou_stats_all else 0
+
+    # ── 合规图测试（精确率）──────────────────────────────────────────────────
+    print(f"\n[2/2] 合规图测试（精确率）...")
+    precision_correct = 0
+    compliant_results = []
+
+    for item in tqdm(compliant_items):
+        img_path = item["path"]
+        t1 = time.time()
+        parsed = infer_single(model, processor, family, img_path, use_tiled)
+        elapsed = time.time() - t1
+
+        is_compliant = True
+        if parsed:
+            detected = bool(parsed.get("violation_detected", False))
+            if isinstance(detected, str):
+                detected = detected.lower() == "true"
+            if not detected and parsed.get("violation_boxes"):
+                detected = True
+            is_compliant = not detected
+
+        if is_compliant:
+            precision_correct += 1
+
+        compliant_results.append({
+            "image": os.path.basename(img_path),
+            "is_compliant": is_compliant,
+            "violation_type": parsed.get("violation_type", "") if parsed else "",
+            "elapsed": round(elapsed, 2),
+        })
+
+    precision = precision_correct / len(compliant_items) if compliant_items else 0
+    total_time = time.time() - t0
+
+    # ── 打印报告 ──────────────────────────────────────────────────────────────
+    print("\n" + "=" * 60)
+    print(f"  测试报告  [{mode} / {infer_mode}]")
+    print("=" * 60)
+    print(f"  召回率  (Recall)   : {recall*100:.1f}%  ({recall_correct}/{len(violation_items)})")
+    print(f"  精确率  (Precision): {precision*100:.1f}%  ({precision_correct}/{len(compliant_items)})")
+    print(f"  平均 IoU           : {mean_iou:.3f}  (基于 {len(iou_stats_all)} 张有框图)")
+    print(f"  总耗时             : {total_time:.1f}s  (平均 {total_time/(len(violation_items)+len(compliant_items)):.1f}s/张)")
+    print("=" * 60)
+
+    # 前10条违规结果
+    print("\n违规图前10条：")
+    for r in violation_results[:10]:
+        icon = "✅" if r["detected"] else "❌"
+        iou_str = f"IoU={r['iou']['mean_iou']:.2f}" if r["iou"]["total_gt"] > 0 else ""
+        print(f"  {icon} {r['image']}  类型:{r['violation_type']}  {iou_str}  {r['elapsed']}s")
+
+    print("\n合规图前10条：")
+    for r in compliant_results[:10]:
+        icon = "✅" if r["is_compliant"] else "❌"
+        print(f"  {icon} {r['image']}  {r['elapsed']}s")
+
+    # 保存 JSON 报告
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    prefix = "lora" if use_lora else "base"
+    out_path = f"outputs/{prefix}_test_{ts}.json"
+    os.makedirs("outputs", exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump({
-            "model_type": model_type_str,
             "summary": {
-                "total_tested": total_count,
-                "correct_violations": correct_count,
-                "missed_violations": total_count - correct_count,
-                "recall_rate": recall_rate,
-                "time_elapsed": f"{end_time - start_time:.2f}s"
+                "model": mode, "infer_mode": infer_mode,
+                "recall": round(recall, 4),
+                "precision": round(precision, 4),
+                "mean_iou": round(mean_iou, 4),
+                "total_time": round(total_time, 1),
             },
-            "results": results
+            "violation_results": violation_results,
+            "compliant_results": compliant_results,
         }, f, ensure_ascii=False, indent=2)
-    
-    print("\n" + "="*60)
-    print(f" {model_type_str} 测试报告")
-    print("="*60)
-    print(f"总测试数量: {total_count}")
-    print(f"成功检出违规: {correct_count}")
-    print(f"漏检(误判为合规): {total_count - correct_count}")
-    print(f"准确率 (Recall): {recall_rate}")
-    print(f"总耗时: {end_time - start_time:.2f}s (平均 {avg_time})")
-    print(f"详细测试结果已保存至: {output_file}")
-    print("="*60)
-    
-    print("\n前10条详细结果:")
-    for res in results[:10]:
-        print(f" - {res['image_name']}: {res['status']} | 检出类型: {res.get('parsed_type', 'N/A')}")
+    print(f"\n报告已保存: {out_path}")
+
 
 if __name__ == "__main__":
-    import sys
-    use_lora = "--base-only" not in sys.argv
-    test_model(use_lora=use_lora)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--base-only", action="store_true", help="不加载 LoRA")
+    parser.add_argument("--tiled", action="store_true", help="启用分块推理（慢但准）")
+    parser.add_argument("--count", type=int, default=50, help="每类最多测试张数")
+    args = parser.parse_args()
+
+    os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    run_test(
+        use_lora=not args.base_only,
+        use_tiled=args.tiled,
+        count=args.count,
+    )
