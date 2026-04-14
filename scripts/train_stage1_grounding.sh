@@ -30,7 +30,7 @@ LR="2e-5"
 EPOCHS=5
 BATCH_SIZE=1
 GRAD_ACCUM=4
-MAX_PIXELS=1003520
+MAX_PIXELS=3686400 # 2k
 
 echo "============================================="
 echo "  Stage 1: Qwen3-VL Grounding 预训练"
@@ -86,8 +86,8 @@ echo ""
 echo "Step 1 完成！"
 
 # ---------- 合并 LoRA 权重 ----------
-# 找到最新的 checkpoint
-BEST_CKPT=$(ls -d "$STAGE1_OUTPUT_DIR"/checkpoint-* 2>/dev/null | sort -V | tail -1)
+# swift 把 checkpoint 存在 v{N}-xxx/checkpoint-* 子目录下
+BEST_CKPT=$(ls -d "$STAGE1_OUTPUT_DIR"/v*/checkpoint-* 2>/dev/null | sort -V | tail -1)
 if [ -z "$BEST_CKPT" ]; then
     echo "[Error] 找不到训练 checkpoint，合并失败"
     exit 1
@@ -101,6 +101,8 @@ echo "  输出目录:   $MERGED_MODEL_DIR"
 mkdir -p "$MERGED_MODEL_DIR"
 
 swift export \
+    --model_type qwen3_vl \
+    --model "$MODEL_DIR" \
     --adapters "$BEST_CKPT" \
     --merge_lora true \
     --output_dir "$MERGED_MODEL_DIR" \

@@ -144,6 +144,7 @@ def infer_vlm(
 
     generate_kwargs = {
         "max_new_tokens": max_new_tokens,
+        "repetition_penalty": 1.3,
     }
     if do_sample:
         generate_kwargs["do_sample"] = True
