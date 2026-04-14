@@ -180,3 +180,17 @@ python scripts/chat.py \
 **swift export 路径**：合并后模型在 `checkpoint-X-merged`，不在 `--output_dir` 指定的路径。
 
 **bbox 越界**：运行 `fix_cache_bbox.py` 对现有 cache 做离线清洗。
+
+```bash
+# 快速测试（默认）
+  python scripts/test_fence_violations.py
+
+  # 高精度测试
+  python scripts/test_fence_violations.py --tiled
+
+  # chat 快速模式
+  python scripts/chat.py --image /path/to/img.jpg --visualize
+
+  # chat 分块模式
+  python scripts/chat.py --image /path/to/img.jpg --tiled --visualize
+```
