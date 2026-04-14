@@ -23,7 +23,7 @@ LR="5e-5"
 EPOCHS=15
 BATCH_SIZE=1
 GRAD_ACCUM=8
-MAX_PIXELS=800000
+MAX_PIXELS=4000000 # 4000000
 
 echo "============================================="
 echo "  Qwen3-VL 2B 围栏精细化 QLoRA 微调"
@@ -68,7 +68,7 @@ swift sft \
     --lora_dropout 0.05 \
     --gradient_checkpointing true \
     --max_pixels "$MAX_PIXELS" \
-    --enable_thinking false
+    --enable_thinking false 
     2>&1 | tee "$OUTPUT_DIR/train.log"
 
 echo "============================================="

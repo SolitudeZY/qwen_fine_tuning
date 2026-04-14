@@ -4,6 +4,8 @@ import time
 from tqdm import tqdm
 from model_utils import load_vlm, infer_vlm
 from chat import SYSTEM_PROMPT, DEFAULT_QUERY, _extract_json_object
+from tiled_infer import tiled_chat
+from PIL import Image
 from datetime import datetime
 
 import csv
@@ -12,9 +14,11 @@ import csv
 CSV_DATA_PATH = "/home/fs-ai/llama-qwen/outputs/all_fences_for_review.csv"
 NON_COMPLIANT_DIR = "/home/fs-ai/llama-qwen/Fences_noncomlaint"
 MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct"
-LORA_PATH = "/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_minimal_cot_lora/v0-20260409-191023/checkpoint-330"
+LORA_PATH = "/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_stage2_json/v9-20260413-151832/checkpoint-180"
+# 备用路径-短思维链后得出结果"/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_minimal_cot_lora/v0-20260409-191023/checkpoint-330"
 # 备用路径-输出长但准确"/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_lora/v4-20260409-161021/checkpoint-420"
 TEST_COUNT = 50
+TILED_PIXEL_THRESHOLD = 4_000_000  # 超过此像素数自动启用分块推理
 
 def get_fence_violation_images():
     """从违规数据集中提取确实存在违规框的图片路径"""
@@ -29,12 +33,18 @@ def get_fence_violation_images():
             img_path = os.path.join(NON_COMPLIANT_DIR, filename)
             json_path = os.path.splitext(img_path)[0] + ".json"
             
-            # 只有当对应的 JSON 文件存在，并且里面确实画了框（shapes不为空）时，才认为是真正的违规图片
+            # 只有当对应的 JSON 文件中包含真正的违规标签时，才认为是违规图片
+            # 仅 shapes 不为空不够，人员/车辆等标签不属于违规
+            VIOLATION_LABELS = {"围栏断口", "围栏倒伏", "临边防护缺失"}
             if os.path.exists(json_path):
                 try:
                     with open(json_path, "r", encoding="utf-8") as f:
                         label_data = json.load(f)
-                        if len(label_data.get("shapes", [])) > 0:
+                        has_violation = any(
+                            s.get("label") in VIOLATION_LABELS
+                            for s in label_data.get("shapes", [])
+                        )
+                        if has_violation:
                             images.append({
                                 "path": img_path,
                                 "expected_type": "已知违规数据",
@@ -66,20 +76,37 @@ def test_model(use_lora=True):
     
     for i, item in enumerate(tqdm(test_images)):
         img_path = item["path"]
-        messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {
-                "role": "user",
-                "content": [
-                    {"type": "image", "image": f"file://{os.path.abspath(img_path)}"},
-                    {"type": "text", "text": DEFAULT_QUERY},
-                ],
-            },
-        ]
-        
+
         try:
-            response = infer_vlm(model, processor, model_family, messages, max_new_tokens=1536)
-            parsed_json, _, _ = _extract_json_object(response)
+            # 检查图片尺寸，超过阈值启用分块推理
+            try:
+                img_size = Image.open(img_path).size
+                use_tiled = (img_size[0] * img_size[1]) > TILED_PIXEL_THRESHOLD
+            except Exception:
+                use_tiled = False
+
+            if use_tiled:
+                parsed_json = tiled_chat(
+                    model, processor, model_family, img_path,
+                    infer_fn=infer_vlm,
+                    system_prompt=SYSTEM_PROMPT,
+                    query=DEFAULT_QUERY,
+                    extract_fn=_extract_json_object,
+                )
+                response = json.dumps(parsed_json, ensure_ascii=False)
+            else:
+                messages = [
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "image", "image": f"file://{os.path.abspath(img_path)}"},
+                            {"type": "text", "text": DEFAULT_QUERY},
+                        ],
+                    },
+                ]
+                response = infer_vlm(model, processor, model_family, messages, max_new_tokens=1536)
+                parsed_json, _, _ = _extract_json_object(response)
             
             if parsed_json:
                 is_violation = parsed_json.get("violation_detected", False)

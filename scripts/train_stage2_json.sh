@@ -18,16 +18,16 @@ DATA_DIR="$PROJECT_ROOT/data"
 DATASET_JSONL="$DATA_DIR/finetune_stage2_gt.jsonl"
 
 # 从 Stage 1 合并后的模型开始（而非原始基础模型）
-MERGED_MODEL_DIR="$PROJECT_ROOT/outputs/qwen3vl_2b_stage1_merged"
+MERGED_MODEL_DIR="$PROJECT_ROOT/outputs/qwen3vl_2b_stage1_grounding/v4-20260413-145230/checkpoint-90-merged"
 OUTPUT_DIR="$PROJECT_ROOT/outputs/qwen3vl_2b_stage2_json"
 
 # Stage 2 超参数（与 train_fences.sh 一致，rank 提升到 32）
-LORA_RANK=32
-LORA_ALPHA=64
+LORA_RANK=16
+LORA_ALPHA=32
 LR="5e-5"
 EPOCHS=15
 BATCH_SIZE=1
-GRAD_ACCUM=4
+GRAD_ACCUM=8
 MAX_PIXELS=1003520
 
 echo "============================================="

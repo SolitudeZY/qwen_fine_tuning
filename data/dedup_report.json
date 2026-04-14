@@ -1,0 +1,713 @@
+{
+  "summary": {
+    "total_scanned": 269,
+    "exact_duplicates_removed": 40,
+    "perceptual_duplicates_removed": 46,
+    "kept": 183
+  },
+  "exact_duplicates": [
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_094542_0_1762825542556_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094542_0_1762825542556_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "42cb9a25353ac1dbc986dccf63c27456"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_094636_0_1762825596259_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094636_0_1762825596259_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "1064e0e74911bb765ef678807ac1777d"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_094656_0_1762825616079_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094656_0_1762825616079_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "a9d7e928e0320c90ce9bd391771370da"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_094814_0_1762825694519_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094814_0_1762825694519_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "3f00c4377ad28e381e10270f66bdf4e8"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "8ae05891161328472160a9bad9dc9322"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_094843_0_1762825723294_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094843_0_1762825723294_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "f4058f9640581c50a6d992a2927bc534"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_095112_0_1762825872640_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095112_0_1762825872640_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "234fe978941815583a2058c8db5f122d"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_095725_0_1762826245713_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095725_0_1762826245713_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "ab1787695458746f189f868961fd78d8"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_095739_0_1762826259471_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095739_0_1762826259471_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "305636415c4d4ba6d20eb42d48c7c5ec"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_095749_0_1762826269685_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095749_0_1762826269685_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "906c2a9218df582061d77b93e8acc40d"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_095904_0_1762826344999_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095904_0_1762826344999_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "638fb95dd601d49b761dda12c2ecb679"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_095910_0_1762826350673_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095910_0_1762826350673_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "7b5bd8c81bd8e07d5ac3fd520086704e"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_100851_0_1762826931377_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_100851_0_1762826931377_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "4332bf3f933d3f3fe154fba0533fa754"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_100931_0_1762826971051_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_100931_0_1762826971051_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "fc70c9a8a6df9f89c886c33fd54d809c"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_100957_0_1762826997220_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_100957_0_1762826997220_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "7e9cb14b49690418ef9067f2bbb4d6b5"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101011_0_1762827011933_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101011_0_1762827011933_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "04329926639b7b5ba2e8cabdf64ac258"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101113_0_1762827073324_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101113_0_1762827073324_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "090a7b6cd35a265b66d8a111f5363af1"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101142_0_1762827102814_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101142_0_1762827102814_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "38fbeea8fb305886ad2d455a1cc6de70"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101210_0_1762827130932_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101210_0_1762827130932_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "0c2ce39517eb7492702f4c90ab428566"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101224_0_1762827144813_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101224_0_1762827144813_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "32f32b4cc1b39ea6bb27a41a44f3296d"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101243_0_1762827163610_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101243_0_1762827163610_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "1733b82930de3b499e7ab832fcc014bc"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101251_0_1762827171896_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101251_0_1762827171896_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "19c6c066c19ebb4ad2cc79a5dff08778"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101256_0_1762827176987_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101256_0_1762827176987_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "d16555e992e84baa14a9548283c057e9"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101314_0_1762827194997_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101314_0_1762827194997_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "9eb62b52c3b6abf8b0fbbee86ec4b119"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101326_0_1762827206324_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101326_0_1762827206324_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "9004986e1c770667db1308ba16534d57"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101336_0_1762827216819_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101336_0_1762827216819_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "f8834c032f4655988d59b93ec6fb74ee"
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101405_0_1762827245671_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101405_0_1762827245671_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "47bc09df817631ff2af40e51eb07c52b"
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_162030_374_1762849241211_photo.jpg",
+      "duplicate_of": "dataset/221-330/DJI_0374.JPG",
+      "reason": "exact_md5",
+      "md5": "bae7fcdc763129fd89dd73c6831fa691"
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_162128_375_1762849299607_photo.jpg",
+      "duplicate_of": "dataset/221-330/DJI_0375.JPG",
+      "reason": "exact_md5",
+      "md5": "d3b5d06b978d373aa010dcb2bf1e3b93"
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_162202_376_1762849334110_photo.jpg",
+      "duplicate_of": "dataset/221-330/DJI_0376.JPG",
+      "reason": "exact_md5",
+      "md5": "8d915ce14b883150904923de5615e31d"
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_162322_377_1762849414642_photo.jpg",
+      "duplicate_of": "dataset/221-330/DJI_0377.JPG",
+      "reason": "exact_md5",
+      "md5": "307057ea9544d961e062487bb0190d0c"
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_162424_378_1762849474241_photo.jpg",
+      "duplicate_of": "dataset/221-330/DJI_0378.JPG",
+      "reason": "exact_md5",
+      "md5": "af925854bfd14b0b79a55be752785f51"
+    },
+    {
+      "removed": "dataset/标注111-220/DJI_0365.JPG",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_155758_365_1762849201088_photo.jpg",
+      "reason": "exact_md5",
+      "md5": "5b9224124b6d383051b6c8570b06a603"
+    },
+    {
+      "removed": "dataset/标注111-220/DJI_0366.JPG",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_155900_366_1762849195708_photo.jpg",
+      "reason": "exact_md5",
+      "md5": "2cca4493673b8e9401e7382403615cf8"
+    },
+    {
+      "removed": "dataset/标注111-220/DJI_0367.JPG",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_155940_367_1762849190662_photo.jpg",
+      "reason": "exact_md5",
+      "md5": "fdfbd09668c49ddc08acd16d99a9ddef"
+    },
+    {
+      "removed": "dataset/标注111-220/DJI_0368.JPG",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_160234_368_1762849185478_photo.jpg",
+      "reason": "exact_md5",
+      "md5": "273df43ad467ebfbd207fed4a0fc91f1"
+    },
+    {
+      "removed": "dataset/标注111-220/DJI_0370.JPG",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_160642_370_1762849176045_photo.jpg",
+      "reason": "exact_md5",
+      "md5": "2e780cb8cbab5cffd87f0f963314f30e"
+    },
+    {
+      "removed": "dataset/标注111-220/DJI_0371.JPG",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_161840_371_1762849170259_photo.jpg",
+      "reason": "exact_md5",
+      "md5": "11c60b25ed0d8769a646ddfce6ee8b43"
+    },
+    {
+      "removed": "dataset/标注111-220/DJI_0373.JPG",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_162016_373_1762849228152_photo.jpg",
+      "reason": "exact_md5",
+      "md5": "27415061ca86e845f586fcec70e08ffe"
+    },
+    {
+      "removed": "dataset/标注111-220/dji_fly_20251111_103357_0_1762828437620_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_103357_0_1762828437620_photo_low_quality.jpg",
+      "reason": "exact_md5",
+      "md5": "93b3ba39445c9ad3b35a693f2a580002"
+    }
+  ],
+  "perceptual_duplicates": [
+    {
+      "removed": "dataset/1-100/dji_fly_20251111_094843_0_1762825723294_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 8
+    },
+    {
+      "removed": "dataset/1-100/dji_fly_20251111_095725_0_1762826245713_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 7
+    },
+    {
+      "removed": "dataset/1-100/dji_fly_20251111_095749_0_1762826269685_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 8
+    },
+    {
+      "removed": "dataset/1-100/dji_fly_20251111_095904_0_1762826344999_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094814_0_1762825694519_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 10
+    },
+    {
+      "removed": "dataset/1-100/dji_fly_20251111_095910_0_1762826350673_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 1
+    },
+    {
+      "removed": "dataset/1-100/dji_fly_20251111_100117_0_1762826477958_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 6
+    },
+    {
+      "removed": "dataset/1-100/dji_fly_20251111_101122_0_1762827082895_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/221-330/DJI_0379.JPG",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/221-330/dji_fly_20251111_101212_0_1762827132490_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101210_0_1762827130932_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 6
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_005edc46c565a29b_1765941012000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_062a18d0b90cd3cb_1765941366000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 8
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_0dc73a021d120d0e_1765941446000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 10
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_106f3c5fb3a585f0_1765941594000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 10
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_1e70a919f9ce7089_1765939314000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_29cd088649864ef1_1765955362000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 10
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_45acb09a42a0e7ab_1765955338000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_5c07bf376411bcac_1765955304000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_627a03d7756bd21b_1765955126000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_6b86dc0a2a535f40_1765954788000.jpg",
+      "duplicate_of": "dataset/北二绕无人机图片标注/org_632d5faa59c5c729_1765954790000.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 0
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_7a77f20d1dd59f54_1765940178000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_102105_0_1762827665199_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_7bbd32ce97720926_1765955082000.jpg",
+      "duplicate_of": "dataset/北二绕无人机图片标注/org_6405cdd965946f92_1765955080000.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 1
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_7c87772b5453fb2f_1765954858000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 4
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_8e23951b17a8c356_1765939318000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_9421c78855341872_1765954922000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 8
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_95f2738083b1775b_1765955278000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 6
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_b8098645e253be21_1765954990000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/北二绕无人机图片标注/org_f153e0418d2b5e86_1765955064000.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 7
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_102848_0_1762828128725_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101243_0_1762827163610_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 10
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_102905_0_1762828145524_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_102903_0_1762828143631_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 6
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_103357_0_1762828437620_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_103345_0_1762828425051_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 8
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_152923_0_1762846163336_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_152920_0_1762846160702_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 0
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153156_0_1762846316063_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153311_0_1762846391677_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153312_0_1762846392983_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153314_0_1762846394453_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153329_0_1762846409137_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153320_0_1762846400155_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 3
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153559_0_1762846559620_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153555_0_1762846555549_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 0
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153852_0_1762846732969_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153851_0_1762846731095_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 3
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153906_0_1762846746409_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153905_0_1762846745353_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 0
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251111_162016_373_1762849228152_photo.jpg",
+      "duplicate_of": "dataset/221-330/DJI_0374.JPG",
+      "reason": "perceptual_phash",
+      "hamming_distance": 8
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095841_0_1762912721376_photo_low_quality.jpg",
+      "duplicate_of": "dataset/北二绕无人机图片标注/org_845e22fae007d6c8_1765940218000.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 10
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100021_0_1762912821599_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_101326_0_1762827206324_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100215_0_1762912935217_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100213_0_1762912933877_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 7
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251112_101312_0_1762913592958_photo_low_quality.jpg",
+      "duplicate_of": "dataset/无人机图片标识441-550(1)/dji_fly_20251112_101305_0_1762913585721_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 7
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102511_0_1762914311218_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    },
+    {
+      "removed": "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102609_0_1762914369708_photo_low_quality.jpg",
+      "duplicate_of": "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+      "reason": "perceptual_phash",
+      "hamming_distance": 9
+    }
+  ],
+  "kept_images": [
+    "dataset/1-100/dji_fly_20251111_094542_0_1762825542556_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_094624_0_1762825584183_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_094636_0_1762825596259_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_094656_0_1762825616079_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_094814_0_1762825694519_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_094826_0_1762825706416_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_095112_0_1762825872640_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_095218_0_1762825938993_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_095739_0_1762826259471_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_100202_0_1762826522599_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_100851_0_1762826931377_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_100855_0_1762826935652_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_100931_0_1762826971051_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_100957_0_1762826997220_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101011_0_1762827011933_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101113_0_1762827073324_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101142_0_1762827102814_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101155_0_1762827115788_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101200_0_1762827120666_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101210_0_1762827130932_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101217_0_1762827137395_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101224_0_1762827144813_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101243_0_1762827163610_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101251_0_1762827171896_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101256_0_1762827176987_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101314_0_1762827194997_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101326_0_1762827206324_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101336_0_1762827216819_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101405_0_1762827245671_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101527_0_1762827327485_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101555_0_1762827355475_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101653_0_1762827413422_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101822_0_1762827502025_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101840_0_1762827520549_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101844_0_1762827524849_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101858_0_1762827538561_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101912_0_1762827552961_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101936_0_1762827576223_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101951_0_1762827591637_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_101958_0_1762827598846_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_102009_0_1762827609480_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_102017_0_1762827617827_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_102021_0_1762827621058_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_102041_0_1762827641686_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_102045_0_1762827645728_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_102053_0_1762827653130_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_102105_0_1762827665199_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_102112_0_1762827672547_photo_low_quality.jpg",
+    "dataset/1-100/dji_fly_20251111_102114_0_1762827674798_photo_low_quality.jpg",
+    "dataset/221-330/DJI_0374.JPG",
+    "dataset/221-330/DJI_0375.JPG",
+    "dataset/221-330/DJI_0376.JPG",
+    "dataset/221-330/DJI_0377.JPG",
+    "dataset/221-330/DJI_0378.JPG",
+    "dataset/221-330/DJI_0380.JPG",
+    "dataset/221-330/DJI_0381.JPG",
+    "dataset/221-330/DJI_0382.JPG",
+    "dataset/221-330/DJI_0383.JPG",
+    "dataset/221-330/dji_fly_20251111_101003_0_1762827003509_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101034_0_1762827034798_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101040_0_1762827040440_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101102_0_1762827062181_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101106_0_1762827066964_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101128_0_1762827088828_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101133_0_1762827093228_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101147_0_1762827107051_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101204_0_1762827124127_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101222_0_1762827142236_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101233_0_1762827153392_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101304_0_1762827184826_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101511_0_1762827311589_photo_low_quality.jpg",
+    "dataset/221-330/dji_fly_20251111_101539_0_1762827339762_photo_low_quality.jpg",
+    "dataset/北二绕无人机图片标注/org_25cde78ab68a28bc_1765938924000.jpg",
+    "dataset/北二绕无人机图片标注/org_29e4a974ae59f94c_1765938446000.jpg",
+    "dataset/北二绕无人机图片标注/org_3a87781d23076600_1765941510000.jpg",
+    "dataset/北二绕无人机图片标注/org_457b7c4325b8d32a_1765938642000.jpg",
+    "dataset/北二绕无人机图片标注/org_4ef661c4c3ef5533_1765938708000.jpg",
+    "dataset/北二绕无人机图片标注/org_4fb12512dc9bcf30_1765940962000.jpg",
+    "dataset/北二绕无人机图片标注/org_5f34b6cd1c971aa1_1765939182000.jpg",
+    "dataset/北二绕无人机图片标注/org_5f61e1b67ac01b67_1765940388000.jpg",
+    "dataset/北二绕无人机图片标注/org_632d5faa59c5c729_1765954790000.jpg",
+    "dataset/北二绕无人机图片标注/org_6405cdd965946f92_1765955080000.jpg",
+    "dataset/北二绕无人机图片标注/org_6b43b8ac75eb6574_1765940936000.jpg",
+    "dataset/北二绕无人机图片标注/org_7516770540b3511f_1765939010000.jpg",
+    "dataset/北二绕无人机图片标注/org_77754065820f106a_1765956686000.jpg",
+    "dataset/北二绕无人机图片标注/org_789e3fe992e28072_1765940300000.jpg",
+    "dataset/北二绕无人机图片标注/org_845e22fae007d6c8_1765940218000.jpg",
+    "dataset/北二绕无人机图片标注/org_8698ed56f2b63d20_1765940416000.jpg",
+    "dataset/北二绕无人机图片标注/org_8da638eed1ad938a_1765939132000.jpg",
+    "dataset/北二绕无人机图片标注/org_c00e624fd16c2654_1765938600000.jpg",
+    "dataset/北二绕无人机图片标注/org_c2d255d025ebebcd_1765938854000.jpg",
+    "dataset/北二绕无人机图片标注/org_e0af5cddc9600ade_1765939246000.jpg",
+    "dataset/北二绕无人机图片标注/org_e3b52d8b45dbddac_1765940264000.jpg",
+    "dataset/北二绕无人机图片标注/org_e712216076cbe30a_1765938830000.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_102844_0_1762828124945_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_102847_0_1762828127047_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_102851_0_1762828131044_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_102900_0_1762828140192_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_102903_0_1762828143631_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_103345_0_1762828425051_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_103516_0_1762828516706_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_152639_0_1762845999081_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_152815_0_1762846095318_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_152841_0_1762846121338_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_152920_0_1762846160702_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_152950_0_1762846190398_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153012_0_1762846212586_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153210_0_1762846330358_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153320_0_1762846400155_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153504_0_1762846504629_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153555_0_1762846555549_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153655_0_1762846615580_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153851_0_1762846731095_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153905_0_1762846745353_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_153913_0_1762846753550_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_154019_0_1762846819543_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_154115_0_1762846875173_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_154156_0_1762846916356_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_154249_0_1762846969180_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_154344_0_1762847024090_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_155654_363_1762849211167_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_155708_364_1762849206212_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_155758_365_1762849201088_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_155900_366_1762849195708_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_155940_367_1762849190662_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_160234_368_1762849185478_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_160442_369_1762849180237_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_160642_370_1762849176045_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_161840_371_1762849170259_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251111_161914_372_1762849165739_photo.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095827_0_1762912707387_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095831_0_1762912711421_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095846_0_1762912726084_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095851_0_1762912731886_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095857_0_1762912737920_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095902_0_1762912742044_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095915_0_1762912755207_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095917_0_1762912757446_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095921_0_1762912761654_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095936_0_1762912776870_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095941_0_1762912781905_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_095956_0_1762912796872_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100004_0_1762912804578_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100009_0_1762912809293_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100017_0_1762912817126_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100027_0_1762912827050_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100035_0_1762912835316_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100057_0_1762912857197_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100109_0_1762912869784_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100124_0_1762912884334_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100137_0_1762912897434_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100157_0_1762912917423_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100204_0_1762912924903_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100206_0_1762912926680_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100211_0_1762912931442_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_100213_0_1762912933877_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_101238_0_1762913558825_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_101249_0_1762913569044_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_101255_0_1762913575029_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_101305_0_1762913585721_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_101319_0_1762913599461_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_101321_0_1762913601597_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102449_0_1762914289468_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102457_0_1762914297438_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102529_0_1762914329007_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102536_0_1762914336913_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102543_0_1762914343382_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102549_0_1762914349289_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102557_0_1762914357842_photo_low_quality.jpg",
+    "dataset/无人机图片标识441-550(1)/dji_fly_20251112_102633_0_1762914393300_photo_low_quality.jpg",
+    "dataset/标注111-220/DJI_0025.JPG",
+    "dataset/标注111-220/DJI_0026.JPG",
+    "dataset/标注111-220/DJI_0360.JPG",
+    "dataset/标注111-220/DJI_0361.JPG",
+    "dataset/标注111-220/DJI_0362.JPG",
+    "dataset/标注111-220/dji_fly_20251111_102206_0_1762827726618_photo_low_quality.jpg",
+    "dataset/标注111-220/dji_fly_20251111_102233_0_1762827753321_photo_low_quality.jpg",
+    "dataset/标注111-220/dji_fly_20251111_102251_0_1762827771701_photo_low_quality.jpg",
+    "dataset/标注111-220/dji_fly_20251111_102308_0_1762827788070_photo_low_quality.jpg",
+    "dataset/标注111-220/dji_fly_20251111_102324_0_1762827804144_photo_low_quality.jpg",
+    "dataset/标注111-220/dji_fly_20251111_102349_0_1762827829623_photo_low_quality.jpg",
+    "dataset/标注111-220/dji_fly_20251111_102451_0_1762827891623_photo_low_quality.jpg",
+    "dataset/标注111-220/dji_fly_20251111_102700_0_1762828020711_photo_low_quality.jpg"
+  ]
+}

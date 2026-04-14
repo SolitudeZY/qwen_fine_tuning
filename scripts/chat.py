@@ -17,6 +17,10 @@ import numpy as np
 from PIL import Image as PILImage, ImageDraw, ImageFont
 import torch
 from model_utils import load_vlm, infer_vlm
+from tiled_infer import tiled_chat
+
+# 大图阈值：超过此像素数时自动启用分块推理（DJI 4032×3024 = 12M）
+TILED_PIXEL_THRESHOLD = 4_000_000
 
 # ============ 配置 ============
 # 默认模型路径，可通过 --model_path 覆盖
@@ -34,6 +38,17 @@ SYSTEM_PROMPT = (
     "1. 首先，输出【推理】：只用一两句话简要说明发现了什么违规或为什么合规。\n"
     "2. 然后，你必须在回答的最后严格以 JSON 格式输出判定结果，不要输出任何其他的解释文本。\n"
     "JSON 字段必须包含：violation_detected(布尔), violation_type(字符串), severity(字符串), suggestion(字符串)。\n"
+    "3. 如果检测到违规(violation_detected=true)，你必须在最后输出的 JSON 对象中，直接包含一个名为 violation_boxes 的数组，"
+    "每个元素包含：label(违规简述), bbox(四个整数的数组，格式为[x_min, y_min, x_max, y_max]，"
+    "坐标为相对于图片宽高的千分比坐标，范围0-1000)。\n"
+    "【严格禁止】：\n"
+    "- 禁止输出 x_min/y_min/x_max/y_max 作为独立字段\n"
+    "- 禁止输出 {\"x\":...,\"y\":...} 格式的坐标\n"
+    "- bbox 必须是四个整数的数组：[x_min, y_min, x_max, y_max]\n"
+    "- violation_boxes 必须嵌套在最终 JSON 对象内部，不能单独输出\n"
+    "【重要警告】：violation_boxes 中的 label 必须是描述**违规缺陷**的词语（例如：'围栏断口'、'围栏倒伏'、'未合围区域'、'踢脚板缺失'、'临边无防护'），**绝对不能**仅仅输出中性词如'临边防护'、'泥浆池'、'施工人员'！你标出的框代表的是隐患点，标签必须体现出隐患性质！\n"
+    "正确示例：\"violation_boxes\": [{\"label\": \"围栏断口\", \"bbox\": [120, 300, 450, 680]}]\n"
+    "4. 如果合规(violation_detected=false)，violation_boxes 为空数组 []。"
     "3. 如果检测到违规(violation_detected=true)，你必须在最后输出的 JSON 对象中，直接包含一个名为 violation_boxes 的数组，"
     "每个元素包含：label(违规简述), bbox(四个整数的数组，格式为[x_min, y_min, x_max, y_max]，"
     "坐标为相对于图片宽高的千分比坐标，范围0-1000)。\n"
@@ -197,26 +212,47 @@ def load_model(use_lora=True):
 
 
 def chat(model, processor, model_family, image_path, query=None):
-    """单次对话推理"""
+    """单次对话推理，大图自动启用分块推理"""
     if query is None:
         query = DEFAULT_QUERY
 
-    messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {
-            "role": "user",
-            "content": [
-                {"type": "image", "image": f"file://{os.path.abspath(image_path)}"},
-                {"type": "text", "text": query},
-            ],
-        },
-    ]
+    # 检查图片尺寸，超过阈值则用分块推理
+    try:
+        img = PILImage.open(image_path)
+        w, h = img.size
+        use_tiled = (w * h) > TILED_PIXEL_THRESHOLD
+    except Exception:
+        use_tiled = False
 
     start = time.time()
-    response = infer_vlm(model, processor, model_family, messages, max_new_tokens=1536)
-    elapsed = time.time() - start
 
-    return response, elapsed
+    if use_tiled:
+        print(f"  [分块推理] 图片尺寸 {w}×{h}，启用 2×2 滑动窗口...")
+        result = tiled_chat(
+            model, processor, model_family, image_path,
+            infer_fn=infer_vlm,
+            system_prompt=SYSTEM_PROMPT,
+            query=query,
+            extract_fn=_extract_json_object,
+        )
+        elapsed = time.time() - start
+        # 转成 response 字符串供 print_result 解析
+        response = json.dumps(result, ensure_ascii=False)
+        return response, elapsed, True   # 第三个值标记已是分块合并结果，跳过二次定位
+    else:
+        messages = [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image", "image": f"file://{os.path.abspath(image_path)}"},
+                    {"type": "text", "text": query},
+                ],
+            },
+        ]
+        response = infer_vlm(model, processor, model_family, messages, max_new_tokens=1536)
+        elapsed = time.time() - start
+        return response, elapsed, False
 
 
 import re
@@ -253,6 +289,10 @@ def _extract_json_object(response: str):
                 start = response.rfind("{", 0, start)
                 
     # 如果找到了 JSON，并且它包含了关键的状态字段
+    # 兼容模型偶尔输出 violation_detection（少了 ed）的情况
+    if parsed_json is not None and "violation_detection" in parsed_json and "violation_detected" not in parsed_json:
+        parsed_json["violation_detected"] = parsed_json.pop("violation_detection")
+
     if parsed_json is not None and ("violation_detected" in parsed_json or "violation_type" in parsed_json):
         # 检查是否缺失 boxes
         if parsed_json.get("violation_detected") is True and not parsed_json.get("violation_boxes"):
@@ -422,7 +462,7 @@ def interactive_mode(model, processor, model_family, visualize=False, output_dir
         query = custom_query if custom_query else None
 
         print(f"\n正在分析图片: {image_path}")
-        response, elapsed = chat(model, processor, model_family, image_path, query)
+        response, elapsed, is_tiled = chat(model, processor, model_family, image_path, query)
         result = print_result(response, elapsed)
 
         # 增加宽容度，如果没解析出 result，但原始回复包含特定关键字，也可以触发定位
@@ -432,21 +472,17 @@ def interactive_mode(model, processor, model_family, visualize=False, output_dir
             is_violation = True
             boxes = result.get("violation_boxes", [])
         elif not result:
-            # 如果没输出 JSON 或是解析失败，从纯文本中寻找线索
             lower_res = response.lower()
             if "violation_detected: true" in lower_res or "存在安全隐患" in response or "高坠风险" in response:
                 is_violation = True
 
         if visualize and is_violation:
-            if not boxes:
-                print("  警告: 未在初始回答中检测到 violation_boxes，正在尝试从备用逻辑获取或进行第二阶段定位...")
-                # 兼容旧版本模型：如果解析出来没有框，自动进行一次定位兜底
+            if not boxes and not is_tiled:
+                print("  警告: 未在初始回答中检测到 violation_boxes，正在尝试二次定位...")
                 start_time = time.time()
                 boxes = locate_violations(model, processor, model_family, image_path)
-                end_time = time.time()
-                location_time = end_time - start_time
-                print(f"二次定位花费时间：{location_time:.2f}")
-            else:
+                print(f"二次定位花费时间：{time.time() - start_time:.2f}s")
+            elif boxes:
                 boxes = _normalize_boxes(boxes, image_path)
 
             if boxes:
@@ -489,7 +525,7 @@ def batch_test(model, processor, model_family, test_jsonl):
         except json.JSONDecodeError:
             continue
 
-        response, elapsed = chat(model, processor, model_family, image_path)
+        response, elapsed, _ = chat(model, processor, model_family, image_path)
 
         predicted_json_str = response
         predicted_json_start = response.rfind("{")
@@ -552,15 +588,14 @@ if __name__ == "__main__":
 
     if args.image:
         # 单图测试
-        response, elapsed = chat(model, processor, model_family, args.image, args.query)
+        response, elapsed, is_tiled = chat(model, processor, model_family, args.image, args.query)
         result = print_result(response, elapsed)
         if args.visualize and result and result.get("violation_detected"):
             boxes = result.get("violation_boxes", [])
-            if not boxes:
-                print("  警告: 未在初始回答中检测到 violation_boxes，正在尝试从备用逻辑获取或进行第二阶段定位...")
-                # 兼容旧版本模型：如果解析出来没有框，自动进行一次定位兜底
+            if not boxes and not is_tiled:
+                print("  警告: 未在初始回答中检测到 violation_boxes，正在尝试二次定位...")
                 boxes = locate_violations(model, processor, model_family, args.image)
-            else:
+            elif boxes:
                 boxes = _normalize_boxes(boxes, args.image)
             if boxes:
                 out_name = os.path.basename(args.image).rsplit(".", 1)[0] + "_annotated.jpg"

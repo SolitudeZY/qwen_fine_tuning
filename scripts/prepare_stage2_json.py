@@ -201,18 +201,11 @@ def main():
 
     n_compliant = len(all_samples) - n_violation
 
-    # 混入约 10% 的 grounding 样本（防止 Stage 2 训练遗忘空间对齐能力）
+    # 不混入 grounding 样本
+    # Stage 2 只训练纯 JSON 格式，防遗忘靠 Stage 1 合并权重保证
+    # 混入 grounding 样本会导致 ms-swift 把 <ref-object><bbox> 当普通文本训练，引发重复生成
     n_grounding_mix = 0
-    if os.path.exists(args.grounding_mix):
-        with open(args.grounding_mix) as f:
-            grounding_samples = [json.loads(l) for l in f if l.strip()]
-        target_mix = max(1, int(len(all_samples) * 0.12))
-        mix_samples = random.sample(grounding_samples, min(target_mix, len(grounding_samples)))
-        all_samples.extend(mix_samples)
-        n_grounding_mix = len(mix_samples)
-        print(f"\n混入 grounding 样本（防遗忘）: {n_grounding_mix} 条")
-    else:
-        print(f"\n[提示] 未找到 grounding 样本文件 {args.grounding_mix}，跳过混入。先运行 convert_labelme_to_grounding.py")
+    print("\n[跳过] grounding 样本混入已禁用，Stage 2 只使用纯 JSON 数据")
 
     random.shuffle(all_samples)
 
