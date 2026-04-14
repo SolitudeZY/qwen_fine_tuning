@@ -197,10 +197,24 @@ def parse_canonical(raw: str, image_path: Path, api_key: str) -> tuple[dict | No
     if missing:
         return None, f"missing fields: {missing}"
 
-    # 标签合法性校验
+    # 标签合法性校验 + bbox 归一化
+    cleaned = []
     for v in data.get("violations", []):
         if v.get("label") not in VALID_LABELS:
-            v["label"] = "临边防护缺失"  # 降级处理
+            v["label"] = "临边防护缺失"
+        b = v.get("bbox_1000", [])
+        if len(b) != 4:
+            continue
+        # clamp 到 0-1000，修正 x0>x1 / y0>y1
+        x0, y0, x1, y1 = [max(0, min(1000, c)) for c in b]
+        if x0 > x1: x0, x1 = x1, x0
+        if y0 > y1: y0, y1 = y1, y0
+        # 过滤过小框（面积 < 0.01% 即边长各 < 10）
+        if x1 - x0 < 10 or y1 - y0 < 10:
+            continue
+        v["bbox_1000"] = [x0, y0, x1, y1]
+        cleaned.append(v)
+    data["violations"] = cleaned
 
     # 一致性校验：violation_detected ↔ violations
     gc = data["global_conclusion"]

@@ -1,0 +1,18 @@
+[
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_160642_370_1762849176045_photo.jpg",
+    "reason": "api_error: HTTP Error 400: Bad Request"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_100957_0_1762826997220_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101251_0_1762827171896_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101314_0_1762827194997_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  }
+]
