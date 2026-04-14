@@ -1,6 +1,8 @@
 #!/bin/bash
 # Stage 2: JSON 精调（从 Stage 1 合并模型开始）
-# 用法: bash scripts/2_stage_train/train_stage2.sh
+# 用法:
+#   首次训练:    bash scripts/2_stage_train/train_stage2.sh
+#   续训:        bash scripts/2_stage_train/train_stage2.sh --resume
 set -euo pipefail
 
 eval "$(conda shell.bash hook)"
@@ -8,24 +10,36 @@ conda activate qwen-ft
 
 PROJECT_ROOT="/home/fs-ai/llama-qwen"
 DATA_DIR="$PROJECT_ROOT/data"
-DATASET_JSONL="$DATA_DIR/stage2_json.jsonl"          # api_annotate_stage12.py 生成
+DATASET_JSONL="$DATA_DIR/stage2_json.jsonl"
 
-MERGED_MODEL_DIR="$PROJECT_ROOT/outputs/stage1_merged"
+MERGED_MODEL_DIR="$PROJECT_ROOT/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
 OUTPUT_DIR="$PROJECT_ROOT/outputs/stage2_json"
 
 LORA_RANK=32
 LORA_ALPHA=64
-LR="5e-5"
-EPOCHS=15
+LR="2e-5"
+EPOCHS=30
 BATCH_SIZE=1
-GRAD_ACCUM=8
+GRAD_ACCUM=4
 MAX_PIXELS=1003520
+
+# 续训支持：传入 --resume 时自动找最新 checkpoint
+RESUME_CKPT=""
+if [[ "${1:-}" == "--resume" ]]; then
+    RESUME_CKPT=$(ls -d "$OUTPUT_DIR"/v*/checkpoint-* 2>/dev/null | grep -v '\-merged' | sort -V | tail -1)
+    if [ -z "$RESUME_CKPT" ]; then
+        echo "[Error] 找不到可续训的 checkpoint"
+        exit 1
+    fi
+    echo "续训 checkpoint: $RESUME_CKPT"
+fi
 
 echo "============================================="
 echo "  Stage 2: JSON 精调"
 echo "  Base:    $MERGED_MODEL_DIR"
 echo "  Dataset: $DATASET_JSONL"
 echo "  Output:  $OUTPUT_DIR"
+echo "  Epochs:  $EPOCHS  LR: $LR  GradAccum: $GRAD_ACCUM"
 echo "============================================="
 
 if [ ! -d "$MERGED_MODEL_DIR" ]; then
@@ -69,7 +83,8 @@ swift sft \
     --lora_dropout 0.05 \
     --gradient_checkpointing true \
     --max_pixels "$MAX_PIXELS" \
-    2>&1 | tee "$OUTPUT_DIR/train.log"
+    ${RESUME_CKPT:+--resume_from_checkpoint "$RESUME_CKPT"} \
+    2>&1 | tee "$OUTPUT_DIR/train_$(date +%Y%m%d_%H%M%S).log"
 
 echo ""
 echo "============================================="

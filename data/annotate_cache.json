@@ -68,7 +68,8 @@
       "suggestion": "现场边坡防护措施基本到位，建议持续巡查边坡稳定性及周边环境变化。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，建议持续巡查边坡稳定性及周边环境变化。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_094814_0_1762825694519_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_094814_0_1762825694519_photo_low_quality.jpg",
@@ -139,7 +140,8 @@
       "suggestion": "巡检建议：现场临边防护完整，无明显安全隐患，继续保持定期巡查。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：现场临边防护完整，无明显安全隐患，继续保持定期巡查。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_095739_0_1762826259471_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_095739_0_1762826259471_photo_low_quality.jpg",
@@ -233,7 +235,8 @@
       "suggestion": "现场边坡防护措施基本到位，临边区域设有围挡和防护结构，建议继续加强日常巡检，确保防护设施完好有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，临边区域设有围挡和防护结构，建议继续加强日常巡检，确保防护设施完好有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_100931_0_1762826971051_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_100931_0_1762826971051_photo_low_quality.jpg",
@@ -322,7 +325,8 @@
       "suggestion": "现场边坡防护措施到位，覆盖有绿色防尘网，未发现明显安全隐患。建议继续定期巡查，确保防护设施完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施到位，覆盖有绿色防尘网，未发现明显安全隐患。建议继续定期巡查，确保防护设施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101200_0_1762827120666_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101200_0_1762827120666_photo_low_quality.jpg",
@@ -393,7 +397,8 @@
       "suggestion": "现场边坡防护措施到位，临边区域未见明显防护缺失或围栏损坏情况，建议继续保持定期巡检，确保施工安全。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施到位，临边区域未见明显防护缺失或围栏损坏情况，建议继续保持定期巡检，确保施工安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101243_0_1762827163610_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101243_0_1762827163610_photo_low_quality.jpg",
@@ -484,24 +489,6 @@
     "model": "qwen-vl-max",
     "reviewed": true
   },
-  "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101336_0_1762827216819_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101336_0_1762827216819_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "基坑",
-    "is_compliant": true,
-    "confidence": "medium",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场未发现明显临边防护缺失或围栏损坏情况，建议继续定期巡检，重点关注高处作业区域及临时通道的防护状态。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"medium\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场未发现明显临边防护缺失或围栏损坏情况，建议继续定期巡检，重点关注高处作业区域及临时通道的防护状态。\"\n  }\n}\n```",
-    "model": "qwen-vl-max",
-    "reviewed": true
-  },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101405_0_1762827245671_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101405_0_1762827245671_photo_low_quality.jpg",
     "width": 1440,
@@ -541,15 +528,15 @@
     "confidence": "medium",
     "violations": [
       {
-        "label": "围栏断口",
         "bbox_1000": [
           644,
           760,
           691,
           822
         ],
-        "severity": "中",
-        "evidence": "手动标注"
+        "evidence": "手动标注",
+        "label": "围栏断口",
+        "severity": "中"
       }
     ],
     "global_conclusion": {
@@ -589,15 +576,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           293,
           198,
           547,
           381
         ],
-        "severity": "高",
-        "evidence": "在基坑边缘区域，可见未设置任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "在基坑边缘区域，可见未设置任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -607,7 +594,8 @@
       "suggestion": "立即在基坑边缘设置符合规范的临边防护栏杆，确保施工人员安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [293, 198, 547, 381],\n      \"severity\": \"高\",\n      \"evidence\": \"在基坑边缘区域，可见未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑边缘设置符合规范的临边防护栏杆，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101822_0_1762827502025_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101822_0_1762827502025_photo_low_quality.jpg",
@@ -639,63 +627,6 @@
     "model": "qwen-vl-max",
     "reviewed": true
   },
-  "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101840_0_1762827520549_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101840_0_1762827520549_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "基坑",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场临边防护措施到位，围栏结构完整，未发现明显安全隐患。建议继续加强日常巡检，确保施工过程中防护设施持续有效。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施到位，围栏结构完整，未发现明显安全隐患。建议继续加强日常巡检，确保施工过程中防护设施持续有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101844_0_1762827524849_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101844_0_1762827524849_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "基坑",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          374,
-          432,
-          500,
-          718
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见两个圆柱形结构顶部无任何围栏或防护设施，工人在顶部作业，存在高空坠落风险"
-      },
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          536,
-          493,
-          650,
-          803
-        ],
-        "severity": "高",
-        "evidence": "另一圆柱形结构顶部同样未设置防护栏杆，人员在边缘作业，存在严重安全隐患"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在所有圆柱结构顶部安装符合标准的临边防护栏杆，并设置警示标志，禁止无防护情况下进行高空作业"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [374, 432, 500, 718],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见两个圆柱形结构顶部无任何围栏或防护设施，工人在顶部作业，存在高空坠落风险\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [536, 493, 650, 803],\n      \"severity\": \"高\",\n      \"evidence\": \"另一圆柱形结构顶部同样未设置防护栏杆，人员在边缘作业，存在严重安全隐患\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在所有圆柱结构顶部安装符合标准的临边防护栏杆，并设置警示标志，禁止无防护情况下进行高空作业\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101858_0_1762827538561_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101858_0_1762827538561_photo_low_quality.jpg",
     "width": 1440,
@@ -711,7 +642,8 @@
       "suggestion": "巡检建议：现场基坑周边未发现明显防护缺失或围栏损坏情况，建议继续保持安全防护措施，并定期检查临边区域稳定性。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：现场基坑周边未发现明显防护缺失或围栏损坏情况，建议继续保持安全防护措施，并定期检查临边区域稳定性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101912_0_1762827552961_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101912_0_1762827552961_photo_low_quality.jpg",
@@ -722,15 +654,15 @@
     "confidence": "medium",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           477,
           71,
           702,
           481
         ],
-        "severity": "中",
-        "evidence": "手动标注"
+        "evidence": "手动标注",
+        "label": "临边防护缺失",
+        "severity": "中"
       }
     ],
     "global_conclusion": {
@@ -752,25 +684,26 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           685,
           245,
           790,
           350
         ],
-        "severity": "高",
-        "evidence": "在边坡下方的施工区域，可见一处明显的临边区域未设置任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "在边坡下方的施工区域，可见一处明显的临边区域未设置任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、围栏断口",
+      "violation_type": "临边防护缺失",
       "severity": "高",
       "suggestion": "立即对边坡临边区域加装防护围栏，修复围挡断口，防止人员误入危险区域；建议加强现场安全巡查，确保防护设施完整有效"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [685, 245, 790, 350],\n      \"severity\": \"高\",\n      \"evidence\": \"在边坡下方的施工区域，可见一处明显的临边区域未设置任何围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [1190, 755, 1260, 880],\n      \"severity\": \"中\",\n      \"evidence\": \"右侧边坡边缘处有一段绿色围挡明显出现缺口，围栏不连续，形成断口\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、围栏断口\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即对边坡临边区域加装防护围栏，修复围挡断口，防止人员误入危险区域；建议加强现场安全巡查，确保防护设施完整有效\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101951_0_1762827591637_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101951_0_1762827591637_photo_low_quality.jpg",
@@ -781,15 +714,15 @@
     "confidence": "medium",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           773,
           357,
           985,
           814
         ],
-        "severity": "中",
-        "evidence": "手动标注"
+        "evidence": "手动标注",
+        "label": "临边防护缺失",
+        "severity": "中"
       }
     ],
     "global_conclusion": {
@@ -811,36 +744,37 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          584,
-          703,
-          692,
-          849
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见边坡下方存在未设置任何围栏或防护结构的危险临边区域，存在坠落风险"
-      },
-      {
         "label": "围栏断口",
         "bbox_1000": [
-          842,
-          328,
-          1000,
-          618
+          811,
+          423,
+          899,
+          516
         ],
         "severity": "中",
-        "evidence": "绿色围挡在中部存在明显断口，围栏不连续，无法有效隔离危险区域"
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          551,
+          643,
+          729,
+          768
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、围栏断口",
+      "violation_type": "围栏断口、临边防护缺失",
       "severity": "高",
       "suggestion": "立即对边坡下方无防护区域增设临时围栏或警示设施；修复绿色围挡断口，确保围挡连续完整，防止人员误入危险区域。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [584, 703, 692, 849],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见边坡下方存在未设置任何围栏或防护结构的危险临边区域，存在坠落风险\"\n    },\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [842, 328, 1075, 618],\n      \"severity\": \"中\",\n      \"evidence\": \"绿色围挡在中部存在明显断口，围栏不连续，无法有效隔离危险区域\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、围栏断口\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即对边坡下方无防护区域增设临时围栏或警示设施；修复绿色围挡断口，确保围挡连续完整，防止人员误入危险区域。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102009_0_1762827609480_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102009_0_1762827609480_photo_low_quality.jpg",
@@ -851,25 +785,26 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
+        "label": "围栏断口",
         "bbox_1000": [
-          285,
-          194,
-          867,
-          704
+          516,
+          333,
+          632,
+          490
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见边坡边缘未设置连续围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失",
+      "violation_type": "围栏断口",
       "severity": "高",
       "suggestion": "立即在边坡临边区域设置连续的防护围栏，确保施工人员安全，防止坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [285, 194, 867, 704],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见边坡边缘未设置连续围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域设置连续的防护围栏，确保施工人员安全，防止坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102017_0_1762827617827_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102017_0_1762827617827_photo_low_quality.jpg",
@@ -880,15 +815,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           625,
           418,
           894,
           570
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见桩基周围虽有橙色围栏，但部分区域围栏未完全封闭，存在缺口，且围栏未延伸至整个危险临边，导致临边防护不完整"
+        "evidence": "俯拍视角可见桩基周围虽有橙色围栏，但部分区域围栏未完全封闭，存在缺口，且围栏未延伸至整个危险临边，导致临边防护不完整",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -898,7 +833,8 @@
       "suggestion": "立即对桩基周边临边区域进行全封闭防护，确保围栏连续、稳固，并设置警示标志，防止人员误入危险区域。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [625, 418, 894, 570],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见桩基周围虽有橙色围栏，但部分区域围栏未完全封闭，存在缺口，且围栏未延伸至整个危险临边，导致临边防护不完整\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即对桩基周边临边区域进行全封闭防护，确保围栏连续、稳固，并设置警示标志，防止人员误入危险区域。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102021_0_1762827621058_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102021_0_1762827621058_photo_low_quality.jpg",
@@ -911,34 +847,35 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          278,
-          334,
-          409,
-          465
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见左侧基坑边缘无任何围栏或防护结构，存在人员坠落风险"
-      },
-      {
-        "label": "围栏断口",
-        "bbox_1000": [
-          707,
-          171,
-          1000,
-          991
+          159,
+          360,
+          282,
+          513
         ],
         "severity": "中",
-        "evidence": "绿色围栏沿施工道路延伸，但中部存在明显断口，未连续封闭"
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          223,
+          426,
+          272,
+          500
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、围栏断口",
+      "violation_type": "临边防护缺失、围栏倒伏",
       "severity": "高",
       "suggestion": "立即在左侧基坑临边设置完整围栏防护；修复绿色围栏断口，确保隔离连续性"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [278, 334, 409, 465],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见左侧基坑边缘无任何围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [707, 171, 1234, 991],\n      \"severity\": \"中\",\n      \"evidence\": \"绿色围栏沿施工道路延伸，但中部存在明显断口，未连续封闭\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、围栏断口\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在左侧基坑临边设置完整围栏防护；修复绿色围栏断口，确保隔离连续性\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102041_0_1762827641686_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102041_0_1762827641686_photo_low_quality.jpg",
@@ -949,37 +886,26 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           204,
           138,
           476,
           522
         ],
-        "severity": "高",
-        "evidence": "H型桥墩底部周围无任何围栏或防护结构，存在高空坠落风险"
-      },
-      {
+        "evidence": "H型桥墩底部周围无任何围栏或防护结构，存在高空坠落风险",
         "label": "临边防护缺失",
-        "bbox_1000": [
-          951,
-          412,
-          1000,
-          555
-        ],
-        "severity": "中",
-        "evidence": "红色钢构架旁的地面开口区域未设置围挡或警示设施"
+        "severity": "高"
       },
       {
         "label": "围栏断口",
         "bbox_1000": [
-          8,
-          653,
-          229,
-          847
+          41,
+          590,
+          235,
+          876
         ],
-        "severity": "低",
-        "evidence": "泥浆池边缘的橙色围栏存在明显缺口，无法有效隔离危险区域"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -989,7 +915,8 @@
       "suggestion": "立即在桥墩周边及地面开口处增设围栏或防护网；修复泥浆池边缘围栏断口，确保所有临边区域有效封闭。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [204, 138, 476, 522],\n      \"severity\": \"高\",\n      \"evidence\": \"H型桥墩底部周围无任何围栏或防护结构，存在高空坠落风险\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [951, 412, 1124, 555],\n      \"severity\": \"中\",\n      \"evidence\": \"红色钢构架旁的地面开口区域未设置围挡或警示设施\"\n    },\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [8, 653, 229, 847],\n      \"severity\": \"低\",\n      \"evidence\": \"泥浆池边缘的橙色围栏存在明显缺口，无法有效隔离危险区域\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、围栏断口\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在桥墩周边及地面开口处增设围栏或防护网；修复泥浆池边缘围栏断口，确保所有临边区域有效封闭。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102045_0_1762827645728_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102045_0_1762827645728_photo_low_quality.jpg",
@@ -1000,25 +927,37 @@
     "confidence": "high",
     "violations": [
       {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          488,
+          450,
+          616,
+          706
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
         "label": "临边防护缺失",
         "bbox_1000": [
-          258,
-          497,
-          738,
-          778
+          439,
+          445,
+          626,
+          685
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘存在大面积积水区域，周围虽有部分橙色围栏，但围栏未完全封闭，存在明显缺口，导致临边防护不完整"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失",
+      "violation_type": "围栏倒伏、临边防护缺失",
       "severity": "高",
       "suggestion": "立即对基坑临边进行全封闭围护，确保围栏连续、稳固，防止人员坠落或意外进入积水区域。同时加强现场巡查与警示标识设置。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [258, 497, 738, 778],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘存在大面积积水区域，周围虽有部分橙色围栏，但围栏未完全封闭，存在明显缺口，导致临边防护不完整\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即对基坑临边进行全封闭围护，确保围栏连续、稳固，防止人员坠落或意外进入积水区域。同时加强现场巡查与警示标识设置。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102053_0_1762827653130_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102053_0_1762827653130_photo_low_quality.jpg",
@@ -1029,15 +968,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           0,
           308,
           1000,
           959
         ],
-        "severity": "高",
-        "evidence": "从俯拍视角可见边坡边缘无任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "从俯拍视角可见边坡边缘无任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -1047,36 +986,8 @@
       "suggestion": "立即在边坡临边设置符合规范的防护围栏，防止人员坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [0, 308, 1297, 959],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见边坡边缘无任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边设置符合规范的防护围栏，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102105_0_1762827665199_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102105_0_1762827665199_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          398,
-          325,
-          517,
-          405
-        ],
-        "severity": "高",
-        "evidence": "在边坡上方的施工平台边缘，可见橙色临时围栏已移除或未安装，存在明显的临边无防护区域"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失、临边开口未防护",
-      "severity": "高",
-      "suggestion": "立即在边坡临边区域设置连续围栏防护，并对地面开口处加装防护盖板或警示隔离设施，防止人员坠落事故。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [398, 325, 517, 405],\n      \"severity\": \"高\",\n      \"evidence\": \"在边坡上方的施工平台边缘，可见橙色临时围栏已移除或未安装，存在明显的临边无防护区域\"\n    },\n    {\n      \"label\": \"临边开口未防护\",\n      \"bbox_1000\": [1037, 675, 1133, 815],\n      \"severity\": \"中\",\n      \"evidence\": \"施工现场右侧地面上有多个方形金属格栅开口，周围未设置任何警示带或防护门，构成潜在坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、临边开口未防护\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域设置连续围栏防护，并对地面开口处加装防护盖板或警示隔离设施，防止人员坠落事故。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102112_0_1762827672547_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102112_0_1762827672547_photo_low_quality.jpg",
@@ -1087,26 +998,26 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           827,
           294,
           1000,
           956
         ],
-        "severity": "高",
-        "evidence": "右侧边坡为裸露土体，无任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "右侧边坡为裸露土体，无任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       },
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           0,
           238,
           658,
           956
         ],
-        "severity": "高",
-        "evidence": "左侧边坡为开挖形成的陡坡，未设置任何防护措施，存在坍塌和坠落风险"
+        "evidence": "左侧边坡为开挖形成的陡坡，未设置任何防护措施，存在坍塌和坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -1116,23 +1027,6 @@
       "suggestion": "立即在两侧边坡边缘设置临时围栏或防护网，防止人员坠落或土体坍塌；对高风险区域设置警示标志，并安排专人巡查。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [827, 294, 1312, 956],\n      \"severity\": \"高\",\n      \"evidence\": \"右侧边坡为裸露土体，无任何围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [0, 238, 658, 956],\n      \"severity\": \"高\",\n      \"evidence\": \"左侧边坡为开挖形成的陡坡，未设置任何防护措施，存在坍塌和坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在两侧边坡边缘设置临时围栏或防护网，防止人员坠落或土体坍塌；对高风险区域设置警示标志，并安排专人巡查。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102114_0_1762827674798_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102114_0_1762827674798_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "medium",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场未发现明显临边防护缺失或围栏破损情况，建议继续加强日常巡查，确保施工区域安全防护措施持续有效。"
-    },
-    "raw_response": "{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"medium\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场未发现明显临边防护缺失或围栏破损情况，建议继续加强日常巡查，确保施工区域安全防护措施持续有效。\"\n  }\n}",
     "model": "qwen-vl-max",
     "reviewed": true
   },
@@ -1147,13 +1041,46 @@
       {
         "label": "围栏断口",
         "bbox_1000": [
-          302,
-          540,
-          370,
-          585
+          212,
+          551,
+          360,
+          773
         ],
         "severity": "中",
-        "evidence": "俯拍视角可见泥浆池北侧围栏存在明显缺口，围栏结构不连续"
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          720,
+          682,
+          908,
+          998
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          203,
+          537,
+          267,
+          690
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          294,
+          637,
+          363,
+          767
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -1163,7 +1090,8 @@
       "suggestion": "立即修复泥浆池北侧围栏断口，并对东侧倒伏围栏进行拆除重建，确保临边防护完整有效"
     },
     "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [302, 540, 370, 585],\n      \"severity\": \"中\",\n      \"evidence\": \"俯拍视角可见泥浆池北侧围栏存在明显缺口，围栏结构不连续\"\n    },\n    {\n      \"label\": \"围栏倒伏\",\n      \"bbox_1000\": [1046, 659, 1150, 923],\n      \"severity\": \"高\",\n      \"evidence\": \"泥浆池东侧围栏整体倾倒，呈折线状塌陷，失去防护功能\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"围栏断口、围栏倒伏\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即修复泥浆池北侧围栏断口，并对东侧倒伏围栏进行拆除重建，确保临边防护完整有效\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0375.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0375.JPG",
@@ -1174,15 +1102,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           0,
           178,
           1000,
           959
         ],
-        "severity": "高",
-        "evidence": "从俯拍视角可见边坡边缘无任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "从俯拍视角可见边坡边缘无任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -1192,7 +1120,8 @@
       "suggestion": "立即在边坡临边设置符合规范的防护栏杆，防止人员坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [0, 178, 1305, 959],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见边坡边缘无任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边设置符合规范的防护栏杆，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0376.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0376.JPG",
@@ -1203,15 +1132,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           1,
           348,
           1000,
           959
         ],
-        "severity": "高",
-        "evidence": "从俯拍视角可见边坡边缘无任何围栏或防护结构，存在高处坠落风险"
+        "evidence": "从俯拍视角可见边坡边缘无任何围栏或防护结构，存在高处坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -1221,7 +1150,8 @@
       "suggestion": "立即在边坡临边设置符合规范的防护栏杆或安全网，防止人员坠落，并加强现场巡查与警示标识设置"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [1, 348, 1297, 959],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见边坡边缘无任何围栏或防护结构，存在高处坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边设置符合规范的防护栏杆或安全网，防止人员坠落，并加强现场巡查与警示标识设置\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0377.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0377.JPG",
@@ -1232,36 +1162,37 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          624,
-          418,
-          807,
-          553
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见右侧泥浆池边缘无任何围栏或防护结构，直接暴露在施工区域"
-      },
-      {
-        "label": "临边开口未防护",
         "bbox_1000": [
           1,
           495,
           194,
           647
         ],
+        "evidence": "左侧泥浆池出入口处未设置防护门或警示隔离措施，存在人员误入风险",
+        "label": "临边开口未防护",
+        "severity": "中"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          440,
+          402,
+          638,
+          595
+        ],
         "severity": "中",
-        "evidence": "左侧泥浆池出入口处未设置防护门或警示隔离措施，存在人员误入风险"
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、临边开口未防护",
+      "violation_type": "临边开口未防护、临边防护缺失",
       "severity": "高",
       "suggestion": "立即在泥浆池周边设置完整围栏防护，并在出入口加装防护门及警示标识，防止人员坠落或误入"
     },
     "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [624, 418, 807, 553],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见右侧泥浆池边缘无任何围栏或防护结构，直接暴露在施工区域\"\n    },\n    {\n      \"label\": \"临边开口未防护\",\n      \"bbox_1000\": [1, 495, 194, 647],\n      \"severity\": \"中\",\n      \"evidence\": \"左侧泥浆池出入口处未设置防护门或警示隔离措施，存在人员误入风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、临边开口未防护\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在泥浆池周边设置完整围栏防护，并在出入口加装防护门及警示标识，防止人员坠落或误入\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0378.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0378.JPG",
@@ -1274,34 +1205,46 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          178,
-          293,
-          406,
-          502
+          125,
+          347,
+          318,
+          524
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见左侧深坑边缘无任何围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       },
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          545,
-          221,
-          837,
-          354
+          450,
+          167,
+          678,
+          378
         ],
-        "severity": "高",
-        "evidence": "右侧开挖区域边缘未设置围栏或防护设施，直接暴露于危险临边"
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          244,
+          302,
+          327,
+          412
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失",
+      "violation_type": "临边防护缺失、围栏倒伏",
       "severity": "高",
       "suggestion": "立即在所有开挖区域的临边设置符合规范的围栏或防护网，防止人员坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [178, 293, 406, 502],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见左侧深坑边缘无任何围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [545, 221, 837, 354],\n      \"severity\": \"高\",\n      \"evidence\": \"右侧开挖区域边缘未设置围栏或防护设施，直接暴露于危险临边\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在所有开挖区域的临边设置符合规范的围栏或防护网，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0380.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0380.JPG",
@@ -1312,15 +1255,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           248,
           367,
           650,
           959
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见左侧边坡边缘无任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "俯拍视角可见左侧边坡边缘无任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -1330,7 +1273,8 @@
       "suggestion": "立即在边坡临边区域设置符合规范的防护栏杆或安全网，防止人员坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [248, 367, 650, 959],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见左侧边坡边缘无任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域设置符合规范的防护栏杆或安全网，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0381.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0381.JPG",
@@ -1341,15 +1285,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           628,
           135,
           719,
           504
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见边坡边缘未设置任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "俯拍视角可见边坡边缘未设置任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -1359,7 +1303,8 @@
       "suggestion": "立即在边坡临边区域设置符合规范的防护围栏，确保施工人员安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [628, 135, 719, 504],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见边坡边缘未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域设置符合规范的防护围栏，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0382.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0382.JPG",
@@ -1376,53 +1321,8 @@
       "suggestion": "现场临边防护措施基本到位，建议持续巡查边坡稳定性及防护设施完整性。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施基本到位，建议持续巡查边坡稳定性及防护设施完整性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0383.JPG": {
-    "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0383.JPG",
-    "width": 4032,
-    "height": 3024,
-    "scene": "边坡",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          458,
-          563,
-          1000,
-          957
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见边坡边缘未设置任何围栏或防护结构，存在高空坠落风险"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在边坡临边区域安装符合规范的防护围栏，确保施工人员安全"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [458, 563, 1309, 957],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见边坡边缘未设置任何围栏或防护结构，存在高空坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域安装符合规范的防护围栏，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101003_0_1762827003509_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101003_0_1762827003509_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场边坡区域未发现明显防护缺失或围栏破损情况，建议继续保持巡查，确保边坡稳定及周边防护措施完好。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡区域未发现明显防护缺失或围栏破损情况，建议继续保持巡查，确保边坡稳定及周边防护措施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101034_0_1762827034798_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101034_0_1762827034798_photo_low_quality.jpg",
@@ -1433,15 +1333,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           13,
           141,
           1000,
           957
         ],
-        "severity": "高",
-        "evidence": "从俯拍视角可见边坡顶部及侧边存在大量未设置围栏或防护结构的临边区域，工人在无防护的边缘作业"
+        "evidence": "从俯拍视角可见边坡顶部及侧边存在大量未设置围栏或防护结构的临边区域，工人在无防护的边缘作业",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -1451,7 +1351,8 @@
       "suggestion": "立即在边坡临边区域加装符合标准的防护栏杆，确保高空作业人员安全；对现场工人进行安全教育，严禁在无防护区域作业。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [13, 141, 1185, 957],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见边坡顶部及侧边存在大量未设置围栏或防护结构的临边区域，工人在无防护的边缘作业\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域加装符合标准的防护栏杆，确保高空作业人员安全；对现场工人进行安全教育，严禁在无防护区域作业。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101040_0_1762827040440_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101040_0_1762827040440_photo_low_quality.jpg",
@@ -1468,41 +1369,8 @@
       "suggestion": "现场边坡防护措施基本到位，建议持续巡查边坡稳定性及防护网覆盖情况，确保施工安全。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，建议持续巡查边坡稳定性及防护网覆盖情况，确保施工安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101102_0_1762827062181_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101102_0_1762827062181_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场边坡防护措施基本到位，建议定期巡查覆盖网是否完好，防止被风吹掀或人为破坏。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，建议定期巡查覆盖网是否完好，防止被风吹掀或人为破坏。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101106_0_1762827066964_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101106_0_1762827066964_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场边坡防护措施基本到位，建议继续加强日常巡查，确保防护网完好无损。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，建议继续加强日常巡查，确保防护网完好无损。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101128_0_1762827088828_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101128_0_1762827088828_photo_low_quality.jpg",
@@ -1519,7 +1387,8 @@
       "suggestion": "现场边坡覆盖绿网，临边区域未见明显防护缺失或围栏损坏，建议继续保持定期巡检，确保防护措施完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡覆盖绿网，临边区域未见明显防护缺失或围栏损坏，建议继续保持定期巡检，确保防护措施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101133_0_1762827093228_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101133_0_1762827093228_photo_low_quality.jpg",
@@ -1536,7 +1405,8 @@
       "suggestion": "现场边坡覆盖绿网，临边区域设置有混凝土挡墙及绿化带，未发现明显防护缺失或围栏破损情况，建议继续定期巡检，确保防护措施完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡覆盖绿网，临边区域设置有混凝土挡墙及绿化带，未发现明显防护缺失或围栏破损情况，建议继续定期巡检，确保防护措施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101147_0_1762827107051_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101147_0_1762827107051_photo_low_quality.jpg",
@@ -1553,7 +1423,8 @@
       "suggestion": "现场边坡区域未发现明显临边防护缺失或围栏损坏情况，建议继续保持现场防护措施，并定期巡检边坡稳定性及防护设施完整性。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡区域未发现明显临边防护缺失或围栏损坏情况，建议继续保持现场防护措施，并定期巡检边坡稳定性及防护设施完整性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101204_0_1762827124127_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101204_0_1762827124127_photo_low_quality.jpg",
@@ -1570,41 +1441,8 @@
       "suggestion": "现场边坡防护措施基本到位，绿网覆盖完整，未发现明显防护缺失或围栏损坏情况，建议继续保持定期巡检。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，绿网覆盖完整，未发现明显防护缺失或围栏损坏情况，建议继续保持定期巡检。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101222_0_1762827142236_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101222_0_1762827142236_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场边坡防护结构完整，未发现明显安全隐患，建议继续加强日常巡检，确保施工期间防护设施稳定有效。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护结构完整，未发现明显安全隐患，建议继续加强日常巡检，确保施工期间防护设施稳定有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101233_0_1762827153392_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101233_0_1762827153392_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场边坡防护措施到位，绿色防尘网覆盖完整，临边区域设有混凝土挡墙，未发现明显安全隐患。建议继续保持定期巡查，确保防护设施完好。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施到位，绿色防尘网覆盖完整，临边区域设有混凝土挡墙，未发现明显安全隐患。建议继续保持定期巡查，确保防护设施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101304_0_1762827184826_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101304_0_1762827184826_photo_low_quality.jpg",
@@ -1621,53 +1459,8 @@
       "suggestion": "现场临边区域已覆盖绿色防护网，围栏结构完整，符合安全规范要求。建议继续保持防护措施，并定期巡检防止网布破损或移位。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域已覆盖绿色防护网，围栏结构完整，符合安全规范要求。建议继续保持防护措施，并定期巡检防止网布破损或移位。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101511_0_1762827311589_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101511_0_1762827311589_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "平台临边",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场临边区域未见明显防护缺失或围栏损坏情况，建议继续保持安全防护措施，并定期巡检高处作业区域的防护状态。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域未见明显防护缺失或围栏损坏情况，建议继续保持安全防护措施，并定期巡检高处作业区域的防护状态。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101539_0_1762827339762_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101539_0_1762827339762_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "基坑",
-    "is_compliant": false,
-    "confidence": "medium",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          648,
-          537,
-          849,
-          782
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘区域未设置任何围栏或防护结构，存在人员坠落风险"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在基坑临边设置符合规范的围栏或防护网，确保施工人员安全，并加强现场巡查"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"medium\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [648, 537, 849, 782],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘区域未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑临边设置符合规范的围栏或防护网，确保施工人员安全，并加强现场巡查\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_25cde78ab68a28bc_1765938924000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_25cde78ab68a28bc_1765938924000.jpg",
@@ -1684,7 +1477,8 @@
       "suggestion": "现场未发现明显安全防护违规，建议继续加强日常巡检，确保临边防护设施完好有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场未发现明显安全防护违规，建议继续加强日常巡检，确保临边防护设施完好有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_29e4a974ae59f94c_1765938446000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_29e4a974ae59f94c_1765938446000.jpg",
@@ -1701,36 +1495,8 @@
       "suggestion": "现场临边防护措施完整，围栏结构连续且稳固，建议继续保持定期巡检，确保施工期间防护设施完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施完整，围栏结构连续且稳固，建议继续保持定期巡检，确保施工期间防护设施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_3a87781d23076600_1765941510000.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_3a87781d23076600_1765941510000.jpg",
-    "width": 4032,
-    "height": 3024,
-    "scene": "平台临边",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          658,
-          0,
-          1000,
-          874
-        ],
-        "severity": "高",
-        "evidence": "右侧边坡临边区域未设置任何围栏或防护结构，存在高空坠落风险"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在右侧边坡临边区域安装符合规范的防护围栏，确保施工人员安全"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [658, 0, 1312, 874],\n      \"severity\": \"高\",\n      \"evidence\": \"右侧边坡临边区域未设置任何围栏或防护结构，存在高空坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在右侧边坡临边区域安装符合规范的防护围栏，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_457b7c4325b8d32a_1765938642000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_457b7c4325b8d32a_1765938642000.jpg",
@@ -1743,13 +1509,24 @@
       {
         "label": "围栏断口",
         "bbox_1000": [
-          25,
-          248,
-          1000,
-          786
+          386,
+          240,
+          668,
+          357
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑四周围栏在顶部存在明显断口，尤其在左侧和右侧上方区域，围栏未形成完整封闭结构"
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏断口",
+        "bbox_1000": [
+          89,
+          215,
+          914,
+          810
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -1759,7 +1536,8 @@
       "suggestion": "立即修复基坑四周围栏的断口，确保围栏连续闭合，防止人员误入危险区域"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [25, 248, 1179, 786],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑四周围栏在顶部存在明显断口，尤其在左侧和右侧上方区域，围栏未形成完整封闭结构\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"围栏断口\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即修复基坑四周围栏的断口，确保围栏连续闭合，防止人员误入危险区域\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_4ef661c4c3ef5533_1765938708000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_4ef661c4c3ef5533_1765938708000.jpg",
@@ -1770,36 +1548,81 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
+        "label": "围栏断口",
         "bbox_1000": [
-          49,
-          452,
-          788,
-          725
+          158,
+          342,
+          460,
+          469
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘部分区域未设置围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       },
       {
         "label": "围栏断口",
         "bbox_1000": [
-          69,
-          183,
-          724,
-          444
+          206,
+          632,
+          448,
+          743
         ],
         "severity": "中",
-        "evidence": "上层基坑围栏在中间位置存在明显缺口，围栏不连续，形成安全隐患"
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          8,
+          489,
+          125,
+          902
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边开口未防护",
+        "bbox_1000": [
+          173,
+          349,
+          436,
+          465
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边开口未防护",
+        "bbox_1000": [
+          212,
+          661,
+          435,
+          757
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏断口",
+        "bbox_1000": [
+          88,
+          212,
+          170,
+          323
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、围栏断口",
+      "violation_type": "围栏断口、临边防护缺失、临边开口未防护",
       "severity": "高",
       "suggestion": "立即对基坑临边缺失防护区域增设围栏，修复围栏断口，确保封闭连续，并加强现场人员安全警示"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [49, 452, 788, 725],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘部分区域未设置围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [69, 183, 724, 444],\n      \"severity\": \"中\",\n      \"evidence\": \"上层基坑围栏在中间位置存在明显缺口，围栏不连续，形成安全隐患\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、围栏断口\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即对基坑临边缺失防护区域增设围栏，修复围栏断口，确保封闭连续，并加强现场人员安全警示\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_4fb12512dc9bcf30_1765940962000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_4fb12512dc9bcf30_1765940962000.jpg",
@@ -1816,7 +1639,8 @@
       "suggestion": "现场临边区域未见明显防护缺失或围栏损坏，建议继续加强日常巡检，确保施工安全。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域未见明显防护缺失或围栏损坏，建议继续加强日常巡检，确保施工安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_5f34b6cd1c971aa1_1765939182000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_5f34b6cd1c971aa1_1765939182000.jpg",
@@ -1827,25 +1651,37 @@
     "confidence": "high",
     "violations": [
       {
+        "label": "围栏断口",
+        "bbox_1000": [
+          365,
+          246,
+          592,
+          330
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
         "label": "临边防护缺失",
         "bbox_1000": [
-          358,
-          254,
-          937,
-          546
+          281,
+          249,
+          714,
+          584
         ],
-        "severity": "高",
-        "evidence": "俯拍视角显示基坑四周未设置连续围栏或防护结构，存在明显临边暴露区域"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失",
+      "violation_type": "围栏断口、临边防护缺失",
       "severity": "高",
       "suggestion": "立即在基坑四周设置符合规范的临边防护栏杆，防止人员坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [358, 254, 937, 546],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角显示基坑四周未设置连续围栏或防护结构，存在明显临边暴露区域\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周设置符合规范的临边防护栏杆，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_5f61e1b67ac01b67_1765940388000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_5f61e1b67ac01b67_1765940388000.jpg",
@@ -1858,13 +1694,13 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          25,
-          370,
-          1000,
-          750
+          23,
+          381,
+          914,
+          785
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑四周未设置连续围栏或防护结构，存在明显临边暴露"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -1874,24 +1710,49 @@
       "suggestion": "立即在基坑四周设置连续围栏或防护网，确保作业人员安全，防止坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [25, 370, 1148, 750],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑四周未设置连续围栏或防护结构，存在明显临边暴露\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周设置连续围栏或防护网，确保作业人员安全，防止坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_632d5faa59c5c729_1765954790000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_632d5faa59c5c729_1765954790000.jpg",
     "width": 4032,
     "height": 3024,
     "scene": "泥浆池",
-    "is_compliant": true,
+    "is_compliant": false,
     "confidence": "high",
-    "violations": [],
+    "violations": [
+      {
+        "label": "临边开口未防护",
+        "bbox_1000": [
+          153,
+          523,
+          237,
+          793
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          849,
+          394,
+          990,
+          984
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      }
+    ],
     "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
+      "violation_detected": true,
+      "violation_type": "临边开口未防护、临边防护缺失",
       "severity": "无",
       "suggestion": "现场泥浆池四周设有围栏防护，整体符合安全规范要求，建议定期巡检围栏完整性及周边警示标识情况。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场泥浆池四周设有围栏防护，整体符合安全规范要求，建议定期巡检围栏完整性及周边警示标识情况。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_6405cdd965946f92_1765955080000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_6405cdd965946f92_1765955080000.jpg",
@@ -1904,13 +1765,13 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          384,
-          207,
-          895,
-          600
+          372,
+          117,
+          670,
+          280
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘未设置任何围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -1920,55 +1781,27 @@
       "suggestion": "立即在基坑周边设置符合规范的临边防护栏杆，确保施工人员安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [384, 207, 895, 600],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑周边设置符合规范的临边防护栏杆，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_6b43b8ac75eb6574_1765940936000.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_6b43b8ac75eb6574_1765940936000.jpg",
-    "width": 4032,
-    "height": 3024,
-    "scene": "基坑",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          6,
-          432,
-          819,
-          571
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘区域未设置任何围栏或防护结构，存在人员坠落风险"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在基坑临边设置符合规范的防护栏杆，确保施工人员安全"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [6, 432, 819, 571],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘区域未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑临边设置符合规范的防护栏杆，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_7516770540b3511f_1765939010000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_7516770540b3511f_1765939010000.jpg",
     "width": 4032,
     "height": 3024,
-    "scene": "基坑",
+    "scene": "平台临边",
     "is_compliant": false,
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           43,
           476,
           1000,
           739
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑四周未设置任何围栏或防护结构，工人直接在无防护的临边作业"
+        "evidence": "俯拍视角可见基坑四周未设置任何围栏或防护结构，工人直接在无防护的临边作业",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -1978,7 +1811,8 @@
       "suggestion": "立即在基坑四周安装符合规范的临边防护栏杆，确保施工人员安全，防止坠落事故发生"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [43, 476, 1235, 739],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑四周未设置任何围栏或防护结构，工人直接在无防护的临边作业\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周安装符合规范的临边防护栏杆，确保施工人员安全，防止坠落事故发生\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_77754065820f106a_1765956686000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_77754065820f106a_1765956686000.jpg",
@@ -1995,7 +1829,8 @@
       "suggestion": "巡检建议：现场临边防护措施到位，围栏完整，无明显安全隐患。建议定期检查围栏稳固性及警示标识清晰度。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：现场临边防护措施到位，围栏完整，无明显安全隐患。建议定期检查围栏稳固性及警示标识清晰度。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_789e3fe992e28072_1765940300000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_789e3fe992e28072_1765940300000.jpg",
@@ -2012,7 +1847,8 @@
       "suggestion": "现场未发现明显安全违规，建议继续定期巡检，重点关注临边防护状态。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场未发现明显安全违规，建议继续定期巡检，重点关注临边防护状态。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_845e22fae007d6c8_1765940218000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_845e22fae007d6c8_1765940218000.jpg",
@@ -2025,13 +1861,13 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          48,
-          293,
-          1000,
-          705
+          135,
+          264,
+          945,
+          767
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑四周未设置连续围栏或防护结构，仅在左侧有部分红色围栏，其余三侧完全暴露，存在高空坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -2041,7 +1877,8 @@
       "suggestion": "立即在基坑四周设置连续、稳固的临边防护栏杆，确保符合安全规范要求，防止人员坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [48, 293, 1207, 705],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑四周未设置连续围栏或防护结构，仅在左侧有部分红色围栏，其余三侧完全暴露，存在高空坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周设置连续、稳固的临边防护栏杆，确保符合安全规范要求，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_8698ed56f2b63d20_1765940416000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_8698ed56f2b63d20_1765940416000.jpg",
@@ -2054,13 +1891,13 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          164,
-          398,
-          1000,
-          659
+          111,
+          410,
+          817,
+          686
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑四周未设置连续围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -2070,7 +1907,8 @@
       "suggestion": "立即在基坑四周设置连续的围栏或防护网，确保施工人员安全，防止坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [164, 398, 1047, 659],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑四周未设置连续围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周设置连续的围栏或防护网，确保施工人员安全，防止坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_8da638eed1ad938a_1765939132000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_8da638eed1ad938a_1765939132000.jpg",
@@ -2081,15 +1919,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           142,
           189,
           1000,
           662
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑四周未设置完整围栏或防护结构，仅在部分区域有临时护栏，大部分临边无防护"
+        "evidence": "俯拍视角可见基坑四周未设置完整围栏或防护结构，仅在部分区域有临时护栏，大部分临边无防护",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -2099,7 +1937,8 @@
       "suggestion": "立即在基坑四周设置连续、稳固的临边防护栏杆，确保施工人员安全，防止坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [142, 189, 1125, 662],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑四周未设置完整围栏或防护结构，仅在部分区域有临时护栏，大部分临边无防护\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周设置连续、稳固的临边防护栏杆，确保施工人员安全，防止坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_c00e624fd16c2654_1765938600000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_c00e624fd16c2654_1765938600000.jpg",
@@ -2110,26 +1949,37 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "围栏断口",
         "bbox_1000": [
           237,
           184,
           659,
           265
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑顶部北侧围栏存在明显断口，未形成连续封闭防护"
+        "evidence": "俯拍视角可见基坑顶部北侧围栏存在明显断口，未形成连续封闭防护",
+        "label": "围栏断口",
+        "severity": "高"
       },
       {
-        "label": "围栏倒伏",
         "bbox_1000": [
           815,
           206,
           1000,
           320
         ],
-        "severity": "高",
-        "evidence": "基坑顶部东侧围栏整体向内倾斜，部分结构已倒塌，失去防护功能"
+        "evidence": "基坑顶部东侧围栏整体向内倾斜，部分结构已倒塌，失去防护功能",
+        "label": "围栏倒伏",
+        "severity": "高"
+      },
+      {
+        "label": "围栏断口",
+        "bbox_1000": [
+          132,
+          531,
+          284,
+          672
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -2139,36 +1989,8 @@
       "suggestion": "立即修复围栏断口并重新安装倒塌的围栏，确保基坑临边防护连续完整，防止人员坠落风险"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [237, 184, 659, 265],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑顶部北侧围栏存在明显断口，未形成连续封闭防护\"\n    },\n    {\n      \"label\": \"围栏倒伏\",\n      \"bbox_1000\": [815, 206, 1224, 320],\n      \"severity\": \"高\",\n      \"evidence\": \"基坑顶部东侧围栏整体向内倾斜，部分结构已倒塌，失去防护功能\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"围栏断口、围栏倒伏\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即修复围栏断口并重新安装倒塌的围栏，确保基坑临边防护连续完整，防止人员坠落风险\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_c2d255d025ebebcd_1765938854000.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_c2d255d025ebebcd_1765938854000.jpg",
-    "width": 4032,
-    "height": 3024,
-    "scene": "平台临边",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          0,
-          732,
-          908,
-          959
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见施工区域边缘无任何围栏或防护结构，存在明显的临边危险区域"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在临边区域设置符合规范的防护栏杆或围挡，防止人员坠落事故"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [0, 732, 908, 959],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见施工区域边缘无任何围栏或防护结构，存在明显的临边危险区域\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在临边区域设置符合规范的防护栏杆或围挡，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_e0af5cddc9600ade_1765939246000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_e0af5cddc9600ade_1765939246000.jpg",
@@ -2181,34 +2003,24 @@
       {
         "label": "围栏断口",
         "bbox_1000": [
-          335,
-          587,
-          624,
-          624
+          382,
+          564,
+          692,
+          686
         ],
         "severity": "中",
-        "evidence": "俯拍视角可见基坑底部一侧的围栏存在明显断口，未连续封闭"
-      },
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          775,
-          590,
-          1000,
-          623
-        ],
-        "severity": "高",
-        "evidence": "基坑另一侧的围栏完全缺失，形成无防护的临边区域"
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "围栏断口、临边防护缺失",
+      "violation_type": "围栏断口",
       "severity": "高",
       "suggestion": "立即修复围栏断口，并在缺失防护区域加装完整围挡，确保基坑四周临边防护连续有效"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [335, 587, 624, 624],\n      \"severity\": \"中\",\n      \"evidence\": \"俯拍视角可见基坑底部一侧的围栏存在明显断口，未连续封闭\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [775, 590, 1056, 623],\n      \"severity\": \"高\",\n      \"evidence\": \"基坑另一侧的围栏完全缺失，形成无防护的临边区域\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"围栏断口、临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即修复围栏断口，并在缺失防护区域加装完整围挡，确保基坑四周临边防护连续有效\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_e3b52d8b45dbddac_1765940264000.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_e3b52d8b45dbddac_1765940264000.jpg",
@@ -2225,41 +2037,8 @@
       "suggestion": "现场临边防护设施完整，符合安全规范要求，建议继续加强日常巡检与维护。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护设施完整，符合安全规范要求，建议继续加强日常巡检与维护。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_e712216076cbe30a_1765938830000.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_e712216076cbe30a_1765938830000.jpg",
-    "width": 4032,
-    "height": 3024,
-    "scene": "基坑",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场未发现明显安全违规，建议继续定期巡检，重点关注临边防护状态。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场未发现明显安全违规，建议继续定期巡检，重点关注临边防护状态。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102844_0_1762828124945_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102844_0_1762828124945_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场临边防护措施基本到位，建议继续保持安全巡查，重点关注施工人员作业区域的动态风险。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施基本到位，建议继续保持安全巡查，重点关注施工人员作业区域的动态风险。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102847_0_1762828127047_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102847_0_1762828127047_photo_low_quality.jpg",
@@ -2270,15 +2049,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           348,
           307,
           759,
           388
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见施工区域边缘存在未设置围栏或防护结构的临边，人员在附近聚集，存在坠落风险"
+        "evidence": "俯拍视角可见施工区域边缘存在未设置围栏或防护结构的临边，人员在附近聚集，存在坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -2288,7 +2067,8 @@
       "suggestion": "立即在临边区域安装符合规范的防护围栏，确保作业人员安全，防止高处坠落事故发生"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [348, 307, 759, 388],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见施工区域边缘存在未设置围栏或防护结构的临边，人员在附近聚集，存在坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在临边区域安装符合规范的防护围栏，确保作业人员安全，防止高处坠落事故发生\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102851_0_1762828131044_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102851_0_1762828131044_photo_low_quality.jpg",
@@ -2299,15 +2079,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           248,
           357,
           640,
           475
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见施工平台边缘未设置任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "俯拍视角可见施工平台边缘未设置任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -2317,7 +2097,8 @@
       "suggestion": "立即在平台临边区域安装符合标准的防护围栏，确保施工人员安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [248, 357, 640, 475],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见施工平台边缘未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在平台临边区域安装符合标准的防护围栏，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102900_0_1762828140192_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102900_0_1762828140192_photo_low_quality.jpg",
@@ -2334,7 +2115,8 @@
       "suggestion": "现场临边区域设置有围挡防护，未发现明显安全隐患，建议继续加强日常巡查，确保防护设施完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域设置有围挡防护，未发现明显安全隐患，建议继续加强日常巡查，确保防护设施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102903_0_1762828143631_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102903_0_1762828143631_photo_low_quality.jpg",
@@ -2345,15 +2127,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           418,
           337,
           675,
           880
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见一个长方形的平台区域，其一侧临边未设置任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "俯拍视角可见一个长方形的平台区域，其一侧临边未设置任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -2363,7 +2145,8 @@
       "suggestion": "立即在该平台临边设置符合规范的防护栏杆，确保施工人员安全，防止高处坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [418, 337, 675, 880],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见一个长方形的平台区域，其一侧临边未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在该平台临边设置符合规范的防护栏杆，确保施工人员安全，防止高处坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_103345_0_1762828425051_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_103345_0_1762828425051_photo_low_quality.jpg",
@@ -2374,59 +2157,48 @@
     "confidence": "high",
     "violations": [
       {
+        "label": "围栏断口",
+        "bbox_1000": [
+          271,
+          508,
+          382,
+          637
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏断口",
+        "bbox_1000": [
+          142,
+          362,
+          313,
+          463
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
         "label": "临边防护缺失",
         "bbox_1000": [
-          485,
-          497,
-          939,
-          796
+          340,
+          527,
+          708,
+          846
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见蓝色施工平台边缘未设置围栏或防护结构，存在高空坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失",
+      "violation_type": "围栏断口、临边防护缺失",
       "severity": "高",
       "suggestion": "立即在施工平台临边加装符合规范的防护栏杆，确保作业人员安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [485, 497, 939, 796],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见蓝色施工平台边缘未设置围栏或防护结构，存在高空坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在施工平台临边加装符合规范的防护栏杆，确保作业人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_103516_0_1762828516706_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_103516_0_1762828516706_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场边坡防护措施到位，围挡覆盖完整，临边区域设有防护栏，建议继续保持安全巡检频率，确保施工期间防护设施完好。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施到位，围挡覆盖完整，临边区域设有防护栏，建议继续保持安全巡检频率，确保施工期间防护设施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152639_0_1762845999081_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152639_0_1762845999081_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场边坡区域未发现明显防护缺失或围栏损坏情况，建议继续定期巡检，确保施工过程中临边防护措施持续有效。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡区域未发现明显防护缺失或围栏损坏情况，建议继续定期巡检，确保施工过程中临边防护措施持续有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152815_0_1762846095318_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152815_0_1762846095318_photo_low_quality.jpg",
@@ -2437,36 +2209,37 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
+        "label": "围栏倒伏",
         "bbox_1000": [
-          547,
-          469,
-          952,
-          583
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘未设置围栏或防护结构，存在人员坠落风险"
-      },
-      {
-        "label": "临边开口未防护",
-        "bbox_1000": [
-          550,
-          578,
-          1000,
-          650
+          401,
+          617,
+          871,
+          672
         ],
         "severity": "中",
-        "evidence": "基坑出入口处未见防护门或警示隔离设施，存在人员误入危险区域的风险"
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          476,
+          445,
+          798,
+          616
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、临边开口未防护",
+      "violation_type": "围栏倒伏、临边防护缺失",
       "severity": "高",
       "suggestion": "立即在基坑四周设置符合规范的围栏防护，并对出入口加装防护门或警示带，防止人员坠落或误入。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [547, 469, 952, 583],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘未设置围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"临边开口未防护\",\n      \"bbox_1000\": [550, 578, 1120, 650],\n      \"severity\": \"中\",\n      \"evidence\": \"基坑出入口处未见防护门或警示隔离设施，存在人员误入危险区域的风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、临边开口未防护\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周设置符合规范的围栏防护，并对出入口加装防护门或警示带，防止人员坠落或误入。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152841_0_1762846121338_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152841_0_1762846121338_photo_low_quality.jpg",
@@ -2480,22 +2253,45 @@
         "label": "临边防护缺失",
         "bbox_1000": [
           468,
-          452,
-          987,
-          598
+          444,
+          817,
+          622
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘未设置连续围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          352,
+          613,
+          932,
+          725
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          218,
+          436,
+          285,
+          553
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失",
+      "violation_type": "临边防护缺失、围栏倒伏",
       "severity": "高",
       "suggestion": "立即在基坑临边设置符合规范的防护栏杆，并加装警示标识，防止人员误入危险区域"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [468, 452, 987, 598],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘未设置连续围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑临边设置符合规范的防护栏杆，并加装警示标识，防止人员误入危险区域\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152920_0_1762846160702_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152920_0_1762846160702_photo_low_quality.jpg",
@@ -2508,63 +2304,35 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          214,
-          253,
-          396,
-          418
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘部分区域未设置围栏或防护结构，存在人员坠落风险"
-      },
-      {
-        "label": "围栏断口",
-        "bbox_1000": [
-          387,
-          217,
-          983,
-          448
+          259,
+          145,
+          620,
+          386
         ],
         "severity": "中",
-        "evidence": "基坑一侧的橙色围栏存在明显断口，未连续封闭，形成安全隐患"
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          317,
+          227,
+          752,
+          500
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、围栏断口",
+      "violation_type": "临边防护缺失、围栏倒伏",
       "severity": "高",
       "suggestion": "立即对基坑临边缺失防护区域增设围栏，并修复围栏断口，确保全封闭防护，防止人员坠落。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [214, 253, 396, 418],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘部分区域未设置围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [387, 217, 983, 448],\n      \"severity\": \"中\",\n      \"evidence\": \"基坑一侧的橙色围栏存在明显断口，未连续封闭，形成安全隐患\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、围栏断口\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即对基坑临边缺失防护区域增设围栏，并修复围栏断口，确保全封闭防护，防止人员坠落。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152950_0_1762846190398_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_152950_0_1762846190398_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          438,
-          56,
-          578,
-          199
-        ],
-        "severity": "高",
-        "evidence": "在边坡顶部靠近绿色箱体处，存在一个开口区域，周围无任何围栏或防护结构，构成临边防护缺失"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在边坡顶部开口区域设置临时围栏或防护网，防止人员坠落，确保施工安全。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [438, 56, 578, 199],\n      \"severity\": \"高\",\n      \"evidence\": \"在边坡顶部靠近绿色箱体处，存在一个开口区域，周围无任何围栏或防护结构，构成临边防护缺失\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡顶部开口区域设置临时围栏或防护网，防止人员坠落，确保施工安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153012_0_1762846212586_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153012_0_1762846212586_photo_low_quality.jpg",
@@ -2577,13 +2345,13 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          365,
-          24,
-          978,
-          957
+          377,
+          64,
+          526,
+          990
         ],
-        "severity": "高",
-        "evidence": "从俯拍视角可见，施工现场一侧为陡峭边坡，沿边坡边缘未设置任何围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -2593,7 +2361,8 @@
       "suggestion": "立即在边坡临边区域设置符合规范的防护围栏，确保施工人员安全。建议增设警示标识，并安排专人巡查防护设施状态。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [365, 24, 978, 957],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见，施工现场一侧为陡峭边坡，沿边坡边缘未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域设置符合规范的防护围栏，确保施工人员安全。建议增设警示标识，并安排专人巡查防护设施状态。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153210_0_1762846330358_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153210_0_1762846330358_photo_low_quality.jpg",
@@ -2610,76 +2379,8 @@
       "suggestion": "巡检建议：继续维持现有防护措施，确保施工人员安全。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：继续维持现有防护措施，确保施工人员安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153320_0_1762846400155_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153320_0_1762846400155_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          675,
-          280,
-          739,
-          954
-        ],
-        "severity": "高",
-        "evidence": "从俯拍视角可见边坡边缘无任何围栏或防护结构，直接暴露于施工区域与山体之间"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在边坡临边设置符合规范的防护围栏，防止人员坠落事故"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [675, 280, 739, 954],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见边坡边缘无任何围栏或防护结构，直接暴露于施工区域与山体之间\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边设置符合规范的防护围栏，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153504_0_1762846504629_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153504_0_1762846504629_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "基坑",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          347,
-          385,
-          592,
-          501
-        ],
-        "severity": "高",
-        "evidence": "在基坑边缘区域，可见绿色防护网未完全覆盖临边，存在明显缺口，无有效围栏或防护结构"
-      },
-      {
-        "label": "临边开口未防护",
-        "bbox_1000": [
-          635,
-          490,
-          1000,
-          551
-        ],
-        "severity": "中",
-        "evidence": "基坑下方有一处施工通道开口，仅用橙色临时护栏部分遮挡，未设置防护门或警示隔离设施"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失、临边开口未防护",
-      "severity": "高",
-      "suggestion": "立即对基坑临边设置连续围栏防护，并在所有出入口安装防护门和警示标识，确保人员安全"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [347, 385, 592, 501],\n      \"severity\": \"高\",\n      \"evidence\": \"在基坑边缘区域，可见绿色防护网未完全覆盖临边，存在明显缺口，无有效围栏或防护结构\"\n    },\n    {\n      \"label\": \"临边开口未防护\",\n      \"bbox_1000\": [635, 490, 1068, 551],\n      \"severity\": \"中\",\n      \"evidence\": \"基坑下方有一处施工通道开口，仅用橙色临时护栏部分遮挡，未设置防护门或警示隔离设施\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、临边开口未防护\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即对基坑临边设置连续围栏防护，并在所有出入口安装防护门和警示标识，确保人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153555_0_1762846555549_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153555_0_1762846555549_photo_low_quality.jpg",
@@ -2696,7 +2397,8 @@
       "suggestion": "巡检建议：持续监控平台临边防护结构稳定性，确保围栏完好无损。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：持续监控平台临边防护结构稳定性，确保围栏完好无损。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153655_0_1762846615580_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153655_0_1762846615580_photo_low_quality.jpg",
@@ -2707,15 +2409,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           436,
           275,
           879,
           444
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘未设置围栏或防护结构，存在人员坠落风险"
+        "evidence": "俯拍视角可见基坑边缘未设置围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -2725,42 +2427,14 @@
       "suggestion": "立即在基坑临边区域加装符合规范的围栏防护设施，防止高空坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [436, 275, 879, 444],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘未设置围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑临边区域加装符合规范的围栏防护设施，防止高空坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153851_0_1762846731095_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153851_0_1762846731095_photo_low_quality.jpg",
     "width": 1440,
     "height": 1080,
     "scene": "平台临边",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          526,
-          223,
-          907,
-          341
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见施工平台边缘未设置围栏或防护结构，存在高空坠落风险"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在施工平台临边加装符合规范的防护围栏，确保作业人员安全"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [526, 223, 907, 341],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见施工平台边缘未设置围栏或防护结构，存在高空坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在施工平台临边加装符合规范的防护围栏，确保作业人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153905_0_1762846745353_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153905_0_1762846745353_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
     "is_compliant": true,
     "confidence": "high",
     "violations": [],
@@ -2768,10 +2442,11 @@
       "violation_detected": false,
       "violation_type": "",
       "severity": "无",
-      "suggestion": "现场临边区域未见明显防护缺失或围栏破损情况，建议继续定期巡检，重点关注施工平台边缘及高处作业区域的防护措施完整性。"
+      "suggestion": "立即在施工平台临边加装符合规范的防护围栏，确保作业人员安全"
     },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域未见明显防护缺失或围栏破损情况，建议继续定期巡检，重点关注施工平台边缘及高处作业区域的防护措施完整性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [526, 223, 907, 341],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见施工平台边缘未设置围栏或防护结构，存在高空坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在施工平台临边加装符合规范的防护围栏，确保作业人员安全\"\n  }\n}\n```",
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153913_0_1762846753550_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153913_0_1762846753550_photo_low_quality.jpg",
@@ -2788,7 +2463,8 @@
       "suggestion": "现场临边区域未发现明显防护缺失或围栏损坏情况，建议继续加强日常巡检，确保施工过程中临时防护措施的完整性。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域未发现明显防护缺失或围栏损坏情况，建议继续加强日常巡检，确保施工过程中临时防护措施的完整性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154019_0_1762846819543_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154019_0_1762846819543_photo_low_quality.jpg",
@@ -2805,47 +2481,8 @@
       "suggestion": "现场临边防护措施基本到位，建议继续加强高空作业人员安全监管，确保施工过程安全可控。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施基本到位，建议继续加强高空作业人员安全监管，确保施工过程安全可控。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154115_0_1762846875173_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154115_0_1762846875173_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "基坑",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          478,
-          305,
-          864,
-          782
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见多个桥墩底部区域未设置围栏或防护结构，存在高空坠落风险"
-      },
-      {
-        "label": "临边开口未防护",
-        "bbox_1000": [
-          520,
-          610,
-          808,
-          849
-        ],
-        "severity": "中",
-        "evidence": "桥墩基础施工区域的出入口未设置防护门或警示带，存在人员误入危险区域的风险"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失、临边开口未防护",
-      "severity": "高",
-      "suggestion": "立即在桥墩底部及施工出入口加装围栏和防护门，并设置警示标识，确保作业人员安全"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [478, 305, 864, 782],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见多个桥墩底部区域未设置围栏或防护结构，存在高空坠落风险\"\n    },\n    {\n      \"label\": \"临边开口未防护\",\n      \"bbox_1000\": [520, 610, 808, 849],\n      \"severity\": \"中\",\n      \"evidence\": \"桥墩基础施工区域的出入口未设置防护门或警示带，存在人员误入危险区域的风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、临边开口未防护\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在桥墩底部及施工出入口加装围栏和防护门，并设置警示标识，确保作业人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154156_0_1762846916356_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154156_0_1762846916356_photo_low_quality.jpg",
@@ -2858,13 +2495,13 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          498,
-          256,
-          937,
-          605
+          476,
+          203,
+          739,
+          635
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘未设置任何围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -2874,7 +2511,8 @@
       "suggestion": "立即在基坑四周设置符合规范的临边防护围栏，防止人员坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [498, 256, 937, 605],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周设置符合规范的临边防护围栏，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154249_0_1762846969180_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154249_0_1762846969180_photo_low_quality.jpg",
@@ -2885,25 +2523,48 @@
     "confidence": "high",
     "violations": [
       {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          609,
+          69,
+          792,
+          235
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
         "label": "临边防护缺失",
         "bbox_1000": [
-          245,
-          3,
-          1000,
-          958
+          435,
+          215,
+          734,
+          447
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘无任何围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          270,
+          58,
+          520,
+          752
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失",
+      "violation_type": "围栏倒伏、临边防护缺失",
       "severity": "高",
       "suggestion": "立即在基坑四周设置符合规范的临边防护栏杆，确保施工人员安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [245, 3, 1007, 958],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘无任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周设置符合规范的临边防护栏杆，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154344_0_1762847024090_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_154344_0_1762847024090_photo_low_quality.jpg",
@@ -2916,13 +2577,13 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          234,
-          325,
-          1000,
-          960
+          483,
+          461,
+          906,
+          910
         ],
-        "severity": "高",
-        "evidence": "从俯拍视角可见，大面积边坡临边区域未设置任何围栏或防护结构，存在高空坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -2932,7 +2593,8 @@
       "suggestion": "立即在边坡临边区域设置符合规范的防护围栏，防止人员坠落，确保施工安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [234, 325, 1198, 960],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见，大面积边坡临边区域未设置任何围栏或防护结构，存在高空坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域设置符合规范的防护围栏，防止人员坠落，确保施工安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155654_363_1762849211167_photo.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155654_363_1762849211167_photo.jpg",
@@ -2945,13 +2607,13 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          32,
-          175,
-          649,
-          958
+          181,
+          119,
+          518,
+          986
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见边坡下方存在大面积无防护的临边区域，工人在未设围栏的脚手架上作业，存在坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -2961,36 +2623,8 @@
       "suggestion": "立即在边坡临边区域设置符合规范的围栏或防护网，确保高空作业人员安全，防止坠落事故发生"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [32, 175, 649, 958],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见边坡下方存在大面积无防护的临边区域，工人在未设围栏的脚手架上作业，存在坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域设置符合规范的围栏或防护网，确保高空作业人员安全，防止坠落事故发生\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155708_364_1762849206212_photo.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155708_364_1762849206212_photo.jpg",
-    "width": 4000,
-    "height": 3000,
-    "scene": "基坑",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          378,
-          126,
-          1000,
-          959
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角显示基坑边缘未设置连续围栏或防护结构，仅靠临时脚手架支撑，存在人员坠落风险"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在基坑临边设置标准化围栏和警示标志，确保施工人员安全，防止坠落事故"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [378, 126, 1245, 959],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角显示基坑边缘未设置连续围栏或防护结构，仅靠临时脚手架支撑，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑临边设置标准化围栏和警示标志，确保施工人员安全，防止坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155758_365_1762849201088_photo.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155758_365_1762849201088_photo.jpg",
@@ -3003,13 +2637,13 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          354,
-          368,
-          985,
-          571
+          313,
+          355,
+          840,
+          625
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘无任何围栏或防护结构，存在明显坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -3019,7 +2653,8 @@
       "suggestion": "立即在基坑四周设置符合规范的临边防护栏杆，确保施工人员安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [354, 368, 985, 571],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘无任何围栏或防护结构，存在明显坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑四周设置符合规范的临边防护栏杆，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155900_366_1762849195708_photo.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155900_366_1762849195708_photo.jpg",
@@ -3032,24 +2667,35 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          463,
-          528,
-          750,
-          709
+          330,
+          518,
+          603,
+          751
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见边坡下方存在积水坑，周围无任何围栏或防护结构，构成危险临边"
+        "severity": "中",
+        "evidence": "手动标注"
       },
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          975,
-          730,
-          1000,
-          992
+          808,
+          757,
+          969,
+          994
         ],
-        "severity": "高",
-        "evidence": "右侧深坑区域存在积水，边缘未设置任何围挡或防护设施，属于未防护的临边"
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          731,
+          375,
+          836,
+          481
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -3059,7 +2705,8 @@
       "suggestion": "立即在积水坑及深坑周边设置临时围栏或警示隔离措施，防止人员坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [463, 528, 750, 709],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见边坡下方存在积水坑，周围无任何围栏或防护结构，构成危险临边\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [975, 730, 1240, 992],\n      \"severity\": \"高\",\n      \"evidence\": \"右侧深坑区域存在积水，边缘未设置任何围挡或防护设施，属于未防护的临边\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在积水坑及深坑周边设置临时围栏或警示隔离措施，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155940_367_1762849190662_photo.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_155940_367_1762849190662_photo.jpg",
@@ -3072,34 +2719,46 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          427,
-          398,
-          560,
-          515
+          171,
+          458,
+          300,
+          616
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见泥浆池边缘无任何围栏或防护结构，存在直接坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏断口",
+        "bbox_1000": [
+          503,
+          434,
+          582,
+          619
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       },
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          228,
-          458,
-          347,
-          574
+          351,
+          212,
+          700,
+          455
         ],
-        "severity": "高",
-        "evidence": "另一处泥浆池区域未设置任何围护设施，临边暴露"
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失",
+      "violation_type": "临边防护缺失、围栏断口",
       "severity": "高",
       "suggestion": "立即在所有泥浆池临边设置符合标准的围栏防护，防止人员坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [427, 398, 560, 515],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见泥浆池边缘无任何围栏或防护结构，存在直接坠落风险\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [228, 458, 347, 574],\n      \"severity\": \"高\",\n      \"evidence\": \"另一处泥浆池区域未设置任何围护设施，临边暴露\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在所有泥浆池临边设置符合标准的围栏防护，防止人员坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_160234_368_1762849185478_photo.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_160234_368_1762849185478_photo.jpg",
@@ -3116,24 +2775,8 @@
       "suggestion": "现场临边防护措施基本到位，建议持续巡查围栏稳定性，确保施工期间防护结构完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施基本到位，建议持续巡查围栏稳定性，确保施工期间防护结构完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_160442_369_1762849180237_photo.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_160442_369_1762849180237_photo.jpg",
-    "width": 4000,
-    "height": 3000,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场边坡防护措施基本到位，建议继续加强日常巡查，确保防护结构稳定。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，建议继续加强日常巡查，确保防护结构稳定。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_161840_371_1762849170259_photo.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_161840_371_1762849170259_photo.jpg",
@@ -3146,34 +2789,57 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          359,
-          337,
-          674,
-          448
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘区域未设置围栏或防护结构，存在人员坠落风险"
-      },
-      {
-        "label": "围栏断口",
-        "bbox_1000": [
-          828,
+          294,
+          339,
           454,
-          1000,
-          640
+          447
         ],
         "severity": "中",
-        "evidence": "右侧边坡临边围栏存在明显断口，部分区域围栏缺失，形成安全隐患"
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          296,
+          354,
+          382,
+          437
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          830,
+          641,
+          986,
+          825
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          489,
+          460,
+          663,
+          547
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、围栏断口",
+      "violation_type": "临边防护缺失、围栏倒伏",
       "severity": "高",
       "suggestion": "立即在基坑临边区域加装完整围栏防护，修复围栏断口，确保施工人员安全。建议加强现场巡查，防止类似隐患再次出现。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [359, 337, 674, 448],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘区域未设置围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [828, 454, 1309, 640],\n      \"severity\": \"中\",\n      \"evidence\": \"右侧边坡临边围栏存在明显断口，部分区域围栏缺失，形成安全隐患\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、围栏断口\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑临边区域加装完整围栏防护，修复围栏断口，确保施工人员安全。建议加强现场巡查，防止类似隐患再次出现。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_161914_372_1762849165739_photo.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_161914_372_1762849165739_photo.jpg",
@@ -3184,36 +2850,48 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          562,
-          364,
-          875,
-          564
-        ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘区域未设置连续围栏或防护结构，存在人员坠落风险"
-      },
-      {
         "label": "围栏断口",
         "bbox_1000": [
-          229,
-          174,
-          524,
-          345
+          156,
+          212,
+          212,
+          309
         ],
         "severity": "中",
-        "evidence": "基坑一侧的橙色围栏存在明显缺口，围栏不连续，形成安全隐患"
+        "evidence": "手动标注"
+      },
+      {
+        "label": "围栏倒伏",
+        "bbox_1000": [
+          376,
+          333,
+          561,
+          439
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          372,
+          428,
+          776,
+          645
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、围栏断口",
+      "violation_type": "围栏断口、围栏倒伏、临边防护缺失",
       "severity": "高",
       "suggestion": "立即对基坑临边加装完整围护设施，修复围栏断口，确保作业区域封闭安全，防止人员误入或坠落"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [562, 364, 875, 564],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘区域未设置连续围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"围栏断口\",\n      \"bbox_1000\": [229, 174, 524, 345],\n      \"severity\": \"中\",\n      \"evidence\": \"基坑一侧的橙色围栏存在明显缺口，围栏不连续，形成安全隐患\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失、围栏断口\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即对基坑临边加装完整围护设施，修复围栏断口，确保作业区域封闭安全，防止人员误入或坠落\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095827_0_1762912707387_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095827_0_1762912707387_photo_low_quality.jpg",
@@ -3230,7 +2908,8 @@
       "suggestion": "现场临边区域设有防护栏及宣传展板，整体防护措施到位，建议继续保持定期巡检，确保防护设施完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域设有防护栏及宣传展板，整体防护措施到位，建议继续保持定期巡检，确保防护设施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095831_0_1762912711421_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095831_0_1762912711421_photo_low_quality.jpg",
@@ -3247,7 +2926,8 @@
       "suggestion": "现场临边区域设置有宣传栏及围挡，整体防护措施到位，建议继续保持定期巡检，确保设施完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域设置有宣传栏及围挡，整体防护措施到位，建议继续保持定期巡检，确保设施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095846_0_1762912726084_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095846_0_1762912726084_photo_low_quality.jpg",
@@ -3264,7 +2944,8 @@
       "suggestion": "现场临边区域防护措施完整，未发现明显安全隐患，建议继续保持常规巡检。"
     },
     "raw_response": "{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域防护措施完整，未发现明显安全隐患，建议继续保持常规巡检。\"\n  }\n}",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095851_0_1762912731886_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095851_0_1762912731886_photo_low_quality.jpg",
@@ -3281,7 +2962,8 @@
       "suggestion": "巡检建议：现场临边防护措施完好，围栏连续且无明显破损，建议继续保持定期巡查，确保防护设施长期有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：现场临边防护措施完好，围栏连续且无明显破损，建议继续保持定期巡查，确保防护设施长期有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095857_0_1762912737920_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095857_0_1762912737920_photo_low_quality.jpg",
@@ -3298,7 +2980,8 @@
       "suggestion": "现场边坡防护措施到位，临边设有绿色护栏，未发现明显安全隐患。建议继续保持定期巡检，确保防护设施完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施到位，临边设有绿色护栏，未发现明显安全隐患。建议继续保持定期巡检，确保防护设施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095902_0_1762912742044_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095902_0_1762912742044_photo_low_quality.jpg",
@@ -3315,7 +2998,8 @@
       "suggestion": "现场临边防护措施完整，围栏连续设置，未发现明显安全隐患，建议继续保持规范管理。"
     },
     "raw_response": "{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施完整，围栏连续设置，未发现明显安全隐患，建议继续保持规范管理。\"\n  }\n}",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095915_0_1762912755207_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095915_0_1762912755207_photo_low_quality.jpg",
@@ -3332,7 +3016,8 @@
       "suggestion": "巡检建议：现场临边防护措施完整，围栏连续设置，未发现明显安全隐患。建议持续保持防护设施完好，并加强日常巡查。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：现场临边防护措施完整，围栏连续设置，未发现明显安全隐患。建议持续保持防护设施完好，并加强日常巡查。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095917_0_1762912757446_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095917_0_1762912757446_photo_low_quality.jpg",
@@ -3349,7 +3034,8 @@
       "suggestion": "现场临边防护措施到位，围栏连续完整，建议继续保持定期巡检，确保防护设施稳定有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施到位，围栏连续完整，建议继续保持定期巡检，确保防护设施稳定有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095921_0_1762912761654_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095921_0_1762912761654_photo_low_quality.jpg",
@@ -3366,7 +3052,8 @@
       "suggestion": "现场临边防护设施完整，围栏连续设置，未发现明显安全隐患，建议继续保持巡检频率，确保防护设施长期有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护设施完整，围栏连续设置，未发现明显安全隐患，建议继续保持巡检频率，确保防护设施长期有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095936_0_1762912776870_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095936_0_1762912776870_photo_low_quality.jpg",
@@ -3383,7 +3070,8 @@
       "suggestion": "现场临边防护措施到位，建议继续保持巡检频率，确保防护设施完好。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施到位，建议继续保持巡检频率，确保防护设施完好。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095941_0_1762912781905_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095941_0_1762912781905_photo_low_quality.jpg",
@@ -3400,7 +3088,8 @@
       "suggestion": "现场临边防护措施到位，建议继续保持巡检频率，确保长期合规。"
     },
     "raw_response": "{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施到位，建议继续保持巡检频率，确保长期合规。\"\n  }\n}",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095956_0_1762912796872_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_095956_0_1762912796872_photo_low_quality.jpg",
@@ -3417,7 +3106,8 @@
       "suggestion": "现场临边防护措施完整，围栏连续无破损，建议继续保持并加强日常巡检。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施完整，围栏连续无破损，建议继续保持并加强日常巡检。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100004_0_1762912804578_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100004_0_1762912804578_photo_low_quality.jpg",
@@ -3434,7 +3124,8 @@
       "suggestion": "巡检建议：现场临边防护设施完整，围栏连续且无明显破损，建议继续保持防护状态，并定期检查围栏稳定性。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：现场临边防护设施完整，围栏连续且无明显破损，建议继续保持防护状态，并定期检查围栏稳定性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100009_0_1762912809293_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100009_0_1762912809293_photo_low_quality.jpg",
@@ -3451,7 +3142,8 @@
       "suggestion": "巡检建议：继续保持临边防护设施完好，定期检查围栏稳定性，确保施工人员安全。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：继续保持临边防护设施完好，定期检查围栏稳定性，确保施工人员安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100017_0_1762912817126_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100017_0_1762912817126_photo_low_quality.jpg",
@@ -3468,7 +3160,8 @@
       "suggestion": "巡检建议：现场临边防护设施完整，围栏连续设置，未发现明显安全隐患。建议继续保持防护措施完好，并定期检查围栏稳定性。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：现场临边防护设施完整，围栏连续设置，未发现明显安全隐患。建议继续保持防护措施完好，并定期检查围栏稳定性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100027_0_1762912827050_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100027_0_1762912827050_photo_low_quality.jpg",
@@ -3485,7 +3178,8 @@
       "suggestion": "现场临边防护措施到位，围栏连续完整，未发现明显安全隐患。建议继续加强日常巡查，确保防护设施长期有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施到位，围栏连续完整，未发现明显安全隐患。建议继续加强日常巡查，确保防护设施长期有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100035_0_1762912835316_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100035_0_1762912835316_photo_low_quality.jpg",
@@ -3502,7 +3196,8 @@
       "suggestion": "现场临边防护设施完整，围栏连续设置，未发现明显安全隐患。建议继续保持定期巡检，确保防护结构稳定有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护设施完整，围栏连续设置，未发现明显安全隐患。建议继续保持定期巡检，确保防护结构稳定有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100057_0_1762912857197_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100057_0_1762912857197_photo_low_quality.jpg",
@@ -3519,7 +3214,8 @@
       "suggestion": "现场边坡临边防护设施完整，围栏连续无断口或倒伏现象，建议继续保持定期巡检以确保防护状态稳定。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡临边防护设施完整，围栏连续无断口或倒伏现象，建议继续保持定期巡检以确保防护状态稳定。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100109_0_1762912869784_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100109_0_1762912869784_photo_low_quality.jpg",
@@ -3536,7 +3232,8 @@
       "suggestion": "现场临边区域防护措施完整，围栏连续无破损，未发现明显安全隐患。建议继续保持日常巡检，确保防护设施长期有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域防护措施完整，围栏连续无破损，未发现明显安全隐患。建议继续保持日常巡检，确保防护设施长期有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100124_0_1762912884334_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100124_0_1762912884334_photo_low_quality.jpg",
@@ -3553,7 +3250,8 @@
       "suggestion": "现场临边防护措施完整，围栏连续无破损，建议继续保持定期巡检，确保防护设施长期有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施完整，围栏连续无破损，建议继续保持定期巡检，确保防护设施长期有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100137_0_1762912897434_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100137_0_1762912897434_photo_low_quality.jpg",
@@ -3570,7 +3268,8 @@
       "suggestion": "现场临边区域设置有防护栏及警示标识，符合安全规范要求，建议继续保持定期巡检。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域设置有防护栏及警示标识，符合安全规范要求，建议继续保持定期巡检。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100157_0_1762912917423_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100157_0_1762912917423_photo_low_quality.jpg",
@@ -3587,7 +3286,8 @@
       "suggestion": "巡检建议：现场临边防护措施完好，未发现明显安全隐患，建议继续保持并定期巡查。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：现场临边防护措施完好，未发现明显安全隐患，建议继续保持并定期巡查。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100204_0_1762912924903_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100204_0_1762912924903_photo_low_quality.jpg",
@@ -3604,7 +3304,8 @@
       "suggestion": "现场临边防护措施完整，围栏连续无破损，建议继续保持定期巡检，确保防护设施长期有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施完整，围栏连续无破损，建议继续保持定期巡检，确保防护设施长期有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100206_0_1762912926680_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100206_0_1762912926680_photo_low_quality.jpg",
@@ -3621,7 +3322,8 @@
       "suggestion": "现场临边防护设施完整，围栏连续无断口或倒伏现象，符合安全规范要求。建议继续保持日常巡检，确保防护设施长期有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护设施完整，围栏连续无断口或倒伏现象，符合安全规范要求。建议继续保持日常巡检，确保防护设施长期有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100211_0_1762912931442_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100211_0_1762912931442_photo_low_quality.jpg",
@@ -3638,7 +3340,8 @@
       "suggestion": "现场临边防护措施完整，围栏连续无破损，建议继续保持并加强日常巡检。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施完整，围栏连续无破损，建议继续保持并加强日常巡检。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100213_0_1762912933877_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_100213_0_1762912933877_photo_low_quality.jpg",
@@ -3655,7 +3358,8 @@
       "suggestion": "现场临边防护措施到位，建议继续保持定期巡检，确保围栏结构稳定。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施到位，建议继续保持定期巡检，确保围栏结构稳定。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101238_0_1762913558825_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101238_0_1762913558825_photo_low_quality.jpg",
@@ -3672,7 +3376,8 @@
       "suggestion": "现场边坡防护措施到位，覆盖绿色防尘网并设置有格构梁结构，临边区域未见明显防护缺失或围栏损坏现象，建议继续保持定期巡查与维护。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施到位，覆盖绿色防尘网并设置有格构梁结构，临边区域未见明显防护缺失或围栏损坏现象，建议继续保持定期巡查与维护。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101249_0_1762913569044_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101249_0_1762913569044_photo_low_quality.jpg",
@@ -3689,7 +3394,8 @@
       "suggestion": "现场边坡防护措施基本到位，建议继续加强日常巡检，确保防护网完好无损。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，建议继续加强日常巡检，确保防护网完好无损。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101255_0_1762913575029_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101255_0_1762913575029_photo_low_quality.jpg",
@@ -3706,7 +3412,8 @@
       "suggestion": "现场未发现明显临边防护缺失或围栏损坏情况，建议继续加强日常巡查，确保施工区域安全防护措施持续有效。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场未发现明显临边防护缺失或围栏损坏情况，建议继续加强日常巡查，确保施工区域安全防护措施持续有效。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101305_0_1762913585721_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101305_0_1762913585721_photo_low_quality.jpg",
@@ -3723,7 +3430,8 @@
       "suggestion": "现场未发现明显临边防护缺失或围栏破损情况，建议继续定期巡检，重点关注边坡稳定性及施工区域隔离措施。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场未发现明显临边防护缺失或围栏破损情况，建议继续定期巡检，重点关注边坡稳定性及施工区域隔离措施。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101319_0_1762913599461_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101319_0_1762913599461_photo_low_quality.jpg",
@@ -3740,7 +3448,8 @@
       "suggestion": "现场临边区域防护措施完整，未发现明显安全隐患，建议继续保持定期巡检。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域防护措施完整，未发现明显安全隐患，建议继续保持定期巡检。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101321_0_1762913601597_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_101321_0_1762913601597_photo_low_quality.jpg",
@@ -3757,24 +3466,8 @@
       "suggestion": "现场临边区域防护措施到位，未发现明显安全隐患，建议继续保持定期巡检。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域防护措施到位，未发现明显安全隐患，建议继续保持定期巡检。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102449_0_1762914289468_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102449_0_1762914289468_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场边坡防护措施基本到位，建议定期检查边坡稳定性及防护网完好情况。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，建议定期检查边坡稳定性及防护网完好情况。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102457_0_1762914297438_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102457_0_1762914297438_photo_low_quality.jpg",
@@ -3785,15 +3478,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           0,
           410,
           1000,
           652
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见边坡顶部边缘无任何围栏或防护结构，工人在下方作业，存在坠落风险"
+        "evidence": "俯拍视角可见边坡顶部边缘无任何围栏或防护结构，工人在下方作业，存在坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -3803,7 +3496,8 @@
       "suggestion": "立即在边坡顶部设置临时围栏或防护网，确保施工人员安全，防止高处坠落事故"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [0, 410, 1303, 652],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见边坡顶部边缘无任何围栏或防护结构，工人在下方作业，存在坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡顶部设置临时围栏或防护网，确保施工人员安全，防止高处坠落事故\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102529_0_1762914329007_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102529_0_1762914329007_photo_low_quality.jpg",
@@ -3820,7 +3514,8 @@
       "suggestion": "现场边坡区域未发现明显防护缺失或围栏破损情况，建议继续保持临边安全防护措施并定期巡检。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡区域未发现明显防护缺失或围栏破损情况，建议继续保持临边安全防护措施并定期巡检。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102536_0_1762914336913_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102536_0_1762914336913_photo_low_quality.jpg",
@@ -3837,36 +3532,8 @@
       "suggestion": "现场边坡区域未发现明显临边防护缺失或围栏损坏情况，建议继续保持安全防护措施并定期巡检。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡区域未发现明显临边防护缺失或围栏损坏情况，建议继续保持安全防护措施并定期巡检。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102543_0_1762914343382_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102543_0_1762914343382_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          495,
-          0,
-          638,
-          957
-        ],
-        "severity": "高",
-        "evidence": "从俯拍视角可见，边坡边缘与施工道路之间无任何围栏或防护结构，存在人员坠落风险"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在边坡临边区域设置符合规范的防护围栏，防止人员误入或坠落，确保施工安全"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [495, 0, 638, 957],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见，边坡边缘与施工道路之间无任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域设置符合规范的防护围栏，防止人员误入或坠落，确保施工安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102549_0_1762914349289_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102549_0_1762914349289_photo_low_quality.jpg",
@@ -3883,24 +3550,8 @@
       "suggestion": "巡检建议：现场边坡区域未发现明显防护缺失或围栏破损情况，建议继续保持安全防护措施，并定期检查边坡稳定性。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：现场边坡区域未发现明显防护缺失或围栏破损情况，建议继续保持安全防护措施，并定期检查边坡稳定性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102557_0_1762914357842_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102557_0_1762914357842_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "巡检建议：继续保持边坡区域的防护措施，定期检查围栏和临边防护结构的完整性。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"巡检建议：继续保持边坡区域的防护措施，定期检查围栏和临边防护结构的完整性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102633_0_1762914393300_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251112_102633_0_1762914393300_photo_low_quality.jpg",
@@ -3917,7 +3568,8 @@
       "suggestion": "现场边坡防护措施基本到位，建议定期巡查边坡稳定性及防护网覆盖情况，确保施工安全。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，建议定期巡查边坡稳定性及防护网覆盖情况，确保施工安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0025.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0025.JPG",
@@ -3928,15 +3580,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           507,
           260,
           803,
           700
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘未设置连续围栏或防护结构，存在人员坠落风险"
+        "evidence": "俯拍视角可见基坑边缘未设置连续围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -3946,24 +3598,8 @@
       "suggestion": "立即在基坑临边设置符合规范的防护栏杆，确保施工人员安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [507, 260, 803, 700],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘未设置连续围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑临边设置符合规范的防护栏杆，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0026.JPG": {
-    "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0026.JPG",
-    "width": 4032,
-    "height": 3024,
-    "scene": "边坡",
-    "is_compliant": true,
-    "confidence": "high",
-    "violations": [],
-    "global_conclusion": {
-      "violation_detected": false,
-      "violation_type": "",
-      "severity": "无",
-      "suggestion": "现场临边区域未见明显防护缺失或围栏损坏，建议继续定期巡检，重点关注施工道路与边坡交接处的稳定性。"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边区域未见明显防护缺失或围栏损坏，建议继续定期巡检，重点关注施工道路与边坡交接处的稳定性。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0360.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0360.JPG",
@@ -3980,7 +3616,8 @@
       "suggestion": "现场临边防护措施到位，未发现明显安全隐患，建议继续保持定期巡检。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施到位，未发现明显安全隐患，建议继续保持定期巡检。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0361.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0361.JPG",
@@ -3997,7 +3634,8 @@
       "suggestion": "现场临边防护措施基本到位，建议继续加强日常巡检，确保施工人员安全。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护措施基本到位，建议继续加强日常巡检，确保施工人员安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0362.JPG": {
     "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/DJI_0362.JPG",
@@ -4014,7 +3652,8 @@
       "suggestion": "现场边坡防护措施基本到位，建议定期巡检边坡稳定性及临边防护状态，确保施工安全。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，建议定期巡检边坡稳定性及临边防护状态，确保施工安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102206_0_1762827726618_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102206_0_1762827726618_photo_low_quality.jpg",
@@ -4045,13 +3684,24 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          348,
-          537,
-          739,
-          665
+          284,
+          444,
+          480,
+          601
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见基坑边缘区域未设置连续围栏或防护结构，存在人员坠落风险"
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          667,
+          37,
+          899,
+          471
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -4061,7 +3711,8 @@
       "suggestion": "立即在基坑边缘设置符合规范的临边防护栏杆，确保施工人员安全"
     },
     "raw_response": "{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [348, 537, 739, 665],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑边缘区域未设置连续围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑边缘设置符合规范的临边防护栏杆，确保施工人员安全\"\n  }\n}",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102251_0_1762827771701_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102251_0_1762827771701_photo_low_quality.jpg",
@@ -4074,13 +3725,24 @@
       {
         "label": "临边防护缺失",
         "bbox_1000": [
-          247,
-          539,
-          1000,
-          959
+          504,
+          746,
+          720,
+          998
         ],
-        "severity": "高",
-        "evidence": "俯拍视角显示泥浆池周围未设置任何围栏或防护结构，存在明显临边暴露风险"
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          451,
+          314,
+          646,
+          548
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
       }
     ],
     "global_conclusion": {
@@ -4090,7 +3752,8 @@
       "suggestion": "立即在泥浆池周边设置围栏或防护网，防止人员坠落，确保施工安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [247, 539, 1161, 959],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角显示泥浆池周围未设置任何围栏或防护结构，存在明显临边暴露风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在泥浆池周边设置围栏或防护网，防止人员坠落，确保施工安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102308_0_1762827788070_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102308_0_1762827788070_photo_low_quality.jpg",
@@ -4101,26 +3764,26 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           4,
           65,
           730,
           720
         ],
-        "severity": "高",
-        "evidence": "从俯拍视角可见左侧边坡边缘无任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "从俯拍视角可见左侧边坡边缘无任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       },
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           785,
           40,
           1000,
           400
         ],
-        "severity": "高",
-        "evidence": "右侧边坡边缘未设置任何防护设施，裸露土体直接临空，存在安全隐患"
+        "evidence": "右侧边坡边缘未设置任何防护设施，裸露土体直接临空，存在安全隐患",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -4130,36 +3793,8 @@
       "suggestion": "立即在两侧边坡临边区域设置符合规范的防护围栏，防止人员坠落；加强现场安全巡查，确保防护措施落实到位。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [4, 65, 730, 720],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见左侧边坡边缘无任何围栏或防护结构，存在人员坠落风险\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [785, 40, 1309, 400],\n      \"severity\": \"高\",\n      \"evidence\": \"右侧边坡边缘未设置任何防护设施，裸露土体直接临空，存在安全隐患\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在两侧边坡临边区域设置符合规范的防护围栏，防止人员坠落；加强现场安全巡查，确保防护措施落实到位。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
-  },
-  "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102324_0_1762827804144_photo_low_quality.jpg": {
-    "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102324_0_1762827804144_photo_low_quality.jpg",
-    "width": 1440,
-    "height": 1080,
-    "scene": "边坡",
-    "is_compliant": false,
-    "confidence": "high",
-    "violations": [
-      {
-        "label": "临边防护缺失",
-        "bbox_1000": [
-          497,
-          35,
-          652,
-          428
-        ],
-        "severity": "高",
-        "evidence": "在边坡边缘区域，可见一条未设置任何围栏或防护结构的危险临边，存在人员坠落风险"
-      }
-    ],
-    "global_conclusion": {
-      "violation_detected": true,
-      "violation_type": "临边防护缺失",
-      "severity": "高",
-      "suggestion": "立即在边坡临边区域设置符合规范的防护栏杆或警示围挡，防止人员意外坠落"
-    },
-    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [497, 35, 652, 428],\n      \"severity\": \"高\",\n      \"evidence\": \"在边坡边缘区域，可见一条未设置任何围栏或防护结构的危险临边，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在边坡临边区域设置符合规范的防护栏杆或警示围挡，防止人员意外坠落\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102349_0_1762827829623_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102349_0_1762827829623_photo_low_quality.jpg",
@@ -4170,15 +3805,15 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           385,
           692,
           885,
           947
         ],
-        "severity": "高",
-        "evidence": "俯拍视角可见施工区域边缘未设置任何围栏或防护结构，存在人员坠落风险"
+        "evidence": "俯拍视角可见施工区域边缘未设置任何围栏或防护结构，存在人员坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -4188,7 +3823,8 @@
       "suggestion": "立即在危险临边区域设置符合规范的围栏或防护网，确保施工人员安全"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [385, 692, 885, 947],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见施工区域边缘未设置任何围栏或防护结构，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在危险临边区域设置符合规范的围栏或防护网，确保施工人员安全\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102451_0_1762827891623_photo_low_quality.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102451_0_1762827891623_photo_low_quality.jpg",
@@ -4200,22 +3836,22 @@
     "violations": [
       {
         "bbox_1000": [
-          623,
-          149,
-          905,
-          447
-        ],
-        "evidence": "俯拍视角可见基坑边缘未设置任何围栏或防护结构，存在坠落风险",
-        "label": "临边防护缺失",
-        "severity": "高"
-      },
-      {
-        "label": "围栏断口",
-        "bbox_1000": [
           464,
           132,
           534,
           220
+        ],
+        "evidence": "手动标注",
+        "label": "围栏断口",
+        "severity": "中"
+      },
+      {
+        "label": "围栏断口",
+        "bbox_1000": [
+          599,
+          404,
+          697,
+          489
         ],
         "severity": "中",
         "evidence": "手动标注"
@@ -4223,7 +3859,7 @@
     ],
     "global_conclusion": {
       "violation_detected": true,
-      "violation_type": "临边防护缺失、围栏断口",
+      "violation_type": "围栏断口",
       "severity": "高",
       "suggestion": "立即在基坑四周安装符合标准的临边防护设施，确保施工人员安全"
     },
@@ -4246,6 +3882,7 @@
       "suggestion": "现场边坡防护措施基本到位，绿色防尘网覆盖良好，未发现明显临边防护缺失或围栏破损情况。建议持续巡查边坡稳定性及防护网完整性，确保施工安全。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡防护措施基本到位，绿色防尘网覆盖良好，未发现明显临边防护缺失或围栏破损情况。建议持续巡查边坡稳定性及防护网完整性，确保施工安全。\"\n  }\n}\n```",
-    "model": "qwen-vl-max"
+    "model": "qwen-vl-max",
+    "reviewed": true
   }
 }
