@@ -26,16 +26,18 @@ from PIL import Image
 from tqdm import tqdm
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
+sys.path.append(str(Path(__file__).parent.parent)) # 这里要使用str将Path()返回的对象转换成字符串，不然sys.path解析不了
+# 而且print打印的时候会自动调用__str__方法进行隐式转换
 
-from ..model_utils import load_vlm, infer_vlm
+from model_utils import load_vlm, infer_vlm
 from prompts import SYSTEM_PROMPT, DEFAULT_QUERY
 from tiled_infer import tiled_chat
 
 # ── 模型路径 ──────────────────────────────────────────────────────────────────
 MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
 LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v2-20260414-160523/checkpoint-1110"
-
-CACHE_FILE = Path(__file__).parent.parent / "data" / "annotate_cache.json"
+PROJECT_ROOT = "/home/fs-ai/llama-qwen"
+CACHE_FILE = Path(__file__).parent.parent.parent / "data" / "annotate_cache.json"
 TILED_PIXEL_THRESHOLD = 4_000_000
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"}
 
@@ -296,7 +298,7 @@ def run_test(use_lora: bool, use_tiled: bool, count: int):
     # 保存报告
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     prefix = "lora" if use_lora else "base"
-    out_path = f"outputs/{prefix}_test_v2_{ts}.json"
+    out_path = f"{PROJECT_ROOT}/outputs/{prefix}_test_v2_{ts}.json"
     os.makedirs("outputs", exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({
