@@ -182,11 +182,17 @@ python scripts/chat.py \
 **bbox 越界**：运行 `fix_cache_bbox.py` 对现有 cache 做离线清洗。
 
 ```bash
-# 快速测试（默认）
-  python scripts/test_fence_violations.py
-
-  # 高精度测试
-  python scripts/test_fence_violations.py --tiled
+  # 快速测试（默认）     
+  python scripts/test_v2.py
+  
+  # 分块推理   
+  python scripts/test_v2.py --tiled        
+   
+  # 限制每类 30 张 
+  python scripts/test_v2.py --count 30
+   
+  # 测基座对比     
+  python scripts/test_v2.py --base-only  
 
   # chat 快速模式
   python scripts/chat.py --image /path/to/img.jpg --visualize

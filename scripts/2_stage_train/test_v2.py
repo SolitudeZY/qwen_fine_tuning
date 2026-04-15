@@ -26,13 +26,14 @@ from PIL import Image
 from tqdm import tqdm
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
-from model_utils import load_vlm, infer_vlm
+
+from ..model_utils import load_vlm, infer_vlm
 from prompts import SYSTEM_PROMPT, DEFAULT_QUERY
 from tiled_infer import tiled_chat
 
 # ── 模型路径 ──────────────────────────────────────────────────────────────────
 MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
-LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v0-20260414-135237/checkpoint-285"
+LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v2-20260414-160523/checkpoint-1110"
 
 CACHE_FILE = Path(__file__).parent.parent / "data" / "annotate_cache.json"
 TILED_PIXEL_THRESHOLD = 4_000_000
