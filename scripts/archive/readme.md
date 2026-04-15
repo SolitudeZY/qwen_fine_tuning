@@ -1,4 +1,21 @@
+# 2026.4.15
+### 本文档是归档目录，保存了旧流程的脚本
+  旧流程遗留（应归档）：
+  - train.sh, train_fences.sh, train_qwen3vl.sh, train_stage1_grounding.sh, train_stage2_json.sh（被 2_stage_train/ 里的脚本取代）
+  - api_annotate_v2.py（被 2_stage_train/api_annotate_stage12.py 取代）
+  - prepare_data.py, prepare_finetune_data.py, prepare_stage2_json.py, prepare_train_v2_data.py（旧数据准备流程）
+  - convert_labelme_to_grounding.py（旧 LabelMe 流程）
+  - find_fence_violations.py, filter_all_fences_for_review.py, extract_compliant_fences.py（旧数据筛选）
+  - fix_labelme_json.py（旧标注修复）
+  - auto_label_compliant.py（旧合规打标）
+  - label_ui.py, ui_review_fences.py, web_ui_review_fences.py（旧标注 UI）
+  - strip_reasoning.py（旧数据清洗）
+  - test_fence_violations_v1.py, test_regex.py（旧测试）
+  - readme.md（内容已过时，被 CLAUDE.md 取代）
+  - outputs/（测试输出不应在 scripts/ 下）
 
+
+# 2026.4.14
 # Step 1: 生成 Stage 1 grounding 数据（已完成，78 条）
   # data/grounding_stage1.jsonl ✓
 

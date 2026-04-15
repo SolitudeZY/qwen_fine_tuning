@@ -30,8 +30,9 @@ from prompts import SYSTEM_PROMPT, DEFAULT_QUERY
 # ── 模型路径 ──────────────────────────────────────────────────────────────────
 # 注意：两阶段训练时基座为 Stage 1 合并模型，一阶段训练时改为原始基座
 MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
-LORA_PATH  = None   # 通过 --lora_path 传入，或在下方硬编码
-
+LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v2-20260414-160523/checkpoint-1110"   # 通过 --lora_path 传入，或在下方硬编码
+PROJECT_ROOT = '/home/fs-ai/llama-qwen'
+OUTPUT_PATH = "/home/fs-ai/llama-qwen/outputs/visualized"
 TILED_PIXEL_THRESHOLD = 4_000_000   # 超过此像素数时大图提示（需 --tiled 才自动分块）
 
 # ── 可视化配置 ────────────────────────────────────────────────────────────────
@@ -44,6 +45,55 @@ CJK_FONT_SIZE  = 22
 
 
 # ── JSON 提取 ─────────────────────────────────────────────────────────────────
+def _fix_malformed_json(text: str) -> str:
+    """修复模型常见的 JSON 格式错误：bbox 字符串化、括号不平衡等。"""
+    # Step 1: bbox 字符串 -> 数组，忽略字符串内混入的括号
+    def _fix_bbox_value(m):
+        nums = re.findall(r'\d+', m.group(1))
+        if len(nums) == 4:
+            return f'"bbox": [{", ".join(nums)}]'
+        return m.group(0)
+    text = re.sub(r'"bbox"\s*:\s*"([^"]*)"', _fix_bbox_value, text)
+
+    # Step 2: 括号平衡修复（去掉多余的 ] }，补上缺失的）
+    result = []
+    stack = []
+    in_str = False
+    escape = False
+    for c in text:
+        if escape:
+            escape = False
+            result.append(c)
+            continue
+        if c == '\\':
+            escape = True
+            result.append(c)
+            continue
+        if c == '"':
+            in_str = not in_str
+            result.append(c)
+            continue
+        if in_str:
+            result.append(c)
+            continue
+        if c in '{[':
+            stack.append(c)
+            result.append(c)
+        elif c == '}':
+            if stack and stack[-1] == '{':
+                stack.pop()
+                result.append(c)
+        elif c == ']':
+            if stack and stack[-1] == '[':
+                stack.pop()
+                result.append(c)
+        else:
+            result.append(c)
+    for opener in reversed(stack):
+        result.append('}' if opener == '{' else ']')
+    return ''.join(result)
+
+
 def _extract_json(text: str) -> tuple[dict | None, str, str]:
     """
     从模型输出中提取 JSON。
@@ -54,15 +104,15 @@ def _extract_json(text: str) -> tuple[dict | None, str, str]:
     end = text_clean.rfind("}") + 1
     if start == -1 or end == 0:
         return None, "", text
-    json_str = text_clean[start:end]
+    json_str = _fix_malformed_json(text_clean[start:end])
     try:
         d = json.loads(json_str)
-        if "violation_detection" in d and "violation_detected" not in d:
-            d["violation_detected"] = d.pop("violation_detection")
-        remaining = text_clean[:start] + text_clean[end:]
-        return d, json_str, remaining.strip()
     except Exception:
         return None, "", text
+    if "violation_detection" in d and "violation_detected" not in d:
+        d["violation_detected"] = d.pop("violation_detection")
+    remaining = text_clean[:start] + text_clean[end:]
+    return d, json_str, remaining.strip()
 
 
 # ── 可视化 ────────────────────────────────────────────────────────────────────
@@ -133,7 +183,7 @@ def infer_image(
         raw = json.dumps(parsed, ensure_ascii=False) if parsed else ""
     else:
         if is_large:
-            print("  [提示] 大图检测到，使用 --tiled 可启用分块推理提升精度")
+            print("  [提示] 检测到大图，可使用 --tiled 可启用分块推理提升精度")
         messages = [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": [
@@ -156,7 +206,7 @@ def print_result(parsed: dict | None, raw: str, elapsed: float, is_tiled: bool):
         print("[!] 无法解析 JSON，原始输出：")
         print(raw[:500])
         return
-
+    
     detected = parsed.get("violation_detected", False)
     status = "🚨 违规" if detected else "✅ 合规"
     print(f"结论: {status}")
@@ -184,7 +234,7 @@ def interactive_mode(model, processor, family, use_tiled: bool, visualize: bool,
 
     while True:
         try:
-            img_path = input("图片路径> ").strip()
+            img_path = input("图片路径>  ").strip()
         except (EOFError, KeyboardInterrupt):
             print("\n退出")
             break
@@ -202,12 +252,17 @@ def interactive_mode(model, processor, family, use_tiled: bool, visualize: bool,
         )
         print_result(parsed, raw, elapsed, is_tiled)
 
-        if visualize and parsed and parsed.get("violation_boxes"):
-            out_dir = output_dir or os.path.dirname(img_path)
-            out_name = os.path.basename(img_path).rsplit(".", 1)[0] + "_annotated.jpg"
-            out_path = os.path.join(out_dir, out_name)
-            saved = draw_violation_boxes(img_path, parsed["violation_boxes"], out_path)
-            print(f"可视化已保存: {saved}")
+        if visualize and parsed:
+            boxes = parsed.get("violation_boxes", [])
+            if boxes:
+                out_name = os.path.basename(img_path).rsplit(".", 1)[0] + "_annotated.jpg"
+                os.makedirs(OUTPUT_PATH, exist_ok=True)
+                out_path = os.path.join(OUTPUT_PATH, out_name)
+                saved = draw_violation_boxes(img_path, boxes, out_path)
+                print(f"可视化已保存: {saved}")
+            else:
+                print("[可视化] 模型未返回 violation_boxes，跳过标注")
+                print("原始输出： \n",raw)
 
 
 # ── 入口 ──────────────────────────────────────────────────────────────────────
@@ -219,7 +274,7 @@ if __name__ == "__main__":
     parser.add_argument("--no-lora", action="store_true", help="不加载 LoRA")
     parser.add_argument("--tiled", action="store_true", help="大图启用分块推理")
     parser.add_argument("--visualize", action="store_true", help="保存可视化结果")
-    parser.add_argument("--output_dir", type=str, default=None, help="可视化输出目录")
+    parser.add_argument("--output_dir", type=str, default='/home/fs-ai/llama-qwen/outputs/visualized', help="可视化输出目录")
     args = parser.parse_args()
 
     os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
