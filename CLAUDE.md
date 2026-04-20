@@ -89,9 +89,10 @@ bash scripts/2_stage_train/train_stage2.sh
 
 **Stage 1（grounding 空间对齐）**：
 - Model: Qwen3-VL-2B-Instruct 原始基础模型，4-bit NF4 量化
-- LR: 2e-5, Epochs: 5, Batch: 1, GradAccum: 4
-- LoRA rank: 16, alpha: 32, dropout: 0.05
-- MAX_PIXELS: 1003520
+- LR: 3e-5, Epochs: 8, Batch: 1, GradAccum: 4
+- LoRA rank: 32, alpha: 64, dropout: 0.05
+- MAX_PIXELS: 1505280
+- 训练数据：`stage1_grounding.jsonl` + `stage1_tiled.jsonl`（大图分块视角）
 
 **Stage 2（JSON 精调）**：
 - Model: Stage 1 合并后的模型，4-bit NF4 量化

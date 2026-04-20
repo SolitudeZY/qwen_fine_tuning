@@ -8,23 +8,24 @@ conda activate qwen-ft
 
 PROJECT_ROOT="/home/fs-ai/llama-qwen"
 DATA_DIR="$PROJECT_ROOT/data"
-GROUNDING_JSONL="$DATA_DIR/stage1_grounding.jsonl"   # api_annotate_stage12.py 生成
+GROUNDING_JSONL="$DATA_DIR/stage1_grounding.jsonl"
+TILED_JSONL="$DATA_DIR/stage1_tiled.jsonl"
+COMBINED_JSONL="$DATA_DIR/stage1_combined.jsonl"
 
 MODEL_DIR="$PROJECT_ROOT/models/Qwen/Qwen3-VL-2B-Instruct"
 OUTPUT_DIR="$PROJECT_ROOT/outputs/stage1_grounding"
 
-LORA_RANK=16
-LORA_ALPHA=32
-LR="2e-5"
-EPOCHS=5
+LORA_RANK=32
+LORA_ALPHA=64
+LR="3e-5"
+EPOCHS=8
 BATCH_SIZE=1
 GRAD_ACCUM=4
-MAX_PIXELS=1003520
+MAX_PIXELS=1505280   # ~1260x1195，比原来大50%，16GB显存可承受
 
 echo "============================================="
 echo "  Stage 1: Grounding 预训练"
 echo "  Model:   $MODEL_DIR"
-echo "  Dataset: $GROUNDING_JSONL"
 echo "  Output:  $OUTPUT_DIR"
 echo "============================================="
 
@@ -34,13 +35,24 @@ if [ ! -f "$GROUNDING_JSONL" ]; then
     exit 1
 fi
 
-echo "训练样本数: $(wc -l < "$GROUNDING_JSONL")"
+# 合并原始样本 + 分块样本
+if [ -f "$TILED_JSONL" ]; then
+    cat "$GROUNDING_JSONL" "$TILED_JSONL" > "$COMBINED_JSONL"
+    TRAIN_DATA="$COMBINED_JSONL"
+    echo "训练样本数: $(wc -l < "$COMBINED_JSONL")（原始 $(wc -l < "$GROUNDING_JSONL") + 分块 $(wc -l < "$TILED_JSONL")）"
+else
+    TRAIN_DATA="$GROUNDING_JSONL"
+    echo "[提示] 未找到 stage1_tiled.jsonl，仅使用原始样本"
+    echo "建议先运行: python scripts/2_stage_train/gen_tiled_stage1.py"
+    echo "训练样本数: $(wc -l < "$GROUNDING_JSONL")"
+fi
+
 mkdir -p "$OUTPUT_DIR"
 
 swift sft \
     --model "$MODEL_DIR" \
     --train_type lora \
-    --dataset "$GROUNDING_JSONL" \
+    --dataset "$TRAIN_DATA" \
     --quant_method bnb \
     --quant_bits 4 \
     --bnb_4bit_quant_type nf4 \
