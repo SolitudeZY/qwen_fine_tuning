@@ -35,7 +35,7 @@ from tiled_infer import tiled_chat
 
 # ── 模型路径 ──────────────────────────────────────────────────────────────────
 MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
-LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v2-20260414-160523/checkpoint-1110"
+LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v4-20260420-090209/checkpoint-285"
 PROJECT_ROOT = "/home/fs-ai/llama-qwen"
 CACHE_FILE = Path(__file__).parent.parent.parent / "data" / "annotate_cache.json"
 TILED_PIXEL_THRESHOLD = 4_000_000
@@ -216,8 +216,9 @@ def run_test(use_lora: bool, use_tiled: bool, count: int):
             recall_correct += 1
 
         violation_results.append({
-            "image": os.path.basename(item["path"]),
+            "image": item["path"],
             "detected": detected,
+            "detection_result": "GT为违规，检测为违规" if detected else "GT为违规，检测为合规",
             "violation_type": parsed.get("violation_type", "") if parsed else "",
             "pred_labels": [b.get("label") for b in (parsed or {}).get("violation_boxes", [])],
             "gt_labels": [v.get("label") for v in item["gt_boxes"]],
@@ -251,8 +252,9 @@ def run_test(use_lora: bool, use_tiled: bool, count: int):
             precision_correct += 1
 
         compliant_results.append({
-            "image": os.path.basename(item["path"]),
+            "image": item["path"],
             "is_compliant": is_compliant,
+            "detection_result": "GT为合规，检测为合规" if is_compliant else "GT为合规，检测为违规",
             "violation_type": parsed.get("violation_type", "") if parsed else "",
             "elapsed": round(elapsed, 2),
         })

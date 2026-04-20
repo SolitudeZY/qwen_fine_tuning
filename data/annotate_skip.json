@@ -142,5 +142,57 @@
   {
     "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_c2d255d025ebebcd_1765938854000.jpg",
     "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101858_0_1762827538561_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0375.JPG",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0381.JPG",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_25cde78ab68a28bc_1765938924000.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_102847_0_1762828127047_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153655_0_1762846615580_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/标注111-220/dji_fly_20251111_102206_0_1762827726618_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_100202_0_1762826522599_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101822_0_1762827502025_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101958_0_1762827598846_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_e3b52d8b45dbddac_1765940264000.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/北二绕无人机图片标注/org_789e3fe992e28072_1765940300000.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/无人机图片标识441-550(1)/dji_fly_20251111_153012_0_1762846212586_photo_low_quality.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
   }
 ]

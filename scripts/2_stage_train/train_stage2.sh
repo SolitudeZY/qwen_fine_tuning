@@ -12,16 +12,16 @@ PROJECT_ROOT="/home/fs-ai/llama-qwen"
 DATA_DIR="$PROJECT_ROOT/data"
 DATASET_JSONL="$DATA_DIR/stage2_json.jsonl"
 
-MERGED_MODEL_DIR="$PROJECT_ROOT/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
+MERGED_MODEL_DIR="$PROJECT_ROOT/outputs/stage1_grounding//v1-20260415-112908/checkpoint-512-merged"
 OUTPUT_DIR="$PROJECT_ROOT/outputs/stage2_json"
 
 LORA_RANK=32
 LORA_ALPHA=64
-LR="2e-5"
-EPOCHS=30
+LR="5e-5"
+EPOCHS=15
 BATCH_SIZE=1
-GRAD_ACCUM=4
-MAX_PIXELS=1003520
+GRAD_ACCUM=8
+MAX_PIXELS=1505280
 
 # 续训支持：传入 --resume 时自动找最新 checkpoint
 RESUME_CKPT=""
@@ -89,6 +89,6 @@ swift sft \
 echo ""
 echo "============================================="
 echo "  Stage 2 完成！"
-echo "  验证: python scripts/test_fence_violations.py"
+echo "  验证: python scripts/2_stage_train/test_v2.py"
 echo "  推理: python scripts/chat.py --lora_path $OUTPUT_DIR/vN/checkpoint-X --visualize"
 echo "============================================="
