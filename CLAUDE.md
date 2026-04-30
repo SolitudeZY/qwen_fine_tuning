@@ -15,7 +15,7 @@
 ```
 violation_detected=false  → violation_boxes: []
 violation_detected=true   → violation_boxes 非空
-violation_type 只能是：围栏断口 / 围栏倒伏 / 临边防护缺失 / 临边开口未防护 / 多类型用顿号连接
+violation_type 只能是：临边防护缺失
 ```
 
 ### 坐标格式

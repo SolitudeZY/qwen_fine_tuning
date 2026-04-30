@@ -1,0 +1,12 @@
+DATASET_DIR = Path('/home/fs-ai/llama-qwen/dataset')
+OUTPUT_ALL = Path('/home/fs-ai/llama-qwen/data/all_labels_images.json')
+OUTPUT_RELEVANT = Path('/home/fs-ai/llama-qwen/data/relevant_images.json')
+OUTPUT_RELEVANT_TXT = Path('/home/fs-ai/llama-qwen/data/relevant_images.txt')
+
+# 与我们任务（高空防坠、临边防护、围栏、基坑等）强相关的标签关键词
+RELEVANT_KEYWORDS = [
+    "防护", "围挡", "基坑", "边坡", "临边", "泥浆池", 
+    "平台", "护栏", "网片", "标识", "标牌", "警示", 
+    "水马", "防撞", "反光", "安全锥", "孔口", "井盖", 
+    "爬模", "爬梯", "塔梯", "抱箍", "限位装置"
+]

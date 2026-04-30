@@ -29,8 +29,11 @@ from prompts import SYSTEM_PROMPT, DEFAULT_QUERY
 
 # ── 模型路径 ──────────────────────────────────────────────────────────────────
 # 注意：两阶段训练时基座为 Stage 1 合并模型，一阶段训练时改为原始基座
-MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
-LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v2-20260414-160523/checkpoint-1110"   # 通过 --lora_path 传入，或在下方硬编码
+# MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
+# LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v2-20260414-160523/checkpoint-1110"   
+# # 通过 --lora_path 传入，或在下方硬编码
+MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct"
+LORA_PATH = "/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_minimal_cot_lora/v0-20260410-105535/checkpoint-225"  # short cot version
 PROJECT_ROOT = '/home/fs-ai/llama-qwen'
 OUTPUT_PATH = "/home/fs-ai/llama-qwen/outputs/visualized"
 TILED_PIXEL_THRESHOLD = 4_000_000   # 超过此像素数时大图提示（需 --tiled 才自动分块）
@@ -269,12 +272,12 @@ def interactive_mode(model, processor, family, use_tiled: bool, visualize: bool,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--image", type=str, default=None, help="单图推理路径")
-    parser.add_argument("--lora_path", type=str, default=None, help="LoRA checkpoint 路径")
-    parser.add_argument("--model_path", type=str, default=None, help="基座模型路径（覆盖默认）")
+    parser.add_argument("--lora-path", type=str, default=None, help="LoRA checkpoint 路径")
+    parser.add_argument("--model-path", type=str, default=None, help="基座模型路径（覆盖默认）")
     parser.add_argument("--no-lora", action="store_true", help="不加载 LoRA")
     parser.add_argument("--tiled", action="store_true", help="大图启用分块推理")
     parser.add_argument("--visualize", action="store_true", help="保存可视化结果")
-    parser.add_argument("--output_dir", type=str, default='/home/fs-ai/llama-qwen/outputs/visualized', help="可视化输出目录")
+    parser.add_argument("--output-dir", type=str, default='/home/fs-ai/llama-qwen/outputs/visualized', help="可视化输出目录")
     args = parser.parse_args()
 
     os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

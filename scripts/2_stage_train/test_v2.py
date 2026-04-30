@@ -34,8 +34,8 @@ from prompts import SYSTEM_PROMPT, DEFAULT_QUERY
 from tiled_infer import tiled_chat
 
 # ── 模型路径 ──────────────────────────────────────────────────────────────────
-MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
-LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v4-20260420-090209/checkpoint-285"
+MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v2-20260420-145047/checkpoint-296-merged"
+LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v5-20260420-155100/checkpoint-255"
 PROJECT_ROOT = "/home/fs-ai/llama-qwen"
 CACHE_FILE = Path(__file__).parent.parent.parent / "data" / "annotate_cache.json"
 TILED_PIXEL_THRESHOLD = 4_000_000

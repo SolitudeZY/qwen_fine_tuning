@@ -1,0 +1,19 @@
+{
+  "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_094542_0_1762825542556_photo_low_quality.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_094542_0_1762825542556_photo_low_quality.jpg",
+    "width": 1440,
+    "height": 1080,
+    "scene": "边坡",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场主要为边坡治理及道路施工区域，暂未发现明显的高差临边防护缺失风险。建议持续监测边坡稳定性，规范施工机械（如压路机）作业路线，确保材料堆放整齐有序。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场主要为边坡治理及道路施工区域，暂未发现明显的高差临边防护缺失风险。建议持续监测边坡稳定性，规范施工机械（如压路机）作业路线，确保材料堆放整齐有序。\"\n  }\n}\n```",
+    "model": "qwen/qwen3.5-397b-a17b"
+  }
+}

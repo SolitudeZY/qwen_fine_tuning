@@ -12,7 +12,7 @@ PROJECT_ROOT="/home/fs-ai/llama-qwen"
 DATA_DIR="$PROJECT_ROOT/data"
 DATASET_JSONL="$DATA_DIR/stage2_json.jsonl"
 
-MERGED_MODEL_DIR="$PROJECT_ROOT/outputs/stage1_grounding//v1-20260415-112908/checkpoint-512-merged"
+MERGED_MODEL_DIR="$PROJECT_ROOT/outputs/stage1_grounding/v2-20260420-145047/checkpoint-296-merged"
 OUTPUT_DIR="$PROJECT_ROOT/outputs/stage2_json"
 
 LORA_RANK=32

@@ -70,7 +70,8 @@ def filter_keys(mode: str) -> list[str]:
     return list(ordered_keys)
 
 
-HTML = """<!DOCTYPE html>
+HTML = """
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
