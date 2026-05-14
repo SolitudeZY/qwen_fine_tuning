@@ -30,14 +30,25 @@ violation_boxes 使用 Qwen-VL 的 **0-1000 千分比相对坐标**，不是像�
 ```
 data/                         # 训练/验证/测试 JSONL（直接喂给 ms-swift）
   ├── unique_images.txt        # 去重后图片列表（2_stage_train 流程产物）
-  ├── annotate_cache.json      # Qwen-VL-Max 打标断点续传缓存
+  ├── annotate_cache.json      # Qwen-VL-Max 打标断点续传缓存（DashScope）
+  ├── annotate_cache_nvidia.json  # NVIDIA API 打标缓存
+  ├── annotate_skip.json       # 失败/跳过记录（DashScope）
+  ├── annotate_skip_nvidia.json   # 失败/跳过记录（NVIDIA）
   ├── stage1_grounding.jsonl   # Stage 1 grounding 训练数据
+  ├── stage1_grounding_nvidia.jsonl  # NVIDIA pipeline 产物
   ├── stage1_tiled.jsonl       # Stage 1 大图分块视角训练数据（gen_tiled_stage1.py 产物）
   ├── stage2_json.jsonl        # Stage 2 JSON 训练数据
-  └── tiled_crops/             # 大图分块子图（gen_tiled_stage1.py 产物）
+  ├── stage2_json_nvidia.jsonl # NVIDIA pipeline 产物
+  ├── test.jsonl               # eval.py 离线评估测试集
+  ├── tiled_crops/             # 大图分块子图（gen_tiled_stage1.py 产物，DJI 大图切的小图）
+  └── archive/                 # 旧 jsonl/json（被新流程取代，只读参考）
 dataset/                      # 原始图片（.gitignore 忽略）
-Fences_noncomlaint/           # 违规围栏测试图片
-dataset_compliant_fences/     # 合规围栏测试图片
+  ├── 1-100/、221-330/、标注111-220/、北二绕无人机图片标注/、无人机图片标识441-550(1)/
+  │                             # 早期人工分批的原始图与 LabelMe 标注
+  ├── compliant_fences/         # 合规围栏测试图片
+  ├── tiled_1024/               # 大图切成的 1024×1024 子图（待标注）
+  ├── video/                    # 无人机原始视频（1920×1080 MP4）
+  └── video_frames/             # 视频抽帧产物（extract_video_frames.py 产物）
 models/                       # 本地模型权重（.gitignore 忽略）
 outputs/                      # 训练输出、评估结果、可视化（.gitignore 忽略）
   ├── stage1_grounding/        # Stage 1 训练 checkpoint
@@ -46,8 +57,10 @@ outputs/                      # 训练输出、评估结果、可视化（.gitig
 scripts/
   ├── 2_stage_train/           # 两阶段训练流程
   │   ├── dedup_dataset.py     # Step 1: 去重过滤
-  │   ├── api_annotate_stage12.py  # Step 2: Qwen-VL-Max 打标
+  │   ├── api_annotate_stage12.py  # Step 2: Qwen-VL-Max 打标（DashScope）
+  │   ├── api_annotate_nvidia.py   # Step 2 备选: NVIDIA API 打标
   │   ├── gen_tiled_stage1.py  # Step 2b: 大图分块 grounding 样本生成
+  │   ├── extract_video_frames.py  # 视频抽帧（场景去重）
   │   ├── train_stage1.sh      # Step 3: Stage 1 训练
   │   ├── merge_stage1.sh      # Step 4: 合并 LoRA
   │   ├── train_stage2.sh      # Step 5: Stage 2 训练
@@ -60,9 +73,11 @@ scripts/
   ├── prompts.py               # 系统提示词、查询模板、测试目录配置
   ├── eval.py                  # 测试集离线评估
   ├── inference.py             # 单图/批量推理
-  └── archive/                 # 旧流程脚本（LabelMe、旧训练、旧数据准备）
+  └── archive/                 # 旧流程脚本（LabelMe、旧训练、旧数据准备、旧 dedup 工作区）
 docs/
-  └── PRD_two_stage_training.md
+  ├── PRD_two_stage_training.md
+  └── archive/                 # 旧 PRD 与汇报材料
+archive/                      # 项目级归档（早期手测样图、临时脚本）
 ```
 
 ## 两阶段训练流程（新，推荐）
@@ -140,10 +155,11 @@ python scripts/inference.py --image /path/to/image.jpg --lora_path ...
 ### data/
 - 训练数据：`stage{1,2}_*.jsonl`
 - 临时/中间产物：`*_cache.json`、`tiled_crops/`
+- 旧数据集（被新流程取代）：`data/archive/`
 
 ## 大图推理说明
 
-`chat.py` 和 `test_fence_violations.py` 对超过 4,000,000 像素的图片（DJI 4032×3024）自动启用双路推理：
+`chat.py` 对超过 4,000,000 像素的图片（DJI 4032×3024）自动启用双路推理：
 1. **全图低分辨率推理**：识别大面积临边防护缺失
 2. **2×2 分块高分辨率推理**：识别小目标围栏断口
 3. IoU > 0.3 的重复框合并取外接矩形

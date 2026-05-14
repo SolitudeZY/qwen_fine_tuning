@@ -31,7 +31,17 @@
       "Bash(/home/fs-ai/miniconda3/envs/qwen-ft/bin/swift export:*)",
       "Bash(bash scripts/train_stage2_json.sh)",
       "Bash(echo \"PID: $!\")",
-      "Bash(grep -v \"^\\\\[INFO\\\\|^\\\\[WARNING\\\\|torch_dtype\\\\|Loading weights\\\\|^$\")"
+      "Bash(grep -v \"^\\\\[INFO\\\\|^\\\\[WARNING\\\\|torch_dtype\\\\|Loading weights\\\\|^$\")",
+      "Bash(mkdir -p archive/samples archive/scripts)",
+      "Bash(rm -v 1.md README.MD)",
+      "Bash(mv -v test.jpg 边坡.jpg archive/samples/)",
+      "Bash(mv -v test_infer.py test_parse.py archive/scripts/)",
+      "Bash(mkdir -p archive)",
+      "Bash(mv -v 'finetune_fences copy.jsonl' finetune_fences.jsonl finetune_fences_json_only.jsonl finetune_fences_minimal_cot.jsonl archive/)",
+      "Bash(mv -v train_balanced.jsonl train_balanced_clean.jsonl val_balanced.jsonl val_balanced_clean.jsonl archive/)",
+      "Bash(mv -v train.json train.jsonl val.json val.jsonl test.json archive/)",
+      "Bash(mv -v grounding_stage1.jsonl finetune_stage2_gt.jsonl stage1_combined.jsonl archive/)",
+      "Bash(mv -v PRD_边防护违规识别.md Qwen-VL_Finetuning_Presentation.md archive/)"
     ]
   }
 }
