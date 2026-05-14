@@ -32,7 +32,7 @@ from prompts import SYSTEM_PROMPT, DEFAULT_QUERY
 # MODEL_PATH = "/home/fs-ai/llama-qwen/outputs/stage1_grounding/v0-20260414-133809/checkpoint-105-merged"
 # LORA_PATH  = "/home/fs-ai/llama-qwen/outputs/stage2_json/v2-20260414-160523/checkpoint-1110"   
 # # 通过 --lora_path 传入，或在下方硬编码
-MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3-VL-2B-Instruct"
+MODEL_PATH = "/home/fs-ai/llama-qwen/models/Qwen/Qwen3.5-2B"
 LORA_PATH = "/home/fs-ai/llama-qwen/outputs/qwen3vl_2b_fences_minimal_cot_lora/v0-20260410-105535/checkpoint-225"  # short cot version
 PROJECT_ROOT = '/home/fs-ai/llama-qwen'
 OUTPUT_PATH = "/home/fs-ai/llama-qwen/outputs/visualized"

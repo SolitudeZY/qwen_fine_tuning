@@ -2,5 +2,81 @@
   {
     "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_094624_0_1762825584183_photo_low_quality.jpg",
     "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_100957_0_1762826997220_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101011_0_1762827011933_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101224_0_1762827144813_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101243_0_1762827163610_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101256_0_1762827176987_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101336_0_1762827216819_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101527_0_1762827327485_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_101822_0_1762827502025_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102017_0_1762827617827_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102021_0_1762827621058_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102053_0_1762827653130_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102105_0_1762827665199_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/1-100/dji_fly_20251111_102112_0_1762827672547_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0382.JPG",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101003_0_1762827003509_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101034_0_1762827034798_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101040_0_1762827040440_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/221-330/dji_fly_20251111_101106_0_1762827066964_photo_low_quality.jpg",
+    "reason": "api_error: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/221-330/DJI_0375.JPG",
+    "reason": "excluded_by_reviewer: 无关场景"
   }
 ]

@@ -22,9 +22,9 @@ from pathlib import Path
 from flask import Flask, jsonify, render_template_string, request, send_file
 
 ROOT = Path(__file__).parent.parent.parent
-CACHE_FILE = ROOT / "data" / "annotate_cache.json"
+CACHE_FILE = ROOT / "data" / "annotate_cache_nvidia.json"
 
-VALID_LABELS = ["围栏断口", "围栏倒伏", "临边防护缺失", "临边开口未防护"]
+VALID_LABELS = ["临边防护缺失"]
 VALID_SCENES = ["基坑", "边坡", "泥浆池", "平台临边", "其他"]
 LABEL_COLORS = {
     "围栏断口":       "#FF4444",
@@ -499,7 +499,7 @@ def api_exclude():
     del cache[key]
     save_cache()
     # 写入 skip 列表
-    skip_file = ROOT / "data" / "annotate_skip.json"
+    skip_file = ROOT / "data" / "annotate_skip_nvidia.json"
     skip = json.loads(skip_file.read_text(encoding="utf-8")) if skip_file.exists() else []
     skip.append({"image": key, "reason": "excluded_by_reviewer: 无关场景"})
     skip_file.write_text(json.dumps(skip, ensure_ascii=False, indent=2), encoding="utf-8")
