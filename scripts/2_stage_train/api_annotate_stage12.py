@@ -128,7 +128,7 @@ def call_qwen_vl_max(image_path: Path, api_key: str, retries: int = 3) -> tuple[
     data_url = f"data:{mime};base64,{b64}"
 
     payload = json.dumps({
-        "model": "qwen-vl-max",
+        "model": "qwen3.6-plus",
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
             {
