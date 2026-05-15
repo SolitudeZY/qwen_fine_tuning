@@ -22,7 +22,7 @@ from pathlib import Path
 from flask import Flask, jsonify, render_template_string, request, send_file
 
 ROOT = Path(__file__).parent.parent.parent
-CACHE_FILE = ROOT / "data" / "annotate_cache_nvidia.json"
+CACHE_FILE = ROOT / "data" / "annotate_cache.json"
 
 VALID_LABELS = ["临边防护缺失"]
 VALID_SCENES = ["基坑", "边坡", "泥浆池", "平台临边", "其他"]

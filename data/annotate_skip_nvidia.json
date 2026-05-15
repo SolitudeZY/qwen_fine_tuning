@@ -1,0 +1,130 @@
+[
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00071_tile_19.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00130_tile_05.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00130_tile_10.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00130_tile_11.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00130_tile_13.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00130_tile_14.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00130_tile_23.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00179_tile_19.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00179_tile_21.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00181_tile_11.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00186_tile_14.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00195_tile_13.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00197_tile_02.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00218_tile_05.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00491_tileL.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00186_tile_16.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00200_tile_14.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00016_global.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00047_tile_01.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00047_tile_02.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00055_tile_17.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00056_global.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00058_tile_13.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00058_tile_15.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00058_tile_19.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00058_tile_20.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00059_tile_01.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00059_tile_04.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00060_global.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00060_tile_01.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00062_tile_02.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  },
+  {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00064_tile_13.jpg",
+    "reason": "excluded_by_reviewer: 无关场景"
+  }
+]
