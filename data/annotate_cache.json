@@ -6222,5 +6222,34 @@
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场未发现临边防护缺失等明显安全隐患，建议继续定期巡检，重点关注基坑周边围护结构稳定性及施工设备安全操作。\"\n  }\n}\n```",
     "model": "qwen-vl-max"
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00141_tile_04.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00141_tile_04.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          264,
+          119,
+          573,
+          448
+        ],
+        "severity": "高",
+        "evidence": "俯拍视角可见基坑四周存在明显高差，但基坑边缘未设置连续围栏或护栏，仅在部分区域有少量临时支撑结构，无法构成有效防护，存在人员坠落风险"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在基坑四周补设连续的临边防护栏杆，确保防护高度不低于1.2米，并设置警示标志，防止人员误入危险区域"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [264, 119, 573, 448],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见基坑四周存在明显高差，但基坑边缘未设置连续围栏或护栏，仅在部分区域有少量临时支撑结构，无法构成有效防护，存在人员坠落风险\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在基坑四周补设连续的临边防护栏杆，确保防护高度不低于1.2米，并设置警示标志，防止人员误入危险区域\"\n  }\n}\n```",
+    "model": "qwen-vl-max"
   }
 }
