@@ -85,6 +85,7 @@ SYSTEM_PROMPT = """你是施工现场安全监测专家。请分析图片，输�
 
 USER_PROMPT = "请对这张施工现场图片进行安全监测，输出 JSON 结果。"
 
+MODEL_NAME = "qwen3.6-plus"
 # ─────────────────────────────────────────────────────────────────────────────
 
 
@@ -117,7 +118,7 @@ def image_to_base64(path: Path) -> str:
         return base64.b64encode(f.read()).decode()
 
 
-def call_qwen_vl_max(image_path: Path, api_key: str, retries: int = 3) -> tuple[str, str]:
+def call_qwen_vl_max(image_path: Path, api_key: str, retries: int = 5) -> tuple[str, str]:
     """返回 (raw_response_text, error_msg)，失败时 raw_response_text 为空。"""
     import urllib.request
     import urllib.error
@@ -127,36 +128,72 @@ def call_qwen_vl_max(image_path: Path, api_key: str, retries: int = 3) -> tuple[
     b64 = image_to_base64(image_path)
     data_url = f"data:{mime};base64,{b64}"
 
-    payload = json.dumps({
-        "model": "qwen3.6-plus",
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {
-                "role": "user",
-                "content": [
-                    {"type": "image_url", "image_url": {"url": data_url}},
-                    {"type": "text", "text": USER_PROMPT},
-                ],
-            },
-        ],
-        "max_tokens": 1024,
-    }).encode()
+    if "vl" in MODEL_NAME.lower():
+        # qwen-vl-max 等视觉模型的结构
+        payload = json.dumps({
+            "model": MODEL_NAME,
+            "messages": [
+                {"role": "system", "content": [{"text": SYSTEM_PROMPT}]},
+                {
+                    "role": "user",
+                    "content": [
+                        {"image": data_url},
+                        {"text": USER_PROMPT},
+                    ],
+                },
+            ],
+            "parameters": {
+                "max_tokens": 1024
+            }
+        }).encode()
+        url = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+    else:
+        # qwen3.5-plus/qwen3.6-plus 等纯文本/兼容模型的结构
+        # OpenAI 兼容格式的多模态请求
+        payload = json.dumps({
+            "model": MODEL_NAME,
+            "messages": [
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "image_url", "image_url": {"url": data_url}},
+                        {"type": "text", "text": USER_PROMPT},
+                    ],
+                },
+            ],
+            "max_tokens": 1024,
+        }).encode()
+        url = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
 
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {api_key}",
     }
-    url = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
 
     for attempt in range(retries):
         try:
             req = urllib.request.Request(url, data=payload, headers=headers, method="POST")
-            with urllib.request.urlopen(req, timeout=60) as resp:
+            with urllib.request.urlopen(req, timeout=180) as resp:
                 result = json.loads(resp.read())
-                return result["choices"][0]["message"]["content"], ""
+                if "vl" in MODEL_NAME.lower():
+                    # vl 模型的解析方式可能会根据接口返回有所不同，这里统一尝试提取
+                    if "output" in result and "choices" in result["output"]:
+                        return result["output"]["choices"][0]["message"]["content"][0]["text"], ""
+                    else:
+                        return result["choices"][0]["message"]["content"], ""
+                else:
+                    return result["choices"][0]["message"]["content"], ""
+        except urllib.error.HTTPError as e:
+            error_body = e.read().decode('utf-8')
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt + 3)
+            else:
+                return "", f"HTTP {e.code}: {error_body}"
         except Exception as e:
             if attempt < retries - 1:
-                time.sleep(2 ** attempt)
+                # 使用指数退避加上一个基础延迟，缓解并发造成的服务端拥堵
+                time.sleep(2 ** attempt + 3)
             else:
                 return "", str(e)
     return "", "max retries exceeded"
@@ -220,7 +257,7 @@ def parse_canonical(raw: str, image_path: Path, api_key: str) -> tuple[dict | No
         "violations": data["violations"],
         "global_conclusion": gc,
         "raw_response": raw,
-        "model": "qwen-vl-max",
+        "model": MODEL_NAME,
     }
     return annotation, ""
 
@@ -319,7 +356,13 @@ def main():
         print(f"错误：{UNIQUE_IMAGES_TXT} 不存在，请先运行 dedup_dataset.py")
         sys.exit(1)
 
-    images = [ROOT / p.strip() for p in UNIQUE_IMAGES_TXT.read_text().splitlines() if p.strip()]
+    images = []
+    for p in UNIQUE_IMAGES_TXT.read_text().splitlines():
+        p = p.strip()
+        if p:
+            # 兼容绝对路径和相对路径
+            img_path = Path(p) if Path(p).is_absolute() else ROOT / p
+            images.append(img_path)
     print(f"待标注图片：{len(images)} 张")
 
     cache = load_cache()
@@ -331,6 +374,7 @@ def main():
         conf_score = {"high": 1.0, "medium": 0.5, "low": 0.0}
         todo = [p for p in images if str(p.resolve()) not in cache and str(p.resolve()) not in skip_keys]
         print(f"已缓存：{len(cache)}，跳过列表：{len(skip)}，本次需标注：{len(todo)}")
+        print(f"使用模型为：{MODEL_NAME}")
 
         for i, img_path in enumerate(todo):
             print(f"[{i+1}/{len(todo)}] {img_path.name} ...", end=" ", flush=True)

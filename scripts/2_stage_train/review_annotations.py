@@ -67,6 +67,10 @@ def filter_keys(mode: str) -> list[str]:
         return [k for k in ordered_keys if cache[k].get("confidence") == "low"]
     if mode == "reviewed":
         return [k for k in ordered_keys if cache[k].get("reviewed")]
+    if mode == "reviewed_violation":
+        return [k for k in ordered_keys if cache[k].get("reviewed") and not cache[k].get("is_compliant")]
+    if mode == "reviewed_compliant":
+        return [k for k in ordered_keys if cache[k].get("reviewed") and cache[k].get("is_compliant")]
     return list(ordered_keys)
 
 
@@ -122,6 +126,8 @@ button:hover { opacity: 0.85; }
       <button class="filter-btn" onclick="setFilter('unreviewed',this)">未审查</button>
       <button class="filter-btn" onclick="setFilter('low_conf',this)">低置信度</button>
       <button class="filter-btn" onclick="setFilter('reviewed',this)">已审查</button>
+      <button class="filter-btn" onclick="setFilter('reviewed_violation',this)">已存违规</button>
+      <button class="filter-btn" onclick="setFilter('reviewed_compliant',this)">已存合规</button>
     </div>
     <div class="progress" id="progress">加载中...</div>
     <hr class="divider">

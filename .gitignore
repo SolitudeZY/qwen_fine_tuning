@@ -4,6 +4,7 @@
 /dataset_norm/
 /dataset_norm_dupes/
 dataset_fences_only/
+/export/
 # 通用模型文件扩展名
 *.bin
 *.pth
