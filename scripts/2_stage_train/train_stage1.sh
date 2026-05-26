@@ -9,19 +9,20 @@ conda activate qwen-ft
 PROJECT_ROOT="/home/fs-ai/llama-qwen"
 DATA_DIR="$PROJECT_ROOT/data"
 GROUNDING_JSONL="$DATA_DIR/stage1_grounding.jsonl"
-TILED_JSONL="$DATA_DIR/stage1_tiled.jsonl"
-COMBINED_JSONL="$DATA_DIR/stage1_combined.jsonl"
+# TILED_JSONL="$DATA_DIR/stage1_tiled.jsonl"
+# COMBINED_JSONL="$DATA_DIR/stage1_combined.jsonl"
 
-MODEL_DIR="$PROJECT_ROOT/models/Qwen/Qwen3-VL-2B-Instruct"
-OUTPUT_DIR="$PROJECT_ROOT/outputs/stage1_grounding"
+# MODEL_DIR="$PROJECT_ROOT/models/Qwen/Qwen3-VL-2B-Instruct"
+MODEL_DIR="$PROJECT_ROOT/models/Qwen/Qwen3.5-2B"
+OUTPUT_DIR="$PROJECT_ROOT/outputs/stage1_grounding/qwen3.5"
 
 LORA_RANK=32
 LORA_ALPHA=64
 LR="3e-5"
-EPOCHS=8
-BATCH_SIZE=1
-GRAD_ACCUM=4
-MAX_PIXELS=1505280   # ~1260x1195，比原来大50%，16GB显存可承受
+EPOCHS=6
+BATCH_SIZE=2                  # 【修改】1 → 2，充分利用 1024×1024 比原来 max_pixels 小的显存余量
+GRAD_ACCUM=2                  # 【修改】4 → 2，配合 batch_size 翻倍，有效 batch size 保持 4
+MAX_PIXELS=1048576            # 【修改】1505280 → 1048576（即 1024×1024），精确匹配训练图片尺寸
 
 echo "============================================="
 echo "  Stage 1: Grounding 预训练"
@@ -35,18 +36,19 @@ if [ ! -f "$GROUNDING_JSONL" ]; then
     exit 1
 fi
 
-# 合并原始样本 + 分块样本
-if [ -f "$TILED_JSONL" ]; then
-    cat "$GROUNDING_JSONL" "$TILED_JSONL" > "$COMBINED_JSONL"
-    TRAIN_DATA="$COMBINED_JSONL"
-    echo "训练样本数: $(wc -l < "$COMBINED_JSONL")（原始 $(wc -l < "$GROUNDING_JSONL") + 分块 $(wc -l < "$TILED_JSONL")）"
-else
-    TRAIN_DATA="$GROUNDING_JSONL"
-    echo "[提示] 未找到 stage1_tiled.jsonl，仅使用原始样本"
-    echo "建议先运行: python scripts/2_stage_train/gen_tiled_stage1.py"
-    echo "训练样本数: $(wc -l < "$GROUNDING_JSONL")"
-fi
+# # 合并原始样本 + 分块样本——————2026.5.25 这段删去，图片在预处理时已经被分块成1080*1080大小，不需要再使用分块
+# if [ -f "$TILED_JSONL" ]; then
+#     cat "$GROUNDING_JSONL" "$TILED_JSONL" > "$COMBINED_JSONL"
+#     TRAIN_DATA="$COMBINED_JSONL"
+#     echo "训练样本数: $(wc -l < "$COMBINED_JSONL")（原始 $(wc -l < "$GROUNDING_JSONL") + 分块 $(wc -l < "$TILED_JSONL")）"
+# else
+#     TRAIN_DATA="$GROUNDING_JSONL"
+#     echo "[提示] 未找到 stage1_tiled.jsonl，仅使用原始样本"
+#     echo "建议先运行: python scripts/2_stage_train/gen_tiled_stage1.py"
+#     echo "训练样本数: $(wc -l < "$GROUNDING_JSONL")"
+# fi
 
+TRAIN_DATA="$GROUNDING_JSONL"
 mkdir -p "$OUTPUT_DIR"
 
 swift sft \

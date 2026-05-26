@@ -7,10 +7,10 @@ eval "$(conda shell.bash hook)"
 conda activate qwen-ft
 
 PROJECT_ROOT="/home/fs-ai/llama-qwen"
-MODEL_DIR="$PROJECT_ROOT/models/Qwen/Qwen3-VL-2B-Instruct"
-STAGE1_OUTPUT_DIR="$PROJECT_ROOT/outputs/stage1_grounding"
+MODEL_DIR="$PROJECT_ROOT/models/Qwen/Qwen3.5-2B"
+STAGE1_OUTPUT_DIR="$PROJECT_ROOT/outputs/stage1_grounding/qwen3.5"
 
-echo "============================================="
+echo "============================================="    
 echo "  合并 Stage 1 LoRA 权重"
 echo "  Base: $MODEL_DIR"
 echo "============================================="
@@ -29,15 +29,12 @@ if [ -d "$MERGED_MODEL_DIR" ]; then
     echo "[Info] 合并目录已存在，跳过合并: $MERGED_MODEL_DIR"
 else
     swift export \
-        --model_type qwen3_vl \
+        --model_type qwen3_5 \
         --model "$MODEL_DIR" \
         --adapters "$BEST_CKPT" \
         --merge_lora true \
-        2>&1
-    echo ""
-fi
-
-echo "合并后模型: $MERGED_MODEL_DIR"
+        --ignore_args_error true \
+        MERGED_MODEL_DIR"
 echo "下一步: bash scripts/2_stage_train/train_stage2.sh"
 echo "请将 train_stage2.sh 中 MERGED_MODEL_DIR 设为:"
 echo "  $MERGED_MODEL_DIR"

@@ -13968,26 +13968,26 @@
     "confidence": "high",
     "violations": [
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           0,
           100,
           150,
           950
         ],
-        "severity": "高",
-        "evidence": "俯拍可见基坑左侧边缘无防护栏杆，且有人员（黑点）在边缘附近活动，存在坠落风险。"
+        "evidence": "俯拍可见基坑左侧边缘无防护栏杆，且有人员（黑点）在边缘附近活动，存在坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
       },
       {
-        "label": "临边防护缺失",
         "bbox_1000": [
           100,
           750,
           950,
           990
         ],
-        "severity": "高",
-        "evidence": "俯拍可见底部桩基施工区域（含积水及四个桩头）边缘无防护栏杆或挡板，属沟槽边沿防护缺失。"
+        "evidence": "俯拍可见底部桩基施工区域（含积水及四个桩头）边缘无防护栏杆或挡板，属沟槽边沿防护缺失。",
+        "label": "临边防护缺失",
+        "severity": "高"
       }
     ],
     "global_conclusion": {
@@ -13997,7 +13997,8 @@
       "suggestion": "在基坑四周（特别是左侧人员活动区及底部桩基沟槽周边）立即补设标准化的临边防护栏杆及警示标志，严禁人员在无防护边缘逗留。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        0,\n        100,\n        150,\n        950\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍可见基坑左侧边缘无防护栏杆，且有人员（黑点）在边缘附近活动，存在坠落风险。\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        100,\n        750,\n        950,\n        990\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍可见底部桩基施工区域（含积水及四个桩头）边缘无防护栏杆或挡板，属沟槽边沿防护缺失。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在基坑四周（特别是左侧人员活动区及底部桩基沟槽周边）立即补设标准化的临边防护栏杆及警示标志，严禁人员在无防护边缘逗留。\"\n  }\n}\n```",
-    "model": "qwen3.6-plus"
+    "model": "qwen3.6-plus",
+    "reviewed": true
   },
   "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00290_tileR.jpg": {
     "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00290_tileR.jpg",
@@ -15304,6 +15305,1626 @@
       "suggestion": "在泥浆池周边补设标准化防护栏杆（高度不低于1.2m），立杆间距符合要求，并设置踢脚板，严禁仅使用警示带代替防护栏杆。"
     },
     "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": false,\n  \"confidence\": \"medium\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        42,\n        342,\n        138,\n        558\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍可见左下方矩形泥浆池（或基坑）四周仅见红白相间线条（疑似警示带或地面警示漆），未见明显的防护栏杆立柱及横杆结构，无有效防坠落措施。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在泥浆池周边补设标准化防护栏杆（高度不低于1.2m），立杆间距符合要求，并设置踢脚板，严禁仅使用警示带代替防护栏杆。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00031_tile_04.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00031_tile_04.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          226,
+          566,
+          450,
+          850
+        ],
+        "evidence": "俯拍视角下，两名工人正在弧形挡土墙顶部作业，该墙体外侧为陡峭土坡，存在明显高差，但临空边缘完全未设置防护栏杆，人员面临坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "立即在弧形挡土墙外侧临边及矩形池体未封闭侧补设标准化的临边防护栏杆（如红白相间钢管护栏），确保作业人员安全。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"边坡\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                226,\n                566,\n                450,\n                850\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"俯拍视角下，两名工人正在弧形挡土墙顶部作业，该墙体外侧为陡峭土坡，存在明显高差，但临空边缘完全未设置防护栏杆，人员面临坠落风险。\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"立即在弧形挡土墙外侧临边及矩形池体未封闭侧补设标准化的临边防护栏杆（如红白相间钢管护栏），确保作业人员安全。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00035_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00035_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "施工现场边坡已覆盖绿色防尘网，建议继续做好边坡稳定性监测及扬尘控制，远处施工区域注意车辆指挥。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"边坡\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"施工现场边坡已覆盖绿色防尘网，建议继续做好边坡稳定性监测及扬尘控制，远处施工区域注意车辆指挥。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00058_tile_20.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00058_tile_20.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护设置基本合规，建议继续定期巡检，确保护栏稳固无破损，并在泥浆池/积水区域增设警示标志。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场临边防护设置基本合规，建议继续定期巡检，确保护栏稳固无破损，并在泥浆池/积水区域增设警示标志。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00059_tile_01.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00059_tile_01.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          526,
+          426,
+          760,
+          960
+        ],
+        "evidence": "基坑右侧及下侧边缘仅有低矮模板或木方，未设置标准化临边防护栏杆，且坑内有工人作业，存在严重坠落风险",
+        "label": "临边防护缺失",
+        "severity": "高"
+      },
+      {
+        "bbox_1000": [
+          23,
+          186,
+          453,
+          458
+        ],
+        "evidence": "左上角已铺设护坡砖的平台边缘临空，高差较大，未设置防护栏杆，且有工人在边缘附近作业",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在基坑四周（特别是右侧和下侧敞开区域）及左上角边坡平台边缘立即补设标准化临边防护栏杆（高度不低于1.2m），并悬挂警示标志；坑内作业人员必须佩戴安全带（如有高挂低挂条件）或确保通道安全。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                526,\n                426,\n                760,\n                960\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"基坑右侧及下侧边缘仅有低矮模板或木方，未设置标准化临边防护栏杆，且坑内有工人作业，存在严重坠落风险\"\n        },\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                23,\n                186,\n                453,\n                458\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"左上角已铺设护坡砖的平台边缘临空，高差较大，未设置防护栏杆，且有工人在边缘附近作业\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"在基坑四周（特别是右侧和下侧敞开区域）及左上角边坡平台边缘立即补设标准化临边防护栏杆（高度不低于1.2m），并悬挂警示标志；坑内作业人员必须佩戴安全带（如有高挂低挂条件）或确保通道安全。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00060_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00060_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          115,
+          145,
+          525,
+          410
+        ],
+        "evidence": "俯拍视角显示基坑内矩形混凝土结构（疑似基础底板）四周临边处，未见连续有效的定型化防护栏杆，仅右上角有一处简易上下通道，其余临边无防护，存在人员坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在基坑四周临边（除出入口外）补设标准防护栏杆（高度不低于1.2m，立杆间距不大于2m），并悬挂安全警示标志；出入口处应设置定型化防护门。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        115,\n        145,\n        525,\n        410\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角显示基坑内矩形混凝土结构（疑似基础底板）四周临边处，未见连续有效的定型化防护栏杆，仅右上角有一处简易上下通道，其余临边无防护，存在人员坠落风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在基坑四周临边（除出入口外）补设标准防护栏杆（高度不低于1.2m，立杆间距不大于2m），并悬挂安全警示标志；出入口处应设置定型化防护门。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00061_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00061_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "平台临边",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护设施（左侧绿色栏杆及右侧混凝土护栏）设置完善，建议继续保持，并定期检查栏杆稳固性及警示标志完好情况。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护设施（左侧绿色栏杆及右侧混凝土护栏）设置完善，建议继续保持，并定期检查栏杆稳固性及警示标志完好情况。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00074_tile_01.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00074_tile_01.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "其他",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场为硬化地面，未见明显临边坠落风险，建议继续加强日常安全巡查。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"其他\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场为硬化地面，未见明显临边坠落风险，建议继续加强日常安全巡查。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00076_tile_02.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00076_tile_02.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "其他",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场绿化及道路施工已基本完成，洒水车正在进行路面清洗作业。右上角边坡处已设置绿色防护栏杆，符合安全要求。建议继续保持现场整洁，关注后续绿化养护及道路收尾工作安全。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"其他\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场绿化及道路施工已基本完成，洒水车正在进行路面清洗作业。右上角边坡处已设置绿色防护栏杆，符合安全要求。建议继续保持现场整洁，关注后续绿化养护及道路收尾工作安全。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00079_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00079_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "平台临边",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场桥墩施工平台临边防护栏杆设置连续且完整，红色爬梯护笼完好。建议定期巡查栏杆连接处是否牢固，确保通道门（橙色区域）处于关闭或有效防护状态，作业人员在高处作业时应规范系挂安全带。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场桥墩施工平台临边防护栏杆设置连续且完整，红色爬梯护笼完好。建议定期巡查栏杆连接处是否牢固，确保通道门（橙色区域）处于关闭或有效防护状态，作业人员在高处作业时应规范系挂安全带。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00083_tile_19.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00083_tile_19.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "其他",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场为泥土路面，可见明显机械履带痕迹，建议保持场地平整，注意车辆行驶安全及防滑。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"其他\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场为泥土路面，可见明显机械履带痕迹，建议保持场地平整，注意车辆行驶安全及防滑。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00100_tile_20.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00100_tile_20.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场边坡顶部已设置绿色密目网防护栏杆，防护基本到位。建议定期巡检防护栏杆的稳固性，确保无倒伏或破损，并及时清理坡面及平台上的散落物。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场边坡顶部已设置绿色密目网防护栏杆，防护基本到位。建议定期巡检防护栏杆的稳固性，确保无倒伏或破损，并及时清理坡面及平台上的散落物。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00105_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00105_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场为边坡格构梁施工，坡面本体不属于临边防护缺失判定范围。建议：1. 确认坡顶边缘（图片上方绿色防尘网处）是否已设置警戒线或防护栏杆，防止人员坠落；2. 坡面作业人员应正确佩戴和使用安全带；3. 起重机作业区域应设置警戒线，专人指挥。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场为边坡格构梁施工，坡面本体不属于临边防护缺失判定范围。建议：1. 确认坡顶边缘（图片上方绿色防尘网处）是否已设置警戒线或防护栏杆，防止人员坠落；2. 坡面作业人员应正确佩戴和使用安全带；3. 起重机作业区域应设置警戒线，专人指挥。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00105_tile_01.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00105_tile_01.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          326,
+          0,
+          1000,
+          126
+        ],
+        "evidence": "俯拍视角显示边坡顶部边缘（绿色防尘网覆盖区域与裸露土坡交界处）未见连续有效的防护栏杆，且有大型吊车臂架伸入该区域作业，存在人员或物体坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在边坡顶部边缘（坡口线）立即设置连续、稳固的防护栏杆（高度不低于1.2m），底部设挡脚板，并挂设安全网和警示标志；在防护设施完善前，限制人员和机械靠近边缘作业。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        326,\n        0,\n        1000,\n        126\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角显示边坡顶部边缘（绿色防尘网覆盖区域与裸露土坡交界处）未见连续有效的防护栏杆，且有大型吊车臂架伸入该区域作业，存在人员或物体坠落风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在边坡顶部边缘（坡口线）立即设置连续、稳固的防护栏杆（高度不低于1.2m），底部设挡脚板，并挂设安全网和警示标志；在防护设施完善前，限制人员和机械靠近边缘作业。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00112_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00112_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          226,
+          341,
+          682,
+          566
+        ],
+        "evidence": "俯拍可见箱涵基坑右侧及靠近山坡一侧（上侧）临边未设置连续有效的防护栏杆。现场多名工人正在右侧搬运金属栏杆进行安装，说明该处临边防护尚未到位，存在人员坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "加快临边防护栏杆的安装进度，确保箱涵基坑四周（特别是右侧和上侧）形成连续、封闭的有效防护，防止人员坠落。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                226,\n                341,\n                682,\n                566\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"俯拍可见箱涵基坑右侧及靠近山坡一侧（上侧）临边未设置连续有效的防护栏杆。现场多名工人正在右侧搬运金属栏杆进行安装，说明该处临边防护尚未到位，存在人员坠落风险。\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"加快临边防护栏杆的安装进度，确保箱涵基坑四周（特别是右侧和上侧）形成连续、封闭的有效防护，防止人员坠落。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00124_tile_07.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00124_tile_07.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          686,
+          153,
+          885,
+          956
+        ],
+        "evidence": "俯拍视角可见右侧施工便道边缘存在显著高差边坡，临边处未设置标准定型化防护栏杆；现有白色管状物疑似简易搭建或管线，排列松散、走向不规则且局部疑似倒伏，不具备有效防坠落功能。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在右侧施工便道临边位置立即补设标准定型化临边防护栏杆（如红白相间钢管护栏，高度不低于1.2m），确保防护连续有效，并设置夜间警示灯。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        686,\n        153,\n        885,\n        956\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见右侧施工便道边缘存在显著高差边坡，临边处未设置标准定型化防护栏杆；现有白色管状物疑似简易搭建或管线，排列松散、走向不规则且局部疑似倒伏，不具备有效防坠落功能。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在右侧施工便道临边位置立即补设标准定型化临边防护栏杆（如红白相间钢管护栏，高度不低于1.2m），确保防护连续有效，并设置夜间警示灯。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00126_tile_01.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00126_tile_01.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "其他",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场整体秩序良好，主要道路及场地边缘已设置绿色防护栏杆，建议继续保持并定期巡查防护设施的完整性；注意施工车辆与行人的交通安全。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"其他\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场整体秩序良好，主要道路及场地边缘已设置绿色防护栏杆，建议继续保持并定期巡查防护设施的完整性；注意施工车辆与行人的交通安全。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00128_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00128_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          506,
+          453,
+          772,
+          593
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在基坑后侧临边（靠近桥墩及吊车作业区）补设标准化的临边防护栏杆，并确保与左右两侧已有防护栏杆连接闭合。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        430,\n        490,\n        730,\n        560\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"基坑后侧临边（靠近桥墩侧）未见连续有效的防护栏杆，该区域有工人作业且连接施工通道，存在人员坠落风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在基坑后侧临边（靠近桥墩及吊车作业区）补设标准化的临边防护栏杆，并确保与左右两侧已有防护栏杆连接闭合。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00128_tile_04.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00128_tile_04.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          330,
+          371,
+          720,
+          606
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "无",
+      "suggestion": "基坑右侧防护护栏缺失，建议立即加装"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场基坑临边已设置连续的橙白相间防护栏杆，防护较为规范。建议定期巡检栏杆稳固性，确保无松动或损坏，并保持通道畅通。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00131_tile_01.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00131_tile_01.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          586,
+          146,
+          832,
+          263
+        ],
+        "evidence": "俯拍视角可见中间盖梁（右侧盖梁）顶部四周边缘完全无防护栏杆，属于高处作业临空边，存在严重高坠风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      },
+      {
+        "bbox_1000": [
+          600,
+          400,
+          950,
+          800
+        ],
+        "evidence": "俯拍视角可见施工平台（桥墩所在地面）右侧及下方边缘紧邻高陡边坡，未设置临边防护栏杆或警示围挡，人员靠近边缘有坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "1. 在中间盖梁周围立即设置标准化的临边防护栏杆（高度不低于1.2m）；2. 在施工平台（坡顶）边缘设置防护栏杆或硬质围挡，防止人员意外坠落。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        586,\n        146,\n        832,\n        263\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见中间盖梁（右侧盖梁）顶部四周边缘完全无防护栏杆，属于高处作业临空边，存在严重高坠风险。\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        600,\n        400,\n        950,\n        800\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见施工平台（桥墩所在地面）右侧及下方边缘紧邻高陡边坡，未设置临边防护栏杆或警示围挡，人员靠近边缘有坠落风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"1. 在中间盖梁周围立即设置标准化的临边防护栏杆（高度不低于1.2m）；2. 在施工平台（坡顶）边缘设置防护栏杆或硬质围挡，防止人员意外坠落。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00132_tile_05.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00132_tile_05.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          320,
+          250,
+          580,
+          950
+        ],
+        "evidence": "俯拍视角清晰显示深基坑/沟槽右侧边缘紧邻施工便道，该临边区域全程未见任何防护栏杆、硬质围挡或警示带，且旁边有车辆通行和停放，人员或车辆极易发生坠落事故。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "立即在基坑/沟槽两侧临边（特别是紧邻行车道的右侧）设置连续的定型化防护栏杆或硬质围挡，高度不低于1.2m，并悬挂安全警示标志。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        320,\n        250,\n        580,\n        950\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角清晰显示深基坑/沟槽右侧边缘紧邻施工便道，该临边区域全程未见任何防护栏杆、硬质围挡或警示带，且旁边有车辆通行和停放，人员或车辆极易发生坠落事故。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑/沟槽两侧临边（特别是紧邻行车道的右侧）设置连续的定型化防护栏杆或硬质围挡，高度不低于1.2m，并悬挂安全警示标志。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00132_tile_16.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00132_tile_16.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "临边防护设置合规，建议定期巡查防护栏杆稳固性及监测设备状态，确保持续有效。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"临边防护设置合规，建议定期巡查防护栏杆稳固性及监测设备状态，确保持续有效。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00135_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00135_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "其他",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场整体防护情况较好，爬架及桩基周围均设有防护栏杆。建议继续加强日常巡检，重点关注右侧开挖边坡边缘及中间桥墩底部基坑的防护维护情况，确保无新增临边风险。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"其他\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场整体防护情况较好，爬架及桩基周围均设有防护栏杆。建议继续加强日常巡检，重点关注右侧开挖边坡边缘及中间桥墩底部基坑的防护维护情况，确保无新增临边风险。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00135_tile_04.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00135_tile_04.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "平台临边",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护（如右侧墩柱顶部作业平台、左侧爬模结构、左下角道路边缘绿网）总体设置合规。建议：1. 现场左下角出现牲畜（牛）进入施工便道，建议加强施工现场封闭管理，防止无关人员或动物进入；2. 继续定期检查高空作业平台（如右侧墩柱顶部、左侧塔架）的防护栏杆稳固性及连接情况；3. 旋挖钻机作业区域注意警戒。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护（如右侧墩柱顶部作业平台、左侧爬模结构、左下角道路边缘绿网）总体设置合规。建议：1. 现场左下角出现牲畜（牛）进入施工便道，建议加强施工现场封闭管理，防止无关人员或动物进入；2. 继续定期检查高空作业平台（如右侧墩柱顶部、左侧塔架）的防护栏杆稳固性及连接情况；3. 旋挖钻机作业区域注意警戒。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00137_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00137_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场为边坡开挖施工，坡面已覆盖绿网（疑似防尘或边坡主动防护网），主要作业面及便道未见明显紧邻高陡临边的无防护情况。建议继续加强边坡稳定性监测，确保施工便道边缘设置警示标志，并规范现场车辆行驶路线。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场为边坡开挖施工，坡面已覆盖绿网（疑似防尘或边坡主动防护网），主要作业面及便道未见明显紧邻高陡临边的无防护情况。建议继续加强边坡稳定性监测，确保施工便道边缘设置警示标志，并规范现场车辆行驶路线。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00141_tile_01.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00141_tile_01.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          115,
+          345,
+          615,
+          565
+        ],
+        "evidence": "俯拍视角可见橙色钢结构框架（位于基坑周边）左侧及上侧边缘紧邻斜坡/树林，存在高差，但框架边缘仅见钢梁结构，未设置标准临边防护栏杆。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在橙色钢结构框架临空侧（特别是左侧及上侧边缘）补设标准临边防护栏杆（高度不低于1.2m），并挂设安全网，防止人员坠落。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        115,\n        345,\n        615,\n        565\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见橙色钢结构框架（位于基坑周边）左侧及上侧边缘紧邻斜坡/树林，存在高差，但框架边缘仅见钢梁结构，未设置标准临边防护栏杆。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在橙色钢结构框架临空侧（特别是左侧及上侧边缘）补设标准临边防护栏杆（高度不低于1.2m），并挂设安全网，防止人员坠落。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00156_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00156_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "其他",
+    "is_compliant": true,
+    "confidence": "low",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场为桥梁施工区域，可见桥墩、基坑（蓝色围挡处）及地面组装区。俯拍视角下部分区域（如方形承台基础）高差及防护细节不清，建议地面巡检时重点核查基坑周边防护是否连续有效，以及高处作业平台临边防护情况。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"其他\",\n  \"is_compliant\": true,\n  \"confidence\": \"low\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场为桥梁施工区域，可见桥墩、基坑（蓝色围挡处）及地面组装区。俯拍视角下部分区域（如方形承台基础）高差及防护细节不清，建议地面巡检时重点核查基坑周边防护是否连续有效，以及高处作业平台临边防护情况。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00164_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00164_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "其他",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护整体合规，基坑及作业区域已设置红色防护栏杆。建议继续加强巡检，确保出入口处防护设施在作业结束后及时恢复，并保持现场材料堆放整齐。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"其他\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护整体合规，基坑及作业区域已设置红色防护栏杆。建议继续加强巡检，确保出入口处防护设施在作业结束后及时恢复，并保持现场材料堆放整齐。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00167_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00167_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          0,
+          330,
+          1000,
+          450
+        ],
+        "evidence": "俯拍视角显示上方坡顶边缘（树林与裸露土坡交界处）沿线未设置任何防护栏杆或警示带，该处高差较大，人员靠近边缘存在严重坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在坡顶边缘（树林与土坡交界处）设置连续的防护栏杆或警示带，并悬挂安全警示标志，防止人员误入危险区域。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"边坡\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                0,\n                330,\n                1000,\n                450\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"俯拍视角显示上方坡顶边缘（树林与裸露土坡交界处）沿线未设置任何防护栏杆或警示带，该处高差较大，人员靠近边缘存在严重坠落风险。\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"在坡顶边缘（树林与土坡交界处）设置连续的防护栏杆或警示带，并悬挂安全警示标志，防止人员误入危险区域。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00167_tile_01.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00167_tile_01.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          0,
+          320,
+          1000,
+          550
+        ],
+        "evidence": "俯拍视角清晰显示上方坡顶边缘（树林与裸露红土交界处）存在显著高差（目测远超1.5m），该临边区域完全无防护栏杆、挡板或警示标志，下方有桩基施工及积水，存在极高的人员坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "立即在边坡顶部边缘（树林与红土交界处）设置连续的标准化临边防护栏杆（高度不低于1.2m），并挂设密目式安全网及醒目的警示标志，严禁人员靠近无防护边缘。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"边坡\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                0,\n                320,\n                1000,\n                550\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"俯拍视角清晰显示上方坡顶边缘（树林与裸露红土交界处）存在显著高差（目测远超1.5m），该临边区域完全无防护栏杆、挡板或警示标志，下方有桩基施工及积水，存在极高的人员坠落风险。\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"立即在边坡顶部边缘（树林与红土交界处）设置连续的标准化临边防护栏杆（高度不低于1.2m），并挂设密目式安全网及醒目的警示标志，严禁人员靠近无防护边缘。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00168_global.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00168_global.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "medium",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场左下角积水坑/泥浆池周边已设置橙色防护栏杆，合规。建议继续加强巡查，确保施工便道畅通及边坡稳定，注意远处起重机作业区安全。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"medium\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场左下角积水坑/泥浆池周边已设置橙色防护栏杆，合规。建议继续加强巡查，确保施工便道畅通及边坡稳定，注意远处起重机作业区安全。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00176_tile_16.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00176_tile_16.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边已设置防护栏杆，建议定期巡查栏杆稳固性及是否随施工进度及时调整。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场临边已设置防护栏杆，建议定期巡查栏杆稳固性及是否随施工进度及时调整。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00177_tile_03.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00177_tile_03.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "泥浆池",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场泥浆池周边已设置防护围挡（右侧白色挡板及左侧绿色栏杆），左下角缺口疑似为预留出入口，整体防护状况良好。建议继续定期检查防护设施的完整性，特别是出入口处的警示标志是否醒目。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场泥浆池周边已设置防护围挡（右侧白色挡板及左侧绿色栏杆），左下角缺口疑似为预留出入口，整体防护状况良好。建议继续定期检查防护设施的完整性，特别是出入口处的警示标志是否醒目。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00182_tile_13.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00182_tile_13.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护设置规范，建议定期巡查防护栏杆稳固性，确保警示标志清晰可见。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场临边防护设置规范，建议定期巡查防护栏杆稳固性，确保警示标志清晰可见。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00188_tile_02.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00188_tile_02.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场基坑临边（图片底部）已设置连续的橙色防护栏杆，符合安全规范。建议继续定期巡查防护设施完整性，防止因施工活动导致破损，并注意场内车辆与临边保持安全距离。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场基坑临边（图片底部）已设置连续的橙色防护栏杆，符合安全规范。建议继续定期巡查防护设施完整性，防止因施工活动导致破损，并注意场内车辆与临边保持安全距离。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00188_tile_04.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00188_tile_04.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "其他",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护设置规范，建议继续保持良好的安全防护措施，定期巡查围栏稳固性。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"其他\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场临边防护设置规范，建议继续保持良好的安全防护措施，定期巡查围栏稳固性。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00188_tile_11.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00188_tile_11.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护设施（红白栏杆）设置较为规范，覆盖了基坑边缘及泥浆池周边。建议继续加强日常巡检，确保防护栏杆稳固无松动；泥浆池周边应增设防落水警示标志；注意清理临边堆放的管材等杂物，防止滑落伤人。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护设施（红白栏杆）设置较为规范，覆盖了基坑边缘及泥浆池周边。建议继续加强日常巡检，确保防护栏杆稳固无松动；泥浆池周边应增设防落水警示标志；注意清理临边堆放的管材等杂物，防止滑落伤人。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00188_tile_15.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00188_tile_15.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护栏杆设置连续且完整，符合安全规范。建议定期巡查栏杆稳固性及是否有破损。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场临边防护栏杆设置连续且完整，符合安全规范。建议定期巡查栏杆稳固性及是否有破损。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00189_tile_13.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00189_tile_13.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          700,
+          0,
+          1000,
+          1000
+        ],
+        "evidence": "俯拍视角显示，图片右侧基坑/沟槽边缘（从上至下）存在显著高差，但未见连续有效的临边防护栏杆，仅有疑似线缆或孤立杆件，人员靠近边缘面临高坠风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在右侧基坑边缘立即补设标准的临边防护栏杆（高度不低于1.2m），并挂设密目式安全网和警示标志，防止人员坠落。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        700,\n        0,\n        1000,\n        1000\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角显示，图片右侧基坑/沟槽边缘（从上至下）存在显著高差，但未见连续有效的临边防护栏杆，仅有疑似线缆或孤立杆件，人员靠近边缘面临高坠风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在右侧基坑边缘立即补设标准的临边防护栏杆（高度不低于1.2m），并挂设密目式安全网和警示标志，防止人员坠落。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00190_tile_11.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00190_tile_11.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "泥浆池",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          480,
+          0,
+          1000,
+          1000
+        ],
+        "evidence": "俯拍视角显示泥浆池右侧及下方边缘为裸露土坡，无任何防护栏杆、挡板或警示带，人员极易滑落坠入泥浆中；左上角虽有简易钢筋结构但未形成封闭防护。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "立即在泥浆池四周（特别是右侧和下方无防护区域）设置标准化的临边防护栏杆（高度不低于1.2m），底部设挡脚板，并挂设安全警示标志。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"泥浆池\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                480,\n                0,\n                1000,\n                1000\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"俯拍视角显示泥浆池右侧及下方边缘为裸露土坡，无任何防护栏杆、挡板或警示带，人员极易滑落坠入泥浆中；左上角虽有简易钢筋结构但未形成封闭防护。\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"立即在泥浆池四周（特别是右侧和下方无防护区域）设置标准化的临边防护栏杆（高度不低于1.2m），底部设挡脚板，并挂设安全警示标志。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00190_tile_13.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00190_tile_13.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "泥浆池",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边已设置防护栏杆，建议定期巡检栏杆稳固性，防止因土质疏松导致栏杆倒塌；注意清理临边内侧杂物（如左侧倒伏的金属架），保持通道畅通。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边已设置防护栏杆，建议定期巡检栏杆稳固性，防止因土质疏松导致栏杆倒塌；注意清理临边内侧杂物（如左侧倒伏的金属架），保持通道畅通。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_10.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_10.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边已设置连续的橙色防护栏杆，符合规范。建议定期监测坑边土体裂缝发展情况（图中可见明显裂缝），防止土体坍塌导致防护设施失效；建议清理护栏前方横置的杆件（疑似竹竿或钢管），确保防护区域整洁。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边已设置连续的橙色防护栏杆，符合规范。建议定期监测坑边土体裂缝发展情况（图中可见明显裂缝），防止土体坍塌导致防护设施失效；建议清理护栏前方横置的杆件（疑似竹竿或钢管），确保防护区域整洁。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_14.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_14.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "泥浆池",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          0,
+          686,
+          362,
+          1000
+        ],
+        "evidence": "左侧临边处护栏呈堆叠/倒伏状态，未竖立形成有效封闭防护，人员可由此接近泥浆池边缘。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在左侧临边位置将倒伏/堆叠的护栏重新竖立固定，确保护栏连续封闭，防止人员坠落。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"泥浆池\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                0,\n                686,\n                362,\n                1000\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"左侧临边处护栏呈堆叠/倒伏状态，未竖立形成有效封闭防护，人员可由此接近泥浆池边缘。\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"在左侧临边位置将倒伏/堆叠的护栏重新竖立固定，确保护栏连续封闭，防止人员坠落。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_15.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_15.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "泥浆池",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边已连续设置橙色防护栏杆及'禁止跨越'警示标志，符合安全规范。建议定期巡查防护设施是否稳固，及时整理内侧堆放的备用围栏材料以防阻碍通道或造成绊倒风险；同时需重点关注右上角边坡裂缝发育情况，防止塌方。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边已连续设置橙色防护栏杆及'禁止跨越'警示标志，符合安全规范。建议定期巡查防护设施是否稳固，及时整理内侧堆放的备用围栏材料以防阻碍通道或造成绊倒风险；同时需重点关注右上角边坡裂缝发育情况，防止塌方。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_16.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_16.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "泥浆池",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "临边防护设施（橙色栏杆）已设置且带有警示标语，状况良好。建议定期巡查栏杆稳固性，防止因外力撞击导致松动。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"泥浆池\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"临边防护设施（橙色栏杆）已设置且带有警示标语，状况良好。建议定期巡查栏杆稳固性，防止因外力撞击导致松动。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_19.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00192_tile_19.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "平台临边",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护栏杆设置规范（右上角），且有警示标识。建议继续保持良好的安全防护状态，注意现场材料（钢筋、木方）堆放整齐，避免绊倒风险。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"平台临边\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场临边防护栏杆设置规范（右上角），且有警示标识。建议继续保持良好的安全防护状态，注意现场材料（钢筋、木方）堆放整齐，避免绊倒风险。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00194_tile_01.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00194_tile_01.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": true,
+    "confidence": "medium",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场可见部分区域（右下角）已设置橙色网格防护及白色钢管栏杆，且有红白警示杆，防护措施看似存在。建议继续巡查全线临边防护的连续性和稳固性，确保无缺口。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"边坡\",\n    \"is_compliant\": true,\n    \"confidence\": \"medium\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场可见部分区域（右下角）已设置橙色网格防护及白色钢管栏杆，且有红白警示杆，防护措施看似存在。建议继续巡查全线临边防护的连续性和稳固性，确保无缺口。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00194_tile_03.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00194_tile_03.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          550,
+          500,
+          1000,
+          1000
+        ],
+        "evidence": "俯拍视角可见左下角设有局部橙色防护栏杆，但沿临边向右延伸的大片区域（可见明显重型机械履带印及土体边缘）完全无防护栏杆，未形成连续封闭防护，存在人员或机械坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "立即在右侧及上方临边区域（履带印附近）补设连续的标准临边防护栏杆，确保防护封闭无缺口，并设置警示标志。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        550,\n        500,\n        1000,\n        1000\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见左下角设有局部橙色防护栏杆，但沿临边向右延伸的大片区域（可见明显重型机械履带印及土体边缘）完全无防护栏杆，未形成连续封闭防护，存在人员或机械坠落风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在右侧及上方临边区域（履带印附近）补设连续的标准临边防护栏杆，确保防护封闭无缺口，并设置警示标志。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00194_tile_04.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00194_tile_04.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          136,
+          653,
+          1000,
+          973
+        ],
+        "evidence": "从俯拍视角看到橙色临边防护栏杆整体倒伏在地面上，未竖立形成有效防护屏障，人员越过该处面临坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "立即在基坑边缘位置重新竖立并加固防护栏杆，确保其稳固有效，防止人员坠落。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        136,\n        653,\n        1000,\n        973\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角看到橙色临边防护栏杆整体倒伏在地面上，未竖立形成有效防护屏障，人员越过该处面临坠落风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在基坑边缘位置重新竖立并加固防护栏杆，确保其稳固有效，防止人员坠落。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00196_tile_09.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00196_tile_09.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场已设置带有'杜漏严管'警示标语的蓝色防护栏杆，建议继续加强巡查，确保存储材料（如钢筋）堆放整齐，不阻碍通道。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场已设置带有'杜绝管漏'警示标语的蓝色防护栏杆，建议继续加强巡查，确保存储材料（如钢筋）堆放整齐，不阻碍通道。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00199_tile_08.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00199_tile_08.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边（作业面与土坡交界处）已设置钢管防护栏杆，左侧设有笼式安全爬梯，防护措施基本到位。建议定期巡查防护栏杆的稳固性，确保无松动或缺失；同时注意观察上方边坡土体稳定性，防止落石或坍塌。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边（作业面与土坡交界处）已设置钢管防护栏杆，左侧设有笼式安全爬梯，防护措施基本到位。建议定期巡查防护栏杆的稳固性，确保无松动或缺失；同时注意观察上方边坡土体稳定性，防止落石或坍塌。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00200_tile_01.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00200_tile_01.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "泥浆池",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          735,
+          0,
+          815,
+          850
+        ],
+        "evidence": "俯拍可见泥浆池右侧边缘紧邻施工平台及作业人员，仅见简易白色线状物（疑似绳索或细杆），未见标准硬质防护栏杆，存在人员坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      },
+      {
+        "bbox_1000": [
+          0,
+          110,
+          750,
+          180
+        ],
+        "evidence": "俯拍可见泥浆池上方边缘完全无防护设施，人员靠近易发生坠落溺水事故。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在泥浆池四周（特别是右侧作业人员附近及上方边缘）立即设置标准硬质防护栏杆（如红白相间钢管护栏，高度不低于1.2m），并悬挂安全警示标志，严禁仅使用绳索作为防护。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"泥浆池\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                735,\n                0,\n                815,\n                850\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"俯拍可见泥浆池右侧边缘紧邻施工平台及作业人员，仅见简易白色线状物（疑似绳索或细杆），未见标准硬质防护栏杆，存在人员坠落风险。\"\n        },\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                0,\n                110,\n                750,\n                180\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"俯拍可见泥浆池上方边缘完全无防护设施，人员靠近易发生坠落溺水事故。\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"在泥浆池四周（特别是右侧作业人员附近及上方边缘）立即设置标准硬质防护栏杆（如红白相间钢管护栏，高度不低于1.2m），并悬挂安全警示标志，严禁仅使用绳索作为防护。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00201_tile_07.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00201_tile_07.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          490,
+          530,
+          980,
+          1000
+        ],
+        "evidence": "俯拍视角可见右下角基坑临边（混凝土结构旁）仅设置有一道细线状物体（疑似警示带或单道细杆）及少量立柱，未见标准的双道硬质防护栏杆，不符合临边防护要求。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在基坑临边（图片右下区域）立即补设标准的临边防护栏杆（高度不低于1.2m，设上下两道横杆及立杆，并挂设密目网），严禁仅使用警示带代替硬质防护。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        490,\n        530,\n        980,\n        1000\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见右下角基坑临边（混凝土结构旁）仅设置有一道细线状物体（疑似警示带或单道细杆）及少量立柱，未见标准的双道硬质防护栏杆，不符合临边防护要求。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在基坑临边（图片右下区域）立即补设标准的临边防护栏杆（高度不低于1.2m，设上下两道横杆及立杆，并挂设密目网），严禁仅使用警示带代替硬质防护。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00201_tile_15.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00201_tile_15.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "临边防护设置合规，建议定期检查栏杆稳固性，防止因施工震动导致松动。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"临边防护设置合规，建议定期检查栏杆稳固性，防止因施工震动导致松动。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00202_tile_09.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00202_tile_09.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "泥浆池",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          0,
+          0,
+          1000,
+          260
+        ],
+        "evidence": "俯拍视角下，泥浆池上方边缘（图片上部土岸）未见防护栏杆或警示带，仅有散乱木方和管线，存在人员坠落风险；图片下方可见防护栏杆，但上方边缘缺失防护。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在泥浆池上方土岸边缘补设连续的临边防护栏杆，并悬挂警示标志。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"泥浆池\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                0,\n                0,\n                1000,\n                260\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"俯拍视角下，泥浆池上方边缘（图片上部土岸）未见防护栏杆或警示带，仅有散乱木方和管线，存在人员坠落风险；图片下方可见防护栏杆，但上方边缘缺失防护。\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"在泥浆池上方土岸边缘补设连续的临边防护栏杆，并悬挂警示标志。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00203_tile_17.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00203_tile_17.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护栏杆设置基本到位，建议定期巡查栏杆稳固性及连接处是否松动，确保防护有效。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"基坑\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场临边防护栏杆设置基本到位，建议定期巡查栏杆稳固性及连接处是否松动，确保防护有效。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00218_tile_04.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00218_tile_04.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "low",
+    "violations": [
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          199,
+          706,
+          449,
+          838
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      },
+      {
+        "label": "临边防护缺失",
+        "bbox_1000": [
+          511,
+          410,
+          992,
+          686
+        ],
+        "severity": "中",
+        "evidence": "手动标注"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "无",
+      "suggestion": "建议现场核实施工便道临空侧（特别是图片右侧及远端）的高差及边坡稳定性，确认是否需要补充设置临边防护栏杆或警示标志；左侧可见绿色防护网/挡板，建议检查其牢固性。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": true,\n  \"confidence\": \"low\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"建议现场核实施工便道临空侧（特别是图片右侧及远端）的高差及边坡稳定性，确认是否需要补充设置临边防护栏杆或警示标志；左侧可见绿色防护网/挡板，建议检查其牢固性。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00218_tile_15.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/tiled_1024/img_00218_tile_15.jpg",
+    "width": 1024,
+    "height": 1024,
+    "scene": "基坑",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边设有绿色防护网，且留有金属格栅作为上下通道（视为正常出入口），整体合规。建议定期检查防护网稳固性及通道安全性。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"基坑\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边设有绿色防护网，且留有金属格栅作为上下通道（视为正常出入口），整体合规。建议定期检查防护网稳固性及通道安全性。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00012_tileL.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00012_tileL.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          680,
+          450,
+          1000,
+          580
+        ],
+        "evidence": "俯拍视角可见图片右侧混凝土结构（疑似截水沟或基础梁）旁存在临空边缘，未见防护措施，且有疑似人员/小型设备在边缘区域作业，坠落风险极高。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "立即在坡顶边缘及沟槽周边设置标准化防护栏杆（高度不低于1.2m）及密目式安全网，悬挂警示标志；核查右侧沟槽区域人员作业安全情况，严禁在无防护临边作业。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [0, 0, 1000, 180],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见图片上方植被与红土交界处为明显的坡顶临边，高差较大，全程未见任何防护栏杆或警示围挡。\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [680, 450, 1000, 580],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角可见图片右侧混凝土结构（疑似截水沟或基础梁）旁存在临空边缘，未见防护措施，且有疑似人员/小型设备在边缘区域作业，坠落风险极高。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在坡顶边缘及沟槽周边设置标准化防护栏杆（高度不低于1.2m）及密目式安全网，悬挂警示标志；核查右侧沟槽区域人员作业安全情况，严禁在无防护临边作业。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00030_tileR.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00030_tileR.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "medium",
+    "violations": [
+      {
+        "bbox_1000": [
+          125,
+          345,
+          375,
+          560
+        ],
+        "evidence": "俯拍视角显示左侧存在明显的高差边坡（目测高差较大），坡顶边缘及附近道路区域未见任何临边防护栏杆或挡板，人员或车辆靠近边缘存在坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在左侧边坡顶部边缘及车辆作业区域周边设置标准的临边防护栏杆（高度不低于1.2m），并悬挂警示标志，防止人员或车辆坠落。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"medium\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        125,\n        345,\n        375,\n        560\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍视角显示左侧存在明显的高差边坡（目测高差较大），坡顶边缘及附近道路区域未见任何临边防护栏杆或挡板，人员或车辆靠近边缘存在坠落风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在左侧边坡顶部边缘及车辆作业区域周边设置标准的临边防护栏杆（高度不低于1.2m），并悬挂警示标志，防止人员或车辆坠落。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00142_tileR.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00142_tileR.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "平台临边",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          200,
+          220,
+          220,
+          950
+        ],
+        "evidence": "从俯拍视角可见，左侧栈桥右侧临水边缘（上部平台下方区域）未见连续防护栏杆，存在人员落水风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在栈桥右侧临水边缘（上部平台下方区域）补设临边防护栏杆，确保临边防护连续有效。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        200,\n        220,\n        220,\n        950\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"从俯拍视角可见，左侧栈桥右侧临水边缘（上部平台下方区域）未见连续防护栏杆，存在人员落水风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在栈桥右侧临水边缘（上部平台下方区域）补设临边防护栏杆，确保临边防护连续有效。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00154_tileR.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00154_tileR.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "平台临边",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          146,
+          105,
+          165,
+          855
+        ],
+        "evidence": "从俯拍视角可见，左侧纵向钢栈桥的右侧临水边缘（位于上方悬挑平台与下方作业平台之间的长段区域）完全未见防护栏杆，而上下两端的平台均有红白相间的护栏，该处存在严重的人员落水风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在左侧栈桥临水侧边缘（上下平台连接段）立即补设标准化的临边防护栏杆（建议红白相间）及踢脚板，并确保与相邻平台的防护设施连续有效。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"平台临边\",\n    \"is_compliant\": false,\n    \"confidence\": \"high\",\n    \"violations\": [\n        {\n            \"label\": \"临边防护缺失\",\n            \"bbox_1000\": [\n                146,\n                105,\n                165,\n                855\n            ],\n            \"severity\": \"高\",\n            \"evidence\": \"从俯拍视角可见，左侧纵向钢栈桥的右侧临水边缘（位于上方悬挑平台与下方作业平台之间的长段区域）完全未见防护栏杆，而上下两端的平台均有红白相间的护栏，该处存在严重的人员落水风险。\"\n        }\n    ],\n    \"global_conclusion\": {\n        \"violation_detected\": true,\n        \"violation_type\": \"临边防护缺失\",\n        \"severity\": \"高\",\n        \"suggestion\": \"在左侧栈桥临水侧边缘（上下平台连接段）立即补设标准化的临边防护栏杆（建议红白相间）及踢脚板，并确保与相邻平台的防护设施连续有效。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00220_tileR.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00220_tileR.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "平台临边",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          245,
+          0,
+          275,
+          680
+        ],
+        "evidence": "俯拍可见左侧栈桥右侧临水边缘完全无防护栏杆，仅有几根竖立的钢管桩，路面上放置有锥桶，且有一名作业人员站在无防护的边缘附近，存在极高坠落风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      },
+      {
+        "bbox_1000": [
+          950,
+          700,
+          1000,
+          960
+        ],
+        "evidence": "俯拍可见下方作业平台右侧临水边缘未见连续有效的防护栏杆，平台边缘直接临空，存在人员或物体坠落水面的风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "立即在左侧栈桥右侧临水边缘及作业平台右侧临水边缘补设标准的临边防护栏杆（高度不低于1.2m）并挂设安全网；在防护设施完善前，严禁人员在无防护边缘区域作业。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        245,\n        0,\n        275,\n        680\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍可见左侧栈桥右侧临水边缘完全无防护栏杆，仅有几根竖立的钢管桩，路面上放置有锥桶，且有一名作业人员站在无防护的边缘附近，存在极高坠落风险。\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        950,\n        700,\n        1000,\n        960\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍可见下方作业平台右侧临水边缘未见连续有效的防护栏杆，平台边缘直接临空，存在人员或物体坠落水面的风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"立即在左侧栈桥右侧临水边缘及作业平台右侧临水边缘补设标准的临边防护栏杆（高度不低于1.2m）并挂设安全网；在防护设施完善前，严禁人员在无防护边缘区域作业。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00222_tileR.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00222_tileR.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "平台临边",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边（栈桥/平台边缘）已设置红白相间的防护栏杆及绿色围挡，防护设施看似连续完整。建议定期巡检栏杆稳固性，确保无松动或缺失；水上作业区域请确保配备足够的救生设施（如救生圈）。"
+    },
+    "raw_response": "```json\n{\n    \"scene\": \"平台临边\",\n    \"is_compliant\": true,\n    \"confidence\": \"high\",\n    \"violations\": [],\n    \"global_conclusion\": {\n        \"violation_detected\": false,\n        \"violation_type\": \"\",\n        \"severity\": \"无\",\n        \"suggestion\": \"现场临边（栈桥/平台边缘）已设置红白相间的防护栏杆及绿色围挡，防护设施看似连续完整。建议定期巡检栏杆稳固性，确保无松动或缺失；水上作业区域请确保配备足够的救生设施（如救生圈）。\"\n    }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00262_tileR.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00262_tileR.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "平台临边",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "现场临边防护总体合规，建议持续保持巡查，确保水上作业平台及岸边临空处的防护栏杆完好有效，特别是在车辆进出通道口处加强警示管理。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"平台临边\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"现场临边防护总体合规，建议持续保持巡查，确保水上作业平台及岸边临空处的防护栏杆完好有效，特别是在车辆进出通道口处加强警示管理。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00318_tileL.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00318_tileL.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "泥浆池",
+    "is_compliant": true,
+    "confidence": "high",
+    "violations": [],
+    "global_conclusion": {
+      "violation_detected": false,
+      "violation_type": "",
+      "severity": "无",
+      "suggestion": "泥浆池四周已设置标准化的临边防护栏杆（可见黄黑/红白警示漆），防护完整。建议日常巡检中注意检查围栏稳固性，防止因施工震动导致松动。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": true,\n  \"confidence\": \"high\",\n  \"violations\": [],\n  \"global_conclusion\": {\n    \"violation_detected\": false,\n    \"violation_type\": \"\",\n    \"severity\": \"无\",\n    \"suggestion\": \"泥浆池四周已设置标准化的临边防护栏杆（可见黄黑/红白警示漆），防护完整。建议日常巡检中注意检查围栏稳固性，防止因施工震动导致松动。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00339_tileL.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00339_tileL.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "泥浆池",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          880,
+          320,
+          1000,
+          530
+        ],
+        "evidence": "泥浆池北侧及西侧临边（混凝土池壁外侧）未设置连续防护栏杆，仅南侧局部可见红色护栏，人员靠近池边存在跌落泥浆池风险。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在泥浆池周边临边处（特别是北侧和西侧无防护区域）补设连续的临边防护栏杆，并悬挂警示标志。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"泥浆池\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        880,\n        320,\n        1000,\n        530\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"泥浆池北侧及西侧临边（混凝土池壁外侧）未设置连续防护栏杆，仅南侧局部可见红色护栏，人员靠近池边存在跌落泥浆池风险。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在泥浆池周边临边处（特别是北侧和西侧无防护区域）补设连续的临边防护栏杆，并悬挂警示标志。\"\n  }\n}\n```",
+    "model": "qwen3.6-plus",
+    "reviewed": true
+  },
+  "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00415_tileL.jpg": {
+    "image": "/home/fs-ai/llama-qwen/dataset/video_frames/DJI_20260329090033_0001_S_t00415_tileL.jpg",
+    "width": 1080,
+    "height": 1080,
+    "scene": "边坡",
+    "is_compliant": false,
+    "confidence": "high",
+    "violations": [
+      {
+        "bbox_1000": [
+          335,
+          0,
+          475,
+          1000
+        ],
+        "evidence": "俯拍可见施工便道（或堤坝）左侧边缘存在明显高差，仅铺设碎石护坡，全程未设置防护栏杆或挡板。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      },
+      {
+        "bbox_1000": [
+          530,
+          0,
+          650,
+          1000
+        ],
+        "evidence": "俯拍可见施工便道（或堤坝）右侧边缘存在明显高差，仅铺设碎石护坡，全程未设置防护栏杆或挡板，临近低洼泥泞区域。",
+        "label": "临边防护缺失",
+        "severity": "高"
+      }
+    ],
+    "global_conclusion": {
+      "violation_detected": true,
+      "violation_type": "临边防护缺失",
+      "severity": "高",
+      "suggestion": "在施工便道/堤坝两侧临边位置设置连续的定型化防护栏杆（高度不低于1.2m），底部设置挡脚板，并悬挂安全警示标志。"
+    },
+    "raw_response": "```json\n{\n  \"scene\": \"边坡\",\n  \"is_compliant\": false,\n  \"confidence\": \"high\",\n  \"violations\": [\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        335,\n        0,\n        475,\n        1000\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍可见施工便道（或堤坝）左侧边缘存在明显高差，仅铺设碎石护坡，全程未设置防护栏杆或挡板。\"\n    },\n    {\n      \"label\": \"临边防护缺失\",\n      \"bbox_1000\": [\n        530,\n        0,\n        650,\n        1000\n      ],\n      \"severity\": \"高\",\n      \"evidence\": \"俯拍可见施工便道（或堤坝）右侧边缘存在明显高差，仅铺设碎石护坡，全程未设置防护栏杆或挡板，临近低洼泥泞区域。\"\n    }\n  ],\n  \"global_conclusion\": {\n    \"violation_detected\": true,\n    \"violation_type\": \"临边防护缺失\",\n    \"severity\": \"高\",\n    \"suggestion\": \"在施工便道/堤坝两侧临边位置设置连续的定型化防护栏杆（高度不低于1.2m），底部设置挡脚板，并悬挂安全警示标志。\"\n  }\n}\n```",
     "model": "qwen3.6-plus",
     "reviewed": true
   }

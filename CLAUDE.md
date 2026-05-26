@@ -4,7 +4,7 @@
 
 施工现场安全监测的多模态微调项目。核心任务：对边坡、基坑、平台临边等场景进行识别，输出**结构化 JSON 安全结论**，不是自由文本问答。
 
-当前主线：`scripts/2_stage_train/` → Qwen3-VL-2B-Instruct，两阶段训练（grounding + JSON精调）
+当前主线：`scripts/2_stage_train/` → Qwen3.5-2B，两阶段训练（grounding + JSON精调）
 
 ## 关键约定
 
