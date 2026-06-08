@@ -277,7 +277,7 @@ if __name__ == "__main__":
     parser.add_argument("--no-lora", action="store_true", help="不加载 LoRA")
     parser.add_argument("--tiled", action="store_true", help="大图启用分块推理")
     parser.add_argument("--visualize", action="store_true", help="保存可视化结果")
-    parser.add_argument("--output-dir", type=str, default='/home/fs-ai/llama-qwen/outputs/visualized', help="可视化输出目录")
+    parser.add_argument("--output-dir", type=str, default='/home/fs-ai/llama-qwen/outputs/visualized/qwen3.5', help="可视化输出目录")
     args = parser.parse_args()
 
     os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

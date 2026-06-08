@@ -18,7 +18,7 @@ OUTPUT_DIR="$PROJECT_ROOT/outputs/stage1_grounding/qwen3.5"
 LORA_RANK=8
 LORA_ALPHA=32
 LR="1e-4"
-EPOCHS=6
+EPOCHS=4
 BATCH_SIZE=2
 GRAD_ACCUM=2
 
@@ -27,7 +27,7 @@ GRAD_ACCUM=2
 export IMAGE_MAX_TOKEN_NUM=1024
 export VIDEO_MAX_TOKEN_NUM=128
 export FPS_MAX_FRAMES=12
-export PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True'
+export PYTORCH_ALLOC_CONF='expandable_segments:True'
 export CUDA_VISIBLE_DEVICES=0
 
 echo "============================================="
@@ -55,12 +55,13 @@ echo "训练样本数: $(wc -l < "$GROUNDING_JSONL")"
 # 4. --add_non_thinking_prefix + --loss_scale ignore_empty_think：
 #    Qwen3.5 是混合思考模型，本任务为定位任务不需要思考链，关闭 thinking。
 
+{
 swift sft \
     --model "$MODEL_DIR" \
     --model_type qwen3_5 \
     --tuner_type lora \
     --dataset "$GROUNDING_JSONL" \
-    --split_dataset_ratio 0.01 \
+    --split_dataset_ratio 0.05 \
     --torch_dtype bfloat16 \
     --output_dir "$OUTPUT_DIR" \
     --num_train_epochs "$EPOCHS" \
@@ -82,14 +83,16 @@ swift sft \
     --loss_scale ignore_empty_think \
     --max_length 2048 \
     --save_strategy steps \
-    --save_steps 50 \
+    --save_steps 100 \
     --save_total_limit 3 \
-    --eval_steps 50 \
+    --eval_steps 100 \
     --logging_steps 5 \
     --load_from_cache_file true \
     --dataset_num_proc 4 \
     --dataloader_num_workers 4 \
-    2>&1 | tee "$OUTPUT_DIR/train.log"
+    --attn_impl flash_attention_2 \
+    --use_liger_kernel true
+} 2>&1 | tee "$OUTPUT_DIR/train.log"
 
 echo ""
 echo "Stage 1 训练完成！checkpoint 在: $OUTPUT_DIR"

@@ -4,7 +4,7 @@
 
 施工现场安全监测的多模态微调项目。核心任务：对边坡、基坑、平台临边等场景进行识别，输出**结构化 JSON 安全结论**，不是自由文本问答。
 
-当前主线：`scripts/2_stage_train/` → Qwen3.5-2B，两阶段训练（grounding + JSON精调）
+当前主线：`scripts/qwen3.5-train/` → Qwen3.5-2B，两阶段训练（grounding + JSON 精调）
 
 ## 关键约定
 
@@ -19,7 +19,7 @@ violation_type 只能是：临边防护缺失
 ```
 
 ### 坐标格式
-violation_boxes 使用 Qwen-VL 的 **0-1000 千分比相对坐标**，不是像素绝对坐标。
+violation_boxes 使用 **0-1000 千分比相对坐标**，不是像素绝对坐标。
 
 ### 常见模型输出 bug
 - 模型有时输出 `violation_detection`（少了 `ed`），`chat.py` 的 `_extract_json` 已做兼容
@@ -30,7 +30,7 @@ violation_boxes 使用 Qwen-VL 的 **0-1000 千分比相对坐标**，不是像�
 ```
 data/                         # 训练/验证/测试 JSONL（直接喂给 ms-swift）
   ├── unique_images.txt        # 去重后图片列表（2_stage_train 流程产物）
-  ├── annotate_cache.json      # Qwen-VL-Max 打标断点续传缓存（DashScope）
+  ├── annotate_cache.json      # DashScope 打标断点续传缓存（历史数据兼容）
   ├── annotate_cache_nvidia.json  # NVIDIA API 打标缓存
   ├── annotate_skip.json       # 失败/跳过记录（DashScope）
   ├── annotate_skip_nvidia.json   # 失败/跳过记录（NVIDIA）
@@ -57,7 +57,7 @@ outputs/                      # 训练输出、评估结果、可视化（.gitig
 scripts/
   ├── 2_stage_train/           # 两阶段训练流程
   │   ├── dedup_dataset.py     # Step 1: 去重过滤
-  │   ├── api_annotate_stage12.py  # Step 2: Qwen-VL-Max 打标（DashScope）
+  │   ├── api_annotate_stage12.py  # Step 2: DashScope 打标/缓存生成
   │   ├── api_annotate_nvidia.py   # Step 2 备选: NVIDIA API 打标
   │   ├── gen_tiled_stage1.py  # Step 2b: 大图分块 grounding 样本生成
   │   ├── extract_video_frames.py  # 视频抽帧（场景去重）
@@ -80,40 +80,40 @@ docs/
 archive/                      # 项目级归档（早期手测样图、临时脚本）
 ```
 
-## 两阶段训练流程（新，推荐）
+## 当前推荐流程（Qwen3.5）
 
 ```bash
 # Step 1: 去重
 python scripts/2_stage_train/dedup_dataset.py
 
-# Step 2: Qwen-VL-Max 打标（需要 API Key）
+# Step 2: DashScope 打标/缓存生成（需要 API Key）
 export DASHSCOPE_API_KEY=your_key
 python scripts/2_stage_train/api_annotate_stage12.py
 
 # Step 3: Stage 1 训练
-bash scripts/2_stage_train/train_stage1.sh
+bash scripts/qwen3.5-train/train_stage1.sh
 
 # Step 4: 合并 LoRA
-bash scripts/2_stage_train/merge_stage1.sh
+bash scripts/qwen3.5-train/merge_stage1.sh
 
 # Step 5: Stage 2 训练
-bash scripts/2_stage_train/train_stage2.sh
+bash scripts/qwen3.5-train/train_stage2.sh
 ```
 
 ## 训练参数（当前版本）
 
 **Stage 1（grounding 空间对齐）**：
-- Model: Qwen3-VL-2B-Instruct 原始基础模型，4-bit NF4 量化
-- LR: 3e-5, Epochs: 8, Batch: 1, GradAccum: 4
-- LoRA rank: 32, alpha: 64, dropout: 0.05
-- MAX_PIXELS: 1505280
-- 训练数据：`stage1_grounding.jsonl` + `stage1_tiled.jsonl`（大图分块视角）
+- Model: `Qwen3.5-2B` 原始基础模型，普通 LoRA + `bfloat16`
+- LR: `1e-4`, Epochs: `4`, Batch: `2`, GradAccum: `2`
+- LoRA rank: `8`, alpha: `32`, dropout: `0.05`
+- 图像 token 上限：`IMAGE_MAX_TOKEN_NUM=1024`
+- 训练数据：`stage1_grounding.jsonl`
 
 **Stage 2（JSON 精调）**：
-- Model: Stage 1 合并后的模型，4-bit NF4 量化
-- LR: 5e-5, Epochs: 15, Batch: 1, GradAccum: 8
-- LoRA rank: 32, alpha: 64, dropout: 0.05
-- MAX_PIXELS: 1003520
+- Model: Stage 1 合并后的 `Qwen3.5-2B` 模型，普通 LoRA + `bfloat16`
+- LR: `5e-5`, Epochs: `4`, Batch: `2`, GradAccum: `2`
+- LoRA rank: `8`, alpha: `32`, dropout: `0.05`
+- 最大序列长度：`4096`
 
 ## 推理与测试
 
@@ -182,8 +182,8 @@ python scripts/inference.py --image /path/to/image.jpg --lora_path ...
 
 - **边坡 ≠ 违规**：边坡坡面本体不需要围挡，只有危险临边才需要。
 - **证据不足时输出 uncertain**，不要强行判断。
-- Stage 1 和 Stage 2 的 MAX_PIXELS 必须一致，否则推理效果下降。
-- 显存不足时降低 `MAX_PIXELS`，不要降低 `LORA_RANK`。
+- 训练与推理阶段的图像 token 上限要保持一致，优先对齐 `IMAGE_MAX_TOKEN_NUM`。
+- 显存不足时优先降低 `IMAGE_MAX_TOKEN_NUM`，不要先动 `LORA_RANK`。
 - Stage 2 训练数据**不要混入 grounding 格式样本**，会导致重复生成 bug。
 - `swift export` 的 `--output_dir` 不能是已存在的目录，否则报错。
 - swift 把 checkpoint 存在 `v{N}-xxx/checkpoint-*` 子目录，合并时路径要用 `v*/checkpoint-*` 通配。
@@ -191,6 +191,118 @@ python scripts/inference.py --image /path/to/image.jpg --lora_path ...
 ## 环境
 
 ```bash
-conda activate qwen-ft
+conda activate qwen35-ft
 export DASHSCOPE_API_KEY=your_key
 ```
+
+## Qwen3.5 当前状态
+
+### 当前主线
+- 当前唯一主线是 `scripts/qwen3.5-train/`，用于 Qwen3.5 的训练、合并与推理。
+- `scripts/2_stage_train/` 目前主要保留数据准备脚本和历史流程参考，不再作为主训练入口。
+- 当前重点是基于 `Qwen3.5-2B` 做两阶段训练与推理，不再继续使用 `Qwen3-VL-2B-Instruct` 或其他 Qwen-VL 路线作为主实验线。
+
+### 当前环境结论
+- 训练历史环境：`qwen35-ft`
+- 回滚验证环境：`qwen35-ft-rollback`
+- Python：`3.12`
+- 本机 `nvcc`：`12.8`
+- `CUDA_HOME` 应使用：`/usr/local/cuda-12.8`
+- GPU：`NVIDIA GeForce RTX 5060 Ti`
+- capability：`sm_120`
+
+### 推理速度关键结论
+- 已确认 `torch` 版本会显著影响 `Qwen3.5` 推理速度，不能只看模型路径是否一致。
+- 在同一张图、同一 `model-path`、同一 `lora-path`、同一推理脚本下：
+  - `torch 2.11.0+cu128` + `attn_impl=sdpa`：约 `4.0s/张`
+  - `torch 2.9.1+cu128` + `attn_impl=sdpa`：约 `17-20s/张`
+- 因此做速度对比时，必须同时记录：
+  - `torch / torchvision / torchaudio` 版本
+  - `transformers / peft` 版本
+  - `attn_impl`
+  - 是否加载 `flash-attn` / `causal-conv1d`
+- 在 `sm_120` 上，不要默认认为预编译 `flash-attn` wheel 一定适合当前环境；推理异常时优先先回到 `torch 2.11.0+cu128` 验证 `sdpa` 基线速度。
+
+### 重要结论
+- 不要再切回 `cu130`。
+- 训练与推理不要混用不同 `torch` 路线做速度结论。
+- 当前推荐优先固定在：
+  - 推理基线：`torch=2.11.0+cu128`
+  - `CUDA_HOME=/usr/local/cuda-12.8`
+- 若继续使用 `torch 2.9.1+cu128`，需要把它视为单独环境，不要和 `torch 2.11.0+cu128` 的速度结果直接对比。
+- `causal-conv1d` 和 `flash-attn` 都和当前 `torch + CUDA` 路线强相关，不能混用 `cu128` 和 `cu130`。
+
+### 已确认可用
+- `causal-conv1d` 已在 `cu128 + CUDA 12.8 + sm_120` 路线下可用。
+- `flash-attn` 已通过预编译 wheel 稳定安装，当前版本：`2.8.3`
+- 当前 wheel 已保存到：
+  - `/home/fs-ai/llama-qwen/env_packages/qwen3.5/wheels/causal_conv1d-1.6.2.post1+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl`
+  - `/home/fs-ai/llama-qwen/env_packages/qwen3.5/wheels/flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl`
+- 本地另有一个 `causal-conv1d` wheel：
+  - `/home/fs-ai/llama-qwen/env_packages/qwen3.5/wheels/causal_conv1d-1.6.2.post1-cp312-cp312-linux_x86_64.whl`
+- 若在 `qwen35-ft-rollback` 中恢复 `torch 2.11.0+cu128`，优先用本地 wheel 验证，再决定是否重编。
+- 相关日志和环境快照在：
+  - `/home/fs-ai/llama-qwen/env_packages/qwen3.5/`
+- 当前环境快照重点文件：
+  - `env_report/`
+  - `logs/causal_conv1d_build.log`
+  - `logs/causal_conv1d_wheel_build.log`
+  - `snapshots/current_causal_conv1d.tar.gz`
+
+### 编译注意事项
+- 编译 `flash-attn` 或其他 CUDA 扩展时，不要设置 `MAX_JOBS=8`。
+- 这台机器内存只有 `32G`，高并发编译会导致 CPU 拉满、SSH 卡死。
+- 建议：
+  - `MAX_JOBS=1`
+  - `OMP_NUM_THREADS=1`
+  - 使用GitHub上预编译的wheel：
+  ```bash
+  wget -O /home/fs-ai/llama-qwen/env_packages/qwen3.5/wheels/causal_conv1d-1.6.2.post1+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl \
+  "https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.6.2.post1/causal_conv1d-1.6.2.post1%2Bcu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl"
+
+  wget -O /home/fs-ai/llama-qwen/env_packages/qwen3.5/wheels/flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl \
+    "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3%2Bcu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl"
+  
+  ```
+
+### 当前 Qwen3.5 关键脚本
+- Stage 1 训练：
+  - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/train_stage1.sh`
+- Stage 2 训练：
+  - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/train_stage2.sh`
+- Qwen3.5 专用推理脚本：
+  - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/chat_qwen35.py`
+- 从 cache 随机抽样测试脚本：
+  - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/test_from_cache_qwen35.py`
+
+### 当前脚本能力
+- `chat_qwen35.py`
+  - 专门适配 `Qwen3.5`
+  - 默认不强制 4bit
+  - 支持 `--visualize`
+  - 支持 `--show-raw-json`
+- `test_from_cache_qwen35.py`
+  - 从 `annotate_cache.json` 抽样
+  - 默认 50 张合规 + 50 张违规
+  - 输出 `precision / recall / accuracy / 总耗时 / 平均耗时 / 混淆矩阵`
+
+### 数据与评测
+- cache 文件：
+  - `/home/fs-ai/llama-qwen/data/annotate_cache.json`
+- ground truth 优先取：
+  - `global_conclusion.violation_detected`
+- 没有时回退：
+  - `is_compliant`
+
+### 推理/训练现状
+- `causal-conv1d` 最小运行样例已经通过。
+- `torchvision nms` 导入问题已解决。
+- `flash-attn` 已安装完成，当前训练环境已切换到 `torch 2.9.1+cu128` 路线。
+
+### 下一个会话优先事项
+- 优先在 `qwen35-ft-rollback` 中源码编译 `flash-attn`，并与 `sdpa` 做单图 A/B 推理测速。
+- 继续保留 `torch 2.11.0+cu128` 作为当前速度基线，不要再用 `torch 2.9.1+cu128` 的结果覆盖它。
+- 若训练或推理再次异常，先核对 `torch` 版本，再判断是否是模型或脚本问题。
+- 需要时检查：
+  - `/home/fs-ai/llama-qwen/env_packages/qwen3.5/logs/flash_attn_build.log`
+  - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/train_stage2.sh`

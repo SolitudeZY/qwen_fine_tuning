@@ -48,7 +48,7 @@ GRAD_ACCUM=2
 export IMAGE_MAX_TOKEN_NUM=1024
 export VIDEO_MAX_TOKEN_NUM=128
 export FPS_MAX_FRAMES=12
-export PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True'
+export PYTORCH_ALLOC_CONF='expandable_segments:True'
 export CUDA_VISIBLE_DEVICES=0
 
 echo "============================================="
@@ -66,12 +66,13 @@ mkdir -p "$OUTPUT_DIR"
 # 3. 仍关闭 thinking：本任务直接输出 JSON，不需要思考链
 # 4. 数据量略大（814 vs 342），epoch 数适当减少
 
+{
 swift sft \
     --model "$BASE_MODEL" \
     --model_type qwen3_5 \
     --tuner_type lora \
     --dataset "$STAGE2_JSONL" \
-    --split_dataset_ratio 0.01 \
+    --split_dataset_ratio 0.05 \
     --torch_dtype bfloat16 \
     --output_dir "$OUTPUT_DIR" \
     --num_train_epochs "$EPOCHS" \
@@ -100,8 +101,9 @@ swift sft \
     --load_from_cache_file true \
     --dataset_num_proc 4 \
     --dataloader_num_workers 4 \
-    --attn_impl sdpa \
-    2>&1 | tee "$OUTPUT_DIR/train.log"
+    --attn_impl flash_attention_2 \
+    --use_liger_kernel true
+} 2>&1 | tee "$OUTPUT_DIR/train.log"
 
 echo ""
 echo "Stage 2 训练完成！checkpoint 在: $OUTPUT_DIR"

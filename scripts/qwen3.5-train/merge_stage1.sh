@@ -72,7 +72,7 @@ echo "============================================="
 mkdir -p "$MERGED_DIR"
 
 export CUDA_VISIBLE_DEVICES=0
-export PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True'
+export PYTORCH_ALLOC_CONF='expandable_segments:True'
 
 swift export \
     --model "$MODEL_DIR" \

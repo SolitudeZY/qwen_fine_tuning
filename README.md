@@ -1,6 +1,6 @@
 # llama-qwen
 
-这是一个面向施工现场安全监测的多模态微调项目，当前重点任务是基于 Qwen2.5-VL 对边坡、基坑、平台临边等场景进行识别，并输出结构化的安全监测结论。项目覆盖了从自动打标、人工复核、数据清洗、QLoRA 微调到评估、推理和可视化的完整闭环。
+这是一个面向施工现场安全监测的多模态微调项目，当前主线已经切换为基于 `Qwen3.5-2B` 的两阶段训练与推理流程，目标是对边坡、基坑、平台临边等场景进行识别，并输出结构化的安全监测结论。项目覆盖了从自动打标、人工复核、数据清洗、两阶段 LoRA 微调到评估、推理和可视化的完整闭环。
 
 ## 1. 项目目标
 
@@ -20,22 +20,23 @@
 
 ## 2. 当前工作流概览
 
-项目目前形成了如下工作流：
+项目当前推荐工作流如下：
 
 1. 收集并整理现场图片，放入 `dataset/`
 2. 使用线上视觉模型进行初始自动打标
 3. 通过人工界面复核和修正标签
-4. 导出为 ms-swift 可训练的 JSONL 数据
-5. 对导出数据做二次清洗，统一成稳定的纯 JSON 输出格式
-6. 使用 ms-swift 执行 QLoRA 微调
+4. 导出 Stage 1 grounding 数据和 Stage 2 JSON 数据
+5. 先训练 Stage 1 空间定位模型，再合并 LoRA
+6. 基于 Stage 1 合并模型训练 Stage 2 结构化输出模型
 7. 用测试脚本、推理脚本和交互式脚本评估模型效果
 
 如果只想快速上手，建议直接使用：
 
-- 数据清洗 + 训练：`scripts/train_v2.sh`
-- 单图推理：`scripts/inference.py`
-- 测试集评估：`scripts/eval.py`
-- 交互式对话与违规区域可视化：`scripts/chat.py`
+- Stage 1 训练：`scripts/qwen3.5-train/train_stage1.sh`
+- Stage 1 合并：`scripts/qwen3.5-train/merge_stage1.sh`
+- Stage 2 训练：`scripts/qwen3.5-train/train_stage2.sh`
+- 单图推理：`scripts/qwen3.5-train/chat_qwen35.py`
+- cache 抽样评估：`scripts/qwen3.5-train/test_from_cache_qwen35.py`
 
 ## 3. 目录说明
 
@@ -68,11 +69,18 @@ llama-qwen/
 
 ## 4. 环境与依赖
 
-脚本默认使用 conda 环境：
+当前至少需要区分两个环境：
 
 ```bash
-conda activate qwen-ft
+conda activate qwen35-ft
+# 或
+conda activate qwen35-ft-rollback
 ```
+
+其中：
+
+- `qwen35-ft`：当前主训练环境，但已确认在 `torch 2.9.1+cu128` 下推理速度明显变慢
+- `qwen35-ft-rollback`：回滚验证环境，已确认在 `torch 2.11.0+cu128` 下同模型推理可恢复到约 `4s/张`
 
 从现有脚本依赖看，至少需要以下核心组件：
 
@@ -80,7 +88,6 @@ conda activate qwen-ft
 - PyTorch
 - transformers
 - peft
-- bitsandbytes
 - ms-swift
 - qwen-vl-utils
 - gradio
@@ -92,8 +99,36 @@ conda activate qwen-ft
 
 如果你要运行全部流程，建议优先保证以下两类依赖可用：
 
-- 训练与推理相关：`torch`、`transformers`、`peft`、`bitsandbytes`、`ms-swift`
+- 训练与推理相关：`torch`、`transformers`、`peft`、`ms-swift`
 - 标注与界面相关：`dashscope`、`gradio`、`Pillow`、`opencv-python`
+
+### 4.1 推理速度注意事项
+
+已确认 `torch` 版本会显著影响 `Qwen3.5` 推理速度。即使 `model-path`、`lora-path`、图片和脚本完全一致，不同 `torch` 版本也会带来数量级差异：
+
+- `torch 2.11.0+cu128` + `attn_impl=sdpa`：约 `4.0s/张`
+- `torch 2.9.1+cu128` + `attn_impl=sdpa`：约 `17-20s/张`
+
+因此做任何性能对比时，必须同步记录：
+
+- `torch / torchvision / torchaudio`
+- `transformers / peft`
+- `attn_impl`
+- 是否启用 `flash-attn`、`causal-conv1d`
+
+不要只根据模型权重路径判断“模型是否变慢”。
+
+### 4.2 当前建议的回滚验证路线
+
+如果目标是先恢复推理速度，建议优先使用 `qwen35-ft-rollback`：
+
+```bash
+conda activate qwen35-ft-rollback
+pip install --index-url https://download.pytorch.org/whl/cu128 \
+  torch==2.11.0 torchvision==0.26.0 torchaudio==2.11.0
+```
+
+随后优先验证 `sdpa` 基线速度，再决定是否继续编译 `flash-attn`。
 
 ## 5. 数据格式
 
@@ -185,6 +220,8 @@ conda activate qwen-ft
 这说明项目当前更像是“小样本、强约束、特定场景”的垂直微调实验，而不是大规模通用视觉指令微调。
 
 ## 7. 核心脚本说明
+
+当前主线以 `scripts/qwen3.5-train/` 为准，旧的 `Qwen2.5-VL` 训练脚本保留作历史参考。
 
 ### 7.1 自动打标：`scripts/api_annotate_v2.py`
 
