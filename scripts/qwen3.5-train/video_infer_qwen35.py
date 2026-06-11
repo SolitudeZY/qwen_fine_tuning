@@ -14,7 +14,9 @@ import json
 import os
 import shutil
 import sys
+import time
 import tempfile
+import datetime
 from collections import deque
 from pathlib import Path
 import numpy as np
@@ -36,7 +38,7 @@ from chat_qwen35 import (
     SYSTEM_PROMPT
 )
 
-DEFAULT_VIDEO_OUTPUT_DIR = str(PROJECT_ROOT / "outputs" / "visualized" / "qwen3.5" / "video_frames")
+DEFAULT_VIDEO_OUTPUT_DIR = str(PROJECT_ROOT / "outputs" / "test-video")
 
 
 def calculate_frame_diff(frame1, frame2):
@@ -62,6 +64,8 @@ def process_video(
     system_prompt: str,
     max_new_tokens: int
 ):
+    start_process_time = time.time()
+    
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
         print(f"[错误] 无法打开视频文件: {video_path}")
@@ -76,9 +80,15 @@ def process_video(
     print(f"[抽帧策略] 目标采样率: {fps_sample_rate} FPS (每隔 {frame_interval} 帧抽取1次)")
     print(f"[判决逻辑] 帧差阈值: {diff_threshold}, 滑窗大小: {window_size} 帧\n")
 
+    # 构建输出目录
+    video_name = Path(video_path).stem
+    current_time = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    run_output_dir = os.path.join(output_dir, f"{video_name}-{current_time}")
+    alert_frames_dir = os.path.join(run_output_dir, "alert_frames")
+    os.makedirs(alert_frames_dir, exist_ok=True)
+
     # 临时目录，用于存放需要送入大模型推理的帧图片
     temp_dir = tempfile.mkdtemp(prefix="qwen_video_frames_")
-    os.makedirs(output_dir, exist_ok=True)
     
     prev_frame = None
     prev_parsed_result = None
@@ -150,7 +160,7 @@ def process_video(
                         cv2.imwrite(tmp_img_path, frame)
                     
                     out_name = f"violation_{timestamp_sec:.1f}s.jpg"
-                    out_path = os.path.join(output_dir, out_name)
+                    out_path = os.path.join(alert_frames_dir, out_name)
                     # 避免重复保存同一秒的帧
                     if out_path not in current_event["frames"]:
                         draw_violation_boxes(tmp_img_path, parsed["violation_boxes"], out_path)
@@ -168,11 +178,21 @@ def process_video(
     cap.release()
     shutil.rmtree(temp_dir, ignore_errors=True)
     
-    print(f"\n[处理完成] 视频提取 {extracted_count} 帧，最终判定 {len(violation_events)} 个违规时间段。")
+    end_process_time = time.time()
+    total_process_time = end_process_time - start_process_time
     
-    report_path = os.path.join(output_dir, "violation_report.json")
+    print(f"\n[处理完成] 视频提取 {extracted_count} 帧，最终判定 {len(violation_events)} 个违规时间段。")
+    print(f"[处理完成] 总耗时: {total_process_time:.1f} 秒")
+    
+    report_data = {
+        "video_path": os.path.abspath(video_path),
+        "total_processing_time_sec": round(total_process_time, 1),
+        "violation_events": violation_events
+    }
+    
+    report_path = os.path.join(run_output_dir, "violation_report.json")
     with open(report_path, "w", encoding="utf-8") as f:
-        json.dump(violation_events, f, ensure_ascii=False, indent=2)
+        json.dump(report_data, f, ensure_ascii=False, indent=2)
     print(f"[报告已保存] {report_path}")
 
 

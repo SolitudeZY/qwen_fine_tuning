@@ -7,6 +7,9 @@ dataset_fences_only/
 /export/
 /env_packegs/qwen3.5/
 /env_packages/
+/test/
+/test-video/
+/data/
 # 通用模型文件扩展名
 *.bin
 *.pth

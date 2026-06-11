@@ -18,7 +18,7 @@ OUTPUT_DIR="$PROJECT_ROOT/outputs/stage1_grounding/qwen3.5"
 LORA_RANK=8
 LORA_ALPHA=32
 LR="1e-4"
-EPOCHS=4
+EPOCHS=5
 BATCH_SIZE=2
 GRAD_ACCUM=2
 
@@ -85,7 +85,10 @@ swift sft \
     --save_strategy steps \
     --save_steps 100 \
     --save_total_limit 3 \
+    --eval_strategy steps \
     --eval_steps 100 \
+    --metric_for_best_model eval_loss \
+    --load_best_model_at_end true \
     --logging_steps 5 \
     --load_from_cache_file true \
     --dataset_num_proc 4 \
