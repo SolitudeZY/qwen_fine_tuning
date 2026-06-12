@@ -125,6 +125,65 @@ python scripts/chat.py --lora_path outputs/stage2_json/vN/checkpoint-X --visuali
 python scripts/inference.py --image /path/to/image.jpg --lora_path ...
 ```
 
+### 非实时 MQTT 协议（当前接入）
+
+- 当前非实时图片接入和协议转换逻辑在 `scripts/qwen3.5-train/video_infer_qwen35.py`
+- 接收字段使用平台侧 JSON，核心输入字段是 `img`，内容为原图 base64
+- 返回字段保持和平台实时格式一致，返回 `img` 时使用**画好框后的图片 base64**
+- `desc` 直接使用模型输出里的 `suggestion`
+- `detections[].bbox` 对外返回**像素坐标**，不是模型内部使用的 0-1000 千分比坐标
+- `detections[].confidence` 优先取模型输出中的 `confidence/score`；若模型未提供，当前默认补 `1.0`
+
+**输入 JSON 示例**：
+
+```json
+{
+  "img": "/9j/4AAQSkZJRgABAQAAAQABAAD...",
+  "stream_id": "1581F7K3C253B00D1JZY",
+  "time": "2026-06-11T14:19:06.636",
+  "location": {
+    "valid": false,
+    "gps": {
+      "height": 76.4566909790039,
+      "latitude": 28.51231,
+      "longitude": 116.09965
+    }
+  }
+}
+```
+
+**输出 JSON 示例**：
+
+```json
+{
+  "desc": "建议尽快安排现场复查并补齐防护",
+  "detections": [
+    {
+      "bbox": [8, 385, 35, 444],
+      "class_id": 0,
+      "class_name": "临边防护缺失",
+      "confidence": 1.0
+    }
+  ],
+  "img": "/9j/4AAQSkZJRgABAQAAAQABAAD...",
+  "location": {
+    "valid": false
+  },
+  "stream_id": "1581F7K3C253B00D1JZY",
+  "time": "2026-06-11T14:32:58"
+}
+```
+
+**字段映射约定**：
+
+- 输入 `img` -> 脚本内部解码为临时图片文件
+- 模型输出 `suggestion` -> 返回 `desc`
+- 模型输出 `violation_boxes` -> 返回 `detections`
+- 返回 `img` -> 画框后的图片 base64；若没有框则回原图 base64
+- 输入 `location / stream_id / time` -> 原样透传到返回结果
+- 当前 `class_id` 固定为 `0`
+- 当前 `class_name` 优先取 box 的 `label`，否则回退到 `violation_type`
+
 ## 文件命名规范
 
 ### scripts/ 根目录
@@ -214,7 +273,8 @@ export DASHSCOPE_API_KEY=your_key
 ### 推理速度关键结论
 - 已确认 `torch` 版本会显著影响 `Qwen3.5` 推理速度，不能只看模型路径是否一致。
 - 在同一张图、同一 `model-path`、同一 `lora-path`、同一推理脚本下：
-  - `torch 2.11.0+cu128` + `attn_impl=sdpa`：约 `4.0s/张`
+  - `torch 2.11.0+cu128` + `attn_impl=flash_attention_2`：在 `sm_120` (RTX 5060 Ti) 架构下触发 `CUDA error: an illegal memory access was encountered`，**不支持生成推理**。
+  - `torch 2.11.0+cu128` + `attn_impl=sdpa`：约 `3.9-4.0s/张`（**推荐推理配置**）
   - `torch 2.9.1+cu128` + `attn_impl=sdpa`：约 `17-20s/张`
 - 因此做速度对比时，必须同时记录：
   - `torch / torchvision / torchaudio` 版本

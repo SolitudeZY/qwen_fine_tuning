@@ -168,6 +168,7 @@ def load_qwen35(
     model_kwargs = {
         "dtype": torch.bfloat16,
         "device_map": device_map,
+        "attn_implementation": "sdpa"
     }
     if quantization_config is not None:
         model_kwargs["quantization_config"] = quantization_config
