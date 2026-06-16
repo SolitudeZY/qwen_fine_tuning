@@ -330,10 +330,22 @@ export DASHSCOPE_API_KEY=your_key
   - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/train_stage1.sh`
 - Stage 2 训练：
   - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/train_stage2.sh`
+- 自动挑选最优权重：
+  - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/find_best_ckpt.py`
 - Qwen3.5 专用推理脚本：
   - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/chat_qwen35.py`
 - 从 cache 随机抽样测试脚本：
   - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/test_from_cache_qwen35.py`
+- 视频/MQTT 测试推理脚本：
+  - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/video_infer_qwen35.py`
+
+### 新项目：环水保 (水体污染检测)
+针对水体是否被污染进行图像分类与短文本描述，独立存放于 `scripts/qwen3.5-water`：
+- `PRD.md`：需求与设计文档
+- `01_api_auto_annotate.py`：DashScope API 自动打标脚本，基于 CVAT XML 输出初始 cache。
+- `02_review_ui.py`：人工审查 Web UI (Flask)，支持状态与文本修改、快照过滤以及一键导出为 `swift` 的单阶段 JSONL。
+- `03_train_stage1.sh`：单阶段微调训练脚本 (LoRA + bf16)。
+- `04_mqtt_inference.py`：支持 MQTT 协议 (`water/detect/request` 和 `water/detect/result`) 的独立推理脚本。
 
 ### 当前脚本能力
 - `chat_qwen35.py`
@@ -360,9 +372,6 @@ export DASHSCOPE_API_KEY=your_key
 - `flash-attn` 已安装完成，当前训练环境已切换到 `torch 2.9.1+cu128` 路线。
 
 ### 下一个会话优先事项
-- 优先在 `qwen35-ft-rollback` 中源码编译 `flash-attn`，并与 `sdpa` 做单图 A/B 推理测速。
-- 继续保留 `torch 2.11.0+cu128` 作为当前速度基线，不要再用 `torch 2.9.1+cu128` 的结果覆盖它。
-- 若训练或推理再次异常，先核对 `torch` 版本，再判断是否是模型或脚本问题。
-- 需要时检查：
-  - `/home/fs-ai/llama-qwen/env_packages/qwen3.5/logs/flash_attn_build.log`
-  - `/home/fs-ai/llama-qwen/scripts/qwen3.5-train/train_stage2.sh`
+- 监控 `qwen3.5-water` 项目的单阶段微调进度（基于修正后的 JSONL 训练文件）。
+- 微调完成后，在 MQTT 客户端验证 `scripts/qwen3.5-water/04_mqtt_inference.py`。
+- 若训练或推理再次异常，先核对 `torch` 版本（确保是 2.11.0+cu128）和 `attn_implementation`，再判断是否是模型或脚本问题。

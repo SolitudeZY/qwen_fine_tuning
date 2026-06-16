@@ -5,6 +5,8 @@
       --model-path /home/fs-ai/llama-qwen/models/Qwen/Qwen3.5-2B \
       --lora-path /home/fs-ai/llama-qwen/outputs/qwen3.5-water/train/... \
       --mqtt-serve
+
+2026-06-16 best model:  /home/fs-ai/llama-qwen/outputs/qwen3.5-water/train/v1-20260616-085800/checkpoint-600
 """
 
 import argparse
@@ -91,7 +93,7 @@ def infer_qwen35(model, processor, image_path: str):
     elapsed = time.time() - start_time
     
     generated_ids_trimmed = [
-        out_ids[len(in_ids):] for len(in_ids), out_ids in zip(inputs.input_ids.shape, generated_ids)
+        out_ids[in_ids_len:] for in_ids_len, out_ids in zip([len(x) for x in inputs.input_ids], generated_ids)
     ]
     output_text = processor.batch_decode(
         generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False

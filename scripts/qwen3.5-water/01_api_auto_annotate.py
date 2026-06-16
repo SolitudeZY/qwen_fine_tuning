@@ -81,7 +81,7 @@ def main():
 
         try:
             response = client.chat.completions.create(
-                model="qwen-vl-plus",
+                model="qwen3.6-plus",
                 messages=[
                     {
                         "role": "user",

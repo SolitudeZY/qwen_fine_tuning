@@ -4,7 +4,7 @@
 set -euo pipefail
 
 eval "$(conda shell.bash hook)"
-conda activate qwen35-ft-rollback
+conda activate qwen35-ft
 
 PROJECT_ROOT="/home/fs-ai/llama-qwen"
 DATA_DIR="$PROJECT_ROOT/data/环水保_labeled"

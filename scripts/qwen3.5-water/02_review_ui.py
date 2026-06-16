@@ -25,36 +25,36 @@ OUTPUT_JSONL = ROOT / "data" / "环水保_labeled" / "water_finetune_reviewed.js
 
 app = Flask(__name__)
 cache: dict = {}
-ordered_keys: list[str] = []
+all_keys: list[str] = []
+session_keys: list[str] = []
 
 def load_cache():
-    global cache, ordered_keys
+    global cache, all_keys
     if CACHE_FILE.exists():
         with open(CACHE_FILE, encoding="utf-8") as f:
             cache = json.load(f)
     else:
         cache = {}
     
-    # 排序：未审查的排前面
-    ordered_keys = sorted(
-        cache.keys(),
-        key=lambda k: 1 if cache[k].get("reviewed") else 0
-    )
+    # 按照文件名固定排序，保证顺序不会随机变动
+    all_keys = sorted(cache.keys())
 
 def save_cache():
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
         json.dump(cache, f, ensure_ascii=False, indent=2)
 
-def filter_keys(mode: str) -> list[str]:
+def set_session_keys(mode: str):
+    global session_keys
     if mode == "unreviewed":
-        return [k for k in ordered_keys if not cache[k].get("reviewed")]
-    if mode == "reviewed":
-        return [k for k in ordered_keys if cache[k].get("reviewed")]
-    if mode == "polluted":
-        return [k for k in ordered_keys if cache[k].get("water_status") == "polluted"]
-    if mode == "normal":
-        return [k for k in ordered_keys if cache[k].get("water_status") == "normal"]
-    return list(ordered_keys)
+        session_keys = [k for k in all_keys if not cache[k].get("reviewed")]
+    elif mode == "reviewed":
+        session_keys = [k for k in all_keys if cache[k].get("reviewed")]
+    elif mode == "polluted":
+        session_keys = [k for k in all_keys if cache[k].get("water_status") == "polluted"]
+    elif mode == "normal":
+        session_keys = [k for k in all_keys if cache[k].get("water_status") == "normal"]
+    else:
+        session_keys = list(all_keys)
 
 HTML = """
 <!DOCTYPE html>
@@ -147,9 +147,14 @@ let currentIdx = 0, currentFilter = 'all', ann = null;
 function setFilter(f, btn) {
   currentFilter = f;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentIdx = 0;
-  loadData(0);
+  if (btn) btn.classList.add('active');
+  
+  fetch(`/api/init_filter?filter=${f}`)
+    .then(r => r.json())
+    .then(d => {
+      currentIdx = 0;
+      loadData(0);
+    });
 }
 
 function loadData(idx) {
@@ -208,7 +213,7 @@ function exportJsonl() {
 }
 
 function navigate(step) {
-  fetch(`/api/total?filter=${currentFilter}`).then(r=>r.json()).then(d => {
+  fetch(`/api/total`).then(r=>r.json()).then(d => {
     let next = currentIdx + step;
     if (next < 0) next = 0;
     if (next >= d.total) { alert('已是最后一张'); return; }
@@ -223,7 +228,7 @@ document.addEventListener('keydown', e => {
   else if (e.key==='s'||e.key==='S') saveAndNext();
 });
 
-window.onload = () => loadData(0);
+window.onload = () => setFilter('all', document.querySelector('.filter-btn.active'));
 </script>
 </body>
 </html>
@@ -234,21 +239,25 @@ def index():
     load_cache()
     return render_template_string(HTML)
 
+@app.route("/api/init_filter")
+def api_init_filter():
+    f = request.args.get("filter", "all")
+    set_session_keys(f)
+    return jsonify({"total": len(session_keys)})
+
 @app.route("/api/total")
 def api_total():
-    return jsonify({"total": len(filter_keys(request.args.get("filter", "all")))})
+    return jsonify({"total": len(session_keys)})
 
 @app.route("/api/data")
 def api_data():
     idx = int(request.args.get("idx", 0))
-    f = request.args.get("filter", "all")
-    keys = filter_keys(f)
-    if not keys:
+    if not session_keys:
         return jsonify({"error": "没有符合条件的数据"})
-    idx = max(0, min(idx, len(keys) - 1))
-    key = keys[idx]
+    idx = max(0, min(idx, len(session_keys) - 1))
+    key = session_keys[idx]
     return jsonify({
-        "idx": idx, "total": len(keys),
+        "idx": idx, "total": len(session_keys),
         "key": key,
         "filename": Path(key).name,
         "ann": copy.deepcopy(cache[key]),
@@ -257,11 +266,9 @@ def api_data():
 @app.route("/api/image")
 def api_image():
     idx = int(request.args.get("idx", 0))
-    f = request.args.get("filter", "all")
-    keys = filter_keys(f)
-    if not keys:
+    if not session_keys:
         return "no data", 404
-    key = keys[max(0, min(idx, len(keys) - 1))]
+    key = session_keys[max(0, min(idx, len(session_keys) - 1))]
     img_path = cache[key]["image"]
     if not Path(img_path).exists():
         return "image not found", 404
@@ -271,25 +278,30 @@ def api_image():
 
 @app.route("/api/exclude", methods=["POST"])
 def api_exclude():
+    global session_keys, all_keys
     data = request.json
-    keys = filter_keys(data["filter"])
     idx = data["idx"]
-    if idx >= len(keys):
+    if idx >= len(session_keys):
         return jsonify({"error": "index out of range"}), 400
-    key = keys[idx]
-    del cache[key]
+    key = session_keys[idx]
+    
+    if key in cache:
+        del cache[key]
+    if key in all_keys:
+        all_keys.remove(key)
+    if key in session_keys:
+        session_keys.remove(key)
+        
     save_cache()
-    load_cache()
     return jsonify({"success": True})
 
 @app.route("/api/save", methods=["POST"])
 def api_save():
     data = request.json
-    keys = filter_keys(data["filter"])
     idx = data["idx"]
-    if idx >= len(keys):
+    if idx >= len(session_keys):
         return jsonify({"error": "index out of range"}), 400
-    key = keys[idx]
+    key = session_keys[idx]
     
     ann = cache[key]
     ann["water_status"] = data["water_status"]
@@ -297,7 +309,6 @@ def api_save():
     ann["reviewed"] = True
     
     save_cache()
-    load_cache()
     return jsonify({"success": True})
 
 @app.route("/api/export", methods=["POST"])
@@ -334,7 +345,7 @@ def api_export():
             
         with open(OUTPUT_JSONL, "w", encoding="utf-8") as f:
             for s in samples:
-                f.write(json.dumps(s, ensure_ascii=False) + "\\n")
+                f.write(json.dumps(s, ensure_ascii=False) + "\n")
                 
         return jsonify({"success": True, "path": str(OUTPUT_JSONL), "count": len(samples)})
     except Exception as e:
