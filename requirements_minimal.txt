@@ -1,0 +1,12 @@
+torch==2.11.0
+torchvision==0.26.0
+transformers==5.2.0
+peft==0.19.1
+ms_swift==4.2.2
+qwen-vl-utils==0.0.14
+paho-mqtt==2.1.0
+Flask==3.0.3
+flask-cors==4.0.1
+openai==2.38.0
+opencv-python-headless==4.13.0.92
+liger_kernel==0.8.0

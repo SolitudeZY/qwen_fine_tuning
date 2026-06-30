@@ -246,6 +246,9 @@ python scripts/inference.py --image /path/to/image.jpg --lora_path ...
 - Stage 2 训练数据**不要混入 grounding 格式样本**，会导致重复生成 bug。
 - `swift export` 的 `--output_dir` 不能是已存在的目录，否则报错。
 - swift 把 checkpoint 存在 `v{N}-xxx/checkpoint-*` 子目录，合并时路径要用 `v*/checkpoint-*` 通配。
+- **CUDA 运行时动态链接库缺失 (`libcudart.so.12`)**：如果在新服务器上遇到该报错（尤其是在系统默认安装了 CUDA 13+ 的情况下），**不要**尝试重新编译或污染系统环境。
+  - **根本原因**：`causal-conv1d` 等预编译 wheel 是基于 CUDA 12.8 编译的，它硬性依赖 `libcudart.so.12`，而新服务器系统路径下只有 `libcudart.so.13`。
+  - **解决套路（物理拷贝法）**：直接从有 CUDA 12 的机器上（如 `/usr/local/cuda-12.8/targets/x86_64-linux/lib/libcudart.so.12`）把该文件提取出来。放到新服务器的 Conda 虚拟环境的 `lib` 目录下，并设置 `LD_LIBRARY_PATH` 环境变量（或直接放到 `site-packages/causal_conv1d/` 旁边）。
 
 ## 环境
 

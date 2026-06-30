@@ -6,6 +6,15 @@ Qwen3.5 视频抽帧与违规推理脚本
   2. 连续多帧滑窗判定：消除单帧运动模糊造成的误报
   3. 复用 chat_qwen35.py 的模型加载与推理逻辑
   4. 自动生成 JSON 违规报告并画框保存
+
+使用方法：
+bash -lc 'source /home/fs-ai/miniconda3/etc/profile.d/conda.sh && \
+conda activate qwen35-ft-rollback && \
+python /home/fs-ai/llama-qwen/scripts/qwen3.5-train/video_infer_qwen35.py \
+  --mqtt-serve \
+  --mqtt-publish-mode immediate \
+  --model-path /home/fs-ai/llama-qwen/outputs/stage1_merged/qwen3.5/merged-20260609-164452 \
+  --lora-path /home/fs-ai/llama-qwen/outputs/stage2_json/qwen3.5/v2-20260609-164542/checkpoint-500'
 """
 
 import argparse
@@ -47,9 +56,13 @@ DEFAULT_MQTT_BROKER = "218.3.126.49"
 DEFAULT_MQTT_PORT = 1883
 DEFAULT_MQTT_REQUEST_TOPIC = "jiahe/frame/+"
 DEFAULT_MQTT_RESPONSE_TOPIC = "jiahe/alertsNonRealtime/{stream_id}"
+DEFAULT_MQTT_OSD_TOPIC = "thing/product/+/osd"
 DEFAULT_MQTT_PUBLISH_MODE = "immediate"
 DEFAULT_MQTT_FLUSH_INTERVAL = 5.0
 DEFAULT_MQTT_QUEUE_SIZE = 100
+
+# 缓存各个无人机最新的 location 数据，key: stream_id (sn), value: location dict
+latest_locations = {}
 
 
 def _strip_data_uri_prefix(image_base64: str) -> str:
@@ -261,12 +274,22 @@ def process_mqtt_payload(
         max_new_tokens=max_new_tokens,
         include_visualized_image=include_visualized_image,
     )
+    
+    stream_id = payload.get("stream_id", "")
+    
+    # 尝试从 OSD 缓存中获取最新的 location 信息，若没有则用 payload 自带的，或默认无效
+    location = payload.get("location")
+    if stream_id in latest_locations:
+        location = latest_locations[stream_id]
+    if not location:
+        location = {"valid": False}
+        
     return {
         "desc": result.get("desc", ""),
         "detections": result.get("detections", []),
         "img": result.get("annotated_image_base64") or image_base64,
-        "location": payload.get("location", {"valid": False}),
-        "stream_id": payload.get("stream_id", ""),
+        "location": location,
+        "stream_id": stream_id,
         "time": payload.get("time", ""),
     }
 
@@ -473,12 +496,32 @@ def run_mqtt_service(
     def on_connect(client, _userdata, _flags, reason_code, _properties=None):
         print(
             f"[MQTT] 已连接 broker={broker_host}:{broker_port}, "
-            f"reason_code={reason_code}, 订阅主题={request_topic}"
+            f"reason_code={reason_code}, 订阅请求主题={request_topic}, 订阅OSD主题={DEFAULT_MQTT_OSD_TOPIC}"
         )
         client.subscribe(request_topic, qos=qos)
+        client.subscribe(DEFAULT_MQTT_OSD_TOPIC, qos=qos)
 
     def on_message(client, _userdata, msg):
         try:
+            payload_text = msg.payload.decode("utf-8")
+            payload_data = json.loads(payload_text)
+            
+            # 如果收到的是 OSD 信息，则更新位置缓存并返回
+            if msg.topic.endswith("/osd"):
+                data = payload_data.get("data", {})
+                sn = data.get("sn")
+                host = data.get("host", {})
+                if sn and "latitude" in host and "longitude" in host and "height" in host:
+                    latest_locations[sn] = {
+                        "valid": True,
+                        "gps": {
+                            "height": host.get("height"),
+                            "latitude": host.get("latitude"),
+                            "longitude": host.get("longitude")
+                        }
+                    }
+                return
+
             inbound_queue.put_nowait(
                 {
                     "request_topic": msg.topic,

@@ -30,6 +30,10 @@ DEFAULT_MQTT_BROKER = "218.3.126.49"
 DEFAULT_MQTT_PORT = 1883
 DEFAULT_MQTT_REQUEST_TOPIC = "water/detect/request"
 DEFAULT_MQTT_RESPONSE_TOPIC = "water/detect/result"
+DEFAULT_MQTT_OSD_TOPIC = "thing/product/+/osd"
+
+# 缓存各个无人机最新的 location 数据，key: stream_id, value: location dict
+latest_locations = {}
 
 SYSTEM_PROMPT = (
     "你是水环境保护专家，基于无人机俯拍图片判断水体状态是否正常，输出结构化 JSON 结论。\n"
@@ -115,18 +119,31 @@ def process_mqtt_payload(payload_data: dict, model, processor) -> dict:
     if not image_base64:
         raise ValueError("缺少图片字段 (img/image_base64)")
     
+    stream_id = payload_data.get("stream_id", "")
+    
+    # 尝试从 OSD 缓存中获取最新的 location 信息，若没有则用 payload 自带的，或默认无效
+    location = payload_data.get("location")
+    if stream_id in latest_locations:
+        location = latest_locations[stream_id]
+    if not location:
+        location = {"valid": False}
+        
     temp_path = None
     try:
         temp_path = _decode_base64_image_to_temp_file(image_base64)
         parsed, raw_output, elapsed = infer_qwen35(model, processor, temp_path)
         
+        water_status = parsed.get("water_status", "unknown")
+        
         return {
             "success": True,
             "processing_time_sec": round(elapsed, 3),
-            "water_status": parsed.get("water_status", "unknown"),
+            "water_status": water_status,
             "description": parsed.get("description", ""),
-            "stream_id": payload_data.get("stream_id", ""),
+            "stream_id": stream_id,
             "time": payload_data.get("time", ""),
+            "location": location,
+            "img": image_base64 if water_status == "polluted" else "",
             "raw_output": raw_output
         }
     finally:
@@ -142,20 +159,41 @@ def run_mqtt_service(args, model, processor):
     client = mqtt.Client()
     
     def on_connect(c, userdata, flags, rc):
-        print(f"[MQTT] 已连接 broker={args.mqtt_broker}:{args.mqtt_port}, 订阅={args.topic_req}")
+        print(f"[MQTT] 已连接 broker={args.mqtt_broker}:{args.mqtt_port}, 订阅请求={args.topic_req}, 订阅OSD={DEFAULT_MQTT_OSD_TOPIC}")
         c.subscribe(args.topic_req)
+        c.subscribe(DEFAULT_MQTT_OSD_TOPIC)
 
     def on_message(c, userdata, msg):
         try:
-            print(f"[MQTT] 收到消息 topic={msg.topic}")
             payload_text = msg.payload.decode("utf-8")
             payload_data = json.loads(payload_text)
             
+            # 如果收到的是 OSD 信息，则更新位置缓存并返回
+            if msg.topic.endswith("/osd"):
+                data = payload_data.get("data", {})
+                sn = data.get("sn")
+                host = data.get("host", {})
+                if sn and "latitude" in host and "longitude" in host and "height" in host:
+                    latest_locations[sn] = {
+                        "valid": True,
+                        "gps": {
+                            "height": host.get("height"),
+                            "latitude": host.get("latitude"),
+                            "longitude": host.get("longitude")
+                        }
+                    }
+                return
+
+            print(f"[MQTT] 收到请求 topic={msg.topic}")
             result = process_mqtt_payload(payload_data, model, processor)
             
-            pub_topic = args.topic_res
-            c.publish(pub_topic, json.dumps(result, ensure_ascii=False))
-            print(f"[MQTT] 已回复 topic={pub_topic}, status={result['water_status']}, time={result['processing_time_sec']}s")
+            if result.get("water_status") == "polluted":
+                pub_topic = args.topic_res
+                c.publish(pub_topic, json.dumps(result, ensure_ascii=False))
+                print(f"[MQTT] 已回复 topic={pub_topic}, status={result['water_status']}, time={result['processing_time_sec']}s")
+            else:
+                print(f"[MQTT] 检测结果为合规 (status={result.get('water_status')})，忽略回传, time={result.get('processing_time_sec')}s")
+                
         except Exception as e:
             print(f"[MQTT] 消息处理失败: {e}")
             error_resp = {"success": False, "error": str(e)}
