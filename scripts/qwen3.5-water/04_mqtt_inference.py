@@ -18,6 +18,8 @@ import queue
 import tempfile
 import threading
 import time
+import logging
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 import cv2
@@ -25,12 +27,36 @@ import torch
 from peft import PeftModel
 from qwen_vl_utils import process_vision_info
 from transformers import AutoModelForImageTextToText, AutoProcessor, BitsAndBytesConfig
+import warnings
+warnings.filterwarnings("ignore", message=".*pad_token_id.*")
 
 DEFAULT_MQTT_BROKER = "218.3.126.49"
 DEFAULT_MQTT_PORT = 1883
 DEFAULT_MQTT_REQUEST_TOPIC = "water/detect/request"
 DEFAULT_MQTT_RESPONSE_TOPIC = "water/detect/result"
 DEFAULT_MQTT_OSD_TOPIC = "thing/product/+/osd"
+
+# ==========================================
+# 日志配置
+# ==========================================
+LOG_DIR = Path(__file__).parent.parent.parent / "logs"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+log_file = LOG_DIR / "mqtt_water.log"
+
+logger = logging.getLogger("MQTT_Water")
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('[%(asctime)s] [%(levelname)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+
+# 输出到控制台
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+# 输出到文件 (按大小滚动，最大10MB，保留5个备份)
+file_handler = RotatingFileHandler(log_file, maxBytes=10*1024*1024, backupCount=5, encoding="utf-8")
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+# ==========================================
 
 # 缓存各个无人机最新的 location 数据，key: stream_id, value: location dict
 latest_locations = {}
@@ -46,15 +72,18 @@ SYSTEM_PROMPT = (
 DEFAULT_QUERY = "<image>请分析这张水域图片，判断水体状态是否正常，以JSON格式输出结果。"
 
 def load_qwen35(model_path: str, lora_path: str | None = None, device_map: str = "auto"):
-    print(f"[Infer] 加载基础模型: {model_path}")
+    logger.info(f"加载基础模型: {model_path}")
     model = AutoModelForImageTextToText.from_pretrained(
         model_path,
         dtype=torch.bfloat16,
         device_map=device_map,
         attn_implementation="sdpa"  # 避免 sm_120 的 flash_attn bug
     )
+    # 彻底关闭 generation 的 pad_token_id 警告
+    model.generation_config.pad_token_id = model.generation_config.eos_token_id
+    
     if lora_path and os.path.exists(lora_path):
-        print(f"[Infer] 加载 LoRA: {lora_path}")
+        logger.info(f"加载 LoRA: {lora_path}")
         model = PeftModel.from_pretrained(model, lora_path)
     
     processor = AutoProcessor.from_pretrained(model_path)
@@ -110,7 +139,7 @@ def infer_qwen35(model, processor, image_path: str):
         json_str = output_text.replace("```json", "").replace("```", "").strip()
         parsed = json.loads(json_str)
     except Exception as e:
-        print(f"[Infer] JSON 解析失败: {e}\nRaw Output: {output_text}")
+        logger.error(f"JSON 解析失败: {e}\nRaw Output: {output_text}")
     
     return parsed, output_text, elapsed
 
@@ -159,7 +188,7 @@ def run_mqtt_service(args, model, processor):
     client = mqtt.Client()
     
     def on_connect(c, userdata, flags, rc):
-        print(f"[MQTT] 已连接 broker={args.mqtt_broker}:{args.mqtt_port}, 订阅请求={args.topic_req}, 订阅OSD={DEFAULT_MQTT_OSD_TOPIC}")
+        logger.info(f"已连接 broker={args.mqtt_broker}:{args.mqtt_port}, 订阅请求={args.topic_req}, 订阅OSD={DEFAULT_MQTT_OSD_TOPIC}")
         c.subscribe(args.topic_req)
         c.subscribe(DEFAULT_MQTT_OSD_TOPIC)
 
@@ -184,25 +213,25 @@ def run_mqtt_service(args, model, processor):
                     }
                 return
 
-            print(f"[MQTT] 收到请求 topic={msg.topic}")
+            logger.info(f"收到请求 topic={msg.topic}")
             result = process_mqtt_payload(payload_data, model, processor)
             
             if result.get("water_status") == "polluted":
                 pub_topic = args.topic_res
                 c.publish(pub_topic, json.dumps(result, ensure_ascii=False))
-                print(f"[MQTT] 已回复 topic={pub_topic}, status={result['water_status']}, time={result['processing_time_sec']}s")
+                logger.warning(f"已回复报警 topic={pub_topic}, status={result['water_status']}, time={result['processing_time_sec']}s")
             else:
-                print(f"[MQTT] 检测结果为合规 (status={result.get('water_status')})，忽略回传, time={result.get('processing_time_sec')}s")
+                logger.info(f"检测结果为合规 (status={result.get('water_status')})，忽略回传, time={result.get('processing_time_sec')}s")
                 
         except Exception as e:
-            print(f"[MQTT] 消息处理失败: {e}")
+            logger.error(f"消息处理失败: {e}")
             error_resp = {"success": False, "error": str(e)}
             c.publish(args.topic_res, json.dumps(error_resp, ensure_ascii=False))
 
     client.on_connect = on_connect
     client.on_message = on_message
 
-    print(f"[MQTT] 启动服务中...")
+    logger.info(f"启动服务中...")
     client.connect(args.mqtt_broker, args.mqtt_port, 60)
     client.loop_forever()
 
@@ -227,10 +256,10 @@ def main():
         run_mqtt_service(args, model, processor)
     elif args.image_path:
         parsed, raw, elapsed = infer_qwen35(model, processor, args.image_path)
-        print(f"\n[测试结果] 耗时: {elapsed:.2f}s")
+        logger.info(f"\n[测试结果] 耗时: {elapsed:.2f}s")
         print(json.dumps(parsed, ensure_ascii=False, indent=2))
     else:
-        print("请指定 --mqtt-serve 或 --image-path")
+        logger.error("请指定 --mqtt-serve 或 --image-path")
 
 if __name__ == "__main__":
     main()

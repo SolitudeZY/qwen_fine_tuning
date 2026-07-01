@@ -105,3 +105,5 @@ __pycache__/
 *.swp
 *.swo
 *~
+
+test-video/*.mp4

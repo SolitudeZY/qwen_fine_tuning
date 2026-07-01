@@ -22,6 +22,8 @@ import base64
 import binascii
 import cv2
 import json
+import logging
+from logging.handlers import RotatingFileHandler
 import os
 import queue
 import shutil
@@ -30,9 +32,33 @@ import threading
 import time
 import tempfile
 import datetime
+import warnings
+warnings.filterwarnings("ignore", message=".*pad_token_id.*")
 from collections import deque
 from pathlib import Path
 import numpy as np
+
+# ==========================================
+# 日志配置
+# ==========================================
+LOG_DIR = Path(__file__).parent.parent.parent / "logs"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+log_file = LOG_DIR / "mqtt_edge.log"
+
+logger = logging.getLogger("MQTT_Edge")
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('[%(asctime)s] [%(levelname)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+
+# 输出到控制台
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
+
+# 输出到文件
+file_handler = RotatingFileHandler(log_file, maxBytes=10*1024*1024, backupCount=5, encoding="utf-8")
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+# ==========================================
 
 # 将当前目录和上一级加入 sys.path 以便复用现有模块
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -419,7 +445,7 @@ def run_mqtt_service(
     def publish_response(client, item: dict) -> None:
         if not should_publish_alert_response(item):
             elapsed = time.time() - item["started_at"]
-            print(
+            logger.info(
                 f"[MQTT] topic={item['request_topic']} 检测结果为合规，已忽略回传, "
                 f"elapsed={elapsed:.2f}s"
             )
@@ -431,7 +457,7 @@ def run_mqtt_service(
             qos=qos,
         )
         elapsed = time.time() - item["started_at"]
-        print(
+        logger.warning(
             f"[MQTT] topic={item['request_topic']} -> {item['publish_topic']}, "
             f"status={item['status_text']}, publish_rc={result.rc}, elapsed={elapsed:.2f}s"
         )
@@ -494,7 +520,7 @@ def run_mqtt_service(
             publish_response(client, pending)
 
     def on_connect(client, _userdata, _flags, reason_code, _properties=None):
-        print(
+        logger.info(
             f"[MQTT] 已连接 broker={broker_host}:{broker_port}, "
             f"reason_code={reason_code}, 订阅请求主题={request_topic}, 订阅OSD主题={DEFAULT_MQTT_OSD_TOPIC}"
         )
@@ -529,7 +555,7 @@ def run_mqtt_service(
                     "received_at": time.time(),
                 }
             )
-            print(f"[MQTT] 已入队 topic={msg.topic}, queue_size={inbound_queue.qsize()}")
+            logger.info(f"[MQTT] 已入队 topic={msg.topic}, queue_size={inbound_queue.qsize()}")
         except queue.Full:
             response_payload = build_mqtt_error_response(msg.payload, "服务忙，消息队列已满")
             response_payload["stream_id"] = response_payload.get("stream_id") or extract_stream_id_from_topic(msg.topic)
@@ -541,14 +567,14 @@ def run_mqtt_service(
                 json.dumps(response_payload, ensure_ascii=False),
                 qos=qos,
             )
-            print(
+            logger.warning(
                 f"[MQTT] topic={msg.topic} -> {publish_topic}, "
                 f"status={status_text}, publish_rc={result.rc}, queue_full=True"
             )
 
     def on_disconnect(_client, _userdata, *args):
         reason_code = args[1] if len(args) >= 2 else (args[0] if args else "unknown")
-        print(f"[MQTT] 连接断开，reason_code={reason_code}")
+        logger.warning(f"[MQTT] 连接断开，reason_code={reason_code}")
 
     client = mqtt.Client(client_id=client_id or "")
     client.on_connect = on_connect
@@ -560,7 +586,7 @@ def run_mqtt_service(
     worker_thread.start()
     publisher_thread.start()
 
-    print(
+    logger.info(
         f"[MQTT] 启动服务 broker={broker_host}:{broker_port}, "
         f"request_topic={request_topic}, response_topic={response_topic}, "
         f"publish_mode={publish_mode}, flush_interval_sec={flush_interval_sec}, queue_size={queue_size}"
@@ -787,12 +813,20 @@ def main() -> None:
     if not any([args.video, args.image_base64, args.mqtt_payload_json, args.mqtt_payload_file, args.mqtt_serve]):
         parser.error("请至少提供 --video、--image-base64、--mqtt-payload-json 或 --mqtt-payload-file 之一")
 
+    logger.info(f"[video_infer_qwen35] 加载模型: {args.model_path}")
     model, processor = load_qwen35(
         model_path=args.model_path,
         lora_path=args.lora_path,
         load_in_4bit=args.load_in_4bit,
         device_map=args.device_map,
     )
+    
+    # 彻底关闭 generation 的 pad_token_id 警告
+    if hasattr(model, "generation_config") and hasattr(model.generation_config, "eos_token_id"):
+        model.generation_config.pad_token_id = model.generation_config.eos_token_id
+
+    if args.lora_path:
+        logger.info(f"[video_infer_qwen35] 加载 LoRA: {args.lora_path}")
 
     if args.mqtt_serve:
         run_mqtt_service(
