@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 # ============ 配置区域 ============
 # 阿里云 DashScope API Key (需替换为你自己的 Key)
-API_KEY = os.getenv("DASHSCOPE_API_KEY", "REDACTED_KEY")
+API_KEY = os.getenv("DASHSCOPE_API_KEY", "")
 # 基础 URL
 BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 
